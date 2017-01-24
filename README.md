@@ -4,4 +4,5 @@ Prueba de funcionamiento del repositorio grupo 1 IE-0217
 Contribuidores:
 
 Giancarlo Marin 
-YO
+
+Adrian Aguilar

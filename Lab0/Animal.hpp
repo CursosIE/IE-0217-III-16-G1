@@ -1,15 +1,15 @@
 /*
  *@author Giancarlo Marin 
  *@date   01-24-2017
- *@brief  Archivo encabezado con la definicion de la clase Vivos
+ *@brief  Archivo encabezado con la definicion de la clase Animal
 */
 
-#ifndef VIVOS_HPP
-#define VIVOS_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-#include "Vivos.hpp"
+#include "Animal.hpp"
 #include "Leon.hpp"
 #include "Zorro.hpp"
 
@@ -19,18 +19,18 @@
 using namespace std;
 
 /*
- * Definicion de clase Vivos
+ * Definicion de clase Animal
 */
-class Vivos{
+class Animal{
 public:
 	//Metodos
-	Vivos(); //Constructor de la clase
-	~Vivos(); //Destructor de la clase
+	Animal(); //Constructor de la clase
+	~Animal(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
-	Vivos& operator^(const Vivos& animal)=0;//Moverse
-	Vivos& operator+(const Vivos& animal)=0;//Comer
-	Vivos& operator*(const Vivos& animal)=0;//Reproducirse 
-	Vivos& operator/(const Vivos& dividendo)=0;//Morir
+	Animal& operator^(const Animal& animal)=0;//Moverse
+	Animal& operator+(const Animal& animal)=0;//Comer
+	Animal& operator*(const Animal& animal)=0;//Reproducirse 
+	Animal& operator/(const Animal& animal)=0;//Morir
 	//obtencion de datos del ser vivo
 	string print();
 	//metodos set y get de los atributos
@@ -42,7 +42,8 @@ private:
 	//Atributos
 	short int energia;
 	bool sexo;
+	short int zacate;
 	short int contador;		
 };
 
-#endif /* VIVOS_HPP */
+#endif /* ANIMAL_HPP */

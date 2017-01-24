@@ -17,7 +17,7 @@ class Leon{
 public:
 	//Metodos
 	Leon(); //Constructor de la clase
-	Leon(bool nuevoSexo); //Constructor sobrecargado de la clase
+	Leon(bool nuevoSexo, short int nivelZacate); //Constructor sobrecargado de la clase
 	~Leon(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	Leon& operator^(const Vivos& zacate);//Moverse

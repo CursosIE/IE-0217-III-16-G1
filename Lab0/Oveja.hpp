@@ -17,7 +17,7 @@ class Oveja{
 public:
 	//Metodos
 	Oveja(); //Constructor de la clase
-	Oveja(bool nuevoSexo); //Constructor sobrecargado de la clase
+	Oveja(bool nuevoSexo, short int nivelZacate); //Constructor sobrecargado de la clase
 	~Oveja(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	Oveja& operator^(const Vivos& zacate);//Moverse

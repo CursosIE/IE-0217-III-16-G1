@@ -17,7 +17,7 @@ class Raton{
 public:
 	//Metodos
 	Raton(); //Constructor de la clase
-	Raton(bool nuevoSexo, short int nivelZacate); //Constructor sobrecargado de la clase
+	Raton(bool nuevoSexo); //Constructor sobrecargado de la clase
 	~Raton(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	Raton& operator^(const Vivos& zacate);//Moverse

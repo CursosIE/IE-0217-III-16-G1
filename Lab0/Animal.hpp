@@ -7,10 +7,10 @@
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
 #include <iostream>
-#include <fstream>
-#include <cstdlib>
 
 using namespace std;
+
+unsigned int identificador=0; //variable global para generar ID de cada animal
 
 /*
  * Definicion de clase Animal

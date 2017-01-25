@@ -6,8 +6,6 @@
 
 #include "Animal.hpp"
 
-unsigned int identificador=0; //variable global para generar ID de cada animal
-
 /*
  * Constructor por defecto de la clase Animal
 */ 

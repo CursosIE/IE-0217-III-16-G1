@@ -1,13 +1,20 @@
 /*
  *@author Luis Adrian Aguilar Cascante, @autor Giancarlo Marin Hernandez
  *@date   01-25-2017
- *@brief  Implementacion de metodos de las clases
+ *@brief  Implementacion de funciones para el funcionamiento del juego ecologico
 */
 
+#include <fstream>
+#include <cstdlib>
 #include "Animal.hpp"
+#include "Celda.hpp"
+#include "Lobo.hpp"
+#include "Oveja.hpp"
+#include "Raton.hpp"
+#include "Zorro.hpp"
+#include "print.hpp"
 
-
-unsigned int identificador=0;
+using namespace std;
 
 /*
  * Constructor por defecto de la clase Animal

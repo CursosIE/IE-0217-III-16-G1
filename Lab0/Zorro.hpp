@@ -17,7 +17,7 @@ class Zorro{
 public:
 	//Metodos
 	Zorro(); //Constructor de la clase
-	Zorro(bool nuevoSexo, short int nivelZacate); //Constructor sobrecargado de la clase
+	Zorro(bool nuevoSexo); //Constructor sobrecargado de la clase
 	~Zorro(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	Zorro& operator^(const Vivos& zacate);//Moverse

@@ -13,7 +13,7 @@ using namespace std;
 /*
  * Definicion de clase Lobo
 */
-class Lobo{
+class Lobo, public Animal{
 public:
 	//Metodos
 	Lobo(); //Constructor de la clase

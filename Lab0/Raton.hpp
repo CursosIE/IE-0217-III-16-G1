@@ -13,7 +13,7 @@ using namespace std;
 /*
  * Definicion de clase Raton
 */
-class Raton{
+class Raton, public Animal{
 public:
 	//Metodos
 	Raton(); //Constructor de la clase

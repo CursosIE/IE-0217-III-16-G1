@@ -13,7 +13,7 @@ using namespace std;
 /*
  * Definicion de clase ZORRO
 */
-class Zorro{
+class Zorro, public Animal{
 public:
 	//Metodos
 	Zorro(); //Constructor de la clase

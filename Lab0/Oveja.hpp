@@ -13,7 +13,7 @@ using namespace std;
 /*
  * Definicion de clase Oveja
 */
-class Oveja{
+class Oveja, public Animal{
 public:
 	//Metodos
 	Oveja(); //Constructor de la clase

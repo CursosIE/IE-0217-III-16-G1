@@ -17,7 +17,7 @@ class Lobo{
 public:
 	//Metodos
 	Lobo(); //Constructor de la clase
-	Lobo(bool nuevoSexo, short int nivelZacate); //Constructor sobrecargado de la clase
+	Lobo(bool nuevoSexo); //Constructor sobrecargado de la clase
 	~Lobo(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	Lobo& operator^(const Vivos& zacate);//Moverse

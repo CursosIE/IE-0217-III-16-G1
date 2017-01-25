@@ -5,16 +5,10 @@
 */
 
 #include "Animal.hpp"
-#include "Celda.hpp"
-#include "Lobo.hpp"
-#include "Oveja.hpp"
-#include "print.hpp"
-#include "Raton.hpp"
-#include "Zorro.hpp"
 
-using namespace std;
 
 unsigned int identificador=0;
+
 /*
  * Constructor por defecto de la clase Animal
 */ 
@@ -28,6 +22,22 @@ Animal::Animal(){
 */ 
 Animal::~Animal(){
 	cout << "Destruyendo Animal" << endl;
+}
+
+/*
+ * Metodo get del identifiacor del animal
+ *@return unsigned int 	ID del Animal
+*/ 
+unsigned int Animal::getID(){
+	return this->ID;
+}
+
+/*
+ * Metodo get del atributo especie 
+ *@return string 	Nombre de la especie del animal
+*/
+string Animal::getEspecie(){
+	return this->especie;
 }
 
 /*
@@ -51,9 +61,14 @@ short int Animal::getEnergia(){
  *@return bool 	Retorna el sexo del animal de la siguiente forma:
  * False=Macho True=Hembra
 */ 
-short int Animal::getSexo(){
+bool Animal::getSexo(){
 	return this->sexo;
 }
+
+
+
+
+
 
 /*
  *Método de alimentación del zorro

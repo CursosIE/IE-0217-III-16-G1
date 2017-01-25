@@ -31,14 +31,12 @@ public:
 	void setEnergia(short int nuevaEnergia);
 	short int getEnergia();
 	bool getSexo();
-	short int getContador();
 private:
 	//Atributos
 	unsigned int ID;
 	string especie;
 	short int energia;
 	bool sexo;
-	short int contador;		
 };
 
 #endif /* ANIMAL_HPP */

@@ -19,7 +19,7 @@ class Celda{
 public:
 	//Metodos
 	Celda(); //Constructor de la clase
-	Celda(int newColumna, int newFila, short int nivelZacate, char animal, bool sexo);
+	Celda(int nuevaColumna, int nuevaFila, short int nivelZacate, char animal='x', bool sexo=0);
 	~Celda(); //Destructor de la clase
 	//metodos set y get de los atributos
 	int getFila();
@@ -28,12 +28,14 @@ public:
 	short int getZacate();
 	void setAnimal(Animal* nuevoAnimal);
 	Animal& getAnimal();
+	short int getContadorDias();
 private:
 	//Atributos
 	int columna;
 	int fila;
 	short int zacate;
-	Vivos* animal;		
+	Animal* animal;
+	short int contadorDias;			
 };
 
 #endif /* CELDA_HPP */

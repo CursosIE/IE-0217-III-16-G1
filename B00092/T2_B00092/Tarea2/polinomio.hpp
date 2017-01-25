@@ -13,27 +13,31 @@
 
 #ifndef POLINOMIO_HPP
 #define POLINOMIO_HPP
+#include <iostream>
 
-class polinomio {
+class polinomio
+{
     public:
-        void resultado();
-         int polinomio[4];
+      void resultado();
+         int base[4] = {2,3,1,4};
+         int nuevo[4];
          polinomio();
+         int suma();
+         int resta();
+         int division();
+         int multiplicacion();
          polinomio(const polinomio& orig);
          virtual ~polinomio();
-         int a, b;
-         
+         int a, b, c, d;
+//         
+polinomio& operator +(const polinomio &grado); 
+
     
 private:
 
 };
 
 
- polinomio& operator +(const polinomio &grado) 
- {
-     return *(new(grado.a + grado.b));
- }
- 
  
 #endif /* POLINOMIO_HPP */
 

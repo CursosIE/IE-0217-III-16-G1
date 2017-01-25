@@ -13,20 +13,14 @@
 using namespace std;
 
 /*
- * Definicion de clase Vivos
+ * Definicion de clase Celda
 */
-class Vivos{
+class Celda{
 public:
 	//Metodos
-	Vivos(); //Constructor de la clase
-	~Vivos(); //Destructor de la clase
-	//Sobrecarga de operadores para funcionamiento de funciones
-	Vivos& operator^(const Vivos& animal)=0;//Moverse
-	Vivos& operator+(const Vivos& animal)=0;//Comer
-	Vivos& operator*(const Vivos& animal)=0;//Reproducirse 
-	Vivos& operator/(const Vivos& dividendo)=0;//Morir
-	//obtencion de datos del ser vivo
-	string print();
+	Celda(); //Constructor de la clase
+	Celda(int newColumna, int newFila, short int nivelZacate, char animal, bool sexo);
+	~Celda(); //Destructor de la clase
 	//metodos set y get de los atributos
 	int getFila();
 	int getColumna();

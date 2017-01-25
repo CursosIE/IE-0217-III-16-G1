@@ -9,12 +9,6 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-#include "Animal.hpp"
-#include "Leon.hpp"
-#include "Zorro.hpp"
-
-
-#include "print.hpp"
 
 using namespace std;
 
@@ -31,18 +25,19 @@ public:
 	Animal& operator+(const Animal& animal)=0;//Comer
 	Animal& operator*(const Animal& animal)=0;//Reproducirse 
 	Animal& operator/(const Animal& animal)=0;//Morir
-	//obtencion de datos del ser vivo
-	string print();
 	//metodos set y get de los atributos
+	unsigned int getID();
+	string getEspecie();
 	void setEnergia(short int nuevaEnergia);
 	short int getEnergia();
 	bool getSexo();
 	short int getContador();
 private:
 	//Atributos
+	unsigned int ID;
+	string especie;
 	short int energia;
 	bool sexo;
-	short int zacate;
 	short int contador;		
 };
 

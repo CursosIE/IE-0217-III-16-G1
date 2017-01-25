@@ -1,19 +1,59 @@
 /*
- *@author Luis Adrian Aguilar Cascante
- *@date   01-24-2017
- *@brief  Archivo clase Juego
+ *@author Luis Adrian Aguilar Cascante, @autor Giancarlo Marin Hernandez
+ *@date   01-25-2017
+ *@brief  Implementacion de metodos de las clases
 */
 
+#include "Animal.hpp"
+#include "Celda.hpp"
+#include "Lobo.hpp"
+#include "Oveja.hpp"
+#include "print.hpp"
+#include "Raton.hpp"
+#include "Zorro.hpp"
 
-#include "Vivos.h++"
-#include "Z.h++"
-#include "R.h++"
-#include "Za.h++"
-#include "L.h++"
-#include "Juego.h"
+using namespace std;
 
+unsigned int identificador=0;
+/*
+ * Constructor por defecto de la clase Animal
+*/ 
+Animal::Animal(){
+	cout << "Creando Animal" << endl;
+	identificador++;
+}
 
+/*
+ * Destructor por defecto de la clase Animal
+*/ 
+Animal::~Animal(){
+	cout << "Destruyendo Animal" << endl;
+}
 
+/*
+ * Metodo set del atributo energia
+ *@param short int 	Nuevo valor de energia asignado al animal 
+*/ 
+void Animal::setEnergia(short int nuevaEnergia){
+	this->energia=nuevaEnergia;
+}
+
+/*
+ * Metodo get del atributo energia
+ *@return short int 	Valor de energia asignado al animal 
+*/ 
+short int Animal::getEnergia(){
+	return this->energia;
+}
+
+/*
+ * Metodo get del atributo sexo
+ *@return bool 	Retorna el sexo del animal de la siguiente forma:
+ * False=Macho True=Hembra
+*/ 
+short int Animal::getSexo(){
+	return this->sexo;
+}
 
 /*
  *Método de alimentación del zorro
@@ -248,4 +288,3 @@ Juego::Juego(const Juego& orig) {
 
 Juego::~Juego() {
 }
-

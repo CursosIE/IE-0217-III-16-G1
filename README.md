@@ -3,7 +3,7 @@ Prueba de funcionamiento del repositorio grupo 1 IE-0217
 ------------
 Contribuidores:
 
-Giancarlo Marin 
+Giancarlo Marin +506 83212391
 
 Adrian Aguilar +506 88904499
 

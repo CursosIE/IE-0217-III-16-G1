@@ -21,10 +21,20 @@ class polinomio {
          polinomio();
          polinomio(const polinomio& orig);
          virtual ~polinomio();
+         int a, b;
+         
     
 private:
 
 };
 
+
+ polinomio& operator +(const polinomio &grado) 
+ {
+     return *(new(grado.a + grado.b));
+ }
+ 
+ 
 #endif /* POLINOMIO_HPP */
 
+ 

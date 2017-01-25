@@ -14,11 +14,22 @@
 #include "polinomio.hpp"
 #include <iostream>
 
+using namespace std;
+
+int polinomio::suma()
+{}
+int polinomio::resta()
+{}
+int polinomio::división()
+{}
+int polinomio::multiplicación()
+{}
+
+
 void polinomio::resultado()
 {
-	
-        cout << "Resultado" << this <<", ";
-	cout << material <<", ";
+      cout << "Resultado" << this <<", ";
+	cout << polinomio <<", ";
 	cout << endl;
 	return;
 }

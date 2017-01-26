@@ -10,9 +10,15 @@
 Zorro::Zorro() {
 }
 
-Zorro::Zorro(const Zorro& orig) {
+Zorro::Zorro(bool nuevoSexo) {
+    this-> ID = identificador;
+    this-> energia
+           
 }
 
 Zorro::~Zorro() {
 }
+
+
+
 

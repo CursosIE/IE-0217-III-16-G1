@@ -6,12 +6,21 @@
 
 #include "Lobo.hpp"
 
+
 Lobo::Lobo() {
 }
 
-Lobo::Lobo(const Lobo& orig) {
+Lobo::Lobo(bool nuevoSexo) {
+    this-> ID = identificador;
+    this-> energia = 25;
+    this-> sexo = nuevoSexo;
+    this-> especie = "Raton";       
 }
 
 Lobo::~Lobo() {
 }
+Lobo& operator^(const int fila, const int columna);//Mover
+Zorro& operator+(const int fila, const int columna);//Comer
+Lobo& operator*(const int fila, const int columna);//Reproducirse 
+Lobo& operator/(const int fila, const int columna);//Morir
 

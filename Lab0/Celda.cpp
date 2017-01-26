@@ -5,6 +5,7 @@
 */
 
 #include "Celda.hpp"
+#include "Animal.hpp"
 
 /*
  * Constructor por defecto de la clase Celda
@@ -55,7 +56,7 @@ int Celda::getFila(){
  * Metodo get de la columna de la Celda
  *@return int 	columna de la Celda
 */ 
-int Celda::getFila(){
+int Celda::getColumna(){
 	return columna;
 }
 

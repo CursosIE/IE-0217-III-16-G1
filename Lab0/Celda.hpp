@@ -9,6 +9,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "print.hpp"
+#include "Animal.hpp"
 
 using namespace std;
 

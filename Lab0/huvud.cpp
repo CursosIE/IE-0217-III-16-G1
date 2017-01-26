@@ -1,10 +1,9 @@
-#include <iostream>
-#include <fstream>
+#include <iostream>//cout cin
+#include <fstream>//para poder usar istream y leer el archivo
 #include <cstdlib>
+#include <sstream>//para poder usar getline(stringstream,string, char)
 #include <cstddef>
-#include <string>
-
-//#include "celda.hpp"
+#include "Celda.cpp"
 
 using namespace std;
 
@@ -17,50 +16,53 @@ int main (int argc, char** argv){
 	filas = atoi(str.c_str());//.c_srt() método para convertir string a vector de caracteres
 	getline(file, str);
 	columnas = atoi(str.c_str());
-	int tablero[filas][columnas];
 	short int zacate;
 	bool feMale;
 	char animal, sexo;
-//	Celda** tablero;
+	Celda** tablero = new Celda*[filas];
 //	tablero = nullptr;
+	for(int f = 0; f < filas;f++ ){
+		tablero[f] = new Celda[columnas];
+	}
 	while (getline(file, str))
 	{
-		getline(str, temp,'\t');
+		getline(file, str);
+		stringstream test(str);
+		getline(test, temp,'\t');
 		filas = atoi(temp.c_str());
-	//	getline(str, temp,'\t');
+		getline(test, temp,'\t');
 		columnas = atoi(temp.c_str());
-	//	getline(str, temp,'\t');
+		getline(test, temp,'\t');
 		zacate = atoi(temp.c_str());
-	//	getline(str, temp,'\n');
-		/*Celda.animal = temp[0];
-		Celda.sexo = temp[1];
-		Celda* c;
-		c = new Celda;
-		c.zacate = zacate;
-		tablero[filas][columnas] = celda;*/
+		getline(test, temp,'\n');
 		animal = temp[0];
 		sexo = temp[1];
 		if(sexo == 49 ){//el char '1' tiene el valor entero:  49
-		feMale = 1;
+			feMale = 1;
 		}
 		else{
-		feMale = 0;
+			feMale = 0;
 		}
+		Celda* casilla;// creamos un puntero a Celda cada iteracion del while 
+		casilla = new Celda(filas, columnas, zacate, animal, feMale);//creamos una instancia a la que apunta el puntero
+		tablero[filas][columnas] = *casilla;//guardamos ese objeto en una casilla de la matriz
+		cout << str << endl;
 		cout << filas << endl;
 		cout << columnas << endl;
+		cout << zacate << endl;
 		cout << animal << endl;
 		cout << sexo << endl;
-		cout << str << endl;
-	
+		cout << feMale << endl;	
 	}
+//	casilla
+	cout << "Cantidad de dias: " << dias << endl;
+	/*cout << "Cantidad de dias: " << dias << endl;
 	cout << "Cantidad de dias: " << dias << endl;
 	cout << "Cantidad de dias: " << dias << endl;
 	cout << "Cantidad de dias: " << dias << endl;
 	cout << "Cantidad de dias: " << dias << endl;
 	cout << "Cantidad de dias: " << dias << endl;
-	cout << "Cantidad de dias: " << dias << endl;
-	cout << "Cantidad de dias: " << dias << endl;
-	cout << "funca " << dias << endl;
+	cout << "funca " z< endl;*/
 	return 0;
 }
 

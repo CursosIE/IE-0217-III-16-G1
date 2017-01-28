@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <sstream>//para poder usar getline(stringstream,string, char)
 #include <cstddef>
-//#include "Celda.cpp"
+#include "Celda.cpp"
 
 using namespace std;
 

@@ -1,26 +1,49 @@
 /*
- *@author Luis Adrian Aguilar Cascante
- *@date   01-25-2017
- *@brief  Implementacion de metodo Lobo
+ *@author Luis Adrian Aguilar Cascante, @autor Giancarlo Marin Hernandez
+ *@date   01-26-2017
+ *@brief  Implementacion de los metodos de la clase Lobo
 */
 
-#include "Lobo.hpp"
+#include "../include/Lobo.hpp"
 
-
+/*
+ *Constructor por defecto de la clase Lobo
+*/ 
 Lobo::Lobo() {
 }
 
-Lobo::Lobo(bool nuevoSexo) {
-    this-> ID = identificador;
-    this-> energia = 25;
-    this-> sexo = nuevoSexo;
-    this-> especie = "Raton";       
+/*
+ * Constructor sobrecargado de la clase Lobo
+ * @param bool 	Sexo del Lobo
+*/ 
+Lobo::Lobo(bool nuevoSexo, Celda** nuevoTablero) {
+    setEnergia(100); //Definido por el enunciado Regla 1
+    setSexo(nuevoSexo);
+    setEspecie("Lobo");       
+	this->tablero = nuevoTablero;
 }
 
+/*
+ * Destructor por defecto de la clase Lobo
+*/ 
 Lobo::~Lobo() {
 }
-Lobo& operator^(const int fila, const int columna);//Mover
-Zorro& operator+(const int fila, const int columna);//Comer
-Lobo& operator*(const int fila, const int columna);//Reproducirse 
-Lobo& operator/(const int fila, const int columna);//Morir
 
+/*
+ * Metodo moverse del Lobo definido por las regla  
+*/ 
+bool Lobo::operator!(){
+	return true;
+}
+
+bool Lobo::operator++(){
+	return true;
+}
+
+bool Lobo::operator~(){
+	return true;
+}
+
+void Lobo::operator--(){
+
+}

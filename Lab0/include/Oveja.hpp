@@ -7,24 +7,27 @@
 #ifndef OVEJA_HPP
 #define OVEJA_HPP
 #include <iostream>
+#include "Animal.hpp"
+#include "Celda.hpp"
 
 using namespace std;
 
 /*
  * Definicion de clase Oveja
 */
-class Oveja, public Animal{
+class Oveja : public Animal{
 public:
 	//Metodos
 	Oveja(); //Constructor de la clase
-	Oveja(bool nuevoSexo); //Constructor sobrecargado de la clase
-	~Oveja(); //Destructor de la clase
+	Oveja(bool nuevoSexo, Celda** nuevoTablero); //Constructor sobrecargado de la clase
+	virtual ~Oveja(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
-	Oveja& operator^(const Vivos& zacate);//Moverse
-	Oveja& operator+(const Vivos& zacate);//Comer
-	Oveja& operator*(const Oveja& Oveja);//Reproducirse 
-	Oveja& operator/(const Oveja& Oveja);//Morir
+	bool operator!();
+	bool operator++();
+	bool operator~();
+	void operator--();
 private:
+	Celda** tablero;
 };
 
 #endif /* OVEJA_HPP */

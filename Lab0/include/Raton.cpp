@@ -4,7 +4,7 @@
  *@brief  Implementacion de los metodos de la clase Raton
 */
 
-#include "../include/Raton.hpp"
+#include "Raton.hpp"
 
 /*
  *Constructor por defecto de la clase Raton

@@ -1,20 +1,24 @@
 /*
  *Universidad de Costa Rica - Escuela de Ingenieria Electrica
  *IE-0217 - Lab0 - Grupo01
- *@author Giancarlo Marin 
- *@date   01-24-2017
- *@brief  Clase main que prubea el funconamiento del juego de la vida
+ *@author Giancarlo Marin, @author Luis Adrian Aguilar, @author Robin 
+ *@date   01-26-2017
+ *@brief  Clase main que prubea el funconamiento del juego de ecologia
 */
-#include "Juego.hpp"
-#include <iostream>//cout cin
-#include <fstream>//para poder usar istream y leer el archivo
-#include <cstdlib>
-#include <sstream>//para poder usar getline(stringstream,string, char)
-#include <cstddef>
-#include "Celda.cpp"
 
-using namespace std;
+#include "../include/Celda.hpp"
+#include "../include/Animal.hpp"
+#include "../include/Lobo.hpp"
+#include "../include/Oveja.hpp"
+#include "../include/Raton.hpp"
+#include "../include/Zorro.hpp"
+#include "../include/print.hpp"
 
+/*
+ * Metodo main que prueba el funcionamieno del juego de ecologia
+ * @param int 		Cantidad de parametros obtenidos en la ejecucion del programa
+ * @param char**	Vector de char* con los parametros enviados en la ejecucion
+*/ 
 int main (int argc, char** argv){
 	//variables necesarias
 	int filas, columnas,dias;
@@ -31,11 +35,11 @@ int main (int argc, char** argv){
 	getline(file, str);
 	columnas = atoi(str.c_str());
 	//inicializacion de la matriz de objetos tipo celda
-//	Celda** tablero = new Celda*[filas];
-//	tablero = nullptr;
-//	for(int f = 0; f < filas;f++ ){
-//		tablero[f] = new Celda[columnas];
-//	}
+	Celda** tablero = new Celda*[filas];
+	
+	for(int f = 0; f < filas;f++ ){
+		tablero[f] = new Celda[columnas];
+	}
 	while (getline(file, str))//Mientras se encuentre texto al leer el archivo guardar cada linea en el string str
 	{
 		stringstream test(str);//construir un objeto stringstream ya que se necesita para leer de el con la funcion getline;

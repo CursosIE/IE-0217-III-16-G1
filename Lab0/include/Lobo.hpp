@@ -7,24 +7,26 @@
 #ifndef LOBO_HPP
 #define LOBO_HPP
 #include <iostream>
+#include "Celda.hpp"
 
 using namespace std;
 
 /*
  * Definicion de clase Lobo
 */
-class Lobo, public Animal{
+class Lobo : public Animal{
 public:
 	//Metodos
 	Lobo(); //Constructor de la clase
-	Lobo(bool nuevoSexo); //Constructor sobrecargado de la clase
-	~Lobo(); //Destructor de la clase
+	Lobo(bool nuevoSexo, Celda** nuevoTablero); //Constructor sobrecargado de la clase
+	virtual ~Lobo(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
-	Lobo& operator^(const Vivos& zacate);//Moverse
-	Lobo& operator+(const Vivos& animal);//Comer
-	Lobo& operator*(const Lobo& Lobo);//Reproducirse 
-	Lobo& operator/(const Lobo& Lobo);//Morir
+	bool operator!();
+	bool operator++();
+	bool operator~();
+	void operator--();
 private:
+	Celda** tablero;
 };
 
 #endif /* LOBO_HPP */

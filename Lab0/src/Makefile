@@ -8,7 +8,7 @@ INCLUDES =  -I../include
 CONFIG = ../config.txt
 DAYS = 50
 
-SRCS= Celda.cpp Animal.cpp Juego.cpp Lobo.cpp Oveja.cpp Raton.cpp Zorro.cpp main.cpp
+SRCS=  main.cpp Celda.cpp Animal.cpp Lobo.cpp Oveja.cpp Raton.cpp Zorro.cpp
 OBJS=$(subst .cc,.o,$(SRCS))
 
 MAIN = ../build/gameOn

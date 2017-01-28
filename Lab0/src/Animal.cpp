@@ -4,13 +4,14 @@
  *@brief  Implementacion de metodos de las clase Animal
 */
 
-#include "Animal.hpp"
+#include "../include/Animal.hpp"
 
 /*
  * Constructor por defecto de la clase Animal
 */ 
 Animal::Animal(){
 	cout << "Creando Animal #" << identificador << endl;
+	ID=identificador; 
 	identificador++;
 }
 
@@ -27,6 +28,13 @@ Animal::~Animal(){
 */ 
 unsigned int Animal::getID(){
 	return ID;
+}
+/*
+ * Metodo set del atributo especie
+ *@param string 	Definicion del Nuevo valor de energia asignado al animal 
+*/ 
+void Animal::setEspecie(string nuevaEspecie){
+	especie=nuevaEspecie;
 }
 
 /*
@@ -54,10 +62,50 @@ short int Animal::getEnergia(){
 }
 
 /*
+ * Metodo set del atributo sexo
+ *@param bool 	Sexo por asignar al animal 
+*/ 
+void Animal::setSexo(bool nuevoSexo){
+	sexo=nuevoSexo;
+}
+
+/*
  * Metodo get del atributo sexo
  *@return bool 	Retorna el sexo del animal de la siguiente forma:
  * False=Macho True=Hembra
 */ 
 bool Animal::getSexo(){
 	return sexo;
+}
+
+/*
+ * Metodo set del atributo fila
+ *@param int 	Nueva asignacion del espacio fila donde se encuentra el animal
+*/ 
+void Animal::setFila(int nuevaFila){
+	this->fila=nuevaFila;
+}
+
+/*
+ * Metodo set del atributo columna
+ *@param int 	Nueva asignacion del espacio columna donde se encuentra el animal
+*/ 
+void Animal::setColumna(int nuevaColumna){
+	this->columna=nuevaColumna;
+}
+
+/*
+ * Metodo get del atributo fila
+ *@return int 	Retorna la fila en la que se encuentra el animal
+*/ 
+int Animal::getFila(){
+	return fila;
+}
+
+/*
+ * Metodo get del atributo columna
+ *@return int 	Retorna la columna en la que se encuentra el animal
+*/ 
+int Animal::getColumna(){
+	return columna;
 }

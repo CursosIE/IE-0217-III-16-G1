@@ -7,24 +7,27 @@
 #ifndef RATON_HPP
 #define RATON_HPP
 #include <iostream>
+#include "Animal.hpp"
+#include "Celda.hpp"
 
 using namespace std;
 
 /*
  * Definicion de clase Raton
 */
-class Raton, public Animal{
+class Raton : public Animal{
 public:
 	//Metodos
 	Raton(); //Constructor de la clase
-	Raton(bool nuevoSexo); //Constructor sobrecargado de la clase
-	~Raton(); //Destructor de la clase
+	Raton(bool nuevoSexo, Celda** nuevoTablero); //Constructor sobrecargado de la clase
+	virtual ~Raton(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
-	Raton& operator^(const Vivos& zacate);//Moverse
-	Raton& operator+(const Vivos& zacate);//Comer
-	Raton& operator*(const Raton& Raton);//Reproducirse 
-	Raton& operator/(const Raton& Raton);//Morir
+	bool operator!();
+	bool operator++();
+	bool operator~();
+	void operator--();
 private:
+	Celda** tablero;
 };
 
 #endif /* RATON_HPP */

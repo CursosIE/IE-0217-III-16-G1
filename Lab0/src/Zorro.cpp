@@ -16,8 +16,10 @@ Zorro::Zorro() {
  * Constructor sobrecargado de la clase Zorro
  * @param bool 	Sexo del Zorro
 */ 
-Zorro::Zorro(bool nuevoSexo, Celda** nuevoTablero) {
-    setEnergia(100); //Definido por el enunciado Regla 1
+Zorro::Zorro(bool nuevoSexo, Celda** nuevoTablero, int tColumnas, int tFilas){
+	this->tableroColum=tColumnas;
+	this->tableroFilas=tFilas;
+    setEnergia(50); //Definido por el enunciado Regla 1
     setSexo(nuevoSexo);
     setEspecie("Zorro");       
 	this-> tablero = nuevoTablero;
@@ -32,12 +34,18 @@ Zorro::~Zorro() {
 /*
  * Metodo moverse del Zorro definido por las regla  
 */ 
-
-/*
- * Metodo moverse del Zorro definido por las regla  
-*/ 
 bool Zorro::operator!(){
-	return true;
+	Celda* vacia=Celda::findEmpty(this, tablero, tableroColum, tableroFilas);
+	if (vacia==NULL){
+		return false;
+	}
+	else{
+		tablero[getColumna()][getFila()].setAnimal(NULL);
+		vacia->setAnimal(this);
+		setColumna(vacia->getColumna());
+		setFila(vacia->getFila());
+		return true;	
+	}
 }
 
 bool Zorro::operator++(){

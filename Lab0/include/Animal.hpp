@@ -15,13 +15,16 @@
 
 using namespace std;
 
-static unsigned int identificador=0; //variable global para generar ID de cada animal
+//variable global para generar ID de cada animal
+static unsigned int identificador=0; 
 
 /*
  * Definicion de clase Animal
 */
 class Animal{
 public:
+	int tableroColum;
+	int tableroFilas;
 	//Metodos
 	Animal(); //Constructor de la clase
 	virtual ~Animal(); //Destructor de la clase

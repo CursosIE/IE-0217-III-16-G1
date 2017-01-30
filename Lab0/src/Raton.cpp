@@ -16,8 +16,10 @@ Raton::Raton() {
  * Constructor sobrecargado de la clase Raton
  * @param bool 	Sexo del Raton
 */ 
-Raton::Raton(bool nuevoSexo, Celda** nuevoTablero) {
-    setEnergia(100); //Definido por el enunciado Regla 1
+Raton::Raton(bool nuevoSexo, Celda** nuevoTablero, int tColumnas, int tFilas){
+	this->tableroColum=tColumnas;
+	this->tableroFilas=tFilas;
+    setEnergia(25); //Definido por el enunciado Regla 1
     setSexo(nuevoSexo);
     setEspecie("Raton");       
 	this-> tablero = nuevoTablero;
@@ -33,7 +35,19 @@ Raton::~Raton() {
  * Metodo moverse del Raton definido por las regla  
 */ 
 bool Raton::operator!(){
-	return true;
+	Celda* vacia=Celda::findEmpty(this, tablero, tableroColum, tableroFilas);
+	if (vacia==NULL){
+		cout<<"No hay espacios vacios ";
+		return false;
+	}
+	else{
+		tablero[getColumna()][getFila()].setAnimal(NULL);
+		vacia->setAnimal(this);
+		setColumna(vacia->getColumna());
+		setFila(vacia->getFila());
+		cout<<"Me movi";
+		return true;	
+	}
 }
 
 bool Raton::operator++(){

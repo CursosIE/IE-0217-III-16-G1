@@ -1,9 +1,9 @@
 # Makefile - Lab0 IE-0217
 CXX= g++
 RM= rm -f
-CXXFLAGS= -Wall -g
+CXXFLAGS= -Wall -g -std=c++11
 CONFIG_FILE= ../include/config.txt 
-DAYS= 50
+DAYS= 10
 SRCS= ../src/main.cpp ../src/Animal.cpp ../src/Celda.cpp ../src/Lobo.cpp ../src/Oveja.cpp ../src/Raton.cpp ../src/Zorro.cpp
 OBJS= $(SRCS:.cpp=.o)
 #Nombre del archivo ejecutable

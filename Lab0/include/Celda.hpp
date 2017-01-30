@@ -19,7 +19,7 @@ class Celda{
 public:
 	//Metodos
 	Celda(); //Constructor de la clase
-	Celda(int nuevaColumna, int nuevaFila, short int nivelZacate, Celda** nuevoTablero, char animal='x', bool sexo=0);
+	Celda(int cantColumnas, int cantFilas, int nuevaColumna, int nuevaFila, short int nivelZacate, Celda** nuevoTablero, char animal='x', bool sexo=0);
 	~Celda(); //Destructor de la clase
 	//metodos set y get de los atributos
 	int getFila();
@@ -27,15 +27,15 @@ public:
 	void setZacate(short int nivelZacate);
 	short int getZacate();
 	void setAnimal(Animal* nuevoAnimal);
-	Animal& getAnimal();
-	short int getContadorDias();
+	Animal* getAnimal();
+	//metodos para el funcionamiento del juego
+	static Celda* findEmpty(Animal* animal, Celda** tableroJuego, int tableroColum, int tableroFilas);
 private:
 	//Atributos
 	int columna;
 	int fila;
 	short int zacate;
 	Animal* animal;
-	short int contadorDias;			
 };
 
 #endif /* CELDA_HPP */

@@ -7,7 +7,6 @@
 #ifndef RATON_HPP
 #define RATON_HPP
 #include <iostream>
-#include "Animal.hpp"
 #include "Celda.hpp"
 
 using namespace std;
@@ -19,7 +18,8 @@ class Raton : public Animal{
 public:
 	//Metodos
 	Raton(); //Constructor de la clase
-	Raton(bool nuevoSexo, Celda** nuevoTablero); //Constructor sobrecargado de la clase
+	 //Constructor sobrecargado de la clase
+	Raton(bool nuevoSexo, Celda** nuevoTablero, int tableroColum, int tableroFilas);
 	virtual ~Raton(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	bool operator!();

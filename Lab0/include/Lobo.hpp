@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Celda.hpp"
 
+
 using namespace std;
 
 /*
@@ -18,7 +19,8 @@ class Lobo : public Animal{
 public:
 	//Metodos
 	Lobo(); //Constructor de la clase
-	Lobo(bool nuevoSexo, Celda** nuevoTablero); //Constructor sobrecargado de la clase
+	//Constructor sobrecargado de la clase
+	Lobo(bool nuevoSexo, Celda** nuevoTablero, int tableroColum, int tableroFilas); 
 	virtual ~Lobo(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	bool operator!();

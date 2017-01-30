@@ -11,9 +11,9 @@ using namespace std;
 
 template <typename T> 
 
-void printVivo(T *serVivo){
-	cout << "Sexo: " << serVivo->getSexo() << 
-	" Energia: " << serVivo->getEnergia() <<
+void printVivo(T* serVivo){
+	cout << "Especie: " << serVivo->getSexo() << 
+	" Sexo: " << serVivo->getSexo() <<
 	" Energia: " << serVivo->getEnergia() << endl; 
 }
 

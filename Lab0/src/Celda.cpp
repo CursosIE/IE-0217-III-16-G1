@@ -5,47 +5,43 @@
 */
 
 #include "../include/Celda.hpp"
-#include "../include/print.hpp"
 #include "../include/Lobo.hpp"
 #include "../include/Oveja.hpp"
 #include "../include/Raton.hpp"
 #include "../include/Zorro.hpp"
 
-
 /*
  * Constructor por defecto de la clase Celda
 */ 
 Celda::Celda(){
-	cout << "Creando Celda" << endl;
 }
 
 /*
  * Constructor sobrecargado de la clase Celda
 */ 
-Celda::Celda(int nuevaColumna, int nuevaFila, short int nivelZacate,  Celda** nuevoTablero, char animal, bool sexo){
+Celda::Celda(int cantColumnas, int cantFilas, int nuevaColumna, int nuevaFila, short int nivelZacate,  Celda** nuevoTablero, char animal, bool sexo){
 	this->columna=nuevaColumna;
 	this->fila=nuevaFila;
 	this->zacate=nivelZacate;
 	if (animal=='L'){
-		Lobo* nuevoLobo = new Lobo(sexo, nuevoTablero); 
+		Lobo* nuevoLobo = new Lobo(sexo, nuevoTablero, cantColumnas, cantFilas); 
 		setAnimal(nuevoLobo);
 	}
 	else if(animal == 'O'){
-		Oveja* nuevaOveja = new Oveja(sexo, nuevoTablero); 
+		Oveja* nuevaOveja = new Oveja(sexo, nuevoTablero, cantColumnas, cantFilas); 
 		setAnimal(nuevaOveja);
 	}
 	else if(animal == 'Z'){
-		Zorro* nuevoZorro = new Zorro(sexo, nuevoTablero); 
+		Zorro* nuevoZorro = new Zorro(sexo, nuevoTablero, cantColumnas, cantFilas); 
 		setAnimal(nuevoZorro);
 	}
 	else if(animal == 'R'){
-		Raton* nuevoRaton = new Raton(sexo, nuevoTablero); 
+		Raton* nuevoRaton = new Raton(sexo, nuevoTablero, cantColumnas, cantFilas); 
 		setAnimal(nuevoRaton);
 	}
 	else{
-		//this->animal=nullptr;
+		this->animal=NULL;
 	}
-	this->contadorDias=0;
 }
 
 /*
@@ -89,14 +85,6 @@ short int Celda::getZacate(){
 }
 
 /*
- * Metodo get del atributo contador de dias
- *@return short int 	Numero de dias que ha estado sin cambios la celda
-*/ 
-short int Celda::getContadorDias(){
-	return contadorDias;
-}
-
-/*
  * Metodo set del atributo animal
  * @param *Animal 	Puntero a una instancia Animal 
 */ 
@@ -106,8 +94,27 @@ void Celda::setAnimal(Animal* nuevoAnimal){
 
 /*
  * Metodo get del atributo animal
- *@return &Animal 	Direccion de memoria del Puntero Animal en la celda
+ *@return Animal& 	Direccion de memoria del Puntero Animal en la celda
 */ 
-Animal& Celda::getAnimal(){
-	return *(this->animal);
+Animal* Celda::getAnimal(){
+	return (this->animal);
+}
+
+/*
+ * Metodo publico que busca la primera celda vacia con respecto a un animal
+ * @param An
+ * 
+ * 
+ * @return Celda* 	Puntero Celda de la celda vacia
+*/
+Celda* Celda::findEmpty(Animal* animal, Celda** tableroJuego, int tableroColumnas, int tableroFilas){
+	Celda* vacia=NULL;
+	for (int i=0;i<tableroFilas;i++){
+		for(int j=0;j<tableroColumnas;j++){
+			if (tableroJuego[i][j].getAnimal() == NULL && abs(animal->getColumna()-j)<=1 && abs(animal->getFila()-i)<=1){
+				vacia=&tableroJuego[i][j];
+			}
+		}
+	}
+	return vacia;
 }

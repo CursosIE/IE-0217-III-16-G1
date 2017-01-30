@@ -7,8 +7,8 @@
 #ifndef ZORRO_HPP
 #define ZORRO_HPP
 #include <iostream>
-#include "Animal.hpp"
 #include "Celda.hpp"
+
 
 using namespace std;
 
@@ -19,7 +19,8 @@ class Zorro : public Animal{
 public:
 	//Metodos
 	Zorro(); //Constructor de la clase
-	Zorro(bool nuevoSexo, Celda** nuevoTablero); //Constructor sobrecargado de la clase
+	//Constructor sobrecargado de la clase
+	Zorro(bool nuevoSexo, Celda** nuevoTablero, int tableroColum, int tableroFilas); 
 	virtual ~Zorro(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	bool operator!();

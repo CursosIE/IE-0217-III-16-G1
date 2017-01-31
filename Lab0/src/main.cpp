@@ -83,8 +83,9 @@ int main(int argc, char *argv[]){
 				if (animal!=NULL){ //si hay un animal
 				//determinar la especie y realizar sus cuatro funciones
 					if (animal->getEspecie()=="Lobo"){
-						if (!animal && !animal){
+						if (!animal){
 							!animal; //los lobos se mueven 3 espacios al dia
+							!animal;
 							cout << "Los lobos se mueven" << endl;
 						}
 					}

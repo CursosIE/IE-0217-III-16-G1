@@ -102,18 +102,114 @@ Animal* Celda::getAnimal(){
 
 /*
  * Metodo publico que busca la primera celda vacia con respecto a un animal
- * @param An
- * 
- * 
- * @return Celda* 	Puntero Celda de la celda vacia
+ * @param Animal* 	Puntero del animal que llama la funcion
+ * @param Celda**	Puntero al tablero sobre el que se juega
+ * @param int 		Cantidad de columnas en el tablero
+ * @param int 		Cantidad de filas en el tablero
+ * @return Celda* 	Puntero a la celda vacia
 */
 Celda* Celda::findEmpty(Animal* animal, Celda** tableroJuego, int tableroColumnas, int tableroFilas){
 	Celda* vacia=NULL;
-	for (int i=0;i<tableroFilas;i++){
-		for(int j=0;j<tableroColumnas;j++){
-			if (tableroJuego[i][j].getAnimal() == NULL && abs(animal->getColumna()-j)<=1 && abs(animal->getFila()-i)<=1){
-				vacia=&tableroJuego[i][j];
+	if (animal->getColumna()==0){
+		if (tableroJuego[animal->getFila()][1].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()+1][1];
+		}
+		else if(animal->getFila()!=tableroFilas){
+			if (tableroJuego[animal->getFila()+1][0].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()+1][0];
 			}
+			else if (tableroJuego[animal->getFila()+1][1].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()+1][0];
+			}
+		}
+		else if(animal->getFila()!=0){
+			if (tableroJuego[animal->getFila()-1][0].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()-1][0];
+			}
+			else if(tableroJuego[animal->getFila()-1][1].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()-1][1];
+			}
+		}
+	}
+	else if (animal->getColumna()==tableroColumnas){
+		if (tableroJuego[animal->getFila()][tableroColumnas-1].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()][tableroColumnas-1];
+		}
+		else if(animal->getFila()!=tableroFilas){
+			if (tableroJuego[animal->getFila()+1][tableroColumnas].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()+1][tableroColumnas];
+			}
+			else if (tableroJuego[animal->getFila()+1][tableroColumnas-1].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()+1][tableroColumnas-1];
+			}
+		}
+		else if(animal->getFila()!=0){
+			if (tableroJuego[animal->getFila()-1][tableroColumnas].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()-1][tableroColumnas];
+			}
+			else if(tableroJuego[animal->getFila()-1][tableroColumnas-1].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()-1][tableroColumnas-1];
+			}
+		}
+	}
+	else if (animal->getFila()==0){
+		if (tableroJuego[1][animal->getColumna()].getAnimal()==NULL){
+			vacia=&tableroJuego[1][animal->getColumna()];
+		}
+		else if(tableroJuego[1][animal->getColumna()+1].getAnimal()==NULL){
+			vacia=&tableroJuego[1][animal->getColumna()+1];
+		}
+		else if(tableroJuego[1][animal->getColumna()-1].getAnimal()==NULL){
+			vacia=&tableroJuego[1][animal->getColumna()-1];
+		}
+		else if(tableroJuego[0][animal->getColumna()+1].getAnimal()==NULL){
+			vacia=&tableroJuego[0][animal->getColumna()+1];
+		}
+		else if(tableroJuego[0][animal->getColumna()-1].getAnimal()==NULL){
+			vacia=&tableroJuego[0][animal->getColumna()-1];
+		}
+	}
+	else if (animal->getFila()==tableroFilas){
+		if (tableroJuego[tableroFilas-1][animal->getColumna()].getAnimal()==NULL){
+			vacia=&tableroJuego[tableroFilas-1][animal->getColumna()];
+		}
+		else if(tableroJuego[tableroFilas-1][animal->getColumna()+1].getAnimal()==NULL){
+			vacia=&tableroJuego[tableroFilas-1][animal->getColumna()+1];
+		}
+		else if(tableroJuego[tableroFilas-1][animal->getColumna()-1].getAnimal()==NULL){
+			vacia=&tableroJuego[tableroFilas-1][animal->getColumna()-1];
+		}
+		else if(tableroJuego[tableroFilas][animal->getColumna()+1].getAnimal()==NULL){
+			vacia=&tableroJuego[tableroFilas][animal->getColumna()+1];
+		}
+		else if(tableroJuego[tableroFilas][animal->getColumna()-1].getAnimal()==NULL){
+			vacia=&tableroJuego[tableroFilas][animal->getColumna()-1];
+		}
+	}
+	else{
+		if(tableroJuego[animal->getFila()-1][animal->getColumna()-1].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()-1][animal->getColumna()-1];
+		}
+		else if(tableroJuego[animal->getFila()-1][animal->getColumna()].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()-1][animal->getColumna()];
+		}
+		else if(tableroJuego[animal->getFila()-1][animal->getColumna()+1].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()-1][animal->getColumna()+1];
+		}
+		else if(tableroJuego[animal->getFila()][animal->getColumna()-1].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()][animal->getColumna()-1];
+		}
+		else if(tableroJuego[animal->getFila()][animal->getColumna()+1].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()][animal->getColumna()+1];
+		}
+		else if(tableroJuego[animal->getFila()+1][animal->getColumna()-1].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()+1][animal->getColumna()-1];
+		}
+		else if(tableroJuego[animal->getFila()+1][animal->getColumna()].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()+1][animal->getColumna()];
+		}
+		else if(tableroJuego[animal->getFila()+1][animal->getColumna()+1].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()+1][animal->getColumna()+1];
 		}
 	}
 	return vacia;

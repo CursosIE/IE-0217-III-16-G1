@@ -1,0 +1,37 @@
+Algoritmo Selection Sort
+
+1) Se determina la longitud de la lista por ordenar (n)
+2) Se recorre la lista buscando el minimo elemento entre la posicion (i) y el final de la lista (n-1)
+3) Se intercambia la el minimo elemento (min) de una posicion (j) a la posicion (i).
+
+Pseudocodigo SS
+
+for i=0 to n-1
+	min = i;
+	for j=i+1 to n
+		if lista[j] < lista[min] 
+			min = j;
+		end if
+	end for
+	interchange(lita[i],lista[min])
+end for
+
+Informacion https://es.wikipedia.org/wiki/Ordenamiento_por_selecci%C3%B3n
+
+Algoritmo Binary Search
+
+1) Sea l=largo de la lista. Sea m=l/2. Sea min=0. Sea max=l-1
+2) Redondear m hacia el entero menor 
+3) Determinar si es el numero en la posicion m es el correcto.
+	3.1) Si lo es. Finalizar
+	3.2) Si no. Preguntar si el numero en m es mayor que el numero buscado
+		3.2.1) Si lo es. max=m
+4)  
+    
+    Si adivinaste el número, detente. ¡Lo encontraste!
+    Si el intento fue demasiado bajo, haz que $ min $ sea uno más grande que el intento.
+    Si el intento fue demasiado alto, haz que $ max $ sea uno más chico que el intento.
+    Regresa al paso dos.
+
+
+	

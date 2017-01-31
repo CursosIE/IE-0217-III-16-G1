@@ -1,7 +1,7 @@
 /*
  *Universidad de Costa Rica - Escuela de Ingenieria Electrica
  *IE-0217 - Lab0 - Grupo01
- *@author Giancarlo Marin, @author Luis Adrian Aguilar, @author Robin 
+ *@author Giancarlo Marin, @author Luis Adrian Aguilar, @author Robin Gonzalez
  *@date   01-26-2017
  *@brief  Clase main que prubea el funconamiento del juego de ecologia
 */

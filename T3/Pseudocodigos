@@ -20,18 +20,37 @@ Informacion https://es.wikipedia.org/wiki/Ordenamiento_por_selecci%C3%B3n
 
 Algoritmo Binary Search
 
-1) Sea l=largo de la lista. Sea m=l/2. Sea min=0. Sea max=l-1
-2) Redondear m hacia el entero menor 
+1) Sea n=numero buscado. Sea l=largo de la lista. Sea min=0. Sea max=l-1
+2) Encontrar la mitad de la lista m=min+max/2. Redondear m hacia el entero menor. 
 3) Determinar si es el numero en la posicion m es el correcto.
 	3.1) Si lo es. Finalizar
 	3.2) Si no. Preguntar si el numero en m es mayor que el numero buscado
-		3.2.1) Si lo es. max=m
-4)  
-    
-    Si adivinaste el número, detente. ¡Lo encontraste!
-    Si el intento fue demasiado bajo, haz que $ min $ sea uno más grande que el intento.
-    Si el intento fue demasiado alto, haz que $ max $ sea uno más chico que el intento.
-    Regresa al paso dos.
+		3.2.1) Si lo es: max=m-1 y l=l/2
+		3.2.2) Si no lo es: min=m+1 y l=m
+4) Repetir desde el paso 2 hasta que l==0
+	4.1) Terminar
 
+Pseudocodigo BS
+
+l = lista.lenght;
+min = 0;
+max = l-1;
+m = floor(min+max/2);
+while (l!=0)
+	if lista(m)==n
+		return m;
+	end if
+	else if lista(m) > n
+		max = m-1;
+		l = floor(l/2);
+		m = floor((min+max)/2));
+	end if
+	else if lista(m) < n
+		min = m+1;
+		l = floor(l/2);
+		m = floor((min+max)/2);
+	end if
+end while
+return 0;
 
 	

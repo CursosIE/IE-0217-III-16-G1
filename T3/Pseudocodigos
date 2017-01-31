@@ -26,7 +26,7 @@ Algoritmo Binary Search
 	3.1) Si lo es. Finalizar
 	3.2) Si no. Preguntar si el numero en m es mayor que el numero buscado
 		3.2.1) Si lo es: max=m-1 y l=l/2
-		3.2.2) Si no lo es: min=m+1 y l=m
+		3.2.2) Si no lo es: min=m+1 y l=l/2
 4) Repetir desde el paso 2 hasta que l==0
 	4.1) Terminar
 
@@ -42,15 +42,16 @@ while (l!=0)
 	end if
 	else if lista(m) > n
 		max = m-1;
-		l = floor(l/2);
+		lista = lista[min:max];
+		l = lista.lenght;
 		m = floor((min+max)/2));
 	end if
 	else if lista(m) < n
 		min = m+1;
-		l = floor(l/2);
+		lista = lista[min:max];
+		l = lista.lenght;
 		m = floor((min+max)/2);
 	end if
 end while
 return 0;
-
 	

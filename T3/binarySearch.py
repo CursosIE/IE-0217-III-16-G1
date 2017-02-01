@@ -21,16 +21,16 @@ print(doc.read())
 
 #lis = doc.readline() # GUARDO LINEAS EN VARIABLE cad
 #lista = list(lis.split( )) # TRANSFORMO A LISTA
-print "\t"
-print lista
 if algoritmo == 'ss' or algoritmo == 'SS':
 	for i in xrange(len(lista)):
-		min = i
-		j = min +1
-		for j in xrange(len(lista)-1):
+		mi = i
+		for j in range((i+1),len(lista)-1):
 			if lista[j] < lista[i]:
-				min = j
-		lista[min],lista[i] = lista[i],lista[min]#intercambio de elementos de una lista
+				mi = j
+		temp = lista[mi]
+		lista[mi] = lista[i] 
+		lista[i] = temp
+#		lista[mi],lista[i] = lista[i],lista[mi]#intercambio de elementos de una lista
 	print "Lista ordenada: \t", lista
 
 if algoritmo == 'bs' or algoritmo == 'BS':
@@ -90,5 +90,4 @@ while (l!=0):
 		l = lista.lenght;
 		m = floor((min+max)/2); 
 
-"""
 

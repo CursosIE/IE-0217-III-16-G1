@@ -1,7 +1,16 @@
-import math
+# -*- coding: utf-8 -*-
+import math, sys, math, time
+
+args = sys.argv[1:]#lee argumentos pasados al ejecutable
+algoritmo =  args[0]#el primer argumento es el tipo de algoritmo
+archivo =  args[1]#el segundo argumento es el nombre del archivo que contiene la lista
+
+print algoritmo
+print archivo
 
 
-doc = open('lista.txt', 'r')
+
+doc = open(archivo, 'r')
 
 print('>>> Lectura completa del fichero')
 print(doc.read())

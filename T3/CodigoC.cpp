@@ -24,7 +24,7 @@ void printVec(vector<int> a, int largo){
 int main (int argc, char** argv){
 	string algoritmo = argv[1];
 	ifstream archivo(argv[2]); 
-	if(!algoritmo.compare("ss")){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
+	if(!(algoritmo.compare("ss")||algoritmo.compare("SS"))){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
 		int i = 0;
 		while(getline(archivo, leido,' ')){
 //			entrada[i] = atoi(leido.c_str());
@@ -43,7 +43,7 @@ int main (int argc, char** argv){
 		printVec(lista, i);//aquí el vector ya debería estar ordenado
 	}
 
-	if(!algoritmo.compare("bs")){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
+	if(!(algoritmo.compare("bs")||algoritmo.compare("BS"))){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
 		//AQUI VA EL BINARY SORT EN C++
 	}
 

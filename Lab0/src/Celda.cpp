@@ -48,7 +48,7 @@ Celda::Celda(int cantColumnas, int cantFilas, int nuevaColumna, int nuevaFila, s
  * Destructor por defecto de la clase Celda
 */ 
 Celda::~Celda(){
-	cout << "Destruyendo Celda " << fila << " " << columna << " y sus componentes:" << endl;
+	cout << "Destruyendo Celda " << fila << " " << columna << endl;
 	delete this->animal;
 }
 
@@ -101,118 +101,197 @@ Animal* Celda::getAnimal(){
 }
 
 /*
- * Metodo publico que busca la primera celda vacia con respecto a un animal
+ * Metodo publico que busca un selec en especifico: 
+ * a) NULL = Primer Celda Vacía adyacente		b) Raton* = Primer Raton adyacente	c) Animal* = Primer Animal adyacente
  * @param Animal* 	Puntero del animal que llama la funcion
  * @param Celda**	Puntero al tablero sobre el que se juega
  * @param int 		Cantidad de columnas en el tablero
  * @param int 		Cantidad de filas en el tablero
- * @return Celda* 	Puntero a la celda vacia
+ * @param char		Selector del tipo de selec que se busca: 0->NULL, 1->R, 2->Z, 3->O, 4->LM, 5->RM, 6->ZM, 8->OM, 9->LH, 10->RH, 11->ZH, 12->OH 
+ * @return Celda* 	Puntero a la celda buscada y en caso de no encontrarla NULL
 */
-Celda* Celda::findEmpty(Animal* animal, Celda** tableroJuego, int tableroColumnas, int tableroFilas){
-	Celda* vacia=NULL;
+Celda* Celda::find(Animal* animal, Celda** tableroJuego, int tableroColumnas, int tableroFilas, string selec){
 	int filas = tableroFilas - 1;
 	int columnas = tableroColumnas - 1;
-	if (animal->getColumna()==0){
-		if (tableroJuego[animal->getFila()][1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()][1];
-		}
-		else if(animal->getFila()!=filas){
-			if (tableroJuego[animal->getFila()+1][0].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()+1][0];
-			}
-			else if (tableroJuego[animal->getFila()+1][1].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()+1][1];
-			}
-		}
-		else if(animal->getFila()!=0){
-			if (tableroJuego[animal->getFila()-1][0].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()-1][0];
-			}
-			else if(tableroJuego[animal->getFila()-1][1].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()-1][1];
-			}
-		}
+	int miFila = animal->getFila();
+	int miColumna = animal->getColumna();
+	Celda* vacia = NULL;
+	Celda* objeto = NULL;
+	int opt;
+	if (selec == "N"){ //Selector de tipo de busquedas
+		opt = 0;
 	}
-	else if (animal->getColumna()==columnas){
-		if (tableroJuego[animal->getFila()][columnas-1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()][columnas-1];
-		}
-		else if(animal->getFila()!=filas){
-			if (tableroJuego[animal->getFila()+1][columnas].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()+1][columnas];
-			}
-			else if (tableroJuego[animal->getFila()+1][columnas-1].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()+1][columnas-1];
-			}
-		}
-		else if(animal->getFila()!=0){
-			if (tableroJuego[animal->getFila()-1][columnas].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()-1][columnas];
-			}
-			else if(tableroJuego[animal->getFila()-1][columnas-1].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()-1][columnas-1];
-			}
-		}
-	}
-	else if (animal->getFila()==0){
-		if (tableroJuego[1][animal->getColumna()].getAnimal()==NULL){
-			vacia=&tableroJuego[1][animal->getColumna()];
-		}
-		else if(tableroJuego[1][animal->getColumna()+1].getAnimal()==NULL){
-			vacia=&tableroJuego[1][animal->getColumna()+1];
-		}
-		else if(tableroJuego[1][animal->getColumna()-1].getAnimal()==NULL){
-			vacia=&tableroJuego[1][animal->getColumna()-1];
-		}
-		else if(tableroJuego[0][animal->getColumna()+1].getAnimal()==NULL){
-			vacia=&tableroJuego[0][animal->getColumna()+1];
-		}
-		else if(tableroJuego[0][animal->getColumna()-1].getAnimal()==NULL){
-			vacia=&tableroJuego[0][animal->getColumna()-1];
-		}
-	}
-	else if (animal->getFila()==filas){
-		if (tableroJuego[filas-1][animal->getColumna()].getAnimal()==NULL){
-			vacia=&tableroJuego[filas-1][animal->getColumna()];
-		}
-		else if(tableroJuego[filas-1][animal->getColumna()+1].getAnimal()==NULL){
-			vacia=&tableroJuego[filas-1][animal->getColumna()+1];
-		}
-		else if(tableroJuego[filas-1][animal->getColumna()-1].getAnimal()==NULL){
-			vacia=&tableroJuego[filas-1][animal->getColumna()-1];
-		}
-		else if(tableroJuego[filas][animal->getColumna()+1].getAnimal()==NULL){
-			vacia=&tableroJuego[filas][animal->getColumna()+1];
-		}
-		else if(tableroJuego[filas][animal->getColumna()-1].getAnimal()==NULL){
-			vacia=&tableroJuego[filas][animal->getColumna()-1];
-		}
+	else if (selec == "R" || selec == "Z" || selec == "O"){
+		opt = 1;
 	}
 	else{
-		if(tableroJuego[animal->getFila()-1][animal->getColumna()-1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()-1][animal->getColumna()-1];
-		}
-		else if(tableroJuego[animal->getFila()-1][animal->getColumna()].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()-1][animal->getColumna()];
-		}
-		else if(tableroJuego[animal->getFila()-1][animal->getColumna()+1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()-1][animal->getColumna()+1];
-		}
-		else if(tableroJuego[animal->getFila()][animal->getColumna()-1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()][animal->getColumna()-1];
-		}
-		else if(tableroJuego[animal->getFila()][animal->getColumna()+1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()][animal->getColumna()+1];
-		}
-		else if(tableroJuego[animal->getFila()+1][animal->getColumna()-1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()+1][animal->getColumna()-1];
-		}
-		else if(tableroJuego[animal->getFila()+1][animal->getColumna()].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()+1][animal->getColumna()];
-		}
-		else if(tableroJuego[animal->getFila()+1][animal->getColumna()+1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()+1][animal->getColumna()+1];
-		}
+		opt = 2;
 	}
-	return vacia;
+	const char* temp = selec.c_str(); //Uso en el caso 1
+	switch (opt){
+	case 0:
+		//Busqueda de espacios vacios
+		if (vacia == NULL && miFila != 0){
+			if (tableroJuego[miFila - 1][miColumna].getAnimal() == NULL){
+				vacia = &tableroJuego[miFila - 1][miColumna];
+			}
+		}
+		if (vacia == NULL && miFila != filas){
+			if (tableroJuego[miFila + 1][miColumna].getAnimal() == NULL){
+				vacia = &tableroJuego[miFila + 1][miColumna];
+			}
+		}
+		if (vacia == NULL && miColumna != 0){
+			if (tableroJuego[miFila][miColumna - 1].getAnimal() == NULL){
+				vacia = &tableroJuego[miFila][miColumna - 1];
+			}
+		}
+		if (vacia == NULL && miColumna != columnas){
+			if (tableroJuego[miFila][miColumna + 1].getAnimal() == NULL){
+				vacia = &tableroJuego[miFila][miColumna + 1];
+			}
+		}
+		if (vacia == NULL && miFila != 0 && miColumna != 0){
+			if (tableroJuego[miFila - 1][miColumna - 1].getAnimal() == NULL){
+				vacia = &tableroJuego[miFila - 1][miColumna - 1];
+			}
+		}
+		if (vacia == NULL && miFila != 0 && miColumna != columnas){
+			if (tableroJuego[miFila - 1][miColumna + 1].getAnimal() == NULL){
+				vacia = &tableroJuego[miFila - 1][miColumna + 1];
+			}
+		}
+		if (vacia == NULL && miFila != filas && miColumna != 0){
+			if (tableroJuego[miFila + 1][miColumna - 1].getAnimal() == NULL){
+				vacia = &tableroJuego[miFila + 1][miColumna - 1];
+			}
+		}
+		if (vacia == NULL && miFila != filas && miColumna != columnas){
+			if (tableroJuego[miFila + 1][miColumna + 1].getAnimal() == NULL){
+				vacia = &tableroJuego[miFila + 1][miColumna + 1];
+			}
+		}
+		return vacia;
+		break;
+	case 1:
+		//Busqueda de animal sin impotar sexo
+		if (objeto == NULL && miFila != 0){
+			if (tableroJuego[miFila - 1][miColumna].getAnimal() != NULL){
+				if (tableroJuego[miFila - 1][miColumna].getAnimal()->getEspecie()[0] == temp[0]){
+					objeto = &tableroJuego[miFila - 1][miColumna];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != filas){
+			if (tableroJuego[miFila + 1][miColumna].getAnimal() != NULL){
+				if (tableroJuego[miFila + 1][miColumna].getAnimal()->getEspecie()[0] == temp[0]){
+					objeto = &tableroJuego[miFila + 1][miColumna];
+				}
+			}
+		}
+		if (objeto == NULL && miColumna != 0){
+			if (tableroJuego[miFila][miColumna - 1].getAnimal() != NULL){
+				if (tableroJuego[miFila][miColumna - 1].getAnimal()->getEspecie()[0] == temp[0]){
+					objeto = &tableroJuego[miFila][miColumna - 1];
+				}
+			}
+		}
+		if (objeto == NULL && miColumna != columnas){
+			if (tableroJuego[miFila][miColumna + 1].getAnimal() != NULL){
+				if (tableroJuego[miFila][miColumna + 1].getAnimal()->getEspecie()[0] == temp[0]){
+					objeto = &tableroJuego[miFila][miColumna + 1];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != 0 && miColumna != 0){
+			if (tableroJuego[miFila - 1][miColumna - 1].getAnimal() != NULL){
+				if (tableroJuego[miFila - 1][miColumna - 1].getAnimal()->getEspecie()[0] == temp[0]){
+					objeto = &tableroJuego[miFila - 1][miColumna - 1];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != 0 && miColumna != columnas){
+			if (tableroJuego[miFila - 1][miColumna + 1].getAnimal() != NULL){
+				if (tableroJuego[miFila - 1][miColumna + 1].getAnimal()->getEspecie()[0] == temp[0]){
+					objeto = &tableroJuego[miFila - 1][miColumna + 1];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != filas && miColumna != 0){
+			if (tableroJuego[miFila + 1][miColumna - 1].getAnimal() != NULL){
+				if (tableroJuego[miFila + 1][miColumna - 1].getAnimal()->getEspecie()[0] == temp[0]){
+					objeto = &tableroJuego[miFila + 1][miColumna - 1];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != filas && miColumna != columnas){
+			if (tableroJuego[miFila + 1][miColumna + 1].getAnimal() != NULL){
+				if (tableroJuego[miFila + 1][miColumna + 1].getAnimal()->getEspecie()[0] == temp[0]){
+					objeto = &tableroJuego[miFila + 1][miColumna + 1];
+				}
+			}
+		}
+		return objeto;
+		break;
+	case 2:
+		//Busqueda de animal con sexo
+		if (objeto == NULL && miFila != 0){
+			if (tableroJuego[miFila - 1][miColumna].getAnimal() != NULL){
+				if (&(tableroJuego[miFila - 1][miColumna].getAnimal()->getEspecie()[0]) + tableroJuego[miFila - 1][miColumna].getAnimal()->getSexo() == selec){
+					objeto = &tableroJuego[miFila - 1][miColumna];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != filas){
+			if (tableroJuego[miFila + 1][miColumna].getAnimal() != NULL){
+				if (&(tableroJuego[miFila + 1][miColumna].getAnimal()->getEspecie()[0]) + tableroJuego[miFila + 1][miColumna].getAnimal()->getSexo() == selec){
+					objeto = &tableroJuego[miFila + 1][miColumna];
+				}
+			}
+		}
+		if (objeto == NULL && miColumna != 0){
+			if (tableroJuego[miFila][miColumna - 1].getAnimal() != NULL){
+				if (&(tableroJuego[miFila][miColumna - 1].getAnimal()->getEspecie()[0]) + tableroJuego[miFila][miColumna - 1].getAnimal()->getSexo() == selec){
+					objeto = &tableroJuego[miFila][miColumna - 1];
+				}
+			}
+		}
+		if (objeto == NULL && miColumna != columnas){
+			if (tableroJuego[miFila][miColumna + 1].getAnimal() != NULL){
+				if (&(tableroJuego[miFila][miColumna + 1].getAnimal()->getEspecie()[0]) + tableroJuego[miFila][miColumna + 1].getAnimal()->getSexo() == selec){
+					objeto = &tableroJuego[miFila][miColumna + 1];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != 0 && miColumna != 0){
+			if (tableroJuego[miFila - 1][miColumna - 1].getAnimal() != NULL){
+				if (&(tableroJuego[miFila - 1][miColumna - 1].getAnimal()->getEspecie()[0]) + tableroJuego[miFila - 1][miColumna - 1].getAnimal()->getSexo() == selec){
+					objeto = &tableroJuego[miFila - 1][miColumna - 1];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != 0 && miColumna != columnas){
+			if (tableroJuego[miFila - 1][miColumna + 1].getAnimal() != NULL){
+				if (&(tableroJuego[miFila - 1][miColumna + 1].getAnimal()->getEspecie()[0]) + tableroJuego[miFila - 1][miColumna + 1].getAnimal()->getSexo() == selec){
+					objeto = &tableroJuego[miFila - 1][miColumna + 1];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != filas && miColumna != 0){
+			if (tableroJuego[miFila + 1][miColumna - 1].getAnimal() != NULL){
+				if (&(tableroJuego[miFila + 1][miColumna - 1].getAnimal()->getEspecie()[0]) + tableroJuego[miFila + 1][miColumna - 1].getAnimal()->getSexo() == selec){
+					objeto = &tableroJuego[miFila + 1][miColumna - 1];
+				}
+			}
+		}
+		if (objeto == NULL && miFila != filas && miColumna != columnas){
+			if (tableroJuego[miFila + 1][miColumna + 1].getAnimal() != NULL){
+				if (&(tableroJuego[miFila + 1][miColumna + 1].getAnimal()->getEspecie()[0]) + tableroJuego[miFila + 1][miColumna + 1].getAnimal()->getSexo() == selec){
+					objeto = &tableroJuego[miFila + 1][miColumna + 1];
+				}
+			}
+		}
+		return objeto;
+		break;
+	}
 }

@@ -32,7 +32,7 @@ public:
 	//Sobrecarga de operadores para funcionamiento de funciones
 	//True=Si realizo la funcion o FALSE de lo contrario
 	virtual bool operator!()=0;//Moverse
-	virtual bool operator++()=0;//Comer
+	virtual Animal* operator++()=0;//Comer
 	virtual bool operator~()=0;//Reproducirse 
 	virtual void operator--()=0;//Morir
 	//metodos set y get de los atributos

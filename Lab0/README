@@ -1,0 +1,28 @@
+------ LABORATORIO 0 - G1 -----
+
+JUEGO DE ECOLOGIA:
+	
+	Para compilar y correr este programa:
+
+		1) Se debe ingresar a la carpeta build/
+		2) Desde la linea de comandos se debe compilar el programa con el Makefile 
+		>> make Juego
+		3) Se corre el archivo ejecutable Juego
+		>> make run
+		4) Se limpian los archivos intermedios con
+		>> make clean
+
+	Para mas documentacion:
+		1) Pagina web por doxygen index.html
+		>> cd Documents/html/
+		>> /usr/bin/firefox index.html
+
+DESARROLLADO POR:
+
+	Giancarlo Marin
+
+	Adrian Aguilar 
+
+	Robin González 
+
+

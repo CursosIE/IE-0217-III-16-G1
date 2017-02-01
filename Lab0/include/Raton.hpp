@@ -23,7 +23,7 @@ public:
 	virtual ~Raton(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	bool operator!();
-	bool operator++();
+	Animal* operator++();
 	bool operator~();
 	void operator--();
 private:

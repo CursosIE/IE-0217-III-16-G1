@@ -38,9 +38,10 @@ Oveja::~Oveja() {
 
 /*
  * Metodo moverse de la oveja
+ *@return bool	Indicacion de si existio o no movimiento del Raton
 */ 
 bool Oveja::operator!(){
-	Celda* vacia=Celda::findEmpty(this, tablero, tableroColum, tableroFilas);
+	Celda* vacia=Celda::find(this, tablero, tableroColum, tableroFilas, "N");
 	if (vacia==NULL){
 		return false;
 	}
@@ -53,8 +54,22 @@ bool Oveja::operator!(){
 	}
 }
 
-bool Oveja::operator++(){
-	return true;
+/*
+ *Metodo comer de la Oveja utilizando un operador unario ++. Regla 9 del Juego
+ *@return Animal*	Puntero a la Oveja
+*/
+Animal* Oveja::operator++(){
+	if (tablero[getFila()][getColumna()].getZacate() > 0){
+		tablero[getFila()][getColumna()].setZacate(tablero[getFila()][getColumna()].getZacate() - 10);
+		if (tablero[getFila()][getColumna()].getZacate() < 0){
+			tablero[getFila()][getColumna()].setZacate(0);
+		}
+		setEnergia(getEnergia() + 10);
+		if (this->getEnergia() > 100){ //Regla 7
+			this->setEnergia(100);
+		}
+	}
+	return tablero[getFila()][getColumna()].getAnimal();
 }
 
 bool Oveja::operator~(){

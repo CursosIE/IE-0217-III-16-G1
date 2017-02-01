@@ -8,6 +8,7 @@
 #define CELDA_HPP
 #include <iostream>
 #include <cstdlib>
+#include <typeinfo>
 #include "Animal.hpp"
 
 using namespace std;
@@ -29,7 +30,7 @@ public:
 	void setAnimal(Animal* nuevoAnimal);
 	Animal* getAnimal();
 	//metodos para el funcionamiento del juego
-	static Celda* findEmpty(Animal* animal, Celda** tableroJuego, int tableroColum, int tableroFilas);
+	static Celda* find(Animal* animal, Celda** tableroJuego, int tableroColum, int tableroFilas, string selec);
 private:
 	//Atributos
 	int columna;

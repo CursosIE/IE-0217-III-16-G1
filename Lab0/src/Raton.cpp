@@ -37,10 +37,11 @@ Raton::~Raton() {
 }
 
 /*
- * Metodo moverse del Raton definido por las regla  
+ *Metodo moverse del Raton definido por las regla  
+ *@return bool	Indicacion de si existio o no movimiento del Raton 
 */ 
 bool Raton::operator!(){
-	Celda* vacia=Celda::findEmpty(this, tablero, tableroColum, tableroFilas);
+	Celda* vacia=Celda::find(this, tablero, tableroColum, tableroFilas, "N");
 	if (vacia==NULL){
 		return false;
 	}
@@ -53,8 +54,22 @@ bool Raton::operator!(){
 	}
 }
 
-bool Raton::operator++(){
-	return true;
+/*
+ *Metodo comer del Raton utilizando un operador unario ++. Regla 10 del Juego
+ *@return Animal*	Puntero al Raton
+*/
+Animal* Raton::operator++(){
+	if (tablero[getFila()][getColumna()].getZacate() > 0){
+		tablero[getFila()][getColumna()].setZacate(tablero[getFila()][getColumna()].getZacate() - 5);
+		if (tablero[getFila()][getColumna()].getZacate() < 0){
+			tablero[getFila()][getColumna()].setZacate(0);
+		}
+		setEnergia(getEnergia() + 5);
+		if (this->getEnergia() > 100){ //Regla 7
+			this->setEnergia(100);
+		}
+	}
+	return tablero[getFila()][getColumna()].getAnimal();
 }
 
 bool Raton::operator~(){

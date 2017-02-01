@@ -66,27 +66,31 @@ int main(int argc, char *argv[]){
 		contDias++;
 		for (int i=0;i<tFilas;i++){
 			for (int j=0;j<tColumnas;j++){
-				Animal* animal=tablero[i][j].getAnimal(); //puntero al animal de la celda
+				Animal* animal=tablero[i][j].getAnimal(); //puntero al animal de la celda|
 				if (animal!=NULL && !(animal->actueHoy)){ //si hay un animal y no ha actuado hoy
-				//determinar la especie y realizar sus cuatro funciones
+				//determinar la especie y realizar sus cuatro funciones (Moverse, Comer, Reproducirse, Morir)
 					if (animal->getEspecie()=="Lobo"){
 						if (!(*animal)){
 							!(*animal); 
 							!(*animal);//los lobos se mueven 3 espacios al dia
 						}
+						animal=++(*animal);
 					}
 					else if (animal->getEspecie()=="Oveja"){
 						if (!(*animal)){
 							!(*animal); //las ovejas se mueven 2 espacios al dia
 						}
+						animal=++(*animal);
 					}
 					else if(animal->getEspecie()=="Zorro"){
 						if (!(*animal)){
 							!(*animal); //los zorros se mueven 2 espacios al dia
 						}
+						animal=++(*animal);
 					}
 					else{
 						!(*animal); //los ratones se mueven 1 espacio al dia
+						animal=++(*animal);
 					}
 					
 				//Regla 5: La energia del animal se disminuye en 1 por dia
@@ -128,6 +132,14 @@ int main(int argc, char *argv[]){
 		}
 		dias--;
 	}
+	//Liberacion de memoria
+	cout << "LIBERANDO MEMORIA..." << endl;
+	for (int i = 0; i<tFilas; i++){
+		for (int j = 0; j < tColumnas; j++){
+			tablero[i][j].~Celda();
+		}
+	}
+	delete tablero;
 	cout << "----FINAL----" << endl;
 	return 0;
 }

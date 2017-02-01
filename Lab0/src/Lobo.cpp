@@ -37,10 +37,11 @@ Lobo::~Lobo() {
 }
 
 /*
- * Metodo moverse del Lobo definido por las regla  
+ * Metodo moverse del Lobo utilizando un operador unario 
+ *@return bool	Indicacion de si existio o no movimiento del Lobo
 */ 
 bool Lobo::operator!(){
-	Celda* vacia=Celda::findEmpty(this, tablero, tableroColum, tableroFilas);
+	Celda* vacia=Celda::find(this, tablero, tableroColum, tableroFilas, "N");
 	if (vacia==NULL){
 		return false;
 	}
@@ -53,8 +54,58 @@ bool Lobo::operator!(){
 	}
 }
 
-bool Lobo::operator++(){
-	return true;
+/*
+ * Metodo comer del Lobo utilizando un operador unario segun regla 12
+ * @return Animal*		El puntero al Lobo
+ */
+Animal* Lobo::operator++(){
+	int randNum = this->getID() + this->getColumna() + rand() % 100; //numero random para determinar la preferencia de alimento del lobo
+	string pref = "x";
+	Celda* comida = NULL;
+	if (randNum < 40){
+		pref = 'R';
+		comida = Celda::find(this, tablero, tableroColum, tableroFilas, pref);
+	}
+	else if (randNum < 80){
+		pref = 'Z';
+		comida = Celda::find(this, tablero, tableroColum, tableroFilas, pref);
+	}
+	else {
+		pref = 'O';
+		comida = Celda::find(this, tablero, tableroColum, tableroFilas, pref);
+	}
+	int i = 0;//indice del ciclo de busqueda
+	while (comida == NULL && i < 2){
+		if (pref == "R"){
+			pref = 'Z';
+			comida = Celda::find(this, tablero, tableroColum, tableroFilas, pref);
+		}
+		else if (pref == "Z"){
+			pref = 'O';
+			comida = Celda::find(this, tablero, tableroColum, tableroFilas, pref);
+		}
+		else{
+			pref = 'R';
+			comida = Celda::find(this, tablero, tableroColum, tableroFilas, pref);
+		}
+		i++;
+	}
+	if (comida != NULL){
+		if (pref == "R"){
+			this->setEnergia(this->getEnergia() + 2);
+		}
+		else if (pref == "Z"){
+			this->setEnergia(this->getEnergia() + 5);
+		}
+		else {
+			this->setEnergia(this->getEnergia() + 10);
+		}
+		if (this->getEnergia() > 100){ //Regla 7
+			this->setEnergia(100);
+		}
+		comida->setAnimal(NULL); //se elimina el animal comido
+	}
+	return tablero[getFila()][getColumna()].getAnimal();
 }
 
 bool Lobo::operator~(){

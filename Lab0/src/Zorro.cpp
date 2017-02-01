@@ -5,6 +5,7 @@
 */
 
 #include "../include/Zorro.hpp"
+#include "../include/Raton.hpp"
 
 /*
  *Constructor por defecto de la clase Zorro
@@ -37,10 +38,11 @@ Zorro::~Zorro() {
 }
 
 /*
- * Metodo moverse del Zorro definido por las regla  
+ * Metodo moverse del Zorro
+ * @return bool		Indicacion de si existio o no movimiento del Zorro
 */ 
 bool Zorro::operator!(){
-	Celda* vacia=Celda::findEmpty(this, tablero, tableroColum, tableroFilas);
+	Celda* vacia=Celda::find(this, tablero, tableroColum, tableroFilas, "N");
 	if (vacia==NULL){
 		return false;
 	}
@@ -53,8 +55,20 @@ bool Zorro::operator!(){
 	}
 }
 
-bool Zorro::operator++(){
-	return true;
+/*
+* Metodo comer del Zorro utilizando un operador unario segun regla 11
+* @return Animal*		El puntero al Zorro
+*/
+Animal* Zorro::operator++(){
+	Celda* comida = Celda::find(this, tablero, tableroColum, tableroFilas, "R");
+	if (comida != NULL){
+		this->setEnergia(this->getEnergia() + 2);
+		if (this->getEnergia() > 100){ //Regla 7
+			this->setEnergia(100);
+		}
+		comida->setAnimal(NULL); //se elimina el raton comido
+	}
+	return tablero[getFila()][getColumna()].getAnimal();
 }
 
 bool Zorro::operator~(){

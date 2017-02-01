@@ -22,7 +22,8 @@ print(doc.read())
 #lis = doc.readline() # GUARDO LINEAS EN VARIABLE cad
 #lista = list(lis.split( )) # TRANSFORMO A LISTA
 if algoritmo == 'ss' or algoritmo == 'SS':
-	for i in xrange(len(lista)):
+	inicial = time()
+	for i in xrange(len(lista)):#Selection sort
 		mi = i
 		for j in range((i+1),len(lista)-1):
 			if lista[j] < lista[i]:
@@ -32,9 +33,24 @@ if algoritmo == 'ss' or algoritmo == 'SS':
 		lista[i] = temp
 #		lista[mi],lista[i] = lista[i],lista[mi]#intercambio de elementos de una lista
 	print "Lista ordenada: \t", lista
+	final = time() 
+	ejecucion = final - inicial
+	print 'Tiempo de ejecucion de selection sort en python: ', ejecucion
 
 if algoritmo == 'bs' or algoritmo == 'BS':
-	pass
+	inicial = time()
+	#AQUI VA EL CODIGO DEL BINARY SEARCH
+	final = time() 
+	ejecucion = final - inicial
+	print 'Tiempo de ejecucion de binary search en python: ', ejecucion
+
+
+
+
+
+
+
+
 #f=file("lista.txt", "r")
 
 #content=f.read().splitlines()

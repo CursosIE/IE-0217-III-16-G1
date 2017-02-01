@@ -10,7 +10,6 @@
  * Constructor por defecto de la clase Animal
 */ 
 Animal::Animal(){
-	cout << "Creando Animal #" << identificador << endl;
 	ID=identificador; 
 	identificador++;
 }
@@ -63,18 +62,18 @@ short int Animal::getEnergia(){
 
 /*
  * Metodo set del atributo sexo
- *@param bool 	Sexo por asignar al animal 
+ *@param char 	Sexo por asignar al animal 
 */ 
-void Animal::setSexo(bool nuevoSexo){
+void Animal::setSexo(char nuevoSexo){
 	sexo=nuevoSexo;
 }
 
 /*
  * Metodo get del atributo sexo
- *@return bool 	Retorna el sexo del animal de la siguiente forma:
- * False=Macho True=Hembra
+ * @return char* 	Retorna el sexo del animal de la siguiente forma:
+ * M=Macho H=Hembra
 */ 
-bool Animal::getSexo(){
+char Animal::getSexo(){
 	return sexo;
 }
 

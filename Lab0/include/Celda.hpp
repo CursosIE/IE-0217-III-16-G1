@@ -19,7 +19,7 @@ class Celda{
 public:
 	//Metodos
 	Celda(); //Constructor de la clase
-	Celda(int cantColumnas, int cantFilas, int nuevaColumna, int nuevaFila, short int nivelZacate, Celda** nuevoTablero, char animal='x', bool sexo=0);
+	Celda(int cantColumnas, int cantFilas, int nuevaColumna, int nuevaFila, short int nivelZacate, Celda** nuevoTablero, char animal, char sexo);
 	~Celda(); //Destructor de la clase
 	//metodos set y get de los atributos
 	int getFila();

@@ -20,7 +20,7 @@ public:
 	//Metodos
 	Oveja(); //Constructor de la clase
 	//Constructor sobrecargado de la clase
-	Oveja(bool nuevoSexo, Celda** nuevoTablero, int tableroColum, int tableroFilas); 
+	Oveja(char nuevoSexo, Celda** nuevoTablero, int nuevFila, int nuevaColumna, int tColumnas, int tFilas);
 	virtual ~Oveja(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	bool operator!();

@@ -9,11 +9,6 @@
 #include "../include/Celda.hpp"
 #include "../include/print.hpp"
 
-//Variables globales que indican las filas, columnas y tablero de juego
-static int tFilas=0;
-static int tColumnas=0;
-static Celda** tablero=NULL;
-
 /*
  * Metodo main que prueba el funcionamieno del juego de ecologia
  * @param int 		Cantidad de parametros obtenidos en la ejecucion del programa
@@ -22,21 +17,21 @@ static Celda** tablero=NULL;
 int main(int argc, char *argv[]){
 	int dias, fila, columna;
 	short int zacate;
-	bool genero;
 	char animal, sexo;
 	dias = atoi(argv[1]);
 	//lectura del archivo de configuracion del juego
 	ifstream file(argv[2]); 
 	string str,temp;
 	getline(file, str);
-	tFilas = atoi(str.c_str());//.c_srt() método para convertir string a vector de caracteres
+	int tFilas = atoi(str.c_str());//.c_srt() método para convertir string a vector de caracteres
 	getline(file, str);
-	tColumnas = atoi(str.c_str());
+	int tColumnas = atoi(str.c_str());
 	//inicializacion de la matriz de objetos tipo celda
-	tablero = new Celda*[tFilas];
+	Celda** tablero = new Celda*[tFilas];
 	for(int i=0; i<tFilas;i++){
 		tablero[i] = new Celda[tColumnas];
 	}
+	cout << "----ESTADO INICIAL----" << endl;
 	while (getline(file, str))//Mientras se encuentre texto al leer el archivo guardar cada linea en el string str
 	{
 		stringstream test(str);
@@ -51,65 +46,55 @@ int main(int argc, char *argv[]){
 		if(temp != "\0"){
 			//si existe animal
 			animal = temp[0];
-			sexo = (int) temp[1];
-			if(sexo == 72){
-				//el char 'H' tiene el valor entero:  72 que indica genero femenino (TRUE)
-				genero = 1;
-			}
-			else{
-				genero = 0;
-			}
+			sexo = temp[1];
+			cout << fila << "\t" << columna << "\t" << zacate << "\t" <<
+				animal << sexo << endl;
 		}
 		else{
 			//caso en que no haya un animal en una celda
-			animal='x';
-			genero=0;
+			animal = 'x'; //setea un valor x para que el constructor de Celda determine que no hay animal
+			cout << fila << "\t" << columna << "\t" << zacate << endl;
 		}
 		//Asignacion de informacion a cada celda
 		Celda* nuevaCelda= new Celda(tColumnas, tFilas, columna, fila, zacate, tablero, animal, sexo);
 		tablero[fila][columna]=*nuevaCelda;
-		cout << fila  << "\t" <<  columna <<  "\t" << zacate << "\t" << 
-		animal << sexo << endl;
+		
 	}
 	//Ciclo del juego
 	int contDias=0;
-	while (dias>0){
-		cout << "estoy en el while: " << dias << endl;
+	while (dias > 0){
 		contDias++;
 		for (int i=0;i<tFilas;i++){
 			for (int j=0;j<tColumnas;j++){
 				Animal* animal=tablero[i][j].getAnimal(); //puntero al animal de la celda
-				cout << "tengo al animal: " << animal->getID() << endl;
-				if (animal!=NULL){ //si hay un animal
+				if (animal!=NULL && !(animal->actueHoy)){ //si hay un animal y no ha actuado hoy
 				//determinar la especie y realizar sus cuatro funciones
 					if (animal->getEspecie()=="Lobo"){
-						if (!animal){
-							!animal; //los lobos se mueven 3 espacios al dia
-							!animal;
-							cout << "Los lobos se mueven" << endl;
+						if (!(*animal)){
+							!(*animal); 
+							!(*animal);//los lobos se mueven 3 espacios al dia
 						}
 					}
 					else if (animal->getEspecie()=="Oveja"){
-						if (!animal){
-							!animal; //las ovejas se mueven 2 espacios al dia
+						if (!(*animal)){
+							!(*animal); //las ovejas se mueven 2 espacios al dia
 						}
 					}
 					else if(animal->getEspecie()=="Zorro"){
-						if (!animal){
-							!animal; //los zorros se mueven 2 espacios al dia
+						if (!(*animal)){
+							!(*animal); //los zorros se mueven 2 espacios al dia
 						}
 					}
 					else{
-						cout << "Soy un Raton" << endl;
-						!animal; //los ratones se mueven 1 espacio al dia
+						!(*animal); //los ratones se mueven 1 espacio al dia
 					}
 					
 				//Regla 5: La energia del animal se disminuye en 1 por dia
 					animal->setEnergia(animal->getEnergia()-1);
-					cout << "Tengo menos energia";
+					animal->actueHoy = true; //Setea el atributo de actuar
 				}
 			//Regla 6: El zacate aumenta en 5 su nivel cada 3 dias	
-				if (contDias == 3 && tablero[i][j].getZacate()>0){ //Regla 8
+				if (contDias%3==0 && tablero[i][j].getZacate()>0){ //Regla 8
 					tablero[i][j].setZacate(tablero[i][j].getZacate()+5);
 				//Regla 7: El nivel de Zacate no puede ser mayor a 100
 					if (tablero[i][j].getZacate()>100){
@@ -118,24 +103,31 @@ int main(int argc, char *argv[]){
 				}
 			}
 		}
-		cout << "--- RESUMEN DIA " << dias << " ---" << endl;
+		cout << "--- RESUMEN DIA " << contDias << " ---" << endl;
 		for (int i=0;i<tFilas;i++){
 			for (int j=0;j<tColumnas;j++){
-				cout << i << "\t" << j << "\t" << tablero[i][j].getZacate() << "\t" << 
-				(tablero[i][j].getAnimal())->getEspecie() << 
-				(tablero[i][j].getAnimal())->getSexo() << endl;
+				if (tablero[i][j].getAnimal() != NULL){
+					cout << i << "\t" << j << "\t" << tablero[i][j].getZacate() << "\t" <<
+						(tablero[i][j].getAnimal())->getEspecie()[0] <<
+						(tablero[i][j].getAnimal())->getSexo() << endl;
+				}
+				else{
+					cout << i << "\t" << j << "\t" << tablero[i][j].getZacate() << "\t" << endl;
+				}
 			}
 		}
-		cout << "--- RESUMEN ANIMALES " << dias << " ---" << endl;
+		cout << "--- RESUMEN ESTADO ANIMALES " << contDias << " ---" << endl;
 		for (int i=0;i<tFilas;i++){
 			for (int j=0;j<tColumnas;j++){
 				Animal* animal=tablero[i][j].getAnimal(); //puntero al animal de la celda
 				if (animal!=NULL){
-					printVivo(animal);
+					printVivo(animal); //llamado a template de impresion de animales
+					animal->actueHoy = false; //setea la accion para el siguiente dia
 				}
 			}
 		}
 		dias--;
 	}
+	cout << "----FINAL----" << endl;
 	return 0;
 }

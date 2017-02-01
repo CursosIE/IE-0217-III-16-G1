@@ -19,24 +19,24 @@ Celda::Celda(){
 /*
  * Constructor sobrecargado de la clase Celda
 */ 
-Celda::Celda(int cantColumnas, int cantFilas, int nuevaColumna, int nuevaFila, short int nivelZacate,  Celda** nuevoTablero, char animal, bool sexo){
+Celda::Celda(int cantColumnas, int cantFilas, int nuevaColumna, int nuevaFila, short int nivelZacate,  Celda** nuevoTablero, char animal, char sexo){
 	this->columna=nuevaColumna;
 	this->fila=nuevaFila;
 	this->zacate=nivelZacate;
 	if (animal=='L'){
-		Lobo* nuevoLobo = new Lobo(sexo, nuevoTablero, cantColumnas, cantFilas); 
+		Lobo* nuevoLobo = new Lobo(sexo, nuevoTablero, nuevaFila, nuevaColumna, cantColumnas, cantFilas); 
 		setAnimal(nuevoLobo);
 	}
 	else if(animal == 'O'){
-		Oveja* nuevaOveja = new Oveja(sexo, nuevoTablero, cantColumnas, cantFilas); 
+		Oveja* nuevaOveja = new Oveja(sexo, nuevoTablero, nuevaFila, nuevaColumna, cantColumnas, cantFilas);
 		setAnimal(nuevaOveja);
 	}
 	else if(animal == 'Z'){
-		Zorro* nuevoZorro = new Zorro(sexo, nuevoTablero, cantColumnas, cantFilas); 
+		Zorro* nuevoZorro = new Zorro(sexo, nuevoTablero, nuevaFila, nuevaColumna, cantColumnas, cantFilas);
 		setAnimal(nuevoZorro);
 	}
 	else if(animal == 'R'){
-		Raton* nuevoRaton = new Raton(sexo, nuevoTablero, cantColumnas, cantFilas); 
+		Raton* nuevoRaton = new Raton(sexo, nuevoTablero, nuevaFila, nuevaColumna, cantColumnas, cantFilas);
 		setAnimal(nuevoRaton);
 	}
 	else{
@@ -110,16 +110,18 @@ Animal* Celda::getAnimal(){
 */
 Celda* Celda::findEmpty(Animal* animal, Celda** tableroJuego, int tableroColumnas, int tableroFilas){
 	Celda* vacia=NULL;
+	int filas = tableroFilas - 1;
+	int columnas = tableroColumnas - 1;
 	if (animal->getColumna()==0){
 		if (tableroJuego[animal->getFila()][1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()+1][1];
+			vacia=&tableroJuego[animal->getFila()][1];
 		}
-		else if(animal->getFila()!=tableroFilas){
+		else if(animal->getFila()!=filas){
 			if (tableroJuego[animal->getFila()+1][0].getAnimal()==NULL){
 				vacia=&tableroJuego[animal->getFila()+1][0];
 			}
 			else if (tableroJuego[animal->getFila()+1][1].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()+1][0];
+				vacia=&tableroJuego[animal->getFila()+1][1];
 			}
 		}
 		else if(animal->getFila()!=0){
@@ -131,24 +133,24 @@ Celda* Celda::findEmpty(Animal* animal, Celda** tableroJuego, int tableroColumna
 			}
 		}
 	}
-	else if (animal->getColumna()==tableroColumnas){
-		if (tableroJuego[animal->getFila()][tableroColumnas-1].getAnimal()==NULL){
-			vacia=&tableroJuego[animal->getFila()][tableroColumnas-1];
+	else if (animal->getColumna()==columnas){
+		if (tableroJuego[animal->getFila()][columnas-1].getAnimal()==NULL){
+			vacia=&tableroJuego[animal->getFila()][columnas-1];
 		}
-		else if(animal->getFila()!=tableroFilas){
-			if (tableroJuego[animal->getFila()+1][tableroColumnas].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()+1][tableroColumnas];
+		else if(animal->getFila()!=filas){
+			if (tableroJuego[animal->getFila()+1][columnas].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()+1][columnas];
 			}
-			else if (tableroJuego[animal->getFila()+1][tableroColumnas-1].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()+1][tableroColumnas-1];
+			else if (tableroJuego[animal->getFila()+1][columnas-1].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()+1][columnas-1];
 			}
 		}
 		else if(animal->getFila()!=0){
-			if (tableroJuego[animal->getFila()-1][tableroColumnas].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()-1][tableroColumnas];
+			if (tableroJuego[animal->getFila()-1][columnas].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()-1][columnas];
 			}
-			else if(tableroJuego[animal->getFila()-1][tableroColumnas-1].getAnimal()==NULL){
-				vacia=&tableroJuego[animal->getFila()-1][tableroColumnas-1];
+			else if(tableroJuego[animal->getFila()-1][columnas-1].getAnimal()==NULL){
+				vacia=&tableroJuego[animal->getFila()-1][columnas-1];
 			}
 		}
 	}
@@ -169,21 +171,21 @@ Celda* Celda::findEmpty(Animal* animal, Celda** tableroJuego, int tableroColumna
 			vacia=&tableroJuego[0][animal->getColumna()-1];
 		}
 	}
-	else if (animal->getFila()==tableroFilas){
-		if (tableroJuego[tableroFilas-1][animal->getColumna()].getAnimal()==NULL){
-			vacia=&tableroJuego[tableroFilas-1][animal->getColumna()];
+	else if (animal->getFila()==filas){
+		if (tableroJuego[filas-1][animal->getColumna()].getAnimal()==NULL){
+			vacia=&tableroJuego[filas-1][animal->getColumna()];
 		}
-		else if(tableroJuego[tableroFilas-1][animal->getColumna()+1].getAnimal()==NULL){
-			vacia=&tableroJuego[tableroFilas-1][animal->getColumna()+1];
+		else if(tableroJuego[filas-1][animal->getColumna()+1].getAnimal()==NULL){
+			vacia=&tableroJuego[filas-1][animal->getColumna()+1];
 		}
-		else if(tableroJuego[tableroFilas-1][animal->getColumna()-1].getAnimal()==NULL){
-			vacia=&tableroJuego[tableroFilas-1][animal->getColumna()-1];
+		else if(tableroJuego[filas-1][animal->getColumna()-1].getAnimal()==NULL){
+			vacia=&tableroJuego[filas-1][animal->getColumna()-1];
 		}
-		else if(tableroJuego[tableroFilas][animal->getColumna()+1].getAnimal()==NULL){
-			vacia=&tableroJuego[tableroFilas][animal->getColumna()+1];
+		else if(tableroJuego[filas][animal->getColumna()+1].getAnimal()==NULL){
+			vacia=&tableroJuego[filas][animal->getColumna()+1];
 		}
-		else if(tableroJuego[tableroFilas][animal->getColumna()-1].getAnimal()==NULL){
-			vacia=&tableroJuego[tableroFilas][animal->getColumna()-1];
+		else if(tableroJuego[filas][animal->getColumna()-1].getAnimal()==NULL){
+			vacia=&tableroJuego[filas][animal->getColumna()-1];
 		}
 	}
 	else{

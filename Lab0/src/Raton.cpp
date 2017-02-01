@@ -14,12 +14,17 @@ Raton::Raton() {
 
 /*
  * Constructor sobrecargado de la clase Raton
- * @param bool 	Sexo del Raton
-*/ 
-Raton::Raton(bool nuevoSexo, Celda** nuevoTablero, int tColumnas, int tFilas){
-	this->tableroColum=tColumnas;
-	this->tableroFilas=tFilas;
-    setEnergia(25); //Definido por el enunciado Regla 1
+ * @param char 		Sexo del Raton
+ * @param Celda**	Tablero en el que se encuentra el Raton
+ * @param int		Cantidad total de columnas del tablero
+ * @param int		Cantidad de filas del tablero
+ */
+Raton::Raton(char nuevoSexo, Celda** nuevoTablero, int nuevFila, int nuevaColumna, int tColumnas, int tFilas){
+	this->setFila(nuevFila);
+	this->setColumna(nuevaColumna);
+	this->tableroFilas = tFilas;
+	this->tableroColum = tColumnas;
+    setEnergia(25); //Definido por el enunciado Regla 4
     setSexo(nuevoSexo);
     setEspecie("Raton");       
 	this-> tablero = nuevoTablero;
@@ -37,15 +42,13 @@ Raton::~Raton() {
 bool Raton::operator!(){
 	Celda* vacia=Celda::findEmpty(this, tablero, tableroColum, tableroFilas);
 	if (vacia==NULL){
-		cout<<"No hay espacios vacios ";
 		return false;
 	}
 	else{
-		tablero[getColumna()][getFila()].setAnimal(NULL);
+		tablero[getFila()][getColumna()].setAnimal(NULL);
 		vacia->setAnimal(this);
 		setColumna(vacia->getColumna());
 		setFila(vacia->getFila());
-		cout<<"Me movi";
 		return true;	
 	}
 }

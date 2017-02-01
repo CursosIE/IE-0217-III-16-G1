@@ -20,7 +20,7 @@ public:
 	//Metodos
 	Zorro(); //Constructor de la clase
 	//Constructor sobrecargado de la clase
-	Zorro(bool nuevoSexo, Celda** nuevoTablero, int tableroColum, int tableroFilas); 
+	Zorro(char nuevoSexo, Celda** nuevoTablero, int nuevFila, int nuevaColumna, int tColumnas, int tFilas);
 	virtual ~Zorro(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	bool operator!();

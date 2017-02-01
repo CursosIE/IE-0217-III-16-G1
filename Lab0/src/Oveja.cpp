@@ -14,12 +14,17 @@ Oveja::Oveja() {
 
 /*
  * Constructor sobrecargado de la clase oveja
- * @param bool 	Sexo del oveja
+ * @param char 		Sexo del oveja
+ * @param Celda**	Tablero en el que se encuentra la Oveja
+ * @param int		Cantidad total de columnas del tablero
+ * @param int		Cantidad de filas del tablero
 */ 
-Oveja::Oveja(bool nuevoSexo, Celda** nuevoTablero, int tColumnas, int tFilas){
-	this->tableroColum=tColumnas;
-	this->tableroFilas=tFilas;
-    setEnergia(75); //Definido por el enunciado Regla 1
+Oveja::Oveja(char nuevoSexo, Celda** nuevoTablero, int nuevaFila, int nuevaColumna, int tColumnas, int tFilas){
+	this->setFila(nuevaFila);
+	this->setColumna(nuevaColumna);
+	this->tableroFilas = tFilas;
+	this->tableroColum = tColumnas;
+    setEnergia(75); //Definido por el enunciado Regla 2
     setSexo(nuevoSexo);
     setEspecie("Oveja");       
 	this->tablero = nuevoTablero;
@@ -40,7 +45,7 @@ bool Oveja::operator!(){
 		return false;
 	}
 	else{
-		tablero[getColumna()][getFila()].setAnimal(NULL);
+		tablero[getFila()][getColumna()].setAnimal(NULL);
 		vacia->setAnimal(this);
 		setColumna(vacia->getColumna());
 		setFila(vacia->getFila());

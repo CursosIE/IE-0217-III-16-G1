@@ -25,6 +25,7 @@ class Animal{
 public:
 	int tableroColum;
 	int tableroFilas;
+	bool actueHoy=false;
 	//Metodos
 	Animal(); //Constructor de la clase
 	virtual ~Animal(); //Destructor de la clase
@@ -40,8 +41,8 @@ public:
 	string getEspecie();
 	void setEnergia(short int nuevaEnergia);
 	short int getEnergia();
-	void setSexo(bool nuevoSexo);
-	bool getSexo();
+	void setSexo(char nuevoSexo);
+	char getSexo();
 	void setFila(int nuevaFila);
 	void setColumna(int nuevaFila);
 	int getFila();
@@ -51,7 +52,7 @@ private:
 	unsigned int ID;
 	string especie;
 	short int energia;
-	bool sexo;
+	char sexo;
 	int fila;
 	int columna;
 };

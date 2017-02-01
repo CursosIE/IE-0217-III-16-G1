@@ -19,7 +19,7 @@ public:
 	//Metodos
 	Raton(); //Constructor de la clase
 	 //Constructor sobrecargado de la clase
-	Raton(bool nuevoSexo, Celda** nuevoTablero, int tableroColum, int tableroFilas);
+	Raton(char nuevoSexo, Celda** nuevoTablero, int nuevFila, int nuevaColumna, int tColumnas, int tFilas);
 	virtual ~Raton(); //Destructor de la clase
 	//Sobrecarga de operadores para funcionamiento de funciones
 	bool operator!();

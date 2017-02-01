@@ -1,17 +1,12 @@
 # -*- coding: utf-8 -*-
 import math, sys, time
 
-args = sys.argv[1:]#lee argumentos pasados al ejecutable
-algoritmo =  args[0]#el primer argumento es el tipo de algoritmo
-archivo =  args[1]#el segundo argumento es el nombre del archivo que contiene la lista
+#print algoritmo
+#print archivo
 
-print algoritmo
-print archivo
-
-
+"""
 with open(archivo) as f:
 	lista = f.readlines()
-# you may also want to remove whitespace characters like `\n` at the end of each line
 lista = [x.strip() for x in lista] 
 
 doc = open(archivo, 'r')
@@ -54,56 +49,56 @@ if algoritmo == 'bs' or algoritmo == 'BS':
 #f=file("lista.txt", "r")
 
 #content=f.read().splitlines()
-
-listaInt = []
- 
-lis = doc.read() # GUARDO LINEAS EN VARIABLE cad
- 
-lista = list(lis.split(' ')) # TRANSFORMO A LISTA
-
-print(lista)
+"""
 
 
+"""
+	Algoritmo BS python
 
+"""
+def BS(nombreArch, n):
+	arch = open(nombreArch, "r")		# Archivo de lectura
+	lis = arch.read() 		# GUARDO LINEAS EN VARIABLE lis 
+	lista = list(lis.split(' ')) 	# TOMA LOS DATOS SEPARADOS POR UN ESPACIO
+#Paso 1
+	l = len(lista); 		# Largo de la lista
+	min = 0; 			# Selector del indice minimo
+	max = l-1; 			# Selector del indice maximo
+#Paso 2
+	m = int(math.floor((min+max/2)))# Selector del indice medio
+	while (l!=0):
+#Paso 3
+		if lista[m]==n:
+			return True;
+		elif lista[m] > n:
+			max = m-1;
+			lista = lista[min:max]; #Crea una sublista de la lista original
+			l = len(lista);		
+			m = int(math.floor((min+max)/2)); #Paso 4
+		elif lista[m] < n:
+			min = m+1;
+			lista = lista[min:max];
+			l = len(lista);
+			m = int(math.floor((min+max)/2)); #Paso 4
+	return False;
+"""
+	Main del programa
+"""
+def main(argc, argv*):
+	algoritmo =  sys.argv[1]	# el primer argumento es el tipo de algoritmo
+	if len(sys.argv)>3:
+		n =  sys.argv[2]	# el segundo argumento es el nombre del archivo que contiene la lista
+		doc = sys.argv[3]
+	else:
+		doc = sys.argv[2]
+	if algoritmo=="BS":
+		encotro=BS(doc,n)
+	if encontro:
+		print "Digito no encontrado"
+	else:
+		print "Digito encontrado"
+	return 0;
 
-l = len(lista);
-min = 0;
-max = l-1;
-y = (min+max/2)
-m = int(math.floor(y))
-
-
-print m;
-print l;
-
-n = input('Escoja un numero')
-
-while (l!=0):
-	
-	if lista[m]==n:
-		print m;
-		
-
-	elif lista[m] > n:
-		max = m-1;
-		lista = lista[min:max];
-		l = len(lista);
-		m = int(math.floor((min+max)/2));
-	
-
-	elif lista[m] < n:
-		min = m+1;
-		lista = lista[min:max];
-		l = len(lista);
-		m = int(math.floor((min+max)/2)); 
-
-
-
-
-	elif lista(m) < n:
-		min = m+1;
-		lista = lista[min:max];
-		l = lista.lenght;
-		m = floor((min+max)/2); 
-
+if __name__=="__main__":
+    main()
 

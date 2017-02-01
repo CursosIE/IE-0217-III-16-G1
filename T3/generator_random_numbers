@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This script generates random numbers and write them on lista.txt
+#Generates 1000 numbers
+
+for i in {1..1000}; 
+do echo $RANDOM >> lista.txt; 
+done;
+echo "Lista 1000 Completado!";

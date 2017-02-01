@@ -1,7 +1,7 @@
 /*
  *Universidad de Costa Rica - Escuela de Ingenieria Electrica
  *IE-0217 - Tarea3 - Grupo01
- *@author Robin Gonzalez Ricz
+ *@author Robin Gonzalez Ricz Luis Adrian Aguilar Cascante 
  *@date   01-31-2017
  *@brief  implementación del algoritmo Selection sort y Binary search en c++
 */
@@ -46,6 +46,58 @@ int main (int argc, char** argv){
 	if(!(algoritmo.compare("bs")||algoritmo.compare("BS"))){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
 		//AQUI VA EL BINARY SORT EN C++
 	}
+
+
+
+//Algoritmo binary search
+
+l = lista.size(); 
+int min = 0;
+int max = l-1;
+y = (min+max/2);
+m = int(floor(y));
+
+
+print m;
+print l;
+
+cout << "Inserte un número";
+cin >> int n >> endl ;
+
+while (l!=0)
+	{
+	if lista[m]==n:
+		print m;
+	}	
+
+	else if (lista[m] > n)
+		{
+		max = m-1;
+		lista = lista[min:max];
+		l = lista.size();
+		m = int(floor((min+max)/2));
+		}
+
+	else if (lista[m] < n)
+	{
+		min = m+1;
+		lista = lista[min:max];
+		l = lista.size();
+		m = int(floor((min+max)/2)); 
+	}
+
+
+
+	else if (lista(m) < n)
+		{
+		min = m+1;
+		lista = lista[min:max];
+		l = lista.lenght;
+		m = floor((min+max)/2); 
+		}
+
+
+
 
 	return 0;
 }

@@ -24,7 +24,10 @@ void printVec(vector<int> a, int largo){
 int main (int argc, char** argv){
 	string algoritmo = argv[1];//Primer argumento es el tipo de algoritmo
 	ifstream archivo(argv[2]);//Segundo argumento es el nombre del archivo para leer la lista de numeros
-	if(!(algoritmo.compare("ss")||algoritmo.compare("SS"))){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
+	cout << algoritmo << endl;
+	cout << argv[2] << endl;
+	if(!(algoritmo.compare("ss"))||!(algoritmo.compare("SS"))){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
+//	if(!(algoritmo.compare("ss"))){
 		int i = 0;
 		while(getline(archivo, leido,' ')){
 //			entrada[i] = atoi(leido.c_str());
@@ -39,66 +42,33 @@ int main (int argc, char** argv){
 			for(int d = c+1;d<i;d++){
 				if(lista[d] < lista[menor])menor = d;
 			iter_swap(lista.begin() + menor, lista.begin() + c);//intercambia dos elementos de un vector en las posiciones dadas: de pos menor a c
+			}
 		}
 		printVec(lista, i);//aquí el vector ya debería estar ordenado
 	}
 
-	if(!(algoritmo.compare("bs")||algoritmo.compare("BS"))){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
-		//AQUI VA EL BINARY SORT EN C++
-	}
-
-
-
-//Algoritmo binary search
-
-l = lista.size(); 
-int min = 0;
-int max = l-1;
-y = (min+max/2);
-m = int(floor(y));
-
-
-print m;
-print l;
-
-cout << "Inserte un número";
-cin >> int n >> endl ;
-
-while (l!=0)
-	{
-	if lista[m]==n:
-		print m;
-	}	
-
-	else if (lista[m] > n)
-		{
-		max = m-1;
-		lista = lista[min:max];
-		l = lista.size();
-		m = int(floor((min+max)/2));
+//	if(!(algoritmo.compare("bs"))||!(algoritmo.compare("BS"))){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
+		int min    = 0;
+		int max   = lista.size();//uso vector previamente ordenado por el SS
+		int mitad;
+		int buscado;
+		cout << "Ingrese el número a buscar: " << endl;
+		cin >> buscado;
+		int waaa = (min + max) >> 1;
+		while (min +1 != max) {//mientras el min y max sean diferentes:
+			mitad = ((min + max) >> 1);//forma de sacar el promedio
+			if (lista[mitad] > buscado) {
+				max = mitad;
+			} else {
+				min = mitad;
+			}
 		}
-
-	else if (lista[m] < n)
-	{
-		min = m+1;
-		lista = lista[min:max];
-		l = lista.size();
-		m = int(floor((min+max)/2)); 
-	}
-
-
-
-	else if (lista(m) < n)
-		{
-		min = m+1;
-		lista = lista[min:max];
-		l = lista.lenght;
-		m = floor((min+max)/2); 
+		if (lista[min] == buscado) {
+			cout << "Buscado: " << buscado << " encontrado en: " << min << endl;
+		} else {
+			cout << "Buscado: " << buscado << " NO encontrado" << endl;
 		}
-
-
-
-
+//	}
 	return 0;
 }
 

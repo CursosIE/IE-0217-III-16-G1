@@ -49,16 +49,4 @@ int main (int argc, char** argv){
 
 	return 0;
 }
-/*
-Pseudocodigo SS
 
-for i=0 to n-1
-	min = i;
-	for j=i+1 to n
-		if lista[j] < lista[min] 
-			min = j;
-		end if
-	end for
-	interchange(lita[i],lista[min])
-end for
-*/

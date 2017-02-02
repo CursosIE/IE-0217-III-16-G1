@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Lab0: Lobo.cpp Source File</title>
+<title>Lab0: G1/Lab0/src/Lobo.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="lobo_y_oveja.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="lobo_y_oveja(1).jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Lab0
    &#160;<span id="projectnumber">v1.0</span>
@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('_lobo_8cpp_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -117,7 +118,7 @@ $(document).ready(function(){initNavTree('_lobo_8cpp_source.html','');});
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *Constructor por defecto de la clase Lobo</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*/</span> </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;Lobo::Lobo() {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_lobo.html#a5c6b593887d794ea47abcc7af82a4090">   12</a></span>&#160;<a class="code" href="class_lobo.html#a5c6b593887d794ea47abcc7af82a4090">Lobo::Lobo</a>() {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*</span></div>
@@ -127,37 +128,37 @@ $(document).ready(function(){initNavTree('_lobo_8cpp_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * @param int       Cantidad total de columnas del tablero</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * @param int       Cantidad de filas del tablero</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;Lobo::Lobo(<span class="keywordtype">char</span> nuevoSexo, Celda** nuevoTablero, <span class="keywordtype">int</span> nuevFila, <span class="keywordtype">int</span> nuevaColumna, <span class="keywordtype">int</span> tColumnas, <span class="keywordtype">int</span> tFilas){</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    this-&gt;setFila(nuevFila);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    this-&gt;setColumna(nuevaColumna);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    this-&gt;tableroFilas = tFilas;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    this-&gt;tableroColum = tColumnas;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    setEnergia(100); <span class="comment">//Definido por el enunciado Regla 1</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    setSexo(nuevoSexo);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    setEspecie(<span class="stringliteral">&quot;Lobo&quot;</span>);       </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_lobo.html#a27eff9c83290d3aed7a4e20ec74849a8">   22</a></span>&#160;<a class="code" href="class_lobo.html#a5c6b593887d794ea47abcc7af82a4090">Lobo::Lobo</a>(<span class="keywordtype">char</span> nuevoSexo, <a class="code" href="class_celda.html">Celda</a>** nuevoTablero, <span class="keywordtype">int</span> nuevFila, <span class="keywordtype">int</span> nuevaColumna, <span class="keywordtype">int</span> tColumnas, <span class="keywordtype">int</span> tFilas){</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    this-&gt;<a class="code" href="class_animal.html#ab930500e34a32d5eebfdc692c37ea8d9">setFila</a>(nuevFila);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    this-&gt;<a class="code" href="class_animal.html#a9db8ced8359a265ff159f2041fd4677b">setColumna</a>(nuevaColumna);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    this-&gt;<a class="code" href="class_animal.html#a5297ac026a4731bab939662635596dec">tableroFilas</a> = tFilas;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    this-&gt;<a class="code" href="class_animal.html#a4d1e6b9107cb4f31f400b020ba319bf1">tableroColum</a> = tColumnas;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_animal.html#a892f3e63da0ff8435517764cb6bfd78e">setEnergia</a>(100); <span class="comment">//Definido por el enunciado Regla 1</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_animal.html#ab382215ea5e1aa6923bb54255f1d066f">setSexo</a>(nuevoSexo);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_animal.html#a4670fe9f3248b62b993c533813d7407f">setEspecie</a>(<span class="stringliteral">&quot;Lobo&quot;</span>);       </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    this-&gt;tablero = nuevoTablero;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * Destructor por defecto de la clase Lobo</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">*/</span> </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;Lobo::~Lobo() {</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_lobo.html#ac3f55f7ba044fc5a20fbcbeed644ce54">   36</a></span>&#160;<a class="code" href="class_lobo.html#ac3f55f7ba044fc5a20fbcbeed644ce54">Lobo::~Lobo</a>() {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> * Metodo moverse del Lobo utilizando un operador unario </span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> *@return bool  Indicacion de si existio o no movimiento del Lobo</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">*/</span> </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">bool</span> Lobo::operator!(){</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    Celda* vacia=Celda::find(<span class="keyword">this</span>, tablero, tableroColum, tableroFilas, <span class="stringliteral">&quot;N&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_lobo.html#af2ae1c20a7104c7758df3aa293027895">   43</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_lobo.html#af2ae1c20a7104c7758df3aa293027895">Lobo::operator!</a>(){</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_celda.html">Celda</a>* vacia=<a class="code" href="class_celda.html#aebb06866b56a937d144f18fa8c7d26e4">Celda::find</a>(<span class="keyword">this</span>, tablero, <a class="code" href="class_animal.html#a4d1e6b9107cb4f31f400b020ba319bf1">tableroColum</a>, <a class="code" href="class_animal.html#a5297ac026a4731bab939662635596dec">tableroFilas</a>, <span class="stringliteral">&quot;N&quot;</span>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (vacia==NULL){</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        tablero[getFila()][getColumna()].setAnimal(NULL);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        vacia-&gt;setAnimal(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        setColumna(vacia-&gt;getColumna());</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        setFila(vacia-&gt;getFila());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        tablero[<a class="code" href="class_animal.html#a27c1b92985d8078bd497661147d6c78e">getFila</a>()][<a class="code" href="class_animal.html#ac49d038f20d4780eaeedb7174396fb4b">getColumna</a>()].<a class="code" href="class_celda.html#abf583df5e4813cab4a34538201136b68">setAnimal</a>(NULL);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        vacia-&gt;<a class="code" href="class_celda.html#abf583df5e4813cab4a34538201136b68">setAnimal</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_animal.html#a9db8ced8359a265ff159f2041fd4677b">setColumna</a>(vacia-&gt;<a class="code" href="class_celda.html#a199ebd31b2317b3702162e802bf6aa23">getColumna</a>());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_animal.html#ab930500e34a32d5eebfdc692c37ea8d9">setFila</a>(vacia-&gt;<a class="code" href="class_celda.html#a851c826190265284315ec85aa588cad2">getFila</a>());</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;    </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
@@ -166,70 +167,94 @@ $(document).ready(function(){initNavTree('_lobo_8cpp_source.html','');});
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> * Metodo comer del Lobo utilizando un operador unario segun regla 12</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"> * @return Animal*      El puntero al Lobo</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;Animal* Lobo::operator++(){</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> randNum = this-&gt;getID() + this-&gt;getColumna() + rand() % 100; <span class="comment">//numero random para determinar la preferencia de alimento del lobo</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_lobo.html#a813acd6d6a003a6de18ec26e8bbd58c4">   61</a></span>&#160;<a class="code" href="class_animal.html">Animal</a>* <a class="code" href="class_lobo.html#a813acd6d6a003a6de18ec26e8bbd58c4">Lobo::operator++</a>(){</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> randNum = this-&gt;<a class="code" href="class_animal.html#a91b9274a6c8bde20f0ad1c96896f4308">getID</a>() + this-&gt;<a class="code" href="class_animal.html#ac49d038f20d4780eaeedb7174396fb4b">getColumna</a>() + rand() % 100; <span class="comment">//numero random para determinar la preferencia de alimento del lobo</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">string</span> pref = <span class="stringliteral">&quot;x&quot;</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    Celda* comida = NULL;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_celda.html">Celda</a>* comida = NULL;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (randNum &lt; 40){</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        pref = <span class="charliteral">&#39;R&#39;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        comida = Celda::find(<span class="keyword">this</span>, tablero, tableroColum, tableroFilas, pref);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        comida = <a class="code" href="class_celda.html#aebb06866b56a937d144f18fa8c7d26e4">Celda::find</a>(<span class="keyword">this</span>, tablero, <a class="code" href="class_animal.html#a4d1e6b9107cb4f31f400b020ba319bf1">tableroColum</a>, <a class="code" href="class_animal.html#a5297ac026a4731bab939662635596dec">tableroFilas</a>, pref);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (randNum &lt; 80){</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        pref = <span class="charliteral">&#39;Z&#39;</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        comida = Celda::find(<span class="keyword">this</span>, tablero, tableroColum, tableroFilas, pref);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        comida = <a class="code" href="class_celda.html#aebb06866b56a937d144f18fa8c7d26e4">Celda::find</a>(<span class="keyword">this</span>, tablero, <a class="code" href="class_animal.html#a4d1e6b9107cb4f31f400b020ba319bf1">tableroColum</a>, <a class="code" href="class_animal.html#a5297ac026a4731bab939662635596dec">tableroFilas</a>, pref);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        pref = <span class="charliteral">&#39;O&#39;</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        comida = Celda::find(<span class="keyword">this</span>, tablero, tableroColum, tableroFilas, pref);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        comida = <a class="code" href="class_celda.html#aebb06866b56a937d144f18fa8c7d26e4">Celda::find</a>(<span class="keyword">this</span>, tablero, <a class="code" href="class_animal.html#a4d1e6b9107cb4f31f400b020ba319bf1">tableroColum</a>, <a class="code" href="class_animal.html#a5297ac026a4731bab939662635596dec">tableroFilas</a>, pref);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> i = 0;<span class="comment">//indice del ciclo de busqueda</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">while</span> (comida == NULL &amp;&amp; i &lt; 2){</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> (pref == <span class="stringliteral">&quot;R&quot;</span>){</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            pref = <span class="charliteral">&#39;Z&#39;</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            comida = Celda::find(<span class="keyword">this</span>, tablero, tableroColum, tableroFilas, pref);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            comida = <a class="code" href="class_celda.html#aebb06866b56a937d144f18fa8c7d26e4">Celda::find</a>(<span class="keyword">this</span>, tablero, <a class="code" href="class_animal.html#a4d1e6b9107cb4f31f400b020ba319bf1">tableroColum</a>, <a class="code" href="class_animal.html#a5297ac026a4731bab939662635596dec">tableroFilas</a>, pref);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pref == <span class="stringliteral">&quot;Z&quot;</span>){</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            pref = <span class="charliteral">&#39;O&#39;</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            comida = Celda::find(<span class="keyword">this</span>, tablero, tableroColum, tableroFilas, pref);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            comida = <a class="code" href="class_celda.html#aebb06866b56a937d144f18fa8c7d26e4">Celda::find</a>(<span class="keyword">this</span>, tablero, <a class="code" href="class_animal.html#a4d1e6b9107cb4f31f400b020ba319bf1">tableroColum</a>, <a class="code" href="class_animal.html#a5297ac026a4731bab939662635596dec">tableroFilas</a>, pref);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">else</span>{</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            pref = <span class="charliteral">&#39;R&#39;</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            comida = Celda::find(<span class="keyword">this</span>, tablero, tableroColum, tableroFilas, pref);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            comida = <a class="code" href="class_celda.html#aebb06866b56a937d144f18fa8c7d26e4">Celda::find</a>(<span class="keyword">this</span>, tablero, <a class="code" href="class_animal.html#a4d1e6b9107cb4f31f400b020ba319bf1">tableroColum</a>, <a class="code" href="class_animal.html#a5297ac026a4731bab939662635596dec">tableroFilas</a>, pref);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        i++;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (comida != NULL){</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (pref == <span class="stringliteral">&quot;R&quot;</span>){</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            this-&gt;setEnergia(this-&gt;getEnergia() + 2);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            this-&gt;<a class="code" href="class_animal.html#a892f3e63da0ff8435517764cb6bfd78e">setEnergia</a>(this-&gt;<a class="code" href="class_animal.html#ac29b9a475b9d00da3d94aaef2528b7ae">getEnergia</a>() + 2);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pref == <span class="stringliteral">&quot;Z&quot;</span>){</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            this-&gt;setEnergia(this-&gt;getEnergia() + 5);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            this-&gt;<a class="code" href="class_animal.html#a892f3e63da0ff8435517764cb6bfd78e">setEnergia</a>(this-&gt;<a class="code" href="class_animal.html#ac29b9a475b9d00da3d94aaef2528b7ae">getEnergia</a>() + 5);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            this-&gt;setEnergia(this-&gt;getEnergia() + 10);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            this-&gt;<a class="code" href="class_animal.html#a892f3e63da0ff8435517764cb6bfd78e">setEnergia</a>(this-&gt;<a class="code" href="class_animal.html#ac29b9a475b9d00da3d94aaef2528b7ae">getEnergia</a>() + 10);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (this-&gt;getEnergia() &gt; 100){ <span class="comment">//Regla 7</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            this-&gt;setEnergia(100);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (this-&gt;<a class="code" href="class_animal.html#ac29b9a475b9d00da3d94aaef2528b7ae">getEnergia</a>() &gt; 100){ <span class="comment">//Regla 7</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            this-&gt;<a class="code" href="class_animal.html#a892f3e63da0ff8435517764cb6bfd78e">setEnergia</a>(100);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        comida-&gt;setAnimal(NULL); <span class="comment">//se elimina el animal comido</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        comida-&gt;<a class="code" href="class_celda.html#abf583df5e4813cab4a34538201136b68">setAnimal</a>(NULL); <span class="comment">//se elimina el animal comido</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> tablero[getFila()][getColumna()].getAnimal();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> tablero[<a class="code" href="class_animal.html#a27c1b92985d8078bd497661147d6c78e">getFila</a>()][<a class="code" href="class_animal.html#ac49d038f20d4780eaeedb7174396fb4b">getColumna</a>()].<a class="code" href="class_celda.html#a2970811bfe067bd455200f4d7010a8a7">getAnimal</a>();</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">bool</span> Lobo::operator~(){</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_lobo.html#a6d7041a7c581fb2cb1d9f10a3a8b1688">  111</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_lobo.html#a6d7041a7c581fb2cb1d9f10a3a8b1688">Lobo::operator~</a>(){</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">void</span> Lobo::operator--(){</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_lobo.html#a55b5655648157f4dac8a1d49cc4ed378">  115</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_lobo.html#a55b5655648157f4dac8a1d49cc4ed378">Lobo::operator--</a>(){</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="ttc" id="class_animal_html_a27c1b92985d8078bd497661147d6c78e"><div class="ttname"><a href="class_animal.html#a27c1b92985d8078bd497661147d6c78e">Animal::getFila</a></div><div class="ttdeci">int getFila()</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00100">Animal.cpp:100</a></div></div>
+<div class="ttc" id="class_celda_html_aebb06866b56a937d144f18fa8c7d26e4"><div class="ttname"><a href="class_celda.html#aebb06866b56a937d144f18fa8c7d26e4">Celda::find</a></div><div class="ttdeci">static Celda * find(Animal *animal, Celda **tableroJuego, int tableroColum, int tableroFilas, string selec)</div><div class="ttdef"><b>Definition:</b> <a href="_celda_8cpp_source.html#l00113">Celda.cpp:113</a></div></div>
+<div class="ttc" id="class_celda_html_a2970811bfe067bd455200f4d7010a8a7"><div class="ttname"><a href="class_celda.html#a2970811bfe067bd455200f4d7010a8a7">Celda::getAnimal</a></div><div class="ttdeci">Animal * getAnimal()</div><div class="ttdef"><b>Definition:</b> <a href="_celda_8cpp_source.html#l00099">Celda.cpp:99</a></div></div>
+<div class="ttc" id="class_animal_html_a5297ac026a4731bab939662635596dec"><div class="ttname"><a href="class_animal.html#a5297ac026a4731bab939662635596dec">Animal::tableroFilas</a></div><div class="ttdeci">int tableroFilas</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8hpp_source.html#l00027">Animal.hpp:27</a></div></div>
+<div class="ttc" id="class_celda_html_a851c826190265284315ec85aa588cad2"><div class="ttname"><a href="class_celda.html#a851c826190265284315ec85aa588cad2">Celda::getFila</a></div><div class="ttdeci">int getFila()</div><div class="ttdef"><b>Definition:</b> <a href="_celda_8cpp_source.html#l00059">Celda.cpp:59</a></div></div>
+<div class="ttc" id="class_lobo_html_a6d7041a7c581fb2cb1d9f10a3a8b1688"><div class="ttname"><a href="class_lobo.html#a6d7041a7c581fb2cb1d9f10a3a8b1688">Lobo::operator~</a></div><div class="ttdeci">bool operator~()</div><div class="ttdef"><b>Definition:</b> <a href="_lobo_8cpp_source.html#l00111">Lobo.cpp:111</a></div></div>
+<div class="ttc" id="class_animal_html_ab930500e34a32d5eebfdc692c37ea8d9"><div class="ttname"><a href="class_animal.html#ab930500e34a32d5eebfdc692c37ea8d9">Animal::setFila</a></div><div class="ttdeci">void setFila(int nuevaFila)</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00084">Animal.cpp:84</a></div></div>
+<div class="ttc" id="class_lobo_html_a813acd6d6a003a6de18ec26e8bbd58c4"><div class="ttname"><a href="class_lobo.html#a813acd6d6a003a6de18ec26e8bbd58c4">Lobo::operator++</a></div><div class="ttdeci">Animal * operator++()</div><div class="ttdef"><b>Definition:</b> <a href="_lobo_8cpp_source.html#l00061">Lobo.cpp:61</a></div></div>
+<div class="ttc" id="class_animal_html"><div class="ttname"><a href="class_animal.html">Animal</a></div><div class="ttdef"><b>Definition:</b> <a href="_animal_8hpp_source.html#l00024">Animal.hpp:24</a></div></div>
+<div class="ttc" id="class_celda_html_a199ebd31b2317b3702162e802bf6aa23"><div class="ttname"><a href="class_celda.html#a199ebd31b2317b3702162e802bf6aa23">Celda::getColumna</a></div><div class="ttdeci">int getColumna()</div><div class="ttdef"><b>Definition:</b> <a href="_celda_8cpp_source.html#l00067">Celda.cpp:67</a></div></div>
+<div class="ttc" id="class_animal_html_ab382215ea5e1aa6923bb54255f1d066f"><div class="ttname"><a href="class_animal.html#ab382215ea5e1aa6923bb54255f1d066f">Animal::setSexo</a></div><div class="ttdeci">void setSexo(char nuevoSexo)</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00067">Animal.cpp:67</a></div></div>
+<div class="ttc" id="class_celda_html_abf583df5e4813cab4a34538201136b68"><div class="ttname"><a href="class_celda.html#abf583df5e4813cab4a34538201136b68">Celda::setAnimal</a></div><div class="ttdeci">void setAnimal(Animal *nuevoAnimal)</div><div class="ttdef"><b>Definition:</b> <a href="_celda_8cpp_source.html#l00091">Celda.cpp:91</a></div></div>
+<div class="ttc" id="class_lobo_html_a55b5655648157f4dac8a1d49cc4ed378"><div class="ttname"><a href="class_lobo.html#a55b5655648157f4dac8a1d49cc4ed378">Lobo::operator--</a></div><div class="ttdeci">void operator--()</div><div class="ttdef"><b>Definition:</b> <a href="_lobo_8cpp_source.html#l00115">Lobo.cpp:115</a></div></div>
+<div class="ttc" id="class_animal_html_a4d1e6b9107cb4f31f400b020ba319bf1"><div class="ttname"><a href="class_animal.html#a4d1e6b9107cb4f31f400b020ba319bf1">Animal::tableroColum</a></div><div class="ttdeci">int tableroColum</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8hpp_source.html#l00026">Animal.hpp:26</a></div></div>
+<div class="ttc" id="class_lobo_html_ac3f55f7ba044fc5a20fbcbeed644ce54"><div class="ttname"><a href="class_lobo.html#ac3f55f7ba044fc5a20fbcbeed644ce54">Lobo::~Lobo</a></div><div class="ttdeci">virtual ~Lobo()</div><div class="ttdef"><b>Definition:</b> <a href="_lobo_8cpp_source.html#l00036">Lobo.cpp:36</a></div></div>
+<div class="ttc" id="class_animal_html_ac49d038f20d4780eaeedb7174396fb4b"><div class="ttname"><a href="class_animal.html#ac49d038f20d4780eaeedb7174396fb4b">Animal::getColumna</a></div><div class="ttdeci">int getColumna()</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00108">Animal.cpp:108</a></div></div>
+<div class="ttc" id="class_animal_html_ac29b9a475b9d00da3d94aaef2528b7ae"><div class="ttname"><a href="class_animal.html#ac29b9a475b9d00da3d94aaef2528b7ae">Animal::getEnergia</a></div><div class="ttdeci">short int getEnergia()</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00059">Animal.cpp:59</a></div></div>
+<div class="ttc" id="class_celda_html"><div class="ttname"><a href="class_celda.html">Celda</a></div><div class="ttdef"><b>Definition:</b> <a href="_celda_8hpp_source.html#l00019">Celda.hpp:19</a></div></div>
+<div class="ttc" id="class_animal_html_a4670fe9f3248b62b993c533813d7407f"><div class="ttname"><a href="class_animal.html#a4670fe9f3248b62b993c533813d7407f">Animal::setEspecie</a></div><div class="ttdeci">void setEspecie(string nuevaEspecie)</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00035">Animal.cpp:35</a></div></div>
+<div class="ttc" id="class_animal_html_a9db8ced8359a265ff159f2041fd4677b"><div class="ttname"><a href="class_animal.html#a9db8ced8359a265ff159f2041fd4677b">Animal::setColumna</a></div><div class="ttdeci">void setColumna(int nuevaFila)</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00092">Animal.cpp:92</a></div></div>
+<div class="ttc" id="class_lobo_html_af2ae1c20a7104c7758df3aa293027895"><div class="ttname"><a href="class_lobo.html#af2ae1c20a7104c7758df3aa293027895">Lobo::operator!</a></div><div class="ttdeci">bool operator!()</div><div class="ttdef"><b>Definition:</b> <a href="_lobo_8cpp_source.html#l00043">Lobo.cpp:43</a></div></div>
+<div class="ttc" id="class_animal_html_a91b9274a6c8bde20f0ad1c96896f4308"><div class="ttname"><a href="class_animal.html#a91b9274a6c8bde20f0ad1c96896f4308">Animal::getID</a></div><div class="ttdeci">unsigned int getID()</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00028">Animal.cpp:28</a></div></div>
+<div class="ttc" id="class_animal_html_a892f3e63da0ff8435517764cb6bfd78e"><div class="ttname"><a href="class_animal.html#a892f3e63da0ff8435517764cb6bfd78e">Animal::setEnergia</a></div><div class="ttdeci">void setEnergia(short int nuevaEnergia)</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00051">Animal.cpp:51</a></div></div>
+<div class="ttc" id="class_lobo_html_a5c6b593887d794ea47abcc7af82a4090"><div class="ttname"><a href="class_lobo.html#a5c6b593887d794ea47abcc7af82a4090">Lobo::Lobo</a></div><div class="ttdeci">Lobo()</div><div class="ttdef"><b>Definition:</b> <a href="_lobo_8cpp_source.html#l00012">Lobo.cpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="_lobo_8cpp.html">Lobo.cpp</a></li>
-    <li class="footer">Generated on Wed Feb 1 2017 05:49:54 for Lab0 by
+    <li class="navelem"><a class="el" href="dir_7986f3cfd0ac26157d1cc2865660f726.html">G1</a></li><li class="navelem"><a class="el" href="dir_9388d1e7907d108ce18763cd06d60c93.html">Lab0</a></li><li class="navelem"><a class="el" href="dir_948a6118d1e7f1148416eae1f769c645.html">src</a></li><li class="navelem"><a class="el" href="_lobo_8cpp.html">Lobo.cpp</a></li>
+    <li class="footer">Generated on Thu Feb 2 2017 12:13:50 for Lab0 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

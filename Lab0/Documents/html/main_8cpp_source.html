@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Lab0: main.cpp Source File</title>
+<title>Lab0: G1/Lab0/src/main.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="lobo_y_oveja.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="lobo_y_oveja(1).jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Lab0
    &#160;<span id="projectnumber">v1.0</span>
@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -135,9 +136,9 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    getline(file, str);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> tColumnas = atoi(str.c_str());</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//inicializacion de la matriz de objetos tipo celda</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Celda** tablero = <span class="keyword">new</span> Celda*[tFilas];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_celda.html">Celda</a>** tablero = <span class="keyword">new</span> <a class="code" href="class_celda.html">Celda</a>*[tFilas];</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;tFilas;i++){</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        tablero[i] = <span class="keyword">new</span> Celda[tColumnas];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        tablero[i] = <span class="keyword">new</span> <a class="code" href="class_celda.html">Celda</a>[tColumnas];</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;----ESTADO INICIAL----&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">while</span> (getline(file, str))<span class="comment">//Mientras se encuentre texto al leer el archivo guardar cada linea en el string str</span></div>
@@ -164,7 +165,7 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            cout &lt;&lt; fila &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; columna &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; zacate &lt;&lt; endl;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">//Asignacion de informacion a cada celda</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        Celda* nuevaCelda= <span class="keyword">new</span> Celda(tColumnas, tFilas, columna, fila, zacate, tablero, animal, sexo);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="class_celda.html">Celda</a>* nuevaCelda= <span class="keyword">new</span> <a class="code" href="class_celda.html">Celda</a>(tColumnas, tFilas, columna, fila, zacate, tablero, animal, sexo);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        tablero[fila][columna]=*nuevaCelda;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
@@ -174,23 +175,23 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        contDias++;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0;i&lt;tFilas;i++){</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;tColumnas;j++){</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                Animal* animal=tablero[i][j].getAnimal(); <span class="comment">//puntero al animal de la celda|</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">if</span> (animal!=NULL &amp;&amp; !(animal-&gt;actueHoy)){ <span class="comment">//si hay un animal y no ha actuado hoy</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <a class="code" href="class_animal.html">Animal</a>* animal=tablero[i][j].getAnimal(); <span class="comment">//puntero al animal de la celda|</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">if</span> (animal!=NULL &amp;&amp; !(animal-&gt;<a class="code" href="class_animal.html#a3155b0c13ffa8569bc22fd3632db74dc">actueHoy</a>)){ <span class="comment">//si hay un animal y no ha actuado hoy</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="comment">//determinar la especie y realizar sus cuatro funciones (Moverse, Comer, Reproducirse, Morir)</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <span class="keywordflow">if</span> (animal-&gt;getEspecie()==<span class="stringliteral">&quot;Lobo&quot;</span>){</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <span class="keywordflow">if</span> (animal-&gt;<a class="code" href="class_animal.html#a348cc0c1b894838785cf814dfc6e3d17">getEspecie</a>()==<span class="stringliteral">&quot;Lobo&quot;</span>){</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        <span class="keywordflow">if</span> (!(*animal)){</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                            !(*animal); </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                            !(*animal);<span class="comment">//los lobos se mueven 3 espacios al dia</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                        animal=++(*animal);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (animal-&gt;getEspecie()==<span class="stringliteral">&quot;Oveja&quot;</span>){</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (animal-&gt;<a class="code" href="class_animal.html#a348cc0c1b894838785cf814dfc6e3d17">getEspecie</a>()==<span class="stringliteral">&quot;Oveja&quot;</span>){</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        <span class="keywordflow">if</span> (!(*animal)){</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                            !(*animal); <span class="comment">//las ovejas se mueven 2 espacios al dia</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                        }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                        animal=++(*animal);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(animal-&gt;getEspecie()==<span class="stringliteral">&quot;Zorro&quot;</span>){</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(animal-&gt;<a class="code" href="class_animal.html#a348cc0c1b894838785cf814dfc6e3d17">getEspecie</a>()==<span class="stringliteral">&quot;Zorro&quot;</span>){</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        <span class="keywordflow">if</span> (!(*animal)){</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                            !(*animal); <span class="comment">//los zorros se mueven 2 espacios al dia</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        }</div>
@@ -202,8 +203,8 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="comment">//Regla 5: La energia del animal se disminuye en 1 por dia</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    animal-&gt;setEnergia(animal-&gt;getEnergia()-1);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    animal-&gt;actueHoy = <span class="keyword">true</span>; <span class="comment">//Setea el atributo de actuar</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    animal-&gt;<a class="code" href="class_animal.html#a892f3e63da0ff8435517764cb6bfd78e">setEnergia</a>(animal-&gt;<a class="code" href="class_animal.html#ac29b9a475b9d00da3d94aaef2528b7ae">getEnergia</a>()-1);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    animal-&gt;<a class="code" href="class_animal.html#a3155b0c13ffa8569bc22fd3632db74dc">actueHoy</a> = <span class="keyword">true</span>; <span class="comment">//Setea el atributo de actuar</span></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">//Regla 6: El zacate aumenta en 5 su nivel cada 3 dias  </span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordflow">if</span> (contDias%3==0 &amp;&amp; tablero[i][j].getZacate()&gt;0){ <span class="comment">//Regla 8</span></div>
@@ -231,10 +232,10 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;--- RESUMEN ESTADO ANIMALES &quot;</span> &lt;&lt; contDias &lt;&lt; <span class="stringliteral">&quot; ---&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0;i&lt;tFilas;i++){</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;tColumnas;j++){</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                Animal* animal=tablero[i][j].getAnimal(); <span class="comment">//puntero al animal de la celda</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <a class="code" href="class_animal.html">Animal</a>* animal=tablero[i][j].getAnimal(); <span class="comment">//puntero al animal de la celda</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordflow">if</span> (animal!=NULL){</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    printVivo(animal); <span class="comment">//llamado a template de impresion de animales</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    animal-&gt;actueHoy = <span class="keyword">false</span>; <span class="comment">//setea la accion para el siguiente dia</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    <a class="code" href="print_8hpp.html#a41b95349676dbe1e126ad8afd349c067">printVivo</a>(animal); <span class="comment">//llamado a template de impresion de animales</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    animal-&gt;<a class="code" href="class_animal.html#a3155b0c13ffa8569bc22fd3632db74dc">actueHoy</a> = <span class="keyword">false</span>; <span class="comment">//setea la accion para el siguiente dia</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
@@ -251,14 +252,21 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;----FINAL----&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="ttc" id="print_8hpp_html_a41b95349676dbe1e126ad8afd349c067"><div class="ttname"><a href="print_8hpp.html#a41b95349676dbe1e126ad8afd349c067">printVivo</a></div><div class="ttdeci">void printVivo(T *serVivo)</div><div class="ttdef"><b>Definition:</b> <a href="print_8hpp_source.html#l00014">print.hpp:14</a></div></div>
+<div class="ttc" id="class_animal_html"><div class="ttname"><a href="class_animal.html">Animal</a></div><div class="ttdef"><b>Definition:</b> <a href="_animal_8hpp_source.html#l00024">Animal.hpp:24</a></div></div>
+<div class="ttc" id="class_animal_html_a3155b0c13ffa8569bc22fd3632db74dc"><div class="ttname"><a href="class_animal.html#a3155b0c13ffa8569bc22fd3632db74dc">Animal::actueHoy</a></div><div class="ttdeci">bool actueHoy</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8hpp_source.html#l00028">Animal.hpp:28</a></div></div>
+<div class="ttc" id="class_animal_html_ac29b9a475b9d00da3d94aaef2528b7ae"><div class="ttname"><a href="class_animal.html#ac29b9a475b9d00da3d94aaef2528b7ae">Animal::getEnergia</a></div><div class="ttdeci">short int getEnergia()</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00059">Animal.cpp:59</a></div></div>
+<div class="ttc" id="class_animal_html_a348cc0c1b894838785cf814dfc6e3d17"><div class="ttname"><a href="class_animal.html#a348cc0c1b894838785cf814dfc6e3d17">Animal::getEspecie</a></div><div class="ttdeci">string getEspecie()</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00043">Animal.cpp:43</a></div></div>
+<div class="ttc" id="class_celda_html"><div class="ttname"><a href="class_celda.html">Celda</a></div><div class="ttdef"><b>Definition:</b> <a href="_celda_8hpp_source.html#l00019">Celda.hpp:19</a></div></div>
 <div class="ttc" id="main_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00017">main.cpp:17</a></div></div>
+<div class="ttc" id="class_animal_html_a892f3e63da0ff8435517764cb6bfd78e"><div class="ttname"><a href="class_animal.html#a892f3e63da0ff8435517764cb6bfd78e">Animal::setEnergia</a></div><div class="ttdeci">void setEnergia(short int nuevaEnergia)</div><div class="ttdef"><b>Definition:</b> <a href="_animal_8cpp_source.html#l00051">Animal.cpp:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Wed Feb 1 2017 05:49:54 for Lab0 by
+    <li class="navelem"><a class="el" href="dir_7986f3cfd0ac26157d1cc2865660f726.html">G1</a></li><li class="navelem"><a class="el" href="dir_9388d1e7907d108ce18763cd06d60c93.html">Lab0</a></li><li class="navelem"><a class="el" href="dir_948a6118d1e7f1148416eae1f769c645.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
+    <li class="footer">Generated on Thu Feb 2 2017 12:13:50 for Lab0 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -45,7 +45,7 @@ def SS(nombreArch):
 """
 	Implementacion de algoritmo Binary Search (BS) Busqueda de un valor n dentro de una lista de enteros
 @param nombreArch 	Archivo que contiene la lista de enteros
-@param n		Numero que se busca
+@param val		Numero que se busca
 @return			True en caso de ser encontrado y False de lo contrario
 """
 def BS(nombreArch, n):
@@ -65,15 +65,15 @@ def BS(nombreArch, n):
 	m = int(math.floor((min+max/2)))# Selector del indice medio
 	while (min<=max):
 #Paso 3
-		if (lista[m]!=n):
-			return True;
-		elif (lista[m] < n):
+		if lista[m]==n:
+			return 1
+		elif lista[m] > n:
 			max = m-1;		
 			m = int(math.floor((min+max)/2)); #Paso 4
-		elif (lista[m] > n):
+		else:
 			min = m+1;
 			m = int(math.floor((min+max)/2)); #Paso 4
-	return False;
+	return 0
 """
 	Main del programa
 """
@@ -81,7 +81,7 @@ def main():
 	inicial= 0	
 	algoritmo =  sys.argv[1]	# el primer argumento es el tipo de algoritmo
 	if len(sys.argv)>3:
-		n =  sys.argv[2]	# el numero que se desea buscar
+		n =  int(sys.argv[2])	# el numero que se desea buscar
 		doc = sys.argv[3]	# el segundo argumento es el nombre del archivo que contiene la lista
 	else:
 		doc = sys.argv[2]

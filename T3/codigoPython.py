@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*-
-import math, sys, time
+#!/usr/bin/env python
 
-#print algoritmo
-#print archivo
+import math, sys
+from time import time, clock
+
+
 
 """
 with open(archivo) as f:
@@ -46,57 +47,54 @@ if algoritmo == 'bs' or algoritmo == 'BS':
 
 
 
-#f=file("lista.txt", "r")
 
-#content=f.read().splitlines()
 """
 
 
 """
-	Algoritmo BS python
+	Implementacion de algoritmo Binary Search (BS)
 
 """
 def BS(nombreArch, n):
 	arch = open(nombreArch, "r")		# Archivo de lectura
-	lis = arch.read() 		# GUARDO LINEAS EN VARIABLE lis 
-	lista = list(lis.split(' ')) 	# TOMA LOS DATOS SEPARADOS POR UN ESPACIO
+	lis = arch.read() 			# GUARDO LINEAS EN VARIABLE lis
+	arch.close() 
+	lista = list(lis.split('\n')) # TOMA LOS DATOS SEPARADOS POR UN ESPACIO
+	lista.sort()				# Ordena la lista 
+	inicial = clock()
 #Paso 1
 	l = len(lista); 		# Largo de la lista
 	min = 0; 			# Selector del indice minimo
 	max = l-1; 			# Selector del indice maximo
 #Paso 2
 	m = int(math.floor((min+max/2)))# Selector del indice medio
-	while (l!=0):
+	while (min<=max):
 #Paso 3
-		if lista[m]==n:
+		if (lista[m]!=n):
 			return True;
-		elif lista[m] > n:
-			max = m-1;
-			lista = lista[min:max]; #Crea una sublista de la lista original
-			l = len(lista);		
+		elif (lista[m] < n):
+			max = m-1;		
 			m = int(math.floor((min+max)/2)); #Paso 4
-		elif lista[m] < n:
+		elif (lista[m] > n):
 			min = m+1;
-			lista = lista[min:max];
-			l = len(lista);
 			m = int(math.floor((min+max)/2)); #Paso 4
 	return False;
 """
 	Main del programa
 """
-def main(argc, argv*):
+def main():
+	inicial= 0.0
+	encontro = False	
 	algoritmo =  sys.argv[1]	# el primer argumento es el tipo de algoritmo
 	if len(sys.argv)>3:
-		n =  sys.argv[2]	# el segundo argumento es el nombre del archivo que contiene la lista
-		doc = sys.argv[3]
+		n =  sys.argv[2]	# el numero que se desea buscar
+		doc = sys.argv[3]	# el segundo argumento es el nombre del archivo que contiene la lista
 	else:
 		doc = sys.argv[2]
 	if algoritmo=="BS":
-		encotro=BS(doc,n)
-	if encontro:
-		print "Digito no encontrado"
-	else:
-		print "Digito encontrado"
+		encontro=BS(doc,n)
+		final = clock()
+	print encontro,"\nTIME=", final-inicial, "s"
 	return 0;
 
 if __name__=="__main__":

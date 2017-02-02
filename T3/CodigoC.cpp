@@ -1,7 +1,7 @@
 /*
  *Universidad de Costa Rica - Escuela de Ingenieria Electrica
  *IE-0217 - Tarea3 - Grupo01
- *@author Robin Gonzalez Ricz Luis Adrian Aguilar Cascante 
+ *@author Robin Gonzalez Ricz @authorLuis Adrian Aguilar Cascante 
  *@date   01-31-2017
  *@brief  implementación del algoritmo Selection sort y Binary search en c++
 */
@@ -22,8 +22,8 @@ void printVec(vector<int> a, int largo){
 }
 
 int main (int argc, char** argv){
-	string algoritmo = argv[1];
-	ifstream archivo(argv[2]); 
+	string algoritmo = argv[1];//Primer argumento es el tipo de algoritmo
+	ifstream archivo(argv[2]);//Segundo argumento es el nombre del archivo para leer la lista de numeros
 	if(!(algoritmo.compare("ss")||algoritmo.compare("SS"))){//la función compare retorna 0 si los strings son iguales, por eso ponemos ! para que sea 1 de ser el caso
 		int i = 0;
 		while(getline(archivo, leido,' ')){

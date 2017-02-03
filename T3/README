@@ -2,21 +2,23 @@
 
 TIEMPOS DE EJECUCION Y COMPLEJIDAD DE ALGORITMOS SS Y BS:
 	
-	I) Los pseudocodigos y el calculo de T(n) y 0(T(n)) estan en la carpeta pseudoodigo
+	I) Los pseudocodigos y el calculo de T(n) y 0(T(n)) estan en la carpeta pseudocodigo
 
 	II) Para ejecutar los archivos en Python:
 
 		1) Se debe ingresar a la carpeta Python/
 		2) Se debe ejecutar el codigo Bash generador_random_numbers esto para generar la lista de (n)
-elementos de forma aleatoria. Por default el archivo "lista.txt" tiene 10 elementos. Para generar una corrida con otro numero de elementos se debe eliminar el contenido de "lista.txt". Abrir generador_random_numbers y asignar en el numero (n) que desee.
+elementos de forma aleatoria. Por default el archivo "lista.txt" tiene 10 elementos.
+Para generar una corrida con otro numero de elementos se debe eliminar el contenido de "lista.txt". 
+Abrir generador_random_numbers y asignar en el numero (n) que desee.
 		3) Desde la linea de comandos se debe ejecutar el programa algoritmosPython.py:
 			2.1) Para correr el Selection Sort (SS)
 
-				>> python algoritmosPython.py SS <tamaño> lista.txt
+				>> python algoritmosPython.py SS <tamano> lista.txt
 
 			2.2) Para correr el Binary Search (BS)
 
-				>> python algoritmosPython.py BS <tamaño> <valor_de_busqueda> lista.txt 
+				>> python algoritmosPython.py BS <tamano> <valor_de_busqueda> lista.txt 
 
 	III) Para compilar y ejecutar el programa en C++ 
 		
@@ -38,7 +40,8 @@ elementos de forma aleatoria. Por default el archivo "lista.txt" tiene 10 elemen
 
 			>> make clean
 
-	IV) En ambas carpetas existen archivos con un cuadro de tiempos de ejecucion de cada uno de los algoritmos llamadas "tiempos_de_ejecucion._python.txt" y "tiempos_de_ejecuion_C++.txt"
+	IV) En ambas carpetas existen archivos con un cuadro de tiempos de ejecucion de cada uno de los algoritmos llamadas
+	"tiempos_de_ejecucion._python.txt" y "tiempos_de_ejecuion_C++.txt"
 
 
 DESARROLLADO POR:

@@ -1,0 +1,5 @@
+Juego de gato en el que siempre hay un ganador.
+El programa contiene una matrix de 3 por 3, dos jugadores y genera dos enteros aleatorios entre [0-2] en el main los cuales son tomados por la funcion move para definir la posición donde el jugador selecciona su marca. Cada vez que se crea una marca por cualquier jugador, el programa analiza 
+
+
+

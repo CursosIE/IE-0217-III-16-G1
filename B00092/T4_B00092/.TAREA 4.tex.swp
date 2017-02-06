@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage{setspace}
+%Gummi|065|=)
+\title{\textbf{Tarea 4}}
+\author{Luis Adrian Aguilar Cascante\\
+		}
+\date{5/2/2016}
+\begin{document}
+
+\maketitle
+
+\section{Ejercisios Varios}
+\subsection{}
+\subsection{}
+\subsection{}
+\subsection{}
+\begin{spacing}{1.75}
+\begin{tabular}{p{5cm}p{5cm}p{5cm}}
+\textbf{Expresion} & \textbf{Terminos dominantes} & \textbf{0(...)}\\
+5+0.001$n^3+25$ & $0.001n3$ & $n^3$\\
+500n + 100$n^{1.5}+50nlog_{10}n$ & $100n^1.5$ & $n^{1.5}$\\
+$0.3n+5n^{1.5}+2.5*n^{1.75}$&$2.5n^{1.75}$ & $n^{1.75}$ \\
+$n^{2}log_{2}n+n(log_{2}n)^{2}$& $n^2log_2n$ & $n^2log_2n$ \\
+$nlog_{3}n+nlog_{2}n$& $nlog_3n,nlog_2n$ & $nlog(n)$  \\
+$3log_{8}n+log_{2}log_{2}log_{2}n$& $3log_8n$ & $log(n)$  \\
+$100n+0.01n^{2}$& $0.01n^2$ & $n^2$  \\
+$0.01n+100n^2$& $100n^2$ & $n^2$ \\
+$2n+n^{0.5}+0.5n^{1.25}$ & $0.5n^{1.25}$ & $n^{1.25}$\\
+$0.01nlog_2n+n(log_2n)^2$& $n(log_2n)^2$ & $n(log(n))^2$  \\
+
+$100nlog_3n+n^3+100n$& $n^3$ & $n^3$ \\
+$0.003log_4n+log_2log_2n$ & $0.003log_4n$ & $log(n)$ \\
+
+\end{tabular}
+\end{spacing}
+\subsection{}
+\begin{spacing}{1.75}
+\begin{tabular}{p{5cm}cp{5cm}}
+\textbf{Declaracion} & \textbf{Falso o Verdadero} & \textbf{Formula correcta en caso de ser verdadero}\\
+Sumas: O(f+g)=O(f)+O(g) & F &  Se escoge el mayor entre O(f) y O(g) \\
+Productos: O(f*g)=O(f)*O(g) & T & --------------------\\
+Transitividad: si g = O(f) y h = O(f) entonces g = O(h) & F & Si f = O(g) y g = O(h) entonces f = O(h) \\
+$5n+8n^2+100n^3=O(n^4)$ & T & -------------------- \\
+$5n+8n^2 + 100n^3 = O(n^2log(n))$ & F & $5n+8n^2+100n^3 = O(n^3)$ \\
+
+\end{tabular}
+\end{spacing}
+\subsection{}
+\subsection{}
+\subsection{}
+\subsection{}
+El algoritmo B es mejor segun O(..). El tiempo de A va a ser mayor que el Tiempo de B, porque $5nlog_10n$ es mayor que $25n$ cuando tiende a infinito
+
+\end{document}

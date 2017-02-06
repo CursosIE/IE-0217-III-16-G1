@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /* 
  * File:   polinomio.hpp
  * Author: adrian
  *
- * Created on January 24, 2017, 9:31 PM
+ * Created on January 24, 2017
  */
 
 #ifndef POLINOMIO_HPP
@@ -22,10 +17,11 @@ class polinomio
          int base[4] = {2,3,1,4};
          int nuevo[4];
          polinomio();
-         int suma();
-         int resta();
-         int division();
-         int multiplicacion();
+	polinomio& operator*(const polinomio &pDer);
+	polinomio& operator+(const polinomio &sumando);
+        polinomio& operator=(const polinomio &orig);
+	polinomio& operator-(const polinomio &sustraendo);
+	polinomio& operator/(const polinomio &dividendo);
          polinomio(const polinomio& orig);
          virtual ~polinomio();
          int a, b, c, d;

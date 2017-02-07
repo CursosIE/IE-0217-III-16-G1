@@ -11,7 +11,17 @@
 
 \section{Ejercisios Varios}
 \subsection{}
+Tiempo de proceso = $cnlog(n)$\\
+c = T(N)/NlogN\\
+T(n) = T(N)nlog(n)/NlogN\\
+
+Entonces si n = 1000000, T(n) = T(1000) * $1000000log_{10} 1000000/1000log_{10}1000$
+
 \subsection{}
+c = $T(N)/N^2$\\
+T(n)=$n^2/1000$\\
+
+Por lo tanto T(5000) = 2500ms\\
 \subsection{}
 \subsection{}
 \begin{spacing}{1.75}
@@ -27,7 +37,6 @@ $100n+0.01n^{2}$& $0.01n^2$ & $n^2$  \\
 $0.01n+100n^2$& $100n^2$ & $n^2$ \\
 $2n+n^{0.5}+0.5n^{1.25}$ & $0.5n^{1.25}$ & $n^{1.25}$\\
 $0.01nlog_2n+n(log_2n)^2$& $n(log_2n)^2$ & $n(log(n))^2$  \\
-
 $100nlog_3n+n^3+100n$& $n^3$ & $n^3$ \\
 $0.003log_4n+log_2log_2n$ & $0.003log_4n$ & $log(n)$ \\
 
@@ -46,8 +55,18 @@ $5n+8n^2 + 100n^3 = O(n^2log(n))$ & F & $5n+8n^2+100n^3 = O(n^3)$ \\
 \end{tabular}
 \end{spacing}
 \subsection{}
+T(n) $ < a_0 + a_1n + a_2 n^2 + a_3 n^3$\\
+Luego, si n$>1$ entonces T(n)$< cn^3$ cuando c = $ a_0 + a_1n + a_2 n^2 + a_3 n^3$\\
+Por ende  T(n) = O($n^3)$
+
 \subsection{}
+Es mejor el algoritmo \textbf{B} de acuerdo a la O de Landau.   
 \subsection{}
+$CA = 10/1024log_21024 = 1/1024; CB = 1/1024^2$\\
+Por esto si se quieren procesar $2^20 = 1024^2$ pasos, $T_A(2^{20})$ = 20280us y $T_B(2^{20}) = 2^{20}us$\\
+
+La mejor opcion por ende es  \textbf{A} 
+
 \subsection{}
 El algoritmo B es mejor segun O(..). El tiempo de A va a ser mayor que el Tiempo de B, porque $5nlog_10n$ es mayor que $25n$ cuando tiende a infinito
 

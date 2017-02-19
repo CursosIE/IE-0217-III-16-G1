@@ -25,6 +25,6 @@ run:
 	
 clean:
 	@echo ----- LIMPIANDO ARCHIVOS INTERMEDIOS Y ARCHIVO EJECUTABLE -----
-	$(RM) ../src/*.o ../src/*~ $(MAIN)
+	rm *.o $(MAIN)
 
 

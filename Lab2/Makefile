@@ -21,7 +21,7 @@ $(MAIN): $(OBJS)
 
 run: 
 	@echo ----- EJECUTANDO -----
-	./$(MAIN
+	./$(MAIN)
 	
 clean:
 	@echo ----- LIMPIANDO ARCHIVOS INTERMEDIOS Y ARCHIVO EJECUTABLE -----

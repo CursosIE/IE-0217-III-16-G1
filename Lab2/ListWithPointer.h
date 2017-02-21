@@ -108,16 +108,48 @@ void sort() { //ordenar
 */ 
 
 void sort(){
-	Cell<D>* min = nullptr;
-	min = new Cell<D>(this->first->data,this->first->next);
+cout << "sort llamado" << endl;
+cout << "Primero" << *(this->first->data) << endl;	
+cout << "último" << *(this->last->data) << endl;
+	Cell<D>* min = this->first;
+	Cell<D>* actual = this->first->next;
+	Cell<D>* temp = mullptr;
+	Cell<D>* tempnext = mullptr;
+	
+cout << "siguiente de first" << *(this->first->next->data) << endl;
+	for(int i = 1; i < this->n; i++){
+		if(*(min->data) > *(actual->data)){
+			min = actual;
+		}
+		cout << *(min->data) << endl;
+		if(actual->next){
+			cout << "sí hay algo más en mi bola de cristal: " << i << endl;
+			actual = actual->next;
+		}
+	}
+cout << "im out bitch" << endl;
+	temp = this->first;
+	tempnext = this->first->next;
+	this->first = min;
+	Cell<D>* max = nullptr;
+	for(int i = 1; i < this->n; i++){
+		if(*(max->data) < *(actual->data)){
+			max = actual;
+		}
+		if(actual->next)actual = actual->next;
+	}
+	this->last = max;
+	cout << "First" << *(this->first->data) << endl;
+	cout << "Last" << *(this->last->data) << endl;
+/*	min = new Cell<D>(this->first->data,this->first->next);
 	for(int i = 1; i < this->n; i++){
 		for(int ii = 1; ii < this->n; ii++){
 			if(*(min->data) > *(min->next->data)){
 				*(this->first->data) = *(min->next->data);
 			}
 		}
-	}
-delete min;	
+	}*/
+//delete min;	
 }
 
 int getSize() { //tamaño

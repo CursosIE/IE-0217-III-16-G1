@@ -78,8 +78,8 @@ int main(int argc, char** argv) {
 	l1->printList();
 	cout << l1->getSize() << endl;
 //PRUEBAS PARA ORDENAR
-	cout << "Primero" << l1->first << endl;	
-	cout << "último" << l1->last << endl;	
+//	cout << "Primero" << l1->first << endl;	
+//	cout << "último" << l1->last << endl;	
 	//ordenar lista con punteros	
 	l1->sort();
 	cout << "----- lista con púnteros ordenada y su tamaño -----" << endl;

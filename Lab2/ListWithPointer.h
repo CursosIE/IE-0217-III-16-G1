@@ -3,6 +3,7 @@
 #include <iostream>
 #include "List.h"
 #include "Cell.h"
+
 using namespace std;
 
 //Lista de double con punteros  
@@ -113,7 +114,6 @@ void printList() { //imprimir
 		}
 	}
 }
-
 
 P next(P k) { //siguiente
     return k->next;

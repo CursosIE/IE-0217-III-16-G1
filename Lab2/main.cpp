@@ -2,6 +2,7 @@
 #include "ListWithArray.h"
 #include "ListWithPointer.h"
 #include "Cell.h"
+#include "Stack.h"
 
 using namespace std;
 
@@ -87,6 +88,39 @@ int main(int argc, char** argv) {
 	l0->printList();
 	cout << "----- ListWithPointer -----" << endl;
 	l1->printList();
+
+	//Crear Pila
+	cout << "----- CREANDO STACK -----" << endl;
+	Stack<double, Cell<double>*>* p0 = new Stack<double, Cell<double>*>();
+
+	//Agregando valor por valor e imprimiendo su top
+	cout << "----- INSERTANDO VALORES (PUSH) -----" << endl;
+	p0->push(5.5);
+	p0->top();
+	p0->push(1.1);
+	p0->top();
+	p0->push(88.8);
+	p0->top();
+	p0->push(77.7);
+	p0->top();
+	p0->push(101.01);
+	p0->top();
+	p0->push(99.9);
+	p0->top();
+	p0->push(31.31);
+	p0->top();
+
+	//POP de varios valores
+	cout << "----- SACANDO ELEMENTOS (POP) -----" << endl;
+	Cell<double>* d0 = p0->pop();
+	Cell<double>* d1 = p0->pop();
+	cout << "Elementos retirados: " << *(d0->data) << ", " << *(d1->data) << endl;
+	cout << "Top del Stack: ";
+	p0->top();
+
+	//POP de varios valores
+	cout << "----- VACIAR STACK (EMPTY) -----" << endl;
+	p0->emptyStack();
 
     return 0;
 }

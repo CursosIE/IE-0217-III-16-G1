@@ -1,14 +1,12 @@
 /**
- * Universidad de Costa Rica - Escuela de Ingenieria ELectrica
- * IE-0217 - Lab2: Estructuras de datos lineales
+ * @brief Libreria que genera un template de una clase abstracta list
  * @author Giancarlo Marin - B54099
  * @date 21-02-2017	
- * @brief Libreria que genera un template de una clase abstracta list
  */
 #ifndef LIST_H
 #define LIST_H
 
-template <typename D, typename P> /**Template que toma un tipo de dato para los datos contenidos en la lista (D) y otro para los indices de las misma (P)*/
+template <typename D, typename P> /**Libreria que genera un template de una clase abstracta list que toma un tipo de dato para los datos contenidos en la lista (D) y otro para los indices de las misma (P)*/
 class List {
 public:
 /**

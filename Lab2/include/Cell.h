@@ -11,7 +11,7 @@
 #include <iostream>
 using namespace std;
 
-template <typename D> /**Template que toma un tipo de dato para los datos contenidos en la Celda (D)*/
+template <typename D> /**Libreria que genera un template de una clase Cell que contiene datos de tipo D*/
 class Cell{
 public:
 	Cell* next; /**<Atrib. publico de tipo puntero a Cell que indica la siguiente celda*/

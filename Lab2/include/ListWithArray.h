@@ -1,9 +1,7 @@
 /**
- * Universidad de Costa Rica - Escuela de Ingenieria ELectrica
- * IE-0217 - Lab2: Estructuras de datos lineales
+ * @brief Libreria que genera un template de una clase ListWithArray (lista implementada con arreglos) que hereda de la clase List
  * @author Giancarlo Marin - B54099
  * @date 21-02-2017	
- * @brief Libreria que genera un template de una clase ListWithArray (lista implementada con arreglos) que hereda de la clase List
  */
 
 #ifndef LISTWITHARRAY_H
@@ -12,7 +10,7 @@
 #include "List.h"
 using namespace std;
 
-template <typename D, typename P> /**Template que toma un tipo de dato para los datos contenidos en la lista (D) y otro para los indices de las misma (P)*/
+template <typename D, typename P> /**Libreria que genera un template de una clase ListWithArray (lista implementada con arreglos) que hereda de la clase List y que toma un tipo de dato para los datos contenidos en la lista (D) y otro para los indices de las misma (P)*/
 class ListWithArray : public List<D, P> {
 public:
 

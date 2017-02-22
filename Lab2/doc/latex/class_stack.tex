@@ -1,0 +1,216 @@
+\hypertarget{class_stack}{\section{Stack$<$ D, P $>$ Class Template Reference}
+\label{class_stack}\index{Stack$<$ D, P $>$@{Stack$<$ D, P $>$}}
+}
+
+
+Libreria que genera un template de la clase \hyperlink{class_stack}{Stack} (Pila) que hereda de la clase \hyperlink{class_list_with_pointer}{List\+With\+Pointer} y que toma un tipo de dato D para los datos contenidos con indices P.  
+
+
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+Inheritance diagram for Stack$<$ D, P $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_stack}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_stack_a6e0f84830cde41cb8d49818842d18d36}{Stack} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+\hyperlink{class_stack_a181a491ce96ea87dc6db37e040f785e0}{$\sim$\+Stack} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+void \hyperlink{class_stack_ac023e5bfa5b4fc5a19d4a849fbfbbbcc}{push} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el insertar (push) del \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+\hyperlink{class_cell}{Cell}$<$ D $>$ $\ast$ \hyperlink{class_stack_ae874c09d418be57373d1a5bf5a6f27dd}{pop} ()
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el sacar elemento del S\+T\+A\+C\+K (pop) \end{DoxyCompactList}\item 
+void \hyperlink{class_stack_ae8737ef6216bb3ee97e1cbf929395a9c}{top} ()
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el obtener el ultimo elemento del L\+I\+F\+O. \end{DoxyCompactList}\item 
+void \hyperlink{class_stack_a045dffa682607b7eee938b900c5f698b}{empty\+Stack} ()
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el vaciar Pila que Deja sin ningun elemento el \hyperlink{class_stack}{Stack} e imprime cada elemento que retira. \end{DoxyCompactList}\item 
+P \hyperlink{class_stack_aa8a3a0b773900e44f641e3be9d9345da}{find} (D d)
+\begin{DoxyCompactList}\small\item\em Metodos que se heredan de \hyperlink{_list_with_pointer_8h}{List\+With\+Pointer.\+h}. \end{DoxyCompactList}\item 
+P \hyperlink{class_stack_ab7f8f7e4ab10c00769c1debc5391fc17}{next} (P k)
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el obtener siguiente elemento de una posicion especifica del \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+P \hyperlink{class_stack_a0c0b55f72c9249bfb9252bce1a93458d}{prev} (P k)
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el obtener elemento anterior en \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+int \hyperlink{class_stack_a74fc7e5921dfb247f9ad7052c3c4297a}{get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el obtener tamaño del \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename D, typename P$>$class Stack$<$ D, P $>$}
+
+Libreria que genera un template de la clase \hyperlink{class_stack}{Stack} (Pila) que hereda de la clase \hyperlink{class_list_with_pointer}{List\+With\+Pointer} y que toma un tipo de dato D para los datos contenidos con indices P. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_stack_a6e0f84830cde41cb8d49818842d18d36}{\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\subsubsection[{Stack}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf Stack}$<$ D, P $>$\+::{\bf Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stack_a6e0f84830cde41cb8d49818842d18d36}
+
+
+Constructor de la clase \hyperlink{class_stack}{Stack}. 
+
+\hypertarget{class_stack_a181a491ce96ea87dc6db37e040f785e0}{\index{Stack@{Stack}!````~Stack@{$\sim$\+Stack}}
+\index{````~Stack@{$\sim$\+Stack}!Stack@{Stack}}
+\subsubsection[{$\sim$\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf Stack}$<$ D, P $>$\+::$\sim${\bf Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stack_a181a491ce96ea87dc6db37e040f785e0}
+
+
+Destructor de la clase \hyperlink{class_stack}{Stack}. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_stack_a045dffa682607b7eee938b900c5f698b}{\index{Stack@{Stack}!empty\+Stack@{empty\+Stack}}
+\index{empty\+Stack@{empty\+Stack}!Stack@{Stack}}
+\subsubsection[{empty\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::empty\+Stack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stack_a045dffa682607b7eee938b900c5f698b}
+
+
+Metodo que implementa el vaciar Pila que Deja sin ningun elemento el \hyperlink{class_stack}{Stack} e imprime cada elemento que retira. 
+
+\hypertarget{class_stack_aa8a3a0b773900e44f641e3be9d9345da}{\index{Stack@{Stack}!find@{find}}
+\index{find@{find}!Stack@{Stack}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P {\bf Stack}$<$ D, P $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stack_aa8a3a0b773900e44f641e3be9d9345da}
+
+
+Metodos que se heredan de \hyperlink{_list_with_pointer_8h}{List\+With\+Pointer.\+h}. 
+
+Metodo que implementa la busqueda en un \hyperlink{class_list_with_pointer}{List\+With\+Pointer} 
+\begin{DoxyParams}{Parameters}
+{\em d} & Dato que se desea buscar en \hyperlink{class_list}{List} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Indice de tipo P dentro de \hyperlink{class_list}{List} 
+\end{DoxyReturn}
+Indicacion de que el dato no fue encontrado en la lista 
+
+Reimplemented from \hyperlink{class_list_with_pointer_afeff8b963c197378553e2a3f73eaf66a}{List\+With\+Pointer$<$ D, P $>$}.
+
+\hypertarget{class_stack_a74fc7e5921dfb247f9ad7052c3c4297a}{\index{Stack@{Stack}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Stack@{Stack}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ int {\bf Stack}$<$ D, P $>$\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stack_a74fc7e5921dfb247f9ad7052c3c4297a}
+
+
+Metodo que implementa el obtener tamaño del \hyperlink{class_stack}{Stack}. 
+
+
+
+Reimplemented from \hyperlink{class_list_with_pointer_ac70c49b5703887fd867e90cdac3c706f}{List\+With\+Pointer$<$ D, P $>$}.
+
+\hypertarget{class_stack_ab7f8f7e4ab10c00769c1debc5391fc17}{\index{Stack@{Stack}!next@{next}}
+\index{next@{next}!Stack@{Stack}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P {\bf Stack}$<$ D, P $>$\+::next (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stack_ab7f8f7e4ab10c00769c1debc5391fc17}
+
+
+Metodo que implementa el obtener siguiente elemento de una posicion especifica del \hyperlink{class_stack}{Stack}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Indice de tipo P dentro de \hyperlink{class_list}{List} del que se desea el siguiente elemento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Siguiente elemento de k de tipo P 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_list_with_pointer_a518b5ee89e3ad32ae7cd4ddd5d4fa7e9}{List\+With\+Pointer$<$ D, P $>$}.
+
+\hypertarget{class_stack_ae874c09d418be57373d1a5bf5a6f27dd}{\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf Cell}$<$D$>$$\ast$ {\bf Stack}$<$ D, P $>$\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stack_ae874c09d418be57373d1a5bf5a6f27dd}
+
+
+Metodo que implementa el sacar elemento del S\+T\+A\+C\+K (pop) 
+
+\begin{DoxyReturn}{Returns}
+Puntero a la celda que contiene el dato sacado el S\+T\+A\+C\+K 
+\end{DoxyReturn}
+\hypertarget{class_stack_a0c0b55f72c9249bfb9252bce1a93458d}{\index{Stack@{Stack}!prev@{prev}}
+\index{prev@{prev}!Stack@{Stack}}
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P {\bf Stack}$<$ D, P $>$\+::prev (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stack_a0c0b55f72c9249bfb9252bce1a93458d}
+
+
+Metodo que implementa el obtener elemento anterior en \hyperlink{class_stack}{Stack}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Indice de tipo P dentro de la list del que se desea el elemento anterior \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Elemento anterior de k de tipo P 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_list_with_pointer_a7242068fcc3a193f0f7e94517856e431}{List\+With\+Pointer$<$ D, P $>$}.
+
+\hypertarget{class_stack_ac023e5bfa5b4fc5a19d4a849fbfbbbcc}{\index{Stack@{Stack}!push@{push}}
+\index{push@{push}!Stack@{Stack}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::push (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stack_ac023e5bfa5b4fc5a19d4a849fbfbbbcc}
+
+
+Metodo que implementa el insertar (push) del \hyperlink{class_stack}{Stack}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Elemento de tipo D que se inserta al S\+T\+A\+C\+K \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_stack_ae8737ef6216bb3ee97e1cbf929395a9c}{\index{Stack@{Stack}!top@{top}}
+\index{top@{top}!Stack@{Stack}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stack_ae8737ef6216bb3ee97e1cbf929395a9c}
+
+
+Metodo que implementa el obtener el ultimo elemento del L\+I\+F\+O. 
+
+Imprime el ultimo elemento añadido 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_stack_8h}{Stack.\+h}\end{DoxyCompactItemize}

@@ -1,9 +1,7 @@
 /**
- * Universidad de Costa Rica - Escuela de Ingenieria ELectrica
- * IE-0217 - Lab2: Estructuras de datos lineales
+ * @brief Libreria que genera un template de una clase ListWithPointer (lista implementada con punteros) que hereda de la clase List
  * @author Giancarlo Marin - B54099
  * @date 21-02-2017	
- * @brief Libreria que genera un template de una clase ListWithPointer (lista implementada con punteros) que hereda de la clase List
  */
 #ifndef LISTWITHPOINTER_H
 #define LISTWITHPOINTER_H
@@ -15,7 +13,7 @@ using namespace std;
 
 //Lista de double con punteros  
 
-template <typename D, typename P> /**Template que toma un tipo de dato para los datos contenidos en la lista (D) y otro para los indices de las misma (P)*/
+template <typename D, typename P> /**Libreria que genera un template de una clase ListWithPointer (lista implementada con punteros) que hereda de la clase List y que toma un tipo de dato para los datos contenidos en la lista (D) y otro para los indices de las misma (P)*/
 class ListWithPointer : public List<D, P> {
 public:
 

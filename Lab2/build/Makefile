@@ -2,7 +2,7 @@
 CXX= g++
 RM= rm -f
 CXXFLAGS= -Wall -g -std=c++11
-SRCS= *.cpp
+SRCS= ../src/*.cpp
 OBJS= $(SRCS:.cpp=.o)
 #Nombre del archivo ejecutable
 MAIN= estructuras
@@ -25,6 +25,6 @@ run:
 	
 clean:
 	@echo ----- LIMPIANDO ARCHIVOS INTERMEDIOS Y ARCHIVO EJECUTABLE -----
-	rm *.o $(MAIN)
+	$(RM) ../src/*.o $(MAIN)
 
 

@@ -1,14 +1,27 @@
+/**
+ * Universidad de Costa Rica - Escuela de Ingenieria ELectrica
+ * IE-0217 - Lab2: Estructuras de datos lineales
+ * @author Giancarlo Marin - B54099
+ * @date 21-02-2017	
+ * @brief Programa de prueba para la implementacion de listas, pilas y colas
+ */
 #include <iostream>
-#include "ListWithArray.h"
-#include "ListWithPointer.h"
-#include "Cell.h"
-#include "Stack.h"
+#include "../include/ListWithArray.h"
+#include "../include/ListWithPointer.h"
+#include "../include/Cell.h"
+#include "../include/Stack.h"
 
 using namespace std;
 
+/**
+ * Main del programa que realiza las pruebas de las estructuras lineales
+ * @param int 		Indicador de la cantidad de argumentos pasados en la ejecucion del programa
+ * @param char**	Vector de char* que contiene los argumentos enviados al ejecutar el programa
+ * @return 
+ */
 int main(int argc, char** argv) {
-    ListWithArray<double, int>* l0 = new ListWithArray<double, int>(5);
-    ListWithPointer<double, Cell<double>*>* l1 = new ListWithPointer<double, Cell<double>*>();
+    ListWithArray<double, int>* l0 = new ListWithArray<double, int>(5); /**<Lista implementada con arreglos */
+    ListWithPointer<double, Cell<double>*>* l1 = new ListWithPointer<double, Cell<double>*>(); /**<Lista implementada con punteros */
     
 	//Impresion en pantalla de las listas
 	cout << "----- CREACION DE LISTAS -----" << endl;
@@ -91,7 +104,7 @@ int main(int argc, char** argv) {
 
 	//Crear Pila
 	cout << "----- CREANDO STACK -----" << endl;
-	Stack<double, Cell<double>*>* p0 = new Stack<double, Cell<double>*>();
+	Stack<double, Cell<double>*>* p0 = new Stack<double, Cell<double>*>();/**<Pila implementada con punteros tomando como base una lista de punteros*/
 
 	//Agregando valor por valor e imprimiendo su top
 	cout << "----- INSERTANDO VALORES (PUSH) -----" << endl;

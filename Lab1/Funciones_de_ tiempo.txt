@@ -1,0 +1,63 @@
+ttt (Gato)
+
+Asignaciones Main: 					6 
+
+Llamado a funcion TicTacToe:  				1
+
+Ciclo while: (n)
+		a) Condicion 		                1
+		b) Asignaciones				2
+		c) Llamado a move:
+			I) Asignacion			5
+			II) Chequeo fila		3n+3
+			III) Chequo Columna		3n+3
+			IV) Chequeo Diagonal frontal	3n+3
+			V) Chequeo Diagonal Trasera	3n+3
+			VI) Chequeo de ganador		9			 			
+		d) Condicion de ganador			3
+Retorno							1	
+
+T(n)= 8+n*n(4+(5+4(3(n)+3))) = 8+n*n(4+5+12n+12) = 8+21n*n+12n*n*n = 12n*n*n+21*n*n+8 = O(n*n*n)
+ 						
+ff (paint)
+
+Asignaciones pre-main:					14
+Main:
+	a) Asignaciones					11
+	b) Condicion					1
+	c) Llamados a funciones				7
+	d) Retorno					1
+FloodFill8:
+	a) Condiciones 					8
+	b) Asignacion					1
+	c) Recursion:	
+		I) Cada Recursion			T(N-1)
+		II) Cantidad de recursiones		8
+
+ 	Busqueda de Patron en recursion FloodFill (N=n*m pixeles)
+T(0) = 0
+T(1) = 1+8     = 9
+T(2) = 1+8T(1) = 1+8*(1+8) = 9+8^2 =
+T(3) = 1+8T(2) = 1+8*(1+8T(1)) = 1+8*(1+8*(1+8))) = 1+8*(1+8+8^2) = 1+8+8^2+8^3
+.
+.
+.
+
+T(N) = 1+8^N
+T(n) = 34+9*(1+8^n) = 34+9+9*8^n = 43+9*8^n = O(8^n)
+
+	De manera empirica se demuestra la linearidad de la recursion que se cumple dada la recursion por la cola del algoritmo.
+T(0) = 1
+T(1) = 9+8(1) = 17 
+T(2) = 9+8(2) = 25
+T(3) = 9+8(3) = 33
+.
+.
+.
+T(N) = 9+8n
+T(n) = 34+9+8n = 43+8n = O(n)
+
+
+		
+
+

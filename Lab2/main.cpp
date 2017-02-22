@@ -67,24 +67,26 @@ int main(int argc, char** argv) {
 	l0->insert(8.8);
 	l1->insert(8.8);
 	l1->insert(9.9);
-	l1->insert(7.9);
 
 	//Impresion en pantalla de las listas 
 	cout << "----- TAMAÑOS -----" << endl;
 	cout << "----- ListWithArray y su tamaño -----" << endl;
 	l0->printList();
 	cout << l0->getSize() << endl;
-	cout << "----- ListWithPointer y su tamaño -----" << endl;
+	cout << "----- ListWithPointer y su tamano -----" << endl;
 	l1->printList();
 	cout << l1->getSize() << endl;
-//PRUEBAS PARA ORDENAR
-//	cout << "Primero" << l1->first << endl;	
-//	cout << "último" << l1->last << endl;	
-	//ordenar lista con punteros	
+
+	//Ordenar listas
+	l0->sort();
 	l1->sort();
-	cout << "----- lista con púnteros ordenada y su tamaño -----" << endl;
+	
+	//Impresion en pantalla de las listas 
+	cout << "----- LISTAS ORDENADAS -----" << endl;
+	cout << "----- ListWithArray -----" << endl;
+	l0->printList();
+	cout << "----- ListWithPointer -----" << endl;
 	l1->printList();
-	cout << l0->getSize() << endl;
 
     return 0;
 }

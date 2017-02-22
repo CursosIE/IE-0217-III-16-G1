@@ -81,12 +81,22 @@ D get(P k) { //obtener
     return data[k];
 }
 
-void assign(P k, D d) {
+void assign(P k, D d) {//asignar
     this->data[k] = d;
 }
 
 void sort() { //ordenar
-
+	for (int i = 0; i < this->getSize()-1; i++) {
+		int min = i;
+		for (int j = i + 1; j < this->getSize(); j++){
+			if (this->data[j] < this->data[min]){
+				min = j;
+			}
+		}
+		D temp = this->data[i];
+		this->data[i] = this->data[min];
+		this->data[min] = temp;
+	}
 }
 
 int getSize() { //tamaño

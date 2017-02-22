@@ -17,7 +17,7 @@ ListWithPointer() {
 	this->last= nullptr;
 }
 
-~ListWithPointer() {//dudas
+~ListWithPointer() {
 	int x = this->getSize();
 	if (x!=0){
 		for (int i=0; i<x;i++){
@@ -73,83 +73,31 @@ D get(P k) { //obtener
     return *(k->data);
 }
 
-void assign(P k, D d) {
+void assign(P k, D d) {//asignar
     *(k->data) = d;
 }
 
-/*
 void sort() { //ordenar
-	Cell<D>* actual = this->first;
-	cout << actual << endl;
-	cout << this->first << endl;
-	Cell<D>* temptr = nullptr;
-	int contador = 0;
-	while(contador<this->n){
-		//this->first = ;
-		//this->last = ;
-		for(int i =0; i < this->n;i++,contador++){
-			if((*(actual->data) > *(actual->next->data)) && actual->next){//entonces hay que hacer un swap
-				cout <<"primer elemento mayor que el siguiente, cambio" << endl;
-				cout <<this->n << endl;
-				cout << actual->next << endl;
-				temptr = actual->next->next;
-				actual->next->next = actual;
-				actual->next = temptr;
-				this->printList();
-				--contador;
-			}
-			else{
-				cout <<"primer elemento menor que el siguiente" << endl;
-				actual = actual->next;
+	int cont = 0;
+	Cell<D>* temp = this->first;
+	while (temp->next != nullptr){
+		Cell<D>* min = this->first;
+		for (int i = 0; i < cont; i++){
+			min = next(min);
+		}
+		Cell<D>* temp2 = min;
+		while (temp2 != last){
+			temp2 = next(temp2);
+			if (*(temp2->data) < *(min->data)){
+				min = temp2;
 			}
 		}
+		D* temp3 = temp->data;
+		temp->data = min->data;
+		min->data = temp3;
+		cont++;
+		temp = next(temp);
 	}
-}
-*/ 
-
-void sort(){
-cout << "sort llamado" << endl;
-cout << "Primero" << *(this->first->data) << endl;	
-cout << "último" << *(this->last->data) << endl;
-	Cell<D>* min = this->first;
-	Cell<D>* actual = this->first->next;
-	Cell<D>* temp = mullptr;
-	Cell<D>* tempnext = mullptr;
-	
-cout << "siguiente de first" << *(this->first->next->data) << endl;
-	for(int i = 1; i < this->n; i++){
-		if(*(min->data) > *(actual->data)){
-			min = actual;
-		}
-		cout << *(min->data) << endl;
-		if(actual->next){
-			cout << "sí hay algo más en mi bola de cristal: " << i << endl;
-			actual = actual->next;
-		}
-	}
-cout << "im out bitch" << endl;
-	temp = this->first;
-	tempnext = this->first->next;
-	this->first = min;
-	Cell<D>* max = nullptr;
-	for(int i = 1; i < this->n; i++){
-		if(*(max->data) < *(actual->data)){
-			max = actual;
-		}
-		if(actual->next)actual = actual->next;
-	}
-	this->last = max;
-	cout << "First" << *(this->first->data) << endl;
-	cout << "Last" << *(this->last->data) << endl;
-/*	min = new Cell<D>(this->first->data,this->first->next);
-	for(int i = 1; i < this->n; i++){
-		for(int ii = 1; ii < this->n; ii++){
-			if(*(min->data) > *(min->next->data)){
-				*(this->first->data) = *(min->next->data);
-			}
-		}
-	}*/
-//delete min;	
 }
 
 int getSize() { //tamaño
@@ -196,7 +144,7 @@ void emptyList() { //vaciar
 
 private:
     int n; //num. elementos
-    	P last; //ultimo
+    P last; //ultimo
 	P first; //primero
 };
 

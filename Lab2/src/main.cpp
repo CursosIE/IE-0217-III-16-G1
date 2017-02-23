@@ -136,6 +136,32 @@ int main(int argc, char** argv) {
 	cout << "----- VACIAR STACK (EMPTY) -----" << endl;
 	p0->emptyStack();
 
+//Crear Cola
+	cout << "----- CREANDO COLA -----" << endl;
+	Queue<double, Cell<double>*>* q0 = new Queue<double, Cell<double>*>();/**<Cola implementada con punteros tomando como base una lista de punteros*/
+
+	//Agregando valor por valor
+	cout << "----- INSERTANDO VALORES (PUSH) -----" << endl;
+	q0->push(5.5);
+	q0->push(1.1);
+	q0->push(88.8);
+	q0->push(77.7);
+	q0->push(101.01);
+	q0->push(99.9);
+	q0->push(31.31);
+	
+	q0->printQueue();	
+	/*//POP de varios valores
+	cout << "----- SACANDO ELEMENTOS (POP) -----" << endl;
+	Cell<double>* q0 = q0->pop();
+	Cell<double>* q1 = q0->pop();
+	cout << "Elementos retirados: " << *(q0->data) << ", " << *(q1->data) << endl;
+	cout << "Top del Stack: ";
+
+	//POP de varios valores
+	cout << "----- VACIAR QUEUE (EMPTY) -----" << endl;
+	q0->emptyQueue();*/
+
     return 0;
 }
 

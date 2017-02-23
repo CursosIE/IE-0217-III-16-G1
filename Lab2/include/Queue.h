@@ -13,7 +13,7 @@
 using namespace std;
 
 template <typename D, typename P>/**Biblioteca que genera un template de la clase Stack (Pila) que hereda de la clase ListWithPointer y que toma un tipo de dato D para los datos contenidos con indices P*/
-class Queue : public List<D, P> {
+class Queue : public ListWithPointer<D, P> {
 public:
 /**
  * Constructor de la clase Stack
@@ -67,8 +67,16 @@ void sort(){//ordena crecientemente
  * Metodo que implementa el insertar (push) del Queue
  * @param d 	Elemento de tipo D que se inserta al Queue
  */
-void push(D* d) { //insertar
-	this->first = Cell<D>(d, this->first->next);//estos first en realidad son los last del queue
+void push(D d) { //insertar
+	if(this->getSize() == 0){	
+		this->first = this->last = Cell<D>(new D(d), this->first);
+	}
+	Cell<D>* neu = new Cell<D>(new D(d), this->first); 
+	this->first = new Cell<D>(new D(d), this->first);//estos first en realidad son los last del queue
+	if(this->getSize()==2){
+		this->last = this->first->next;
+	}
+
 }
 
 /**

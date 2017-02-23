@@ -1,0 +1,18 @@
+------ LABORATORIO 2 - G1 -----
+
+ESTRUCTURAS DE DATOS LINEALES:
+	
+	Para compilar y correr este programa:
+
+		1) Se debe ingresar a la carpeta build/
+		2) Desde la linea de comandos se debe compilar el programa con el Makefile 
+
+		>> make estructuras
+
+		3) Se corre el archivo ejecutable estructuras
+
+		>> make run
+
+		4) Se limpian los archivos intermedios con
+
+		>> make clean

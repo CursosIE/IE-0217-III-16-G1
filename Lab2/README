@@ -1,0 +1,30 @@
+Universidad de Costa Rica - Escuela de Ingenieria ELectrica
+IE-0217 - Lab2: Estructuras de datos lineales
+Ultima Actualizacion 21-02-2017	
+Programa de prueba para la implementacion de listas, pilas y colas
+
+------ LABORATORIO 2 - G1 -----
+
+ESTRUCTURAS DE DATOS LINEALES:
+	
+	Este laboratorio tiene como objetivo la implementacion de estructuras de Datos lineales como lo son:
+
+	a) Listas con arreglos (ListWithArray.h)
+	b) Listas con punteros (ListWithPointers.h)
+	c) Pilas (Stack.h)
+	d) Colas (Queue.h)
+
+	Para mas documentacion:
+
+		1) Pagina web por doxygen index.html
+
+		>> cd doc/html/
+		>> /usr/bin/firefox index.html
+
+DESARROLLADO POR:
+
+	Giancarlo Marin
+
+	Adrian Aguilar 
+
+	Robin González 

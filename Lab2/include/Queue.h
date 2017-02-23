@@ -1,25 +1,31 @@
 /**
-*@brief archivo header que contiene la implementacion de una cola en c++
-*@author Robin Gonzalez Ricz - B43011
+*@brief Archivo header que contiene la implementacion de la clase Queue (cola) en c++
+* @author Luis Adrian Aguilar - B00092
+* @author Robin Gonzalez Ricz - B43011
+* @author Giancarlo Marin - B54099
 *@date 22 - 02 - 2017
 */
 #ifndef QUEUE_H
 #define QUEUE_H
 #include <iostream>
-#include "List.h"
+#include "ListWithPointer.h"
 #include "Cell.h"
 using namespace std;
-//queue de double con punteros
 
-template <typename D, typename P>//aqui P es puntero a celda
-lass Queue : public List<D, P> {
+template <typename D, typename P>/**Biblioteca que genera un template de la clase Stack (Pila) que hereda de la clase ListWithPointer y que toma un tipo de dato D para los datos contenidos con indices P*/
+class Queue : public List<D, P> {
 public:
-
+/**
+ * Constructor de la clase Stack
+ */ 
 Queue() {
     this->n = 0;
 	this->first= nullptr;//es un tipo de ojeto vacio
 	this->last= nullptr;
 }
+/**
+ * Destructor de la clase Stack
+ */
 ~Queue() {
 	int x = this->getSize();
 	if (x!=0){
@@ -32,9 +38,6 @@ Queue() {
     delete this;
 }
 
-int getSize(){
-  return this->n;
-}
 	
 void sort(){//ordena crecientemente
   /**Implementacion por medio de Selection Sort*/
@@ -60,17 +63,30 @@ void sort(){//ordena crecientemente
 	}
 }
 
-void insert(D* d) { //insertar
-	this->first = Cell(d, this->first->next);//estos first en realidad son los last del queue
+/**
+ * Metodo que implementa el insertar (push) del Queue
+ * @param d 	Elemento de tipo D que se inserta al Queue
+ */
+void push(D* d) { //insertar
+	this->first = Cell<D>(d, this->first->next);//estos first en realidad son los last del queue
 }
 
-void remove(D d) { //remover
-  Cell ant = prev(this->last);//estos last son en relidad los first del queue
-  Cell borrar = this->last;
+/**
+ * Metodo que implementa el sacar elemento del Queue (pop)
+ * @return  	Puntero a la celda que contiene el dato sacado el Queue
+ */
+void pop(D d) { //remover
+  Cell<D>* ant = prev(this->last);//estos last son en relidad los first del queue
+  Cell<D>* borrar = this->last;
   this->last = ant;
   delete borrar;
 }
 
+/**
+ * Metodo que implementa la busqueda en un ListWithPointer
+ * @param d 	Dato que se desea buscar en List
+ * @return 	Indice de tipo P dentro de List
+ */
 P find(D d) { //buscar
     Cell<double>* temp = this->first;
 	if (first!=nullptr){
@@ -84,20 +100,17 @@ P find(D d) { //buscar
     return nullptr;
 }
 
-D get(P k) { //obtener
-    return *(k->data);
-}
-
-void assign(P k, D d) {
-    *(k->data) = d;
-}
-
-
-int getSize() { //tamaÃ±o
+/**
+ * Metodo que implementa el obtener tamaño del Queue
+ */
+int getSize() {
     return this->n;
 }
 
-void printList() { //imprimir
+/**
+ * Metodo para imprimir los elementos de la cola 
+ */
+void printQueue() {
     Cell<double>* temp = this->first;
 	for (int i = 0; i < this->getSize(); i++) {
         if (temp!=nullptr){
@@ -107,12 +120,21 @@ void printList() { //imprimir
 	}
 }
 
-
+/**
+ * Metodo que implementa el obtener siguiente elemento de una posicion especifica del Queue
+ * @param k 	Indice de tipo P dentro de List del que se desea el siguiente elemento 
+ * @return 	Siguiente elemento de k de tipo P
+ */
 P next(P k) { //siguiente
     return k->next;
 }
 
-P prev(P k) { //anterior
+/**
+ * Metodo que implementa el obtener elemento anterior en Queue
+ * @param k 	Indice de tipo P dentro de la list del que se desea el elemento anterior
+ * @return 	Elemento anterior de k de tipo P
+ */
+P prev(P k) {
     if (k != this->first){
 		Cell<double>* temp = this->first;
 		while (temp->next != k){
@@ -124,7 +146,10 @@ P prev(P k) { //anterior
 		return nullptr;
 }
 
-void emptyList() { //vaciar
+/**
+ * Metodo que implementa el vaciar Cola que Deja sin ningun elemento el Queue e imprime cada elemento que retira
+ */
+void emptyQueue() {
 	int x = this->getSize();
 	Cell<double>* temp = this->first;
     for(int i=0;i<x;i++){
@@ -136,9 +161,9 @@ void emptyList() { //vaciar
 }
 
 private:
-    int n; //num. elementos
-    P last; //ultimo
-	   P first; //primero
+	int n; /**<Atrib. privado de tipo entero que indica el numero de elementos en la cola*/
+	P last; /**<Atrib. privado de tipo P que indica el indice del primer elemento de la cola*/
+	P first; /**<Atrib. privado de tipo P que indica el indice del ultimo elemento de la cola*/
 };
 
 #endif

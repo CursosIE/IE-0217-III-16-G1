@@ -1,5 +1,7 @@
 /**
  * @brief Libreria que genera un template de una clase ListWithArray (lista implementada con arreglos) que hereda de la clase List
+ * @author Luis Adrian Aguilar - B00092
+ * @author Robin Gonzalez Ricz - B43011
  * @author Giancarlo Marin - B54099
  * @date 21-02-2017	
  */

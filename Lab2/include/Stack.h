@@ -1,5 +1,7 @@
 /**
  * @brief Libreria que genera un template de la clase Stack (Pila) que hereda de la clase ListWithPointer
+ * @author Luis Adrian Aguilar - B00092
+ * @author Robin Gonzalez Ricz - B43011
  * @author Giancarlo Marin - B54099
  * @date 21-02-2017	
  */
@@ -10,7 +12,7 @@
 #include "Cell.h"
 using namespace std;
 
-template <typename D, typename P> /**Libreria que genera un template de la clase Stack (Pila) que hereda de la clase ListWithPointer y que toma un tipo de dato D para los datos contenidos con indices P*/
+template <typename D, typename P> /**Biblioteca que genera un template de la clase Stack (Pila) que hereda de la clase ListWithPointer y que toma un tipo de dato D para los datos contenidos con indices P*/
 class Stack : public ListWithPointer<D, P> {
 public:
 

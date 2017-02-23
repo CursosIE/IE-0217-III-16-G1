@@ -1,6 +1,8 @@
 /**
  * Universidad de Costa Rica - Escuela de Ingenieria ELectrica
  * IE-0217 - Lab2: Estructuras de datos lineales
+ * @author Luis Adrian Aguilar - B00092
+ * @author Robin Gonzalez Ricz - B43011
  * @author Giancarlo Marin - B54099
  * @date 21-02-2017	
  * @brief Libreria que genera un template de una clase Cell (Celda que contiene datos)

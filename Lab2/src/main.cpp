@@ -10,6 +10,7 @@
 #include "../include/ListWithPointer.h"
 #include "../include/Cell.h"
 #include "../include/Stack.h"
+#include "../include/Queue.h"
 
 using namespace std;
 

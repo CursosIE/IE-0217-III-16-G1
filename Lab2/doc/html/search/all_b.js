@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['remove',['remove',['../class_list.html#a14fc4e853102018df78db3899aa00d71',1,'List::remove()'],['../class_list_with_array.html#aaa18e76fc128ca05151178d914901ec3',1,'ListWithArray::remove()'],['../class_list_with_pointer.html#abcb151e95e9fffea7f9f7af593d8176f',1,'ListWithPointer::remove()']]]
+  ['queue',['Queue',['../class_queue.html',1,'Queue&lt; D, P &gt;'],['../class_queue.html#aaecc8eba91905e5bda9752e0f85a150e',1,'Queue::Queue()']]],
+  ['queue_2eh',['Queue.h',['../_queue_8h.html',1,'']]]
 ];

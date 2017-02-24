@@ -126,7 +126,8 @@ Inheritance diagram for List&lt; D, P &gt;:</div>
   <map id="List&lt; D, P &gt;_map" name="List&lt; D, P &gt;_map">
 <area href="class_list_with_array.html" title="Libreria que genera un template de una clase ListWithArray (lista implementada con arreglos) que here..." alt="ListWithArray&lt; D, P &gt;" shape="rect" coords="0,56,145,80"/>
 <area href="class_list_with_pointer.html" title="Libreria que genera un template de una clase ListWithPointer (lista implementada con punteros) que he..." alt="ListWithPointer&lt; D, P &gt;" shape="rect" coords="155,56,300,80"/>
-<area href="class_stack.html" title="Libreria que genera un template de la clase Stack (Pila) que hereda de la clase ListWithPointer y que..." alt="Stack&lt; D, P &gt;" shape="rect" coords="155,112,300,136"/>
+<area href="class_queue.html" title="Biblioteca que genera un template de la clase Stack (Pila) que hereda de la clase ListWithPointer y q..." alt="Queue&lt; D, P &gt;" shape="rect" coords="77,112,222,136"/>
+<area href="class_stack.html" title="Biblioteca que genera un template de la clase Stack (Pila) que hereda de la clase ListWithPointer y q..." alt="Stack&lt; D, P &gt;" shape="rect" coords="232,112,377,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -186,7 +187,11 @@ Protected Attributes</h2></td></tr>
 class List&lt; D, P &gt;</h3>
 
 <p>Libreria que genera un template de una clase abstracta list. </p>
-<dl class="section author"><dt>Author</dt><dd>Giancarlo Marin - B54099 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Luis Adrian Aguilar - B00092 </dd>
+<dd>
+Robin Gonzalez Ricz - B43011 </dd>
+<dd>
+Giancarlo Marin - B54099 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>21-02-2017 Libreria que genera un template de una clase abstracta list que toma un tipo de dato para los datos contenidos en la lista (D) y otro para los indices de las misma (P) </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3deb54ab4f51c6c39aa4015f258b5812"></a>
@@ -353,7 +358,7 @@ template&lt;typename D , typename P &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Indice de tipo P dentro de <a class="el" href="class_list.html" title="Libreria que genera un template de una clase abstracta list. ">List</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="class_stack.html#aa8a3a0b773900e44f641e3be9d9345da">Stack&lt; D, P &gt;</a>, <a class="el" href="class_list_with_array.html#a9a054a6d407dc5cb39575739fe412fff">ListWithArray&lt; D, P &gt;</a>, and <a class="el" href="class_list_with_pointer.html#afeff8b963c197378553e2a3f73eaf66a">ListWithPointer&lt; D, P &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_stack.html#aa8a3a0b773900e44f641e3be9d9345da">Stack&lt; D, P &gt;</a>, <a class="el" href="class_list_with_array.html#a9a054a6d407dc5cb39575739fe412fff">ListWithArray&lt; D, P &gt;</a>, <a class="el" href="class_queue.html#a5c5ad7000d15506d3ec9c2ef6c8e6041">Queue&lt; D, P &gt;</a>, and <a class="el" href="class_list_with_pointer.html#afeff8b963c197378553e2a3f73eaf66a">ListWithPointer&lt; D, P &gt;</a>.</p>
 
 </div>
 </div>
@@ -419,7 +424,7 @@ template&lt;typename D , typename P &gt; </div>
 
 <p>Metodo virtual puro para obtener el tamaño de <a class="el" href="class_list.html" title="Libreria que genera un template de una clase abstracta list. ">List</a>. </p>
 
-<p>Implemented in <a class="el" href="class_list_with_pointer.html#ac70c49b5703887fd867e90cdac3c706f">ListWithPointer&lt; D, P &gt;</a>, <a class="el" href="class_list_with_array.html#ae7a071bcdde9ddbf4c40a716f5a09434">ListWithArray&lt; D, P &gt;</a>, and <a class="el" href="class_stack.html#a74fc7e5921dfb247f9ad7052c3c4297a">Stack&lt; D, P &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_list_with_pointer.html#ac70c49b5703887fd867e90cdac3c706f">ListWithPointer&lt; D, P &gt;</a>, <a class="el" href="class_list_with_array.html#ae7a071bcdde9ddbf4c40a716f5a09434">ListWithArray&lt; D, P &gt;</a>, <a class="el" href="class_stack.html#a74fc7e5921dfb247f9ad7052c3c4297a">Stack&lt; D, P &gt;</a>, and <a class="el" href="class_queue.html#ab2c7217e6737bf579493b321184a2db3">Queue&lt; D, P &gt;</a>.</p>
 
 </div>
 </div>
@@ -492,7 +497,7 @@ template&lt;typename D , typename P &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Siguiente elemento de k de tipo P </dd></dl>
 
-<p>Implemented in <a class="el" href="class_list_with_pointer.html#a518b5ee89e3ad32ae7cd4ddd5d4fa7e9">ListWithPointer&lt; D, P &gt;</a>, <a class="el" href="class_list_with_array.html#a125811011abb77c1b11e5150f4524fb1">ListWithArray&lt; D, P &gt;</a>, and <a class="el" href="class_stack.html#ab7f8f7e4ab10c00769c1debc5391fc17">Stack&lt; D, P &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_list_with_pointer.html#a518b5ee89e3ad32ae7cd4ddd5d4fa7e9">ListWithPointer&lt; D, P &gt;</a>, <a class="el" href="class_list_with_array.html#a125811011abb77c1b11e5150f4524fb1">ListWithArray&lt; D, P &gt;</a>, <a class="el" href="class_queue.html#aa4c9b83f260a172e1fffc389f354386f">Queue&lt; D, P &gt;</a>, and <a class="el" href="class_stack.html#ab7f8f7e4ab10c00769c1debc5391fc17">Stack&lt; D, P &gt;</a>.</p>
 
 </div>
 </div>
@@ -529,7 +534,7 @@ template&lt;typename D , typename P &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Elemento anterior de k de tipo P </dd></dl>
 
-<p>Implemented in <a class="el" href="class_list_with_pointer.html#a7242068fcc3a193f0f7e94517856e431">ListWithPointer&lt; D, P &gt;</a>, <a class="el" href="class_list_with_array.html#a72f0d74c4ae1fd4697088114db41d442">ListWithArray&lt; D, P &gt;</a>, and <a class="el" href="class_stack.html#a0c0b55f72c9249bfb9252bce1a93458d">Stack&lt; D, P &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_list_with_pointer.html#a7242068fcc3a193f0f7e94517856e431">ListWithPointer&lt; D, P &gt;</a>, <a class="el" href="class_list_with_array.html#a72f0d74c4ae1fd4697088114db41d442">ListWithArray&lt; D, P &gt;</a>, <a class="el" href="class_queue.html#adcb9a0e709ea65bc7e98f7e9cbae8a39">Queue&lt; D, P &gt;</a>, and <a class="el" href="class_stack.html#a0c0b55f72c9249bfb9252bce1a93458d">Stack&lt; D, P &gt;</a>.</p>
 
 </div>
 </div>
@@ -623,7 +628,7 @@ template&lt;typename D , typename P &gt; </div>
 
 <p>Metodo virtual puro para ordenar <a class="el" href="class_list.html" title="Libreria que genera un template de una clase abstracta list. ">List</a>. </p>
 
-<p>Implemented in <a class="el" href="class_list_with_array.html#a1a0ec4ab4a8fcb1a20568445ad892c9a">ListWithArray&lt; D, P &gt;</a>, and <a class="el" href="class_list_with_pointer.html#aa46631b2da29895d1f767626fb591bc8">ListWithPointer&lt; D, P &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_list_with_array.html#a1a0ec4ab4a8fcb1a20568445ad892c9a">ListWithArray&lt; D, P &gt;</a>, <a class="el" href="class_list_with_pointer.html#aa46631b2da29895d1f767626fb591bc8">ListWithPointer&lt; D, P &gt;</a>, and <a class="el" href="class_queue.html#a896b0e1bcac0d660079eb838c1823446">Queue&lt; D, P &gt;</a>.</p>
 
 </div>
 </div>
@@ -687,7 +692,7 @@ template&lt;typename D , typename P &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_list.html">List</a></li>
-    <li class="footer">Generated on Wed Feb 22 2017 01:06:42 for Lab2: Estructuras de Datos Lineales by
+    <li class="footer">Generated on Fri Feb 24 2017 12:24:06 for Lab2: Estructuras de Datos Lineales by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

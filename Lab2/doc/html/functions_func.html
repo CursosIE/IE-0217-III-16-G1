@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_q"><span>q</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
@@ -153,6 +154,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="class_list_with_array.html#a2179e228f285cc29b46bd5d13ba0b4ed">ListWithArray&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_pointer.html#aec4f5374971962c79d397bbcd0080199">ListWithPointer&lt; D, P &gt;</a>
 </li>
+<li>emptyQueue()
+: <a class="el" href="class_queue.html#a619e0caf9005be9ccd38e3284ad6b796">Queue&lt; D, P &gt;</a>
+</li>
 <li>emptyStack()
 : <a class="el" href="class_stack.html#a045dffa682607b7eee938b900c5f698b">Stack&lt; D, P &gt;</a>
 </li>
@@ -164,6 +168,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_list.html#a2b40d6fffc7b2fb5138b648f52c839ee">List&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_array.html#a9a054a6d407dc5cb39575739fe412fff">ListWithArray&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_pointer.html#afeff8b963c197378553e2a3f73eaf66a">ListWithPointer&lt; D, P &gt;</a>
+, <a class="el" href="class_queue.html#a5c5ad7000d15506d3ec9c2ef6c8e6041">Queue&lt; D, P &gt;</a>
 , <a class="el" href="class_stack.html#aa8a3a0b773900e44f641e3be9d9345da">Stack&lt; D, P &gt;</a>
 </li>
 </ul>
@@ -179,6 +184,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_list.html#af213bbcf13ee436a0f04cde66e337672">List&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_array.html#ae7a071bcdde9ddbf4c40a716f5a09434">ListWithArray&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_pointer.html#ac70c49b5703887fd867e90cdac3c706f">ListWithPointer&lt; D, P &gt;</a>
+, <a class="el" href="class_queue.html#ab2c7217e6737bf579493b321184a2db3">Queue&lt; D, P &gt;</a>
 , <a class="el" href="class_stack.html#a74fc7e5921dfb247f9ad7052c3c4297a">Stack&lt; D, P &gt;</a>
 </li>
 </ul>
@@ -211,6 +217,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_list.html#a4ec3e88e176bb45bc49b030d1c8abb3f">List&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_array.html#a125811011abb77c1b11e5150f4524fb1">ListWithArray&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_pointer.html#a518b5ee89e3ad32ae7cd4ddd5d4fa7e9">ListWithPointer&lt; D, P &gt;</a>
+, <a class="el" href="class_queue.html#aa4c9b83f260a172e1fffc389f354386f">Queue&lt; D, P &gt;</a>
 , <a class="el" href="class_stack.html#ab7f8f7e4ab10c00769c1debc5391fc17">Stack&lt; D, P &gt;</a>
 </li>
 </ul>
@@ -218,12 +225,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>pop()
-: <a class="el" href="class_stack.html#ae874c09d418be57373d1a5bf5a6f27dd">Stack&lt; D, P &gt;</a>
+: <a class="el" href="class_queue.html#a1543a11927722a9ef59806e7119634c4">Queue&lt; D, P &gt;</a>
+, <a class="el" href="class_stack.html#ae874c09d418be57373d1a5bf5a6f27dd">Stack&lt; D, P &gt;</a>
 </li>
 <li>prev()
 : <a class="el" href="class_list.html#acc1831ae92a288345ef20cb29f3846b2">List&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_array.html#a72f0d74c4ae1fd4697088114db41d442">ListWithArray&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_pointer.html#a7242068fcc3a193f0f7e94517856e431">ListWithPointer&lt; D, P &gt;</a>
+, <a class="el" href="class_queue.html#adcb9a0e709ea65bc7e98f7e9cbae8a39">Queue&lt; D, P &gt;</a>
 , <a class="el" href="class_stack.html#a0c0b55f72c9249bfb9252bce1a93458d">Stack&lt; D, P &gt;</a>
 </li>
 <li>printList()
@@ -231,8 +240,19 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="class_list_with_array.html#a515ea38cb40ba7b0c9df98825b2dd270">ListWithArray&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_pointer.html#a7079b5f1dbddb87a7e33ffc71ebb7b92">ListWithPointer&lt; D, P &gt;</a>
 </li>
+<li>printQueue()
+: <a class="el" href="class_queue.html#a5a68470adc616026ded26026bcec5a1f">Queue&lt; D, P &gt;</a>
+</li>
 <li>push()
-: <a class="el" href="class_stack.html#ac023e5bfa5b4fc5a19d4a849fbfbbbcc">Stack&lt; D, P &gt;</a>
+: <a class="el" href="class_queue.html#a8779ae337e779be3dbff7c7bb8285428">Queue&lt; D, P &gt;</a>
+, <a class="el" href="class_stack.html#ac023e5bfa5b4fc5a19d4a849fbfbbbcc">Stack&lt; D, P &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
+<li>Queue()
+: <a class="el" href="class_queue.html#aaecc8eba91905e5bda9752e0f85a150e">Queue&lt; D, P &gt;</a>
 </li>
 </ul>
 
@@ -251,6 +271,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_list.html#ae3795939f27cf3e688cd470450e0c27a">List&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_array.html#a1a0ec4ab4a8fcb1a20568445ad892c9a">ListWithArray&lt; D, P &gt;</a>
 , <a class="el" href="class_list_with_pointer.html#aa46631b2da29895d1f767626fb591bc8">ListWithPointer&lt; D, P &gt;</a>
+, <a class="el" href="class_queue.html#a896b0e1bcac0d660079eb838c1823446">Queue&lt; D, P &gt;</a>
 </li>
 <li>Stack()
 : <a class="el" href="class_stack.html#a6e0f84830cde41cb8d49818842d18d36">Stack&lt; D, P &gt;</a>
@@ -278,6 +299,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>~ListWithPointer()
 : <a class="el" href="class_list_with_pointer.html#a2a19c2e6e9bdee1c56750e36d6bbd7c2">ListWithPointer&lt; D, P &gt;</a>
 </li>
+<li>~Queue()
+: <a class="el" href="class_queue.html#a4934a19723695272d8722a8fc2d84240">Queue&lt; D, P &gt;</a>
+</li>
 <li>~Stack()
 : <a class="el" href="class_stack.html#a181a491ce96ea87dc6db37e040f785e0">Stack&lt; D, P &gt;</a>
 </li>
@@ -287,7 +311,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 22 2017 01:06:43 for Lab2: Estructuras de Datos Lineales by
+    <li class="footer">Generated on Fri Feb 24 2017 12:24:06 for Lab2: Estructuras de Datos Lineales by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

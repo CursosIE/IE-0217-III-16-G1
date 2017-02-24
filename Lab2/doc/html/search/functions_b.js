@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sort',['sort',['../class_list.html#ae3795939f27cf3e688cd470450e0c27a',1,'List::sort()'],['../class_list_with_array.html#a1a0ec4ab4a8fcb1a20568445ad892c9a',1,'ListWithArray::sort()'],['../class_list_with_pointer.html#aa46631b2da29895d1f767626fb591bc8',1,'ListWithPointer::sort()']]],
-  ['stack',['Stack',['../class_stack.html#a6e0f84830cde41cb8d49818842d18d36',1,'Stack']]]
+  ['remove',['remove',['../class_list.html#a14fc4e853102018df78db3899aa00d71',1,'List::remove()'],['../class_list_with_array.html#aaa18e76fc128ca05151178d914901ec3',1,'ListWithArray::remove()'],['../class_list_with_pointer.html#abcb151e95e9fffea7f9f7af593d8176f',1,'ListWithPointer::remove()']]]
 ];

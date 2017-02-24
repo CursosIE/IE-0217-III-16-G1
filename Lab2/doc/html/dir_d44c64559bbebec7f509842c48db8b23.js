@@ -12,6 +12,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "ListWithPointer.h", "_list_with_pointer_8h.html", [
       [ "ListWithPointer", "class_list_with_pointer.html", "class_list_with_pointer" ]
     ] ],
+    [ "Queue.h", "_queue_8h.html", [
+      [ "Queue", "class_queue.html", "class_queue" ]
+    ] ],
     [ "Stack.h", "_stack_8h.html", [
       [ "Stack", "class_stack.html", "class_stack" ]
     ] ]

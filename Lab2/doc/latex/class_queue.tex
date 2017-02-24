@@ -1,0 +1,235 @@
+\hypertarget{class_queue}{\section{Queue$<$ D, P $>$ Class Template Reference}
+\label{class_queue}\index{Queue$<$ D, P $>$@{Queue$<$ D, P $>$}}
+}
+
+
+Biblioteca que genera un template de la clase \hyperlink{class_stack}{Stack} (Pila) que hereda de la clase \hyperlink{class_list_with_pointer}{List\+With\+Pointer} y que toma un tipo de dato D para los datos contenidos con indices P.  
+
+
+
+
+{\ttfamily \#include $<$Queue.\+h$>$}
+
+Inheritance diagram for Queue$<$ D, P $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_queue}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_queue_aaecc8eba91905e5bda9752e0f85a150e}{Queue} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+\hyperlink{class_queue_a4934a19723695272d8722a8fc2d84240}{$\sim$\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+void \hyperlink{class_queue_a896b0e1bcac0d660079eb838c1823446}{sort} ()
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el ordenar para \hyperlink{class_list_with_pointer}{List\+With\+Pointer}. \end{DoxyCompactList}\item 
+void \hyperlink{class_queue_a8779ae337e779be3dbff7c7bb8285428}{push} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el insertar (push) del \hyperlink{class_queue}{Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{class_queue_a1543a11927722a9ef59806e7119634c4}{pop} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el sacar elemento del \hyperlink{class_queue}{Queue} (pop) \end{DoxyCompactList}\item 
+P \hyperlink{class_queue_a5c5ad7000d15506d3ec9c2ef6c8e6041}{find} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo que implementa la busqueda en un \hyperlink{class_list_with_pointer}{List\+With\+Pointer}. \end{DoxyCompactList}\item 
+int \hyperlink{class_queue_ab2c7217e6737bf579493b321184a2db3}{get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el obtener tamaño del \hyperlink{class_queue}{Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{class_queue_a5a68470adc616026ded26026bcec5a1f}{print\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir los elementos de la cola. \end{DoxyCompactList}\item 
+P \hyperlink{class_queue_aa4c9b83f260a172e1fffc389f354386f}{next} (P k)
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el obtener siguiente elemento de una posicion especifica del \hyperlink{class_queue}{Queue}. \end{DoxyCompactList}\item 
+P \hyperlink{class_queue_adcb9a0e709ea65bc7e98f7e9cbae8a39}{prev} (P k)
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el obtener elemento anterior en \hyperlink{class_queue}{Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{class_queue_a619e0caf9005be9ccd38e3284ad6b796}{empty\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el vaciar Cola que Deja sin ningun elemento el \hyperlink{class_queue}{Queue} e imprime cada elemento que retira. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename D, typename P$>$class Queue$<$ D, P $>$}
+
+Biblioteca que genera un template de la clase \hyperlink{class_stack}{Stack} (Pila) que hereda de la clase \hyperlink{class_list_with_pointer}{List\+With\+Pointer} y que toma un tipo de dato D para los datos contenidos con indices P. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_queue_aaecc8eba91905e5bda9752e0f85a150e}{\index{Queue@{Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue@{Queue}}
+\subsubsection[{Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf Queue}$<$ D, P $>$\+::{\bf Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_queue_aaecc8eba91905e5bda9752e0f85a150e}
+
+
+Constructor de la clase \hyperlink{class_stack}{Stack}. 
+
+\hypertarget{class_queue_a4934a19723695272d8722a8fc2d84240}{\index{Queue@{Queue}!````~Queue@{$\sim$\+Queue}}
+\index{````~Queue@{$\sim$\+Queue}!Queue@{Queue}}
+\subsubsection[{$\sim$\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf Queue}$<$ D, P $>$\+::$\sim${\bf Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_queue_a4934a19723695272d8722a8fc2d84240}
+
+
+Destructor de la clase \hyperlink{class_stack}{Stack}. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_queue_a619e0caf9005be9ccd38e3284ad6b796}{\index{Queue@{Queue}!empty\+Queue@{empty\+Queue}}
+\index{empty\+Queue@{empty\+Queue}!Queue@{Queue}}
+\subsubsection[{empty\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Queue}$<$ D, P $>$\+::empty\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_queue_a619e0caf9005be9ccd38e3284ad6b796}
+
+
+Metodo que implementa el vaciar Cola que Deja sin ningun elemento el \hyperlink{class_queue}{Queue} e imprime cada elemento que retira. 
+
+\hypertarget{class_queue_a5c5ad7000d15506d3ec9c2ef6c8e6041}{\index{Queue@{Queue}!find@{find}}
+\index{find@{find}!Queue@{Queue}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P {\bf Queue}$<$ D, P $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_queue_a5c5ad7000d15506d3ec9c2ef6c8e6041}
+
+
+Metodo que implementa la busqueda en un \hyperlink{class_list_with_pointer}{List\+With\+Pointer}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Dato que se desea buscar en \hyperlink{class_list}{List} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Indice de tipo P dentro de \hyperlink{class_list}{List} 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_list_with_pointer_afeff8b963c197378553e2a3f73eaf66a}{List\+With\+Pointer$<$ D, P $>$}.
+
+\hypertarget{class_queue_ab2c7217e6737bf579493b321184a2db3}{\index{Queue@{Queue}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Queue@{Queue}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ int {\bf Queue}$<$ D, P $>$\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_queue_ab2c7217e6737bf579493b321184a2db3}
+
+
+Metodo que implementa el obtener tamaño del \hyperlink{class_queue}{Queue}. 
+
+
+
+Reimplemented from \hyperlink{class_list_with_pointer_ac70c49b5703887fd867e90cdac3c706f}{List\+With\+Pointer$<$ D, P $>$}.
+
+\hypertarget{class_queue_aa4c9b83f260a172e1fffc389f354386f}{\index{Queue@{Queue}!next@{next}}
+\index{next@{next}!Queue@{Queue}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P {\bf Queue}$<$ D, P $>$\+::next (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_queue_aa4c9b83f260a172e1fffc389f354386f}
+
+
+Metodo que implementa el obtener siguiente elemento de una posicion especifica del \hyperlink{class_queue}{Queue}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Indice de tipo P dentro de \hyperlink{class_list}{List} del que se desea el siguiente elemento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Siguiente elemento de k de tipo P 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_list_with_pointer_a518b5ee89e3ad32ae7cd4ddd5d4fa7e9}{List\+With\+Pointer$<$ D, P $>$}.
+
+\hypertarget{class_queue_a1543a11927722a9ef59806e7119634c4}{\index{Queue@{Queue}!pop@{pop}}
+\index{pop@{pop}!Queue@{Queue}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Queue}$<$ D, P $>$\+::pop (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_queue_a1543a11927722a9ef59806e7119634c4}
+
+
+Metodo que implementa el sacar elemento del \hyperlink{class_queue}{Queue} (pop) 
+
+\begin{DoxyReturn}{Returns}
+Puntero a la celda que contiene el dato sacado el \hyperlink{class_queue}{Queue} 
+\end{DoxyReturn}
+\hypertarget{class_queue_adcb9a0e709ea65bc7e98f7e9cbae8a39}{\index{Queue@{Queue}!prev@{prev}}
+\index{prev@{prev}!Queue@{Queue}}
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P {\bf Queue}$<$ D, P $>$\+::prev (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_queue_adcb9a0e709ea65bc7e98f7e9cbae8a39}
+
+
+Metodo que implementa el obtener elemento anterior en \hyperlink{class_queue}{Queue}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Indice de tipo P dentro de la list del que se desea el elemento anterior \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Elemento anterior de k de tipo P 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_list_with_pointer_a7242068fcc3a193f0f7e94517856e431}{List\+With\+Pointer$<$ D, P $>$}.
+
+\hypertarget{class_queue_a5a68470adc616026ded26026bcec5a1f}{\index{Queue@{Queue}!print\+Queue@{print\+Queue}}
+\index{print\+Queue@{print\+Queue}!Queue@{Queue}}
+\subsubsection[{print\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Queue}$<$ D, P $>$\+::print\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_queue_a5a68470adc616026ded26026bcec5a1f}
+
+
+Metodo para imprimir los elementos de la cola. 
+
+\hypertarget{class_queue_a8779ae337e779be3dbff7c7bb8285428}{\index{Queue@{Queue}!push@{push}}
+\index{push@{push}!Queue@{Queue}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Queue}$<$ D, P $>$\+::push (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_queue_a8779ae337e779be3dbff7c7bb8285428}
+
+
+Metodo que implementa el insertar (push) del \hyperlink{class_queue}{Queue}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Elemento de tipo D que se inserta al \hyperlink{class_queue}{Queue} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_queue_a896b0e1bcac0d660079eb838c1823446}{\index{Queue@{Queue}!sort@{sort}}
+\index{sort@{sort}!Queue@{Queue}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Queue}$<$ D, P $>$\+::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_queue_a896b0e1bcac0d660079eb838c1823446}
+
+
+Metodo que implementa el ordenar para \hyperlink{class_list_with_pointer}{List\+With\+Pointer}. 
+
+Implementacion por medio de Selection Sort
+
+Implementacion por medio de Selection Sort 
+
+Reimplemented from \hyperlink{class_list_with_pointer_aa46631b2da29895d1f767626fb591bc8}{List\+With\+Pointer$<$ D, P $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_queue_8h}{Queue.\+h}\end{DoxyCompactItemize}

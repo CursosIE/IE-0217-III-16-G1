@@ -138,9 +138,9 @@ int main(int argc, char** argv) {
 
 //Crear Cola
 	cout << "----- CREANDO COLA -----" << endl;
-	Queue<double, Cell<double>*>* q0 = new Queue<double, Cell<double>*>();/**<Cola implementada con punteros tomando como base una lista de punteros*/
+	Queue<double, Cell<double>*>* q0 = new Queue<double, Cell<double>*>();/**<Cola implementada con punteros tomando como base una lista de punteros
 
-	//Agregando valor por valor
+/*	//Agregando valor por valor
 	cout << "----- INSERTANDO VALORES (PUSH) -----" << endl;
 	q0->push(5.5);
 	q0->push(1.1);
@@ -150,8 +150,9 @@ int main(int argc, char** argv) {
 	q0->push(99.9);
 	q0->push(31.31);
 	
-	q0->printQueue();	
-	/*//POP de varios valores
+	q0->printQueue();
+	
+	//POP de varios valores
 	cout << "----- SACANDO ELEMENTOS (POP) -----" << endl;
 	Cell<double>* q0 = q0->pop();
 	Cell<double>* q1 = q0->pop();

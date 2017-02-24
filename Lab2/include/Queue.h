@@ -12,7 +12,7 @@
 #include "Cell.h"
 using namespace std;
 
-template <typename D, typename P>/**Biblioteca que genera un template de la clase Stack (Pila) que hereda de la clase ListWithPointer y que toma un tipo de dato D para los datos contenidos con indices P*/
+template <typename D, typename P>/**Biblioteca que genera un template de la clase Queue (Cola) que hereda de la clase ListWithPointer y que toma un tipo de dato D para los datos contenidos con indices P*/
 class Queue : public ListWithPointer<D, P> {
 public:
 /**
@@ -39,30 +39,6 @@ Queue() {
 }
 
 	
-void sort(){//ordena crecientemente
-  /**Implementacion por medio de Selection Sort*/
-  int cont = 0;
-	Cell<D>* temp = this->first;
-	while (temp->next != nullptr){
-		Cell<D>* min = this->first;
-		for (int i = 0; i < cont; i++){
-			min = next(min);
-		}
-		Cell<D>* temp2 = min;
-		while (temp2 != last){
-			temp2 = next(temp2);
-			if (*(temp2->data) < *(min->data)){
-				min = temp2;
-			}
-		}
-		D* temp3 = temp->data;
-		temp->data = min->data;
-		min->data = temp3;
-		cont++;
-		temp = next(temp);
-	}
-}
-
 /**
  * Metodo que implementa el insertar (push) del Queue
  * @param d 	Elemento de tipo D que se inserta al Queue

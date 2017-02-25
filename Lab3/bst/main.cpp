@@ -1,71 +1,84 @@
+/**
+ * Universidad de Costa Rica - Escuela de Ingenieria ELectrica
+ * IE-0217 - Lab3: Estructuras de datos no lineales
+ * @author Giancarlo Marin - B54099
+ * @date 26-02-2017	
+ * @brief Programa de prueba para la implementacion de arboles BST
+ */
 
 #include <iostream>
 #include "Node.h"
-#include "BinarySearchTree.h"
+#include "BST.h"
+#include "Data.h"
 #define D int
 
 using namespace std;
 
+/**
+ * Main del programa que realiza las pruebas del arbol BST
+ * @param int 		Indicador de la cantidad de argumentos pasados en la ejecucion del programa
+ * @param char**	Vector de char* que contiene los argumentos enviados al ejecutar el programa
+ * @return 
+ */
 int main(int argc, char** argv) {
-    //0 to 18,446,744,073,709,551,615
-    //    Node<D>* n0 = new Node<D>(nullptr, nullptr, new D(3), nullptr);
-    //    Node<D>* n1 = new Node<D>(nullptr, nullptr, new D(1), nullptr);
-    //    Node<D>* n2 = new Node<D>(nullptr, nullptr, new D(2), nullptr);
-    //    Node<D>* n3 = new Node<D>(nullptr, nullptr, new D(4), nullptr);
-    //
-    //    n0->l = n1;
-    //    n0->r = n3;
-    //    n1->r = n2;
-    //
-    //    BinarySearchTree<D>* bst0 = new BinarySearchTree<D>(n0);
-    //    bst0->printTree();
-    //    cout << "======" << endl;
-    //    
-    BinarySearchTree<D>* bst1 = new BinarySearchTree<D>(new D(3));
-    bst1->insert(new D(4));
-    bst1->insert(new D(1));
-    bst1->insert(new D(2));
+	cout << "------ ARBOL BST -----" << endl;
+	cout << "--- CREANDO ARBOL ---" << endl;
+    BST<D>* bst1 = new BST<D>(new D(10));
+    bst1->insert(new D(15));
     bst1->insert(new D(5));
-    bst1->insert(new D(6));
+    bst1->insert(new D(8));
     bst1->printTree();
-cout<< "root: "<< *(bst1->root->d) << "@" << bst1->root <<endl;
-	bst1->set(bst1->find(new D(4)),new D(23));
-    bst1->printTree();
-	cout << bst1 <<endl;
-	cout << bst1->root <<endl;
-	bst1 = bst1->balance();
-	cout << bst1 <<endl;
-	cout << bst1->root <<endl;
-    bst1->printTree();
-cout<< "root: "<< *(bst1->root->d) << "@" << bst1->root <<endl;
-    Node<D>* r = bst1->find(new D(666));
+	cout << "--- PreOrden ---" << endl;
+	bst1->preOrder(bst1->root, "");
+	cout << "--- PostOrden ---" << endl;
+	bst1->postOrder(bst1->root, "");
+	//Prueba de busqueda
+	int* temp = new int(15);
+	cout << "--- PRUEBA DE BUSQUEDA ---" << endl << "Buscando: " << *temp << endl;
+    Node<D>* r = bst1->find(new D(15));
     if (r) {
-        cout <<"esta en: "<< *(r->d) << endl;
+        cout << *(r->d) << " Encontrado en el arbol" << endl;
     } else {
-        cout << "no esta" << endl;
+        cout << "Nodo no encontrado" << endl;
     }
 
+	//Impresion del mayor de lo menores
+	cout << "--- MAYOR DE LOS MENORES ---" << endl;
     r = bst1->maxLesser(bst1->root);
     if (r) {
-        cout <<"esta en: "<< *(r->d) << endl;
+        cout << *(r->d) << endl;
     } else {
-        cout << "no esta" << endl;
+        cout << "No existe" << endl;
     }
-
+	//Impresion del menor de los mayores
+	cout << "--- MENOR DE LOS MAYORES ---" << endl;
     r = bst1->minGreater(bst1->root);
     if (r) {
-        cout <<"esta en: "<< *(r->d) << endl;
+        cout << *(r->d) << endl;
     } else {
-        cout << "no esta" << endl;
+        cout << "No existe" << endl;
     }
-	cout<< "root: "<< *(bst1->root->d) << "@" << bst1->root <<endl;
-	bst1->inOrder();
-	bst1->postOrder();
-	bst1->preOrder();
-    bst1->remove(new int(987));
+	//Prueba de eliminacion de hoja
+	temp = new int(8);
+	cout << "--- PRUEBA DE ELIMINACION DE HOJA ---" << endl;
+	cout << "Eliminando " << *temp << "..." << endl;
+    bst1->remove(temp);
     bst1->printTree();
-	bst1->~BinarySearchTree();
-
+	//Nuevas inserciones
+	cout << "Insertando mas valores al arbol..." << endl;
+	bst1->insert(new int(12));
+	bst1->insert(new int(3));
+	bst1->insert(new int(6));
+	bst1->printTree();
+	//Prueba de eliminacion de la raiz
+	temp = new int(10);
+	cout << "--- PRUEBA DE ELIMINACION DE LA RAIZ---" << endl;
+	bst1->remove(temp);
+	bst1->printTree();
+	//Liberando memoria dinamica
+	cout << "ELIMINANDO EL ARBOL..." << endl;
+	delete temp;
+	delete bst1;
     return 0;
 }
 

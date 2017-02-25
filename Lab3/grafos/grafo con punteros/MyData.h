@@ -1,7 +1,7 @@
 /**
 * @author Giancarlo Marin - B54099
 * @date 22-02-2017
-* @brief Libreria de la clase MyChar que contiene un dato nuevo 
+* @brief Biblioteca de la clase MyData que contiene un dato nuevo 
 */
 #ifndef MYDATA_H
 #define MYDATA_H
@@ -9,13 +9,13 @@
 #include <iostream>
 using namespace std;
 
-template<typename D>/**Libreria de la clase MyData que contiene un dato nuevo */
+template<typename D>/**Biblioteca de la clase MyData que contiene un dato nuevo */
 class MyData{
 public:
 	D data; ///Atrib. publico de tipo D que contiene el dato a guardar///
 	
 	/**
-	* Constructor de la clase MyChar
+	* Constructor de la clase MyData
 	*/
 	MyData(){
 	}

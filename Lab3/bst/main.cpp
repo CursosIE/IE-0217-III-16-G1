@@ -25,9 +25,19 @@ int main(int argc, char** argv) {
     bst1->insert(new D(4));
     bst1->insert(new D(1));
     bst1->insert(new D(2));
-
+    bst1->insert(new D(5));
+    bst1->insert(new D(6));
     bst1->printTree();
-
+cout<< "root: "<< *(bst1->root->d) << "@" << bst1->root <<endl;
+	bst1->set(bst1->find(new D(4)),new D(23));
+    bst1->printTree();
+	cout << bst1 <<endl;
+	cout << bst1->root <<endl;
+	bst1 = bst1->balance();
+	cout << bst1 <<endl;
+	cout << bst1->root <<endl;
+    bst1->printTree();
+cout<< "root: "<< *(bst1->root->d) << "@" << bst1->root <<endl;
     Node<D>* r = bst1->find(new D(666));
     if (r) {
         cout <<"esta en: "<< *(r->d) << endl;
@@ -48,12 +58,13 @@ int main(int argc, char** argv) {
     } else {
         cout << "no esta" << endl;
     }
-	
+	cout<< "root: "<< *(bst1->root->d) << "@" << bst1->root <<endl;
 	bst1->inOrder();
 	bst1->postOrder();
 	bst1->preOrder();
     bst1->remove(new int(987));
     bst1->printTree();
+	bst1->~BinarySearchTree();
 
     return 0;
 }

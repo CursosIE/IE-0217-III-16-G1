@@ -11,6 +11,7 @@ class BinarySearchTree {
 public:
 
     BinarySearchTree() {
+	this->root = nullptr;
     }
 
     BinarySearchTree(Node<Data>* r) {
@@ -25,7 +26,17 @@ public:
     }
 
     virtual ~BinarySearchTree() {
+	cout << "Ejecutando destructor " << endl;
+	borrado(this->root);
     }
+	
+	void borrado(Node<Data>* n){
+		if(n){
+			borrado(n->l);
+			borrado(n->r);
+			delete n;
+		}
+	}
 
     void insert(Data* d) {
         if (this->root == nullptr) {
@@ -56,6 +67,31 @@ public:
             }
         }
     }
+	void insertSupChal(Data* datsit){
+		if(!(this->root))this->root = new Node<Data>(nullptr, nullptr, datsit, nullptr);
+		inceptionChalupa(this->root ,datsit);
+	}
+	
+	void inceptionChalupa(Node<Data>* n, Data* d){
+		if(n){
+			if(*d < *(n->d)){
+				inceptionChalupa(n->l, d);
+			}
+			if(*d > *(n->d)){
+				inceptionChalupa(n->r, d);
+			}
+			if(*d < *(n->d) && n->l==nullptr){
+cout << "se anadio algo" << endl;
+				Node<Data>* temporalCarnita = new Node<Data>(nullptr, nullptr, d, nullptr);
+				n->l = temporalCarnita;
+			}
+			if(*d > *(n->d) && n->r==nullptr){
+cout << "se anadio algo" << endl;
+				Node<Data>* temporalCarnita = new Node<Data>(nullptr, nullptr, d, nullptr);
+				n->r = temporalCarnita;
+			}
+		}
+	}
 
     void removing(Node<Data>* n) {
         if (n && n->l == n->r && n->r == nullptr) // es hoja?
@@ -103,8 +139,20 @@ public:
         return finding(d, this->root);
     }
 
-    void balance() {
-    }
+    BinarySearchTree<Data>* balance() {
+		cout << "Balanceando arbol de busqueda binaria" << endl;
+		BinarySearchTree<Data>* bst = new BinarySearchTree<Data>();
+		this->blnc(this->root, bst);
+		return bst;
+	}
+	
+	void blnc(Node<Data>* n,BinarySearchTree* bst){
+		if(n){
+			blnc(n->l, bst);
+			blnc(n->r, bst);
+			bst->insertSupChal(n->d);
+		}
+	}
 
     Node<Data>* replacementFor(Node<Data>* n) {
         if (n) {

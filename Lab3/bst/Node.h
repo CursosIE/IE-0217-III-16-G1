@@ -31,15 +31,7 @@ public:
 
     virtual ~Node() {
         cout << "deleting node " << this << endl;
-        if (*(this->f->d) > *(this->d)) {
-            this->f->l = nullptr;
-        } else {
-            this->f->r = nullptr;
-        }
-
-
         delete d;
-
     }
 
 };

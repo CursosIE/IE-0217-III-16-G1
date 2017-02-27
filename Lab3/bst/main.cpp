@@ -48,7 +48,10 @@ int main(int argc, char** argv) {
     } else {
         cout << "no esta" << endl;
     }
-
+	
+	bst1->inOrder();
+	bst1->postOrder();
+	bst1->preOrder();
     bst1->remove(new int(987));
     bst1->printTree();
 

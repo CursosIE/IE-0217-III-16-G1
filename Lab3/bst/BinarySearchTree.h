@@ -74,10 +74,12 @@ public:
         removing(find(d));
     }
 
-    Data * get(Node<Data>* n) {
+    Data* get(Node<Data>* n) {
+	return n->d;
     }
 
     void set(Node<Data>* n, Data * d) {
+	n->d = d;
     }
 
     Node<Data>* finding(Data* d, Node<Data>* n) {
@@ -102,19 +104,6 @@ public:
     }
 
     void balance() {
-    }
-
-    void printTree() {
-        this->inOrder(root, "");
-    }
-
-    void inOrder(Node<Data>* n, string s) {
-        if (n) {
-            cout << s << *(n->d) << "@" << n << endl;
-            inOrder(n->r, s + "\t");
-            inOrder(n->l, s + "\t");
-        }
-
     }
 
     Node<Data>* replacementFor(Node<Data>* n) {
@@ -148,11 +137,51 @@ public:
         return t;
     }
 
-    void postOrder() {
+    void printTree() {
+	cout << "Printed tree:" << endl;
+	inO(this->root, "\t");
     }
 
-    void preOrder() {
+	void inOrder(){
+	cout << "InOrder" << endl;
+		inO(this->root, "\t");
+	}
+
+    void inO(Node<Data>* n, string s) {
+        if (n) {
+            cout << s << *(n->d) << "@" << n << endl;
+            inO(n->r, s + "\t");
+            inO(n->l, s + "\t");
+        }
+
     }
+
+    void postOrder() {
+	cout << "PostOrder" << endl;
+	postO(this->root,"\t");
+    }
+	void postO(Node<Data>* n, string s){
+		if(n){
+			postO(n->l, s + "\t");
+			postO(n->r, s + "\t");
+			cout<< s<< *(n->d) << "@" << n <<endl;
+		}
+			
+	}
+
+    void preOrder() {
+	cout << "PreOrder" << endl;
+	preO(this->root,"\t");
+    }
+	
+	void preO(Node<Data>* n, string s){
+		if(n){
+			cout<< s<< *(n->d) << "@" << n <<endl;
+			preO(n->l, s + "\t");
+			preO(n->r, s + "\t");
+		}
+			
+	}
 
     Node<Data>* root;
     int level, nodes;

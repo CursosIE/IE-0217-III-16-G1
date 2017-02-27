@@ -1,5 +1,7 @@
 /**
 * @author Giancarlo Marin - B54099
+* @author Robin Gonzalez Ricz - B43011
+* @author Giancarlo Marin - B54099
 * @date 22-02-2017
 * @brief Biblioteca de la clase MyData que contiene un dato nuevo 
 */

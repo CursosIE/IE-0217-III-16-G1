@@ -1,5 +1,5 @@
 /**
- * @brief Libreria que genera un template de una clase abstracta list
+ * @brief Biblioteca que genera un template de una clase abstracta list
  * @author Luis Adrian Aguilar - B00092
  * @author Robin Gonzalez Ricz - B43011
  * @author Giancarlo Marin - B54099

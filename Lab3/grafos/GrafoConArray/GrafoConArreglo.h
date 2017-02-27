@@ -1,7 +1,6 @@
 /**
 * @author Giancarlo Marin - B54099
 * @author Robin Gonzalez Ricz - B43011
-* @author Giancarlo Marin - B54099
 * @date 25-02-2017
 * @brief Biblioteca de la clase Graph que genera Grafos
 */

@@ -1,3 +1,9 @@
+/**
+* @author Giancarlo Marin - B54099
+* @author Robin Gonzalez Ricz - B43011
+* @date 25-02-2017
+* @brief Biblioteca de la clase Node que genera nodos para grafos
+*/
 #ifndef NODE_H
 #define NODE_H
 

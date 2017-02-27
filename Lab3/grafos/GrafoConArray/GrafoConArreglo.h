@@ -39,10 +39,10 @@ public:
 
 	}
 	
-	int** creaM(){
+	int** creaM(){//crea la matriz de adyacencias
 		int** adyaTemp;
 		if(adyacencias){
-			adyaTemp = allocMat(nTotales,nTotales);//new int[nTotales][nTotales];
+			adyaTemp = allocMat(nTotales,nTotales);
 			for(int i = 0;i<nTotales;i++){
 				if(this->adyacencias[i]){
 					for(int j = 0; j<nTotales;j++){
@@ -55,18 +55,18 @@ public:
 			}
 		}
 		else{
-			adyaTemp = allocMat(nTotales,nTotales);//new int[nTotales][nTotales];
+			adyaTemp = allocMat(nTotales,nTotales);
 		}
 		return adyaTemp;
 	}	
 	
-	static int** allocMat(int row, int col){
+	static int** allocMat(int row, int col){//guardar en memoria dinamica la matriz
 		int** arr = new int*[row];
 		for(int i = 0; i < row; i++)arr[i] = new int[col];
 		return arr;
 	}
 	
-	void printMat(){
+	void printMat(){//imprimir la matriz
 		for(int i=0;i<nTotales;i++){
 			for(int j=0;j<nTotales;j++){
 				cout << adyacencias[i][j] << "\t";
@@ -120,7 +120,16 @@ public:
 	}
 	
 	Node <Data>* dfs(int i){
-		
+		int cuenta = 0;
+		while(cuenta < nTotales){
+			for(int c =0;c<nTotales;c++){
+				if(adyacencias[i][c]==1){
+					i = c;
+					cout <<this->getNode(i) << endl;
+					cuenta++;
+				}
+			}
+		}
 	}
 
 	Node <Data>* bfs(int i){

@@ -1,10 +1,11 @@
+# Makefile - Lab3 IE-0217
 CC=gcc
 CXX=g++
 RM=rm -f
 CFLAGS = -Wall -g -lm
 LFLAGS = 
 LIBS = 
-INCLUDES =  -I*.hpp
+INCLUDES =  -I ../include/*.hpp
 
 SRCS= polinomios.cpp main.cpp
 OBJS=$(subst .cc,.o,$(SRCS))

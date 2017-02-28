@@ -3,12 +3,12 @@
 ESTRUCTURAS DE DATOS NO LINEALES:
 
 	Organizacion de directorios:
-		src ->bst: ubicacion de archivos propios de arbol de busqueda binario
+		/src ->bst: ubicacion de archivos propios de arbol de busqueda binario
 		    ->garray: ubicacion de archivos propios del grafo implementado con matriz de adyacencia
 		    ->gpointer: ubicacion de archivos propios del grafo implementado con punteros
 		    
-		include: archivos include como list.h y listWithArray.h que se usan en archivos en src
-		build: aqui esta el makefile y aqui caen los ejecutables.
+		/include: archivos headers que se usan en archivos en src
+		/build: aqui esta el makefile y aqui caen los ejecutables.
 
 	Para compilar y correr este programa:
 

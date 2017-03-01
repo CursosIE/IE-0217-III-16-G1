@@ -1,0 +1,281 @@
+\hypertarget{class_node}{\section{Node$<$ D $>$ Class Template Reference}
+\label{class_node}\index{Node$<$ D $>$@{Node$<$ D $>$}}
+}
+
+
+Biblioteca de la clase Vertex que genera los vertices de un grafo.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+
+
+Collaboration diagram for Node$<$ D $>$\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_node_a6d883b970cbbadb1f7d4785f737fc650}{Node} ()
+\begin{DoxyCompactList}\small\item\em l Puntero al dato tipo D del nodo/// \end{DoxyCompactList}\item 
+\hyperlink{class_node_aa78739f6f3d6164fe37f7d838959d7cf}{Node} (\hyperlink{class_node}{Node} $\ast$\hyperlink{class_node_a0887ae573dd58274be628313b5170186}{l}, \hyperlink{class_node}{Node} $\ast$\hyperlink{class_node_a61cefac7cf9a73b5057968706f6931fe}{r}, \hyperlink{gwp_2main_8cpp_af316c33cc298530f245e8b55330e86b5}{D} $\ast$\hyperlink{class_node_ab9a8975b57edc70d79492408a950c666}{d}, \hyperlink{class_node}{Node} $\ast$\hyperlink{class_node_a33f853af2475252e43c437811478fae1}{f})
+\begin{DoxyCompactList}\small\item\em Constructor sobrecargado de la clase Nodo. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_node_a6b5a080cf05afe6a81e4dd56ba5f90e3}{$\sim$\+Node} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase Nodo. \end{DoxyCompactList}\item 
+\hyperlink{class_node_a6d883b970cbbadb1f7d4785f737fc650}{Node} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase My\+Char. \end{DoxyCompactList}\item 
+\hyperlink{class_node_acae50cc855125df6d333368d28575b3e}{Node} (\hyperlink{gwp_2main_8cpp_af316c33cc298530f245e8b55330e86b5}{D} $\ast$\hyperlink{class_node_ab9a8975b57edc70d79492408a950c666}{d})
+\begin{DoxyCompactList}\small\item\em Constructor sobrecargado de la clase Vertex. \end{DoxyCompactList}\item 
+\hyperlink{class_node_a59a3ac8a9279e123756e679e11ea11e0}{$\sim$\+Node} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase Vertex. \end{DoxyCompactList}\item 
+bool \hyperlink{class_node_a2d6a8aa109473d39eeb0c66cf0b7cf77}{operator==} (\hyperlink{class_node}{Node}$<$ \hyperlink{gwp_2main_8cpp_af316c33cc298530f245e8b55330e86b5}{D} $>$ n)
+\item 
+ostream \& \hyperlink{class_node_a4ebd81f613c7bbfef2ffd402ad944b5d}{operator$<$$<$} (ostream \&s)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a0887ae573dd58274be628313b5170186}{l}
+\begin{DoxyCompactList}\small\item\em Atributos de la clase Nodo///. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a61cefac7cf9a73b5057968706f6931fe}{r}
+\begin{DoxyCompactList}\small\item\em l Puntero a Nodo izquierdo/// \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a33f853af2475252e43c437811478fae1}{f}
+\begin{DoxyCompactList}\small\item\em r Puntero a Nodo derecho/// \end{DoxyCompactList}\item 
+\hyperlink{gwp_2main_8cpp_af316c33cc298530f245e8b55330e86b5}{D} $\ast$ \hyperlink{class_node_ab9a8975b57edc70d79492408a950c666}{d}
+\begin{DoxyCompactList}\small\item\em f Puntero a Nodo padre/// \end{DoxyCompactList}\item 
+\hyperlink{gwp_2main_8cpp_af316c33cc298530f245e8b55330e86b5}{D} $\ast$ \hyperlink{class_node_a94c115991edeecf6664eaa4884fbf6ca}{data}
+\item 
+\hyperlink{class_list_with_pointer}{List\+With\+Pointer}$<$ \hyperlink{class_node}{Node}$<$ \hyperlink{gwp_2main_8cpp_af316c33cc298530f245e8b55330e86b5}{D} $>$\\*
+, \hyperlink{class_cell}{Cell}$<$ \hyperlink{class_node}{Node}$<$ \hyperlink{gwp_2main_8cpp_af316c33cc298530f245e8b55330e86b5}{D} $>$ $>$ $\ast$ $>$ $\ast$ \hyperlink{class_node_a7c58a21705e05644b17d7a46f8c11d18}{nodos}
+\begin{DoxyCompactList}\small\item\em Atrib. publico de tipo \hyperlink{class_my_data}{My\+Data} que contiene el puntero al dato a guardar///. \end{DoxyCompactList}\item 
+int \hyperlink{class_node_a8dd8d5c2b989c76aa9414ecc0615f233}{conexiones}
+\begin{DoxyCompactList}\small\item\em Atrib. publico de tipo puntero a \hyperlink{class_edge}{Edge} que contiene l alista de aristas que contiene el vertice del grafo///. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename D$>$class Node$<$ D $>$}
+
+Biblioteca de la clase Vertex que genera los vertices de un grafo. 
+
+Definition at line 15 of file Node.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_node_a6d883b970cbbadb1f7d4785f737fc650}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$<$ {\bf D} $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_node_a6d883b970cbbadb1f7d4785f737fc650}
+
+
+l Puntero al dato tipo D del nodo/// 
+
+Constructor de la clase Nodo 
+
+Definition at line 26 of file Node.\+h.
+
+\hypertarget{class_node_aa78739f6f3d6164fe37f7d838959d7cf}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$<$ {\bf D} $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf D} $>$ $\ast$}]{l, }
+\item[{{\bf Node}$<$ {\bf D} $>$ $\ast$}]{r, }
+\item[{{\bf D} $\ast$}]{d, }
+\item[{{\bf Node}$<$ {\bf D} $>$ $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_node_aa78739f6f3d6164fe37f7d838959d7cf}
+
+
+Constructor sobrecargado de la clase Nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & Puntero al nodo izquierdo \\
+\hline
+{\em r} & Puntero al nodo derecho \\
+\hline
+{\em d} & Puntero al dato del nodo \\
+\hline
+{\em f} & Puntero al nodo padre \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Node.\+h.
+
+\hypertarget{class_node_a6b5a080cf05afe6a81e4dd56ba5f90e3}{\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection[{$\sim$\+Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ virtual {\bf Node}$<$ {\bf D} $>$\+::$\sim${\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_node_a6b5a080cf05afe6a81e4dd56ba5f90e3}
+
+
+Destructor de la clase Nodo. 
+
+
+
+Definition at line 46 of file Node.\+h.
+
+\hypertarget{class_node_a6d883b970cbbadb1f7d4785f737fc650}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$<$ {\bf D} $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_node_a6d883b970cbbadb1f7d4785f737fc650}
+
+
+Constructor de la clase My\+Char. 
+
+
+
+Definition at line 24 of file Node.\+h.
+
+\hypertarget{class_node_acae50cc855125df6d333368d28575b3e}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$<$ {\bf D} $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{{\bf D} $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_node_acae50cc855125df6d333368d28575b3e}
+
+
+Constructor sobrecargado de la clase Vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Puntero a D con el dato a guardar \\
+\hline
+{\em e} & Puntero a Lista de aristas a asignar al vertice \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Node.\+h.
+
+\hypertarget{class_node_a59a3ac8a9279e123756e679e11ea11e0}{\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection[{$\sim$\+Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$<$ {\bf D} $>$\+::$\sim${\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_node_a59a3ac8a9279e123756e679e11ea11e0}
+
+
+Destructor de la clase Vertex. 
+
+
+
+Definition at line 42 of file Node.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_node_a4ebd81f613c7bbfef2ffd402ad944b5d}{\index{Node@{Node}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Node@{Node}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ ostream\& {\bf Node}$<$ {\bf D} $>$\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_node_a4ebd81f613c7bbfef2ffd402ad944b5d}
+
+
+Definition at line 50 of file Node.\+h.
+
+\hypertarget{class_node_a2d6a8aa109473d39eeb0c66cf0b7cf77}{\index{Node@{Node}!operator==@{operator==}}
+\index{operator==@{operator==}!Node@{Node}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ bool {\bf Node}$<$ {\bf D} $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf D} $>$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_node_a2d6a8aa109473d39eeb0c66cf0b7cf77}
+
+
+Definition at line 46 of file Node.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_node_a8dd8d5c2b989c76aa9414ecc0615f233}{\index{Node@{Node}!conexiones@{conexiones}}
+\index{conexiones@{conexiones}!Node@{Node}}
+\subsubsection[{conexiones}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ int {\bf Node}$<$ {\bf D} $>$\+::conexiones}}\label{class_node_a8dd8d5c2b989c76aa9414ecc0615f233}
+
+
+Atrib. publico de tipo puntero a \hyperlink{class_edge}{Edge} que contiene l alista de aristas que contiene el vertice del grafo///. 
+
+
+
+Definition at line 20 of file Node.\+h.
+
+\hypertarget{class_node_ab9a8975b57edc70d79492408a950c666}{\index{Node@{Node}!d@{d}}
+\index{d@{d}!Node@{Node}}
+\subsubsection[{d}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf D}$\ast$ {\bf Node}$<$ {\bf D} $>$\+::d}}\label{class_node_ab9a8975b57edc70d79492408a950c666}
+
+
+f Puntero a Nodo padre/// 
+
+
+
+Definition at line 21 of file Node.\+h.
+
+\hypertarget{class_node_a94c115991edeecf6664eaa4884fbf6ca}{\index{Node@{Node}!data@{data}}
+\index{data@{data}!Node@{Node}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf D}$\ast$ {\bf Node}$<$ {\bf D} $>$\+::data}}\label{class_node_a94c115991edeecf6664eaa4884fbf6ca}
+
+
+Definition at line 18 of file Node.\+h.
+
+\hypertarget{class_node_a33f853af2475252e43c437811478fae1}{\index{Node@{Node}!f@{f}}
+\index{f@{f}!Node@{Node}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$\ast$ {\bf Node}$<$ {\bf D} $>$\+::f}}\label{class_node_a33f853af2475252e43c437811478fae1}
+
+
+r Puntero a Nodo derecho/// 
+
+
+
+Definition at line 20 of file Node.\+h.
+
+\hypertarget{class_node_a0887ae573dd58274be628313b5170186}{\index{Node@{Node}!l@{l}}
+\index{l@{l}!Node@{Node}}
+\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$\ast$ {\bf Node}$<$ {\bf D} $>$\+::l}}\label{class_node_a0887ae573dd58274be628313b5170186}
+
+
+Atributos de la clase Nodo///. 
+
+
+
+Definition at line 18 of file Node.\+h.
+
+\hypertarget{class_node_a7c58a21705e05644b17d7a46f8c11d18}{\index{Node@{Node}!nodos@{nodos}}
+\index{nodos@{nodos}!Node@{Node}}
+\subsubsection[{nodos}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf List\+With\+Pointer}$<${\bf Node}$<${\bf D}$>$, {\bf Cell}$<${\bf Node}$<${\bf D}$>$ $>$$\ast$$>$$\ast$ {\bf Node}$<$ {\bf D} $>$\+::nodos}}\label{class_node_a7c58a21705e05644b17d7a46f8c11d18}
+
+
+Atrib. publico de tipo \hyperlink{class_my_data}{My\+Data} que contiene el puntero al dato a guardar///. 
+
+
+
+Definition at line 19 of file Node.\+h.
+
+\hypertarget{class_node_a61cefac7cf9a73b5057968706f6931fe}{\index{Node@{Node}!r@{r}}
+\index{r@{r}!Node@{Node}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$\ast$ {\bf Node}$<$ {\bf D} $>$\+::r}}\label{class_node_a61cefac7cf9a73b5057968706f6931fe}
+
+
+l Puntero a Nodo izquierdo/// 
+
+
+
+Definition at line 19 of file Node.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/bst/\hyperlink{bst_2_node_8h}{Node.\+h}\end{DoxyCompactItemize}

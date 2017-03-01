@@ -1,0 +1,10 @@
+digraph "List&lt; D, P &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="List\< D, P \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ListWithArray\< D, P \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_list_with_array.html",tooltip="Libreria que genera un template de una clase ListWithArray (lista implementada con arreglos) que here..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ListWithPointer\< D, P \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_list_with_pointer.html",tooltip="Libreria que genera un template de una clase ListWithPointer (lista implementada con punteros) que he..."];
+}

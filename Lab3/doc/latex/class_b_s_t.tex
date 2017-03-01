@@ -1,0 +1,497 @@
+\hypertarget{class_b_s_t}{\section{B\+S\+T$<$ Data $>$ Class Template Reference}
+\label{class_b_s_t}\index{B\+S\+T$<$ Data $>$@{B\+S\+T$<$ Data $>$}}
+}
+
+
+{\ttfamily \#include $<$B\+S\+T.\+h$>$}
+
+
+
+Collaboration diagram for B\+S\+T$<$ Data $>$\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_s_t_ae8c626ed756142bd58283573e15eaef3}{B\+S\+T} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\item 
+\hyperlink{class_b_s_t_a1b3e547b32a6ac7fcf76c77d556d456e}{B\+S\+T} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$r)
+\begin{DoxyCompactList}\small\item\em Constructor sobrecargado de la clase \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\item 
+\hyperlink{class_b_s_t_a3006134db9a7013c903e108e582764c2}{B\+S\+T} (\hyperlink{class_data}{Data} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Constructor sobrecargado de la clase \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_b_s_t_acdaa591d85def33414245d0b7c0c296c}{$\sim$\+B\+S\+T} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_s_t_a3ed5ed757aaf0f131ed9e212b77a1cef}{insert} (\hyperlink{class_data}{Data} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Metodo insertar del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Agrega una nueva hoja y en caso de no existir raiz tambien la agrega. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_s_t_a4832d0c2d2f2b19e5ceba0e8206fc7cf}{removing} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n)
+\begin{DoxyCompactList}\small\item\em Metodo removiendo del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Elimina un Nodo del arbol y reasigna algun nodo a su posicion en caso de ser un nodo intermedio o raiz. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_s_t_a335d8090d94fe5710a41469452cb9956}{remove} (\hyperlink{class_data}{Data} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Metodo remover del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si el dato por eliminar es parte del arbol y si lo encuentra lo elimina utilizando removing. \end{DoxyCompactList}\item 
+\hyperlink{class_data}{Data} $\ast$ \hyperlink{class_b_s_t_aa60fb93a17547c1fb17aa4d45b74701c}{get} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n)
+\begin{DoxyCompactList}\small\item\em Metodo obtener del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si un nodo es parte del arbol y si lo encuentra devuelve el dato que contiene. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_s_t_a50ece072ec2fe0c7c4380c0fb4808661}{set} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n, \hyperlink{class_data}{Data} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Metodo asignar del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si un nodo es parte del arbol y si lo encuentra asigna un nuevo dato a este. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_b_s_t_a65295854e5dc764b58c09772a89da2d3}{finding} (\hyperlink{class_data}{Data} $\ast$d, \hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n)
+\begin{DoxyCompactList}\small\item\em Metodo encontrando del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si un dato es parte del subarbol que tiene como raiz el nodo n. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_b_s_t_a5d1f792ccf02006853a75f121fbe53d5}{find} (\hyperlink{class_data}{Data} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Metodo buscar del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si un dato es parte del arbol. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_s_t_ae0fa2476a85117c4087410d913824e80}{print\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Metodo imprimir arbol \hyperlink{class_b_s_t}{B\+S\+T}, imprime En\+Orden el arbol. \end{DoxyCompactList}\item 
+string \hyperlink{class_b_s_t_a2c40901338176a3feb7deb18be9b279a}{in\+Order} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n, string s)
+\begin{DoxyCompactList}\small\item\em Metodo recorrido En\+Orden del arbol \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\item 
+string \hyperlink{class_b_s_t_a76dfc7270fabfcc113d0e1e6ce81a72e}{pre\+Order} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n, string s)
+\begin{DoxyCompactList}\small\item\em Metodo recorrido En\+Pre\+Orden del arbol \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\item 
+string \hyperlink{class_b_s_t_ae63ecda406953b0e2b32ddbdb9e8505a}{post\+Order} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n, string s)
+\begin{DoxyCompactList}\small\item\em Metodo recorrido En\+Post\+Orden del arbol \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_b_s_t_afc638de07f0fa6f789f06883e080956e}{replacement\+For} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n)
+\begin{DoxyCompactList}\small\item\em Metodo sustitucion\+Por para nodos del arbol \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_b_s_t_a4a1bb86c1c7c9ba57885800541b82f24}{min\+Greater} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n)
+\begin{DoxyCompactList}\small\item\em Metodo minimo de los mayores hijos de un nodo del arbol \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_b_s_t_ac9bfcea57b211a7da89b3eb6efb5cbe0}{max\+Lesser} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n)
+\begin{DoxyCompactList}\small\item\em Metodo maximo de los menores hijos de un nodo del arbol \hyperlink{class_b_s_t}{B\+S\+T}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_b_s_t_ae9208b0d67c10cd0452bdef9b8fd2669}{root}
+\begin{DoxyCompactList}\small\item\em Atributos de la clase///. \end{DoxyCompactList}\item 
+int \hyperlink{class_b_s_t_ab7d2c494210429a912857968faabbcf5}{level}
+\begin{DoxyCompactList}\small\item\em Puntero al nodo raiz del arbol B\+S\+T///. \end{DoxyCompactList}\item 
+int \hyperlink{class_b_s_t_adc23f51220d43a63e6b34a80fc9e6932}{nodes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Data$>$class B\+S\+T$<$ Data $>$}
+
+
+
+Definition at line 18 of file B\+S\+T.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_b_s_t_ae8c626ed756142bd58283573e15eaef3}{\index{B\+S\+T@{B\+S\+T}!B\+S\+T@{B\+S\+T}}
+\index{B\+S\+T@{B\+S\+T}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{B\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::{\bf B\+S\+T} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_ae8c626ed756142bd58283573e15eaef3}
+
+
+Constructor de la clase \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+
+Definition at line 24 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a1b3e547b32a6ac7fcf76c77d556d456e}{\index{B\+S\+T@{B\+S\+T}!B\+S\+T@{B\+S\+T}}
+\index{B\+S\+T@{B\+S\+T}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{B\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::{\bf B\+S\+T} (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a1b3e547b32a6ac7fcf76c77d556d456e}
+
+
+Constructor sobrecargado de la clase \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Puntero a la raiz del arbol \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a3006134db9a7013c903e108e582764c2}{\index{B\+S\+T@{B\+S\+T}!B\+S\+T@{B\+S\+T}}
+\index{B\+S\+T@{B\+S\+T}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{B\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::{\bf B\+S\+T} (
+\begin{DoxyParamCaption}
+\item[{{\bf Data} $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a3006134db9a7013c903e108e582764c2}
+
+
+Constructor sobrecargado de la clase \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Puntero al dato que se asignara como raiz del arbol \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_acdaa591d85def33414245d0b7c0c296c}{\index{B\+S\+T@{B\+S\+T}!````~B\+S\+T@{$\sim$\+B\+S\+T}}
+\index{````~B\+S\+T@{$\sim$\+B\+S\+T}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{$\sim$\+B\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ virtual {\bf B\+S\+T}$<$ {\bf Data} $>$\+::$\sim${\bf B\+S\+T} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_b_s_t_acdaa591d85def33414245d0b7c0c296c}
+
+
+Destructor de la clase \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+
+Definition at line 46 of file B\+S\+T.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_b_s_t_a5d1f792ccf02006853a75f121fbe53d5}{\index{B\+S\+T@{B\+S\+T}!find@{find}}
+\index{find@{find}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{{\bf Data} $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a5d1f792ccf02006853a75f121fbe53d5}
+
+
+Metodo buscar del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si un dato es parte del arbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Puntero al dato que se desea buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al nodo que posee el dato d 
+\end{DoxyReturn}
+
+
+Definition at line 159 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a65295854e5dc764b58c09772a89da2d3}{\index{B\+S\+T@{B\+S\+T}!finding@{finding}}
+\index{finding@{finding}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{finding}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::finding (
+\begin{DoxyParamCaption}
+\item[{{\bf Data} $\ast$}]{d, }
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a65295854e5dc764b58c09772a89da2d3}
+
+
+Metodo encontrando del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si un dato es parte del subarbol que tiene como raiz el nodo n. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Puntero al dato que se desea buscar \\
+\hline
+{\em n} & Puntero al nodo que se toma como raiz del subarbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al nodo que posee el dato d 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_aa60fb93a17547c1fb17aa4d45b74701c}{\index{B\+S\+T@{B\+S\+T}!get@{get}}
+\index{get@{get}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Data}$\ast$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::get (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_aa60fb93a17547c1fb17aa4d45b74701c}
+
+
+Metodo obtener del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si un nodo es parte del arbol y si lo encuentra devuelve el dato que contiene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero al nodo que se desea obtener el dato \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al dato del nodo n 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a2c40901338176a3feb7deb18be9b279a}{\index{B\+S\+T@{B\+S\+T}!in\+Order@{in\+Order}}
+\index{in\+Order@{in\+Order}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{in\+Order}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ string {\bf B\+S\+T}$<$ {\bf Data} $>$\+::in\+Order (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n, }
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a2c40901338176a3feb7deb18be9b279a}
+
+
+Metodo recorrido En\+Orden del arbol \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero a la raiz del arbol que se desea recorrer \\
+\hline
+{\em s} & String donde se escribira el recorrido del arbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String del recorrido del arbol donde cada nodo se separa por un tab 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a3ed5ed757aaf0f131ed9e212b77a1cef}{\index{B\+S\+T@{B\+S\+T}!insert@{insert}}
+\index{insert@{insert}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf B\+S\+T}$<$ {\bf Data} $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Data} $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a3ed5ed757aaf0f131ed9e212b77a1cef}
+
+
+Metodo insertar del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Agrega una nueva hoja y en caso de no existir raiz tambien la agrega. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Puntero al dato que se asignara al nuevo nodo hoja \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_ac9bfcea57b211a7da89b3eb6efb5cbe0}{\index{B\+S\+T@{B\+S\+T}!max\+Lesser@{max\+Lesser}}
+\index{max\+Lesser@{max\+Lesser}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{max\+Lesser}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::max\+Lesser (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_ac9bfcea57b211a7da89b3eb6efb5cbe0}
+
+
+Metodo maximo de los menores hijos de un nodo del arbol \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero al nodo que se desea encontrar el maximo hijo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al nodo que posee el dato del hijo maximo de los menores 
+\end{DoxyReturn}
+
+
+Definition at line 256 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a4a1bb86c1c7c9ba57885800541b82f24}{\index{B\+S\+T@{B\+S\+T}!min\+Greater@{min\+Greater}}
+\index{min\+Greater@{min\+Greater}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{min\+Greater}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::min\+Greater (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a4a1bb86c1c7c9ba57885800541b82f24}
+
+
+Metodo minimo de los mayores hijos de un nodo del arbol \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero al nodo que se desea encontrar el minimo de los mayores \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al nodo que posee el dato minimo de los mayores hijos de n 
+\end{DoxyReturn}
+
+
+Definition at line 243 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_ae63ecda406953b0e2b32ddbdb9e8505a}{\index{B\+S\+T@{B\+S\+T}!post\+Order@{post\+Order}}
+\index{post\+Order@{post\+Order}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{post\+Order}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ string {\bf B\+S\+T}$<$ {\bf Data} $>$\+::post\+Order (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n, }
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_ae63ecda406953b0e2b32ddbdb9e8505a}
+
+
+Metodo recorrido En\+Post\+Orden del arbol \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero a la raiz del arbol que se desea recorrer \\
+\hline
+{\em s} & String donde se escribira el recorrido del arbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String del recorrido del arbol donde cada nodo se separa por un tab 
+\end{DoxyReturn}
+
+
+Definition at line 210 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a76dfc7270fabfcc113d0e1e6ce81a72e}{\index{B\+S\+T@{B\+S\+T}!pre\+Order@{pre\+Order}}
+\index{pre\+Order@{pre\+Order}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{pre\+Order}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ string {\bf B\+S\+T}$<$ {\bf Data} $>$\+::pre\+Order (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n, }
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a76dfc7270fabfcc113d0e1e6ce81a72e}
+
+
+Metodo recorrido En\+Pre\+Orden del arbol \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero a la raiz del arbol que se desea recorrer \\
+\hline
+{\em s} & String donde se escribira el recorrido del arbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String del recorrido del arbol donde cada nodo se separa por un tab 
+\end{DoxyReturn}
+
+
+Definition at line 193 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_ae0fa2476a85117c4087410d913824e80}{\index{B\+S\+T@{B\+S\+T}!print\+Tree@{print\+Tree}}
+\index{print\+Tree@{print\+Tree}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{print\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf B\+S\+T}$<$ {\bf Data} $>$\+::print\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_ae0fa2476a85117c4087410d913824e80}
+
+
+Metodo imprimir arbol \hyperlink{class_b_s_t}{B\+S\+T}, imprime En\+Orden el arbol. 
+
+
+
+Definition at line 166 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a335d8090d94fe5710a41469452cb9956}{\index{B\+S\+T@{B\+S\+T}!remove@{remove}}
+\index{remove@{remove}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf B\+S\+T}$<$ {\bf Data} $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Data} $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a335d8090d94fe5710a41469452cb9956}
+
+
+Metodo remover del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si el dato por eliminar es parte del arbol y si lo encuentra lo elimina utilizando removing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero al dato que se desea eliminar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 102 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a4832d0c2d2f2b19e5ceba0e8206fc7cf}{\index{B\+S\+T@{B\+S\+T}!removing@{removing}}
+\index{removing@{removing}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{removing}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf B\+S\+T}$<$ {\bf Data} $>$\+::removing (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a4832d0c2d2f2b19e5ceba0e8206fc7cf}
+
+
+Metodo removiendo del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Elimina un Nodo del arbol y reasigna algun nodo a su posicion en caso de ser un nodo intermedio o raiz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero al nodo que se desea eliminar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 84 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_afc638de07f0fa6f789f06883e080956e}{\index{B\+S\+T@{B\+S\+T}!replacement\+For@{replacement\+For}}
+\index{replacement\+For@{replacement\+For}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{replacement\+For}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::replacement\+For (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_afc638de07f0fa6f789f06883e080956e}
+
+
+Metodo sustitucion\+Por para nodos del arbol \hyperlink{class_b_s_t}{B\+S\+T}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero al nodo que se le desea remplazar el dato \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al nodo que posee el dato por el que se sustituira 
+\end{DoxyReturn}
+
+
+Definition at line 225 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_a50ece072ec2fe0c7c4380c0fb4808661}{\index{B\+S\+T@{B\+S\+T}!set@{set}}
+\index{set@{set}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf B\+S\+T}$<$ {\bf Data} $>$\+::set (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n, }
+\item[{{\bf Data} $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_b_s_t_a50ece072ec2fe0c7c4380c0fb4808661}
+
+
+Metodo asignar del arbol \hyperlink{class_b_s_t}{B\+S\+T}\+: Busca si un nodo es parte del arbol y si lo encuentra asigna un nuevo dato a este. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Puntero al nodo que se desea asignar dato \\
+\hline
+{\em d} & Puntero al dato que se asignara al nodo n \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 124 of file B\+S\+T.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_b_s_t_ab7d2c494210429a912857968faabbcf5}{\index{B\+S\+T@{B\+S\+T}!level@{level}}
+\index{level@{level}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ int {\bf B\+S\+T}$<$ {\bf Data} $>$\+::level}}\label{class_b_s_t_ab7d2c494210429a912857968faabbcf5}
+
+
+Puntero al nodo raiz del arbol B\+S\+T///. 
+
+
+
+Definition at line 265 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_adc23f51220d43a63e6b34a80fc9e6932}{\index{B\+S\+T@{B\+S\+T}!nodes@{nodes}}
+\index{nodes@{nodes}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{nodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ int {\bf B\+S\+T}$<$ {\bf Data} $>$\+::nodes}}\label{class_b_s_t_adc23f51220d43a63e6b34a80fc9e6932}
+
+
+Definition at line 265 of file B\+S\+T.\+h.
+
+\hypertarget{class_b_s_t_ae9208b0d67c10cd0452bdef9b8fd2669}{\index{B\+S\+T@{B\+S\+T}!root@{root}}
+\index{root@{root}!B\+S\+T@{B\+S\+T}}
+\subsubsection[{root}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf B\+S\+T}$<$ {\bf Data} $>$\+::root}}\label{class_b_s_t_ae9208b0d67c10cd0452bdef9b8fd2669}
+
+
+Atributos de la clase///. 
+
+
+
+Definition at line 264 of file B\+S\+T.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/bst/\hyperlink{_b_s_t_8h}{B\+S\+T.\+h}\end{DoxyCompactItemize}

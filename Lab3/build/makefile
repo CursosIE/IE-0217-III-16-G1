@@ -1,27 +1,55 @@
 # Makefile - Lab3 IE-0217
-CC=gcc
-CXX=g++
-RM=rm -f
-CFLAGS = -Wall -g -lm
-LFLAGS = 
-LIBS = 
-INCLUDES =  -I ../include/*.hpp
+CXX= g++
+RM= rm -f
+CXXFLAGS= -Wall -g -std=c++11
+SRCBST= ../src/bst/*.cpp
+SRCGWA= ../src/gwa/*.cpp
+SRCGWP= ../src/gwp/*.cpp
+OBJSBST= $(SRCBST:.cpp=.o)
+OBJSGWA= $(SRCGWA:.cpp=.o)
+OBJSGWP= $(SRCGWP:.cpp=.o)
+#Nombre del archivo ejecutable
+BST= bst
+GWA= gwa
+GWP= gwp
 
-SRCS= polinomios.cpp main.cpp
-OBJS=$(subst .cc,.o,$(SRCS))
+.PHONY: depend clean
 
-MAIN = operaciones
+all:	$(BST) $(GWA) $(GWP) run clean
+	
 
-all:    $(MAIN)
-	@echo  "Felicidades ya compiló :)"
+$(BST): $(OBJSBST)
+	$(CXX) $(OBJSBST) -o $(BST) 
+	@echo ----- COMPILACION DE ARBOL BST ARCHIVO EJECUTABLE bst GENERADO -----
 
-$(MAIN): $(OBJS)
-	$(CXX) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
+$(GWA): $(OBJSGWA)
+	$(CXX) $(OBJSGWA) -o $(GWA) 
+	@echo ----- COMPILACION DE GRAFO CON ARREGLO ARCHIVO EJECUTABLE gwa GENERADO -----
 
-run:
-	@echo  ">>>Ejecutando..."
-	./operaciones
+$(GWP): $(OBJSGWP)
+	$(CXX) $(OBJSGWP) -o $(GWP) 
+	@echo ----- COMPILACION DE GRAFO CON PUNTEROS ARCHIVO EJECUTABLE gwp GENERADO -----
 
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $<  -o $@
+
+run: 	runBST runGWA runGWP
+	
+
+runBST: 
+	@echo ----- EJECUTANDO BST -----
+	./$(BST) 
+
+runGWA: 
+	@echo ----- EJECUTANDO GWA -----
+	./$(GWA)
+
+runGWP: 
+	@echo ----- EJECUTANDO GWP -----
+	./$(GWP) 
+	
 clean:
-	@echo  ">>>Limpiando..."
-	$(RM) *.o *~ operaciones
+	@echo ----- LIMPIANDO ARCHIVOS INTERMEDIOS Y ARCHIVOS EJECUTABLE -----
+	$(RM) ../src/bst/*.o ../src/gwa/*.o ../src/gwp/*.o $(BST) $(GWA) $(GWP) 
+
+

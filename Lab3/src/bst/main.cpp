@@ -7,9 +7,9 @@
  */
 
 #include <iostream>
-#include "Node.h"
-#include "BST.h"
-#include "Data.h"
+#include "../../include/bst/Node.h"
+#include "../../include/bst/BST.h"
+#include "../../include/bst/Data.h"
 #define D int
 
 using namespace std;

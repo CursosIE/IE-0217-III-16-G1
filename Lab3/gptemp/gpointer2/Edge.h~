@@ -49,7 +49,7 @@ public:
 	}
 	
 	bool operator==(Edge<D> n){
-			return (/*this->peso==n.peso&&*/this->orig==n.orig &&this->dest==n.dest);//vamos a asumir que basta con el nodo de origen y el de destino puesto que no deberia haber dos aristas diferentes que tengan el mismo origen y destino independientemente del peso
+			return (this->peso==n.peso&&this->orig==n.orig &&this->dest==n.dest);
 	}
 	
 	ostream& operator<<(ostream& s)

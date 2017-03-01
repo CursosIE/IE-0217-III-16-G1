@@ -89,7 +89,7 @@ public:
 	}
 
 	Node <Data>* firstNode(){
-		return this->nodes->first->data;
+//		return this->nodos->get(0);
 	}
 
 	Node <Data>* nextNode(Node<Data> *n){

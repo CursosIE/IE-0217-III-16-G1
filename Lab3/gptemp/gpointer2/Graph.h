@@ -45,7 +45,7 @@ public:
 	*/
 	void addNode(Data d){
 		Node<Data>* n = new Node<Data>(new Data(d));
-		if(!this->nodes) this->nodes = new ListWithPointer<Node<Data>,Cell<Node<Data>>*>();;
+		if(!this->nodes) this->nodes = new ListWithPointer<Node<Data>,Cell<Node<Data>>*>();
 		this->nodes->insert(*n);
 		++nodos;
 	}
@@ -61,18 +61,20 @@ public:
 	*/
 	void addEdge(double w, Node<Data>* p,Node<Data>* s){
 		Edge<Data>* e = new Edge<Data>(w,p,s);
+		if(!this->edges) this->edges = new ListWithPointer<Edge<Data>,Cell<Edge<Data>>*>();
 		this->edges->insert(e);
-		++nodos;
+		++aristas;
 	}
 
 	void delEdge(Node<Data>* s,Node<Data>* d){
 		
 	//	adyacencias[this->nodos->find(s)][this->nodos->find(d)] = 0;
+	--aristas;
 	}
 
 	void delNode(Node<Data>* d){
 	//	this->nodos->remove(d);
-//		--nTotales;
+	--nodos;
 	}
 
 	Node <Data>* firstNode(){
@@ -87,6 +89,10 @@ public:
 //		return this->nodos->get(i);		
 	}
 	
+	Data* getData(Node<Data>* n){
+//		return n->d->data;	
+	}
+
 	Node <Data>* dfs(int i){
 //		int cuenta = 0;
 //		while(cuenta < nTotales){
@@ -104,10 +110,6 @@ public:
 		
 	}
 
-	Data* getData(Node<Data>* n){
-//		return n->d->data;	
-	}
-	
 	double* dijkstra(){
 		
 	}

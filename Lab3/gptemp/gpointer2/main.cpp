@@ -1,5 +1,5 @@
 #include <iostream>
-//#include "Graph.h"
+#include "Graph.h"
 #include "MyData.h"
 #include "ListWithPointer.h"
 #include "Edge.h"
@@ -65,6 +65,8 @@ int main(int argc, char** argv) {
 	l2->insert(*arista);
 	l2->insert(*arista2);
 	l2->insert(*arista3);
+	Graph<int> g = Graph<int>();
+	g.addNode(777);
 
 	//g1->edges->printList();
 /*

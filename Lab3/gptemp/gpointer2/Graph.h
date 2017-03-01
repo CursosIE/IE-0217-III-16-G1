@@ -19,15 +19,16 @@ template<typename Data>/**Libreria de la clase Graph que genera Grafos*/ //E es 
 class Graph{
 public:
 	
-	ListWithPointer<Edge<Data>*,Cell<Edge<Data>*>>* edges; ///Atrib. publico de tipo puntero a lista que contiene la lista de vertices del grafo///
+	ListWithPointer<Edge<Data>,Cell<Edge<Data>>*>* edges; ///Atrib. publico de tipo puntero a lista que contiene la lista de aristas del grafo///
 	int nodos;
-//	ListWithPointer<Edge<D>, Cell<Edge<D>>*>* gA; ///Atrib. publico de tipo puntero a lista que contiene la lista de aristas del grafo///
+	int aristas;
+	ListWithPointer<Node<Data>, Cell<Node<Data>>*>* nodes; ///Atrib. publico de tipo puntero a lista que contiene la lista de nodos del grafo///
 	/**
 	* Constructor de la clase Graph
 	*/
 	Graph(){
 		this->edges = nullptr;
-//		this->gA = nullptr;
+		this->nodes = nullptr;
 	}
 
 	/**
@@ -35,7 +36,7 @@ public:
 	*/
 	~Graph(){
 		delete edges;
-//		delete gA;
+		delete nodes;
 	}
 
 	/**
@@ -43,8 +44,9 @@ public:
 	* @param v		Puntero a Vertex que es agregado a la lista
 	*/
 	void addNode(Data d){
-		Edge<Data>* e = new Edge<Data>(-1,new Node<Data>(&d),nullptr);
-		this->edges->insert(e);
+		Node<Data>* n = new Node<Data>(new Data(d));
+		if(!this->nodes) this->nodes = new ListWithPointer<Node<Data>,Cell<Node<Data>>*>();;
+		this->nodes->insert(*n);
 		++nodos;
 	}
 	

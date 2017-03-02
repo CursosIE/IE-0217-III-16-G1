@@ -34,12 +34,12 @@ public:
 	* @param dictionary		Array de char que contiene el diccionario de caracteres por utilizar
 	* @param Y				Matriz de char que contiene cada una de los elementos de cada palabra a insertar al grafo y que representa cada estado
 	*/
-	GraphAhoCorasick(int totStates, char dictionary[], const char** Y){
+	GraphAhoCorasick(int totStates, string dictionary, string* Y){
 		this->stades = new ListWithArray<STADE, int>(10);
-		this->stades->insert(STADE(new D(0)));								//Se anade un estado neutro por default
-		this->numStades = totStates+1;										//Se anade un estado mas, el neutro
-		this->sizeDicc = int(sizeof(dictionary) / sizeof(dictionary[0]));	//Se determina el tamano del diccionario  
-		initMat();															//Se crea la matriz de estados en 0s del tamano correcto
+		this->stades->insert(STADE(new D(0)));						//Se anade un estado neutro por default
+		this->numStades = totStates+1;								//Se anade un estado mas, el neutro
+		this->sizeDicc = dictionary.length();						//Se determina el tamano del diccionario  
+		initMat();													//Se crea la matriz de estados en 0s del tamano correcto
 		//insertStades(Y);
 		//setStadeMat(Y);
 	}
@@ -58,7 +58,7 @@ public:
 	*/
 	void initMat(){
 		this->stadeMat = new int*[this->sizeDicc];
-		for (int i = 0; i < this->sizeDicc; i++){ //Se asiga el tamno de diccionario como cantidad de filas
+		for (int i = 0; i < this->sizeDicc; i++){ //Se asiga el tamano de diccionario como cantidad de filas
 			this->stadeMat[i] = new int[this->numStades];
 			for (int j = 0; j <this->numStades; j++){ //Se asigna la cantidad de estados como columnas
 				this->stadeMat[i][j] = 0;
@@ -68,9 +68,9 @@ public:
 
 	/**
 	* Metodo que crea la matriz de transicion de estados para modelar el grafo despues de tener todos los estados y sus relaciones
-	* @return	Puntero doble de tipo int que representa la matriz de transicion de estados donde 0 me lleva al estado neutro de comienzo
+	* @param words	Puntero a string que contiene las palabras a buscar
 	*/
-	void setStadeMat(char** words){
+	void setStadeMat(string* words){
 		
 	}
 
@@ -80,7 +80,7 @@ public:
 	void printStadeMat(){
 		for (int i = 0; i < this->sizeDicc; i++){
 			for (int j = 0; j < this->numStades; j++){
-				cout << this->stadeMat[i][j] << "\t";
+				cout << this->stadeMat[i][j] << " ";
 			}
 			cout << endl;
 		}

@@ -18,12 +18,11 @@ using namespace std;
 */
 int main(int argc, char** argv) {
 	cout << "-- ALGORITMO AHO-CORASICK PARA COMPARACION DE CADENAS DE NUCLEOTIDOS DE ADN --" << endl << endl;
-	char* dicc;//diccionario de caracteres
-	const char* X;//Cadena de caracteres por comparar
-	const char** Y;//Array de cadenas de caracteres por comparar
+	string dicc;//diccionario de caracteres
+	string X="";//Cadena de caracteres por comparar
+	string* Y;//Array de cadenas de caracteres por comparar
 	int perce;//Porcentaje de comparacion de prefijos
 	int numWords;//Cantidad de palabrasde busqueda
-	string tempX=""; //String temporal para copia del texto X
 	string temp; //String temporal para copia de elementos tipo const char*
 	string* temp2 = new string[10];//array de strings para copia de lectura de archivos
 	if (argc != 5){
@@ -41,11 +40,10 @@ int main(int argc, char** argv) {
 			int i = 0;
 			while (getline(fileX, temp)){
 				temp2[i] = temp;
-				tempX += temp2[i];
+				X += temp2[i];
 				i++;
 			}
 			fileX.close();
-			X = tempX.c_str();
 		}
 		ifstream fileY(argv[3]);
 		if (fileY){
@@ -57,14 +55,12 @@ int main(int argc, char** argv) {
 			}
 			fileY.close();
 			numWords = i;
-			Y = new const char*[numWords];
-			ifstream fileY(argv[3]);
+			Y = new string[numWords];
 			i = 0;
 			while (i<3){
-				Y[i] = temp2[i].c_str() + '\0';
+				Y[i] = temp2[i];
 				i++;
 			}
-			fileY.close();
 		}
 		perce = atoi(argv[4]);
 		//Generar comparacion

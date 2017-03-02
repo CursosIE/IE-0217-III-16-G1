@@ -19,12 +19,13 @@ DNAcompare::DNAcompare(){
 
 /**
 * Constructor sobrecargado de la clase DNAcompare
-* @param dictionary		Array de char que contiene todos los caracteres que representan el diccionario
-* @param stringX 		const char* Secuencia que se quiere comparar
-* @param words			const char** Palabras que se quieren buscar en la secuencia
+* @param dictionary		Cadena de caracteres que contiene los elementos que representan el diccionario
+* @param stringX 		String Secuencia que se quiere comparar
+* @param words			String* Palabras que se quieren buscar en la secuencia
 * @param percentage		int que representa el valor minimo de comparacion acertada. Se toma como porcentaje del prefijo de la palabra desde
+* @param countWords		int que indica la cantidad de palabras contenidas en Y
 */
-DNAcompare::DNAcompare(char dictionary[], const char* stringX, const char** words, int percentage, int countWords){
+DNAcompare::DNAcompare(string dictionary, string stringX, string* words, int percentage, int countWords){
 	this->dicc = dictionary;
 	this->X = stringX;
 	this->Y = words;
@@ -46,19 +47,19 @@ DNAcompare::~DNAcompare(){
  * @param sequences		char** que contiene cada caracter de cada palabra
  * @return int que contiene la cantidad de estados por crear en el grafo
  */
-int DNAcompare::countStades(const char** sequences){
+int DNAcompare::countStades(string* sequences){
 	int temp = 0;
 	char* firstChar = new char[this->numWords];
 	int count = 0; //Suma de caracteres que tienen la misma raiz de diferentes palabras
 	for (int i = 0; i < this->numWords; i++){
 		firstChar[i] = sequences[i][0];
-		temp += int(sizeof(sequences[i]) / sizeof(sequences[i][0]));
+		temp += sequences[i].length();
 	}
 	//Comparacion de prefijos de las palabras
 	for (int j = 1; j < this->numWords; j++){
-		for (int k = 0; k < this->numWords; k++){
+		for (int k = 0; k < this->numWords-1; k++){
 			if (j != k && firstChar[j] == firstChar[k]){
-				for (int m = 1; m<int(sizeof(sequences[j]) / sizeof(sequences[j][0])); m++){
+				for (int m = 1; m<sequences[j].length(); m++){
 					if (sequences[j][m] != sequences[k][m]){
 						count += m;
 						break;
@@ -72,9 +73,9 @@ int DNAcompare::countStades(const char** sequences){
 
 /**
 * Metodo get del atributo dicc
-* @return char* que contiene el diccionario
+* @return string que contiene el diccionario
 */
-char* DNAcompare::getDicc(){
+string DNAcompare::getDicc(){
 	return this->dicc;
 }
 

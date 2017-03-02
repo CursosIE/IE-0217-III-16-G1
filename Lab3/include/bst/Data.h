@@ -1,5 +1,7 @@
 /**
 * @author Giancarlo Marin - B54099
+ * @author Robin Gonzalez Ricz - B43011
+ * @author Luis Adrian Aguilar Cascante - B00092
 * @date 22-02-2017
 * @brief Libreria de la clase Data que contiene un dato de tipo emplantillado
 */

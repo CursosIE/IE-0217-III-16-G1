@@ -1,4 +1,7 @@
 /**
+* @author Robin Gonzalez Ricz - B43011
+* @author Giancarlo Marin - B54099
+* @author Luis Adrian Aguilar Cascante
 * @author Giancarlo Marin - B54099
 * @date 25-02-2017
 * @brief Libreria de la clase Graph que genera Grafos

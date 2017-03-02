@@ -1,5 +1,7 @@
 /**
+* @author Robin Gonzalez Ricz - B43011
 * @author Giancarlo Marin - B54099
+* @author Luis Adrian Aguilar Cascante
 * @date 22-02-2017
 * @brief Libreria de la clase Edge que contiene la especificacion de una arista del grafo
 */

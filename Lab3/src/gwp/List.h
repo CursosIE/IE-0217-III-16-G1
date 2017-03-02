@@ -1,6 +1,8 @@
 /**
 * @brief Libreria que genera un template de una clase abstracta list
+* @author Robin Gonzalez Ricz - B43011
 * @author Giancarlo Marin - B54099
+* @author Luis Adrian Aguilar Cascante
 * @date 21-02-2017
 */
 #ifndef LIST_H

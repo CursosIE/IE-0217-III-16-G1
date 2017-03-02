@@ -1,4 +1,5 @@
-/**
+/*
+ * @author Luis Adrian Aguilar Cascante - B00092
  * @author Robin Gonzalez Ricz - B43011
  * @author Giancarlo Marin - B54099
  * @date 21-02-2017	

@@ -93,7 +93,7 @@ public:
 	}
 
 	Node <Data>* nextNode(Node<Data> *n){
-//		return this->nodos->next(n);
+		return (this->nodes->next(this->nodes->find(*n))->data);
 	}
 
 	Node <Data>* getNode(int i){

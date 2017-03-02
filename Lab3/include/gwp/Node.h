@@ -17,6 +17,7 @@ class Node{
 public:
 	D* data; ///Atrib. publico de tipo MyData que contiene el puntero al dato a guardar///
 	ListWithPointer<Node<D>, Cell<Node<D>>*>* nodos;///Atrib. publico de tipo puntero a Edge que contiene l alista de aristas que contiene el vertice del grafo///
+	int conexiones;
 	/**
 	* Constructor de la clase MyChar
 	*/

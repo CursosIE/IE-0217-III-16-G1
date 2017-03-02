@@ -8,14 +8,8 @@
 */
 #include <iostream>
 #include "Graph.h"
-#include "MyData.h"
-#include "ListWithPointer.h"
-#include "Edge.h"
-#include "Node.h"
 
 //#include "../../include/gwp/graphWithPointer.h"
-
-#include <iostream>
 
 #define D int
 
@@ -23,12 +17,6 @@ using namespace std;
 
 
 int main(int argc, char** argv) {
-	//Creacion del grafo
-//	Graph<int> *g1 = new Graph<int>();
-/*	g1->addNode(23);
-	g1->addNode(33);
-	g1->addNode(2);
-	g1->addNode(3);/*/
 	
 	MyData<D> datito = MyData<D>(2342);
 	cout << "dato en MyData " << &datito << " es :"<< datito.data <<endl;//flecha cuando es puntero, punto cuando es objeto.
@@ -69,48 +57,33 @@ int main(int argc, char** argv) {
 	cout << arista->orig << endl;
 	cout << arista->dest << endl;
 	Edge<D>* arista2;
+	cout << "funco" << endl;
 	arista2 = new Edge<D>(0.9 ,&nodito2,&nodito4);
 	Edge<D>* arista3 = new Edge<D>(0.9 ,&nodito2,&nodito3);
-	ListWithPointer<Edge<D>,Cell<Edge<D>*>* l2 = new ListWithPointer<Edge<D>,Cell<Edge<D>>*>();
+	ListWithPointer<Edge<D>,Cell<Edge<D>>*>* l2 = new ListWithPointer<Edge<D>,Cell<Edge<D>>*>();
 	l2->insert(*arista);
 	l2->insert(*arista2);
 	l2->insert(*arista3);
 	Graph<D> g = Graph<D>();
+	cout << "funco" << endl;
 	g.addNode(777);
 	g.addNode(7);
 	g.addNode(77);
 	g.addNode(7777);
 	g.addNode(77777);
 	g.addNode(777777);
-	g.addEdge(12, g.getNode(3),g.getNode(6));
-	g.addEdge(12, g.getNode(3),g.getNode(1));
-	g.delEdge(g.getNode(3),g.getNode(1));
-	g.delNode(g.getNode(2));
+	//g.addEdge(12, g.getNode(3),g.getNode(6));
+	//g.addEdge(12, g.getNode(3),g.getNode(1));
+	//g.delEdge(g.getNode(3),g.getNode(1));
+	//g.delNode(g.getNode(2));
 	g.firstNode();
 	g.nextNode(g.getNode(3));
 	g.getData(g.getNode(3));
-	g.dfs(32);
+	g.dfs(2);
 /*	Node <Data>* bfs(int i)
 	double* dijkstra()
 	double** floyd()*/
 
-	//g1->edges->printList();
-/*
-	//Creacion de vertices y asignacion de datos
-	Vertex<MyData<int>, Edge<int>>* v1 = new Vertex<MyData<int>, Edge<int>>();
-	Vertex<MyData<int>, Edge<int>>* v2 = new Vertex<MyData<int>, Edge<int>>();
-	v1->data = new MyData<int>(2);
-	v2->data = new MyData<int>(5);
-	//Agregar vertices a la lista de vertices del grafo
-	g1->addV(*v1);
-	g1->addV(*v2);
-	//Creacion de aristas
-	Edge<int> *e1 = new Edge<int>(1.1, v1, v2);
-	Edge<int> *e2 = new Edge<int>(2.2, v2, v1);
-	//Agregar aristas a la lista de aristas del grafo
-	g1->addE(*e1);
-	g1->addE(*e2);
-	system("Pause");*/
 	return 0;
 }
 

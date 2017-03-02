@@ -1,6 +1,7 @@
 /**
  * @author Robin Gonzalez Ricz - B43011
  * @author Giancarlo Marin - B54099
+ * @author Luis Adrian Aguilar - B00092
  * @date 25-02-2017	
  * @brief Libreria del Binary Search Tree (BST) emplantillado
  */

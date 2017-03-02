@@ -3,6 +3,7 @@
 * IE-0217 - Lab3: Estructuras de datos no lineales
 * @author Robin Gonzalez - B43011	
 * @author Giancarlo Marin - B54099
+* @author Luis Adrian Aguilar Cascante - B00092
 * @date 26-02-2017
 * @brief Programa de prueba para la implementacion de Grafos con arreglos
 */

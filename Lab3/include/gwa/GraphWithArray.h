@@ -1,6 +1,7 @@
 /**
  * @author Giancarlo Marin Hernandez - B54099
  * @author Robin Gonzalez Ricz - B43011
+* @author Luis Adrian Aguilar Cascante - B00092
  * @date 27-02-2017	
  * @brief Biblioteca de la clase GraphWithArray que implementa un grafo con una representacion matricial que contiene datos de tipo Data
 */

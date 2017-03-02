@@ -72,14 +72,14 @@ int main(int argc, char** argv) {
 	g.addNode(7777);
 	g.addNode(77777);
 	g.addNode(777777);
-	g.addEdge(12, getNode(3),getNode(6));
-	g.addEdge(12, getNode(3),getNode(1));
-	g.delEdge(getNode(3),getNode(1));
-	g.delNode(getNode(2));
-	g.firstNode();
-	g.nextNode(getNode(3));
-	g.getData(getNode(3));
-	g.dfs(int i);
+	g.addEdge(12, g.getNode(3),g.getNode(6));
+	//g.addEdge(12, g.getNode(3),g.getNode(1));
+	//g.delEdge(g.getNode(3),g.getNode(1));
+	//g.delNode(g.getNode(2));
+	//g.firstNode();
+	//g.nextNode(g.getNode(3));
+	//g.getData(g.getNode(3));
+//	g.dfs(int i);
 /*	Node <Data>* bfs(int i)
 	double* dijkstra()
 	double** floyd()*/

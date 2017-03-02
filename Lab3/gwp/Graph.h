@@ -60,7 +60,7 @@ public:
 	* @param e		int 1 es agregado a matriz
 	*/
 	void addEdge(double w, Node<Data>* p,Node<Data>* s){
-		Edge<Data>* e = new Edge<Data>(w,p,s);
+		Edge<Data> e = Edge<Data>(w,p,s);
 		if(!this->edges) this->edges = new ListWithPointer<Edge<Data>,Cell<Edge<Data>>*>();
 		this->edges->insert(e);
 		++aristas;
@@ -101,7 +101,7 @@ public:
 		for(int c = 0; c > i; c++){
 			temp = temp->next;
 		}
-		return this->nodes->get(temp);
+		return temp->data;
 	}
 	
 	Data* getData(Node<Data>* n){

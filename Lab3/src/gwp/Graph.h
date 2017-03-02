@@ -1,4 +1,5 @@
 /**
+* @author Robin Gonzalez - B43011
 * @author Giancarlo Marin - B54099
 * @date 25-02-2017
 * @brief Libreria de la clase Graph que genera Grafos
@@ -9,54 +10,127 @@
 #include <iostream>
 #include "MyData.h"
 #include "Edge.h"
-#include "Vertex.h"
+#include "Node.h"
 #include "ListWithPointer.h"
 #include "Cell.h"
 
 using namespace std;
-template<typename D>/**Libreria de la clase Graph que genera Grafos*/
+template<typename Data>/**Libreria de la clase Graph que genera Grafos*/ //E es lo que
 class Graph{
 public:
-	ListWithPointer<Vertex<MyData<D>, Edge<D>>, Cell<Vertex<MyData<D>,Edge<D>>>*>* gV; ///Atrib. publico de tipo puntero a lista que contiene la lista de vertices del grafo///
-	ListWithPointer<Edge<D>, Cell<Edge<D>>*>* gA; ///Atrib. publico de tipo puntero a lista que contiene la lista de aristas del grafo///
+	
+	ListWithPointer<Edge<Data>,Cell<Edge<Data>>*>* edges; ///Atrib. publico de tipo puntero a lista que contiene la lista de aristas del grafo///
+	int nodos;
+	int aristas;
+	ListWithPointer<Node<Data>, Cell<Node<Data>>*>* nodes; ///Atrib. publico de tipo puntero a lista que contiene la lista de nodos del grafo///
 	/**
 	* Constructor de la clase Graph
 	*/
 	Graph(){
-		this->gV = nullptr;
-		this->gA = nullptr;
+		this->edges = nullptr;
+		this->nodes = nullptr;
 	}
 
 	/**
 	* Destructor de la clase Graph
 	*/
 	~Graph(){
-		delete gV;
-		delete gA;
+		delete edges;
+		delete nodes;
 	}
 
 	/**
 	* Metodo que agrega Vertices a la lista de Vertices del grafo
 	* @param v		Puntero a Vertex que es agregado a la lista
 	*/
-	void addV(Vertex<MyData<D>, Edge<D>> v){
-		gV->insert(v);
+	void addNode(Data d){
+		Node<Data>* n = new Node<Data>(new Data(d));
+		if(!this->nodes) this->nodes = new ListWithPointer<Node<Data>,Cell<Node<Data>>*>();
+		this->nodes->insert(*n);
+		++nodos;
+	}
+	
+	/*void  addNode(Node<Data>* n){
+		this->nodos->insert(n);
+		++nTotales;
+	}*/
+	
+	/**
+	* Metodo que agrega conexiones entre nodos en matriz de adyacencias
+	* @param e		int 1 es agregado a matriz
+	*/
+	void addEdge(double w, Node<Data>* p,Node<Data>* s){
+		Edge<Data> e = Edge<Data>(w,p,s);
+		if(!this->edges) this->edges = new ListWithPointer<Edge<Data>,Cell<Edge<Data>>*>();
+		this->edges->insert(e);
+		++aristas;
 	}
 
-	/**
-	* Metodo que agrega Edges a la lista de Aristas del grafo
-	* @param e		Puntero a Edge que es agregado a la lista
-	*/
-	void addE(Edge<D> e){
-		gA->insert(e);
+	void delEdge(Node<Data>* s,Node<Data>* d){
+		Edge<Data> buscado = Edge<Data>(0,s,d);
+		Cell<Edge<Data>>* ctemp = this->edges->find(buscado);
+		this->edges->remove(*(ctemp->data));			
+		--aristas;
 	}
 
-	/**
-	* Metodo que agrega una arista que conecta un vertice origen con su destino
-	* @param e		Puntero a Edge que asigna dicha arista de forma dirigida entre el vertice origen y el destino
-	*/
-	void assignEdge(Edge<D> e){
-		e->orig->aristas->insert(e);
+	void delNode(Node<Data>* d){
+		Cell<Edge<Data>>* pos = this->edges->first;
+		while(pos!=this->edges->last){
+			if(*(pos->data->orig)==*d || *(pos->data->dest)==*d){
+				this->delEdge(pos->data->orig,pos->data->dest);
+			}
+			pos = this->edges->next(pos);
+		}
+		if(*(pos->data->orig)==*d || *(pos->data->dest)==*d){
+			this->delEdge(pos->data->orig,pos->data->dest);
+		}
+		this->nodes->remove(*d);
+		--nodos;
+	}
+
+	Node <Data>* firstNode(){
+		return this->nodes->first->data;
+	}
+
+	Node <Data>* nextNode(Node<Data> *n){
+		return (this->nodes->next(this->nodes->find(*n))->data);
+	}
+
+	Node <Data>* getNode(int i){
+		Cell<Node<Data>>* temp = this->nodes->first;
+		for(int c = 0; c > i; c++){
+			temp = temp->next;
+		}
+		return temp->data;
+	}
+	
+	Data* getData(Node<Data>* n){
+		return n->data;
+	}
+
+	Node <Data>* dfs(int i){
+//		int cuenta = 0;
+//		while(cuenta < nTotales){
+//			for(int c =0;c<nTotales;c++){
+//				if(adyacencias[i][c]==1){
+//					i = c;
+//					cout <<this->getNode(i) << endl;
+//					cuenta++;
+//				}
+//			}
+//		}
+	}
+
+	Node <Data>* bfs(int i){
+		
+	}
+
+	double* dijkstra(){
+		
+	}
+
+	double** floyd(){
+		
 	}
 };
 

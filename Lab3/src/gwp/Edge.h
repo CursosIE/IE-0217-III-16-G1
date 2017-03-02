@@ -1,4 +1,5 @@
 /**
+* @author Robin Gonzalez - B43011
 * @author Giancarlo Marin - B54099
 * @date 22-02-2017
 * @brief Libreria de la clase Edge que contiene la especificacion de una arista del grafo
@@ -7,23 +8,24 @@
 #define EDGE_H
 
 #include <iostream>
-#include "Vertex.h"
+#include "Node.h"
 #include "MyData.h"
+#include "ListWithPointer.h"
 
 using namespace std;
 
 template<typename D>/**Libreria de la clase Edge que contiene la especificacion de una arista del grafo*/
 class Edge{
 public:
-	double weight; /**Atrib. publico de tipo double que indica el peso de la arista*/
-	Vertex<MyData<D>, Edge<D>>* orig;  /**Atrib. publico de tipo puntero a Vertex que apunta al vertice origen de la arista*/
-	Vertex<MyData<D>, Edge<D>>* dest; /**Atrib. publico de tipo puntero a Vertex que apunta al vertice destino de la arista*/
+	double peso; /**Atrib. publico de tipo double que indica el peso de la arista*/
+	Node<D>* orig;//<MyData<D>, Edge<D>>* orig;  /**Atrib. publico de tipo puntero a Vertex que apunta al vertice origen de la arista*/
+	Node<D>* dest;//<MyData<D>, Edge<D>>* dest; /**Atrib. publico de tipo puntero a Vertex que apunta al vertice destino de la arista*/
 
 	/**
 	* Constructor de la clase Edge
 	*/
 	Edge(){
-		this->weight = 0.0;
+		this->peso = 0.0;
 		this->orig = nullptr;
 		this->dest = nullptr;
 	}
@@ -34,16 +36,28 @@ public:
 	* @param o	Puntero de Vertex que indica el vertice de origen
 	* @param d	Puntero de Vertex que indica el vertice de destino
 	*/
-	Edge(double w, Vertex<MyData<D>, Edge<D>>* o, Vertex<MyData<D>, Edge<D>>* d){
-		this->weight = w;
-		this->orig = o;
-		this->dest = d;
+	Edge(double w, Node<D>* p, Node<D>* s){
+		this->peso = w;
+		this->orig = p;
+		this->dest = s;
 	}
 
 	/**
 	* Destructor de la clase Edge
 	*/
 	~Edge(){
+	}
+	
+	bool operator==(Edge<D> n){
+			return (/*this->peso==n.peso&&*/this->orig==n.orig &&this->dest==n.dest);//vamos a asumir que basta con el nodo de origen y el de destino puesto que no deberia haber dos aristas diferentes que tengan el mismo origen y destino independientemente del peso
+	}
+	
+	ostream& operator<<(ostream& s)
+//ostream& operator<<(ostream& os, const Date& dt) 
+	{
+		//ostream& s;
+	    s << "direccion: " << &this <<" data: "<< *(this.data);
+	    return s;
 	}
 };
 

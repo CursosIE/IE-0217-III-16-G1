@@ -67,6 +67,22 @@ int main(int argc, char** argv) {
 	l2->insert(*arista3);
 	Graph<int> g = Graph<int>();
 	g.addNode(777);
+	g.addNode(7);
+	g.addNode(77);
+	g.addNode(7777);
+	g.addNode(77777);
+	g.addNode(777777);
+	void addEdge(double w, Node<Data>* p,Node<Data>* s);
+	void delEdge(Node<Data>* s,Node<Data>* d);
+	void delNode(Node<Data>* d);
+	Node <Data>* firstNode();
+	Node <Data>* nextNode(Node<Data> *n);
+	Node <Data>* getNode(int i);
+	Data* getData(Node<Data>* n);
+	Node <Data>* dfs(int i)
+/*	Node <Data>* bfs(int i)
+	double* dijkstra()
+	double** floyd()*/
 
 	//g1->edges->printList();
 /*

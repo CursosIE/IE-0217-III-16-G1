@@ -97,11 +97,15 @@ public:
 	}
 
 	Node <Data>* getNode(int i){
-//		return this->nodos->get(i);		
+		Cell<Node<Data>>* temp = this->nodes->first;
+		for(int c = 0; c > i; c++){
+			temp = temp->next;
+		}
+		return this->nodes->get(temp);
 	}
 	
 	Data* getData(Node<Data>* n){
-//		return n->d->data;	
+		return n->data;
 	}
 
 	Node <Data>* dfs(int i){

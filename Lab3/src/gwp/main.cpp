@@ -9,7 +9,7 @@
 #include <iostream>
 #include "Graph.h"
 
-//#include "../../include/gwp/graphWithPointer.h"
+#include "../../include/gwp/graphWithPointer.h"
 
 #define D int
 

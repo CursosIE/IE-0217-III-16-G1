@@ -1,3 +1,11 @@
+/**
+* Universidad de Costa Rica - Escuela de Ingenieria ELectrica
+* IE-0217 - Lab3: Estructuras de datos no lineales
+* @author Robin Gonzalez - B43011	
+* @author Giancarlo Marin - B54099
+* @date 26-02-2017
+* @brief Programa de prueba para la implementacion de Grafos con punteros
+*/
 #include <iostream>
 #include "Graph.h"
 #include "MyData.h"
@@ -5,9 +13,11 @@
 #include "Edge.h"
 #include "Node.h"
 
+//#include "../../include/gwp/graphWithPointer.h"
+
 #include <iostream>
 
-#define D double
+#define D int
 
 using namespace std;
 
@@ -20,52 +30,52 @@ int main(int argc, char** argv) {
 	g1->addNode(2);
 	g1->addNode(3);/*/
 	
-	MyData<int> datito = MyData<int>(2342);
+	MyData<D> datito = MyData<D>(2342);
 	cout << "dato en MyData " << &datito << " es :"<< datito.data <<endl;//flecha cuando es puntero, punto cuando es objeto.
-	Cell<int> celda = Cell<int>(new int(123), nullptr);
+	Cell<D> celda = Cell<D>(new D(123), nullptr);
 	cout << "dato en Celda " << &celda << " es :"<< *celda.data << " y next es: " <<celda.next << endl;//flecha cuando es puntero, punto cuando es objeto.	
-	Cell<int> celda2 = Cell<int>();
-	celda2.data = new int(321);
+	Cell<D> celda2 = Cell<D>();
+	celda2.data = new D(321);
 	celda2.next = &celda;
 	cout << "dato en Celda " << &celda2 << " es :"<< *celda2.data << " y next es: " <<celda2.next << endl;//flecha cuando es puntero, punto cuando es objeto.	
 	celda.~Cell();
 	celda2.~Cell();
 	datito.~MyData();
-	ListWithPointer<int,Cell<int>*> listita = ListWithPointer<int,Cell<int>*>();
+	ListWithPointer<D,Cell<D>*> listita = ListWithPointer<D,Cell<D>*>();
 	listita.insert(1);
 	listita.insert(2);
 	listita.insert(3);
 	listita.insert(4);
 	listita.insert(5);
 	listita.printList();
-	Node<int> nodito = Node<int>(new int(2509));
+	Node<D> nodito = Node<D>(new D(2509));
 	cout << "Dato en Nodo " << &nodito << " es :"<< *nodito.data << endl;
-	Node<int> nodito2 = Node<int>(new int(250));
+	Node<D> nodito2 = Node<D>(new D(250));
 	cout << "Dato en Nodo " << &nodito2 << " es :"<< *nodito2.data << endl;
-	Node<int> nodito3 = Node<int>(new int(33));
-	Node<int> nodito4 = Node<int>(new int(457));
+	Node<D> nodito3 = Node<D>(new D(33));
+	Node<D> nodito4 = Node<D>(new D(457));
 	//cout << nodito << endl;
-	ListWithPointer<Node<int>,Cell<Node<int>>*>* l = new ListWithPointer<Node<int>,Cell<Node<int>>*>();
+	ListWithPointer<Node<D>,Cell<Node<D>>*>* l = new ListWithPointer<Node<D>,Cell<Node<D>>*>();
 	l->insert(nodito);
 	l->insert(nodito2);
 	//cout << l->find(nodito) << endl;//se cae
 	cout << "funca" << endl;
-	Edge<int>* arista;
-	arista = new Edge<int>();
+	Edge<D>* arista;
+	arista = new Edge<D>();
 	arista->peso = 1.2;
 	arista->orig = &nodito;
 	arista->dest = &nodito2;
 	cout << arista->peso << endl;
 	cout << arista->orig << endl;
 	cout << arista->dest << endl;
-	Edge<int>* arista2;
-	arista2 = new Edge<int>(0.9 ,&nodito2,&nodito4);
-	Edge<int>* arista3 = new Edge<int>(0.9 ,&nodito2,&nodito3);
-	ListWithPointer<Edge<int>,Cell<Edge<int>>*>* l2 = new ListWithPointer<Edge<int>,Cell<Edge<int>>*>();
+	Edge<D>* arista2;
+	arista2 = new Edge<D>(0.9 ,&nodito2,&nodito4);
+	Edge<D>* arista3 = new Edge<D>(0.9 ,&nodito2,&nodito3);
+	ListWithPointer<Edge<D>,Cell<Edge<D>*>* l2 = new ListWithPointer<Edge<D>,Cell<Edge<D>>*>();
 	l2->insert(*arista);
 	l2->insert(*arista2);
 	l2->insert(*arista3);
-	Graph<int> g = Graph<int>();
+	Graph<D> g = Graph<D>();
 	g.addNode(777);
 	g.addNode(7);
 	g.addNode(77);

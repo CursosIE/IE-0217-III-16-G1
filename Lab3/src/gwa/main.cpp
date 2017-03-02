@@ -1,6 +1,7 @@
 /**
 * Universidad de Costa Rica - Escuela de Ingenieria ELectrica
 * IE-0217 - Lab3: Estructuras de datos no lineales
+* @author Robin Gonzalez - B43011	
 * @author Giancarlo Marin - B54099
 * @date 26-02-2017
 * @brief Programa de prueba para la implementacion de Grafos con arreglos

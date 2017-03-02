@@ -215,10 +215,11 @@ void emptyList() {
 	this->n=0;
 }
 
+
 	P first; /**<Atrib. privado de tipo P que indica el indice del primer elemento de list*/
+	P last; /**<Atrib. privado de tipo P que indica el indice del ultimo elemento de list*/
 private:
 	int n; /**<Atrib. privado de tipo entero que indica el numero de elementos en list*/
-	P last; /**<Atrib. privado de tipo P que indica el indice del ultimo elemento de list*/
 
 };
 

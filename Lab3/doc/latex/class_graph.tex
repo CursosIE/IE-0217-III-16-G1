@@ -1,0 +1,391 @@
+\hypertarget{class_graph}{\section{Graph$<$ Data $>$ Class Template Reference}
+\label{class_graph}\index{Graph$<$ Data $>$@{Graph$<$ Data $>$}}
+}
+
+
+Libreria de la clase \hyperlink{class_graph}{Graph} que genera Grafos.  
+
+
+
+
+{\ttfamily \#include $<$graph\+With\+Pointer.\+h$>$}
+
+
+
+Collaboration diagram for Graph$<$ Data $>$\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graph_a8ef748930440a759a822f7c6c44951e7}{Graph} ()
+\begin{DoxyCompactList}\small\item\em Atrib. publico de tipo puntero a lista que contiene la lista de nodos del grafo///. \end{DoxyCompactList}\item 
+\hyperlink{class_graph_a9ee23093ccf3a80df54838637e33fffd}{$\sim$\+Graph} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \hyperlink{class_graph}{Graph}. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aad2f858eee99cbe448a8360c76357f09}{add\+Node} (\hyperlink{class_data}{Data} d)
+\begin{DoxyCompactList}\small\item\em Metodo que agrega Nodos a la lista de Nodos del grafo. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_a53ff2bd0e8925335198ecb06b86443e3}{add\+Edge} (double w, \hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$p, \hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$s)
+\begin{DoxyCompactList}\small\item\em Metodo que agrega conexiones entre nodos creando un objeto arista. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_a96a41f6820bf0ef9c40b4e748a6a447b}{del\+Edge} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$p, \hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$s)
+\begin{DoxyCompactList}\small\item\em Metodo que elimina una arista. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_a2d4f6aaaf01d42b86adc62722fca1708}{del\+Node} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$d)
+\begin{DoxyCompactList}\small\item\em Metodo que elimina un nodo. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_graph_ad62cffbfcc756ee7c9d02294ab5250f6}{first\+Node} ()
+\begin{DoxyCompactList}\small\item\em Metodo que retorna primer nodo. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_graph_a437e5d7af67aa694662f4771fb09389a}{next\+Node} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n)
+\begin{DoxyCompactList}\small\item\em Metodo que retorna el siguiente nodo. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_graph_ae9cac0cd09984cf19e6f2727c519b5ec}{get\+Node} (int i)
+\begin{DoxyCompactList}\small\item\em Metodo que reotrna nodo. \end{DoxyCompactList}\item 
+\hyperlink{class_data}{Data} $\ast$ \hyperlink{class_graph_aea0299a50d31f377264ad0c5b6763851}{get\+Data} (\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$n)
+\begin{DoxyCompactList}\small\item\em Metodo retorna data. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_graph_a48cfc6240bc62c2d8383611c0c802a95}{dfs} (int i)
+\begin{DoxyCompactList}\small\item\em Algoritmo dfs. \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $\ast$ \hyperlink{class_graph_ae366957a73bb817a42fa1af60ffd3d06}{bfs} (int i)
+\begin{DoxyCompactList}\small\item\em Algoritmo bfs. \end{DoxyCompactList}\item 
+double $\ast$ \hyperlink{class_graph_a8948b09a3892f77f1a3645f104ced594}{dijkstra} ()
+\begin{DoxyCompactList}\small\item\em Algoritmo Dijsktra. \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \hyperlink{class_graph_a159efcb9312762a6e170524c7d298e9c}{floyd} ()
+\begin{DoxyCompactList}\small\item\em Algoritmo Floyd. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_list_with_pointer}{List\+With\+Pointer}$<$ \hyperlink{class_edge}{Edge}$<$ \hyperlink{class_data}{Data} $>$\\*
+, \hyperlink{class_cell}{Cell}$<$ \hyperlink{class_edge}{Edge}$<$ \hyperlink{class_data}{Data} $>$ $>$ $\ast$ $>$ $\ast$ \hyperlink{class_graph_a973cbdbbf60ccf30f4c77bba47f3e962}{edges}
+\item 
+int \hyperlink{class_graph_a5b930a12715664a8a1595623ec5b55f3}{nodos}
+\begin{DoxyCompactList}\small\item\em Atrib. publico de tipo puntero a lista que contiene la lista de aristas del grafo///. \end{DoxyCompactList}\item 
+int \hyperlink{class_graph_a4aeb20da059673dd103faf1499e59118}{aristas}
+\item 
+\hyperlink{class_list_with_pointer}{List\+With\+Pointer}$<$ \hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$\\*
+, \hyperlink{class_cell}{Cell}$<$ \hyperlink{class_node}{Node}$<$ \hyperlink{class_data}{Data} $>$ $>$ $\ast$ $>$ $\ast$ \hyperlink{class_graph_a07d8653e4d8d908c57d3977212797f3b}{nodes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Data$>$class Graph$<$ Data $>$}
+
+Libreria de la clase \hyperlink{class_graph}{Graph} que genera Grafos. 
+
+Definition at line 16 of file graph\+With\+Pointer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graph_a8ef748930440a759a822f7c6c44951e7}{\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{Graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Graph}$<$ {\bf Data} $>$\+::{\bf Graph} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a8ef748930440a759a822f7c6c44951e7}
+
+
+Atrib. publico de tipo puntero a lista que contiene la lista de nodos del grafo///. 
+
+Constructor de la clase \hyperlink{class_graph}{Graph} 
+
+Definition at line 26 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a9ee23093ccf3a80df54838637e33fffd}{\index{Graph@{Graph}!````~Graph@{$\sim$\+Graph}}
+\index{````~Graph@{$\sim$\+Graph}!Graph@{Graph}}
+\subsubsection[{$\sim$\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Graph}$<$ {\bf Data} $>$\+::$\sim${\bf Graph} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a9ee23093ccf3a80df54838637e33fffd}
+
+
+Destructor de la clase \hyperlink{class_graph}{Graph}. 
+
+
+
+Definition at line 34 of file graph\+With\+Pointer.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graph_a53ff2bd0e8925335198ecb06b86443e3}{\index{Graph@{Graph}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!Graph@{Graph}}
+\subsubsection[{add\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf Graph}$<$ {\bf Data} $>$\+::add\+Edge (
+\begin{DoxyParamCaption}
+\item[{double}]{w, }
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{p, }
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a53ff2bd0e8925335198ecb06b86443e3}
+
+
+Metodo que agrega conexiones entre nodos creando un objeto arista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & double peso de la conexion \\
+\hline
+{\em c} & puntero a nodo origen \\
+\hline
+{\em d} & puntero a nodo destino \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_aad2f858eee99cbe448a8360c76357f09}{\index{Graph@{Graph}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Graph@{Graph}}
+\subsubsection[{add\+Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf Graph}$<$ {\bf Data} $>$\+::add\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Data}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aad2f858eee99cbe448a8360c76357f09}
+
+
+Metodo que agrega Nodos a la lista de Nodos del grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Puntero a Nodos que es agregado a la lista \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_ae366957a73bb817a42fa1af60ffd3d06}{\index{Graph@{Graph}!bfs@{bfs}}
+\index{bfs@{bfs}!Graph@{Graph}}
+\subsubsection[{bfs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::bfs (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_ae366957a73bb817a42fa1af60ffd3d06}
+
+
+Algoritmo bfs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 136 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a96a41f6820bf0ef9c40b4e748a6a447b}{\index{Graph@{Graph}!del\+Edge@{del\+Edge}}
+\index{del\+Edge@{del\+Edge}!Graph@{Graph}}
+\subsubsection[{del\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf Graph}$<$ {\bf Data} $>$\+::del\+Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{p, }
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a96a41f6820bf0ef9c40b4e748a6a447b}
+
+
+Metodo que elimina una arista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Puntero a Nodos que son extremos de arista a eliminar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a2d4f6aaaf01d42b86adc62722fca1708}{\index{Graph@{Graph}!del\+Node@{del\+Node}}
+\index{del\+Node@{del\+Node}!Graph@{Graph}}
+\subsubsection[{del\+Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf Graph}$<$ {\bf Data} $>$\+::del\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a2d4f6aaaf01d42b86adc62722fca1708}
+
+
+Metodo que elimina un nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Puntero a Nodos que es eliminido \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a48cfc6240bc62c2d8383611c0c802a95}{\index{Graph@{Graph}!dfs@{dfs}}
+\index{dfs@{dfs}!Graph@{Graph}}
+\subsubsection[{dfs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::dfs (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a48cfc6240bc62c2d8383611c0c802a95}
+
+
+Algoritmo dfs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a8948b09a3892f77f1a3645f104ced594}{\index{Graph@{Graph}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!Graph@{Graph}}
+\subsubsection[{dijkstra}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ double$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::dijkstra (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a8948b09a3892f77f1a3645f104ced594}
+
+
+Algoritmo Dijsktra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 162 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_ad62cffbfcc756ee7c9d02294ab5250f6}{\index{Graph@{Graph}!first\+Node@{first\+Node}}
+\index{first\+Node@{first\+Node}!Graph@{Graph}}
+\subsubsection[{first\+Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::first\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_ad62cffbfcc756ee7c9d02294ab5250f6}
+
+
+Metodo que retorna primer nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a159efcb9312762a6e170524c7d298e9c}{\index{Graph@{Graph}!floyd@{floyd}}
+\index{floyd@{floyd}!Graph@{Graph}}
+\subsubsection[{floyd}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ double$\ast$$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::floyd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a159efcb9312762a6e170524c7d298e9c}
+
+
+Algoritmo Floyd. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_aea0299a50d31f377264ad0c5b6763851}{\index{Graph@{Graph}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Graph@{Graph}}
+\subsubsection[{get\+Data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Data}$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::get\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aea0299a50d31f377264ad0c5b6763851}
+
+
+Metodo retorna data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_ae9cac0cd09984cf19e6f2727c519b5ec}{\index{Graph@{Graph}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!Graph@{Graph}}
+\subsubsection[{get\+Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::get\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_ae9cac0cd09984cf19e6f2727c519b5ec}
+
+
+Metodo que reotrna nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & int posicion \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 110 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a437e5d7af67aa694662f4771fb09389a}{\index{Graph@{Graph}!next\+Node@{next\+Node}}
+\index{next\+Node@{next\+Node}!Graph@{Graph}}
+\subsubsection[{next\+Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::next\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a437e5d7af67aa694662f4771fb09389a}
+
+
+Metodo que retorna el siguiente nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Puntero a Nodos \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file graph\+With\+Pointer.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_graph_a4aeb20da059673dd103faf1499e59118}{\index{Graph@{Graph}!aristas@{aristas}}
+\index{aristas@{aristas}!Graph@{Graph}}
+\subsubsection[{aristas}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ int {\bf Graph}$<$ {\bf Data} $>$\+::aristas}}\label{class_graph_a4aeb20da059673dd103faf1499e59118}
+
+
+Definition at line 21 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a973cbdbbf60ccf30f4c77bba47f3e962}{\index{Graph@{Graph}!edges@{edges}}
+\index{edges@{edges}!Graph@{Graph}}
+\subsubsection[{edges}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf List\+With\+Pointer}$<${\bf Edge}$<${\bf Data}$>$,{\bf Cell}$<${\bf Edge}$<${\bf Data}$>$ $>$$\ast$$>$$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::edges}}\label{class_graph_a973cbdbbf60ccf30f4c77bba47f3e962}
+
+
+Definition at line 19 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a07d8653e4d8d908c57d3977212797f3b}{\index{Graph@{Graph}!nodes@{nodes}}
+\index{nodes@{nodes}!Graph@{Graph}}
+\subsubsection[{nodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf List\+With\+Pointer}$<${\bf Node}$<${\bf Data}$>$, {\bf Cell}$<${\bf Node}$<${\bf Data}$>$ $>$$\ast$$>$$\ast$ {\bf Graph}$<$ {\bf Data} $>$\+::nodes}}\label{class_graph_a07d8653e4d8d908c57d3977212797f3b}
+
+
+Definition at line 22 of file graph\+With\+Pointer.\+h.
+
+\hypertarget{class_graph_a5b930a12715664a8a1595623ec5b55f3}{\index{Graph@{Graph}!nodos@{nodos}}
+\index{nodos@{nodos}!Graph@{Graph}}
+\subsubsection[{nodos}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ int {\bf Graph}$<$ {\bf Data} $>$\+::nodos}}\label{class_graph_a5b930a12715664a8a1595623ec5b55f3}
+
+
+Atrib. publico de tipo puntero a lista que contiene la lista de aristas del grafo///. 
+
+
+
+Definition at line 20 of file graph\+With\+Pointer.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/gwp/\hyperlink{graph_with_pointer_8h}{graph\+With\+Pointer.\+h}\end{DoxyCompactItemize}

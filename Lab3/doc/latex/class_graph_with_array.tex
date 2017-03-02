@@ -1,0 +1,521 @@
+\hypertarget{class_graph_with_array}{\section{Graph\+With\+Array Class Reference}
+\label{class_graph_with_array}\index{Graph\+With\+Array@{Graph\+With\+Array}}
+}
+
+
+{\ttfamily \#include $<$Graph\+With\+Array.\+h$>$}
+
+
+
+Collaboration diagram for Graph\+With\+Array\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graph_with_array_a2d5c344eb9674d28ff3dee9379be73a8}{Graph\+With\+Array} ()
+\begin{DoxyCompactList}\small\item\em Lista de nodos con indice de enteros ///. \end{DoxyCompactList}\item 
+\hyperlink{class_graph_with_array_aa2f46c01d724076e296b876c74d74477}{$\sim$\+Graph\+With\+Array} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \hyperlink{class_graph}{Graph}. \end{DoxyCompactList}\item 
+C $\ast$$\ast$ \hyperlink{class_graph_with_array_a7bb36bd068aa1d1e2f9c2f6cf9a2039d}{build\+M} ()
+\begin{DoxyCompactList}\small\item\em Metodo que genera la matriz de adyacencia para modelar el grafo despues de cada insercion de vertices. \end{DoxyCompactList}\item 
+C $\ast$$\ast$ \hyperlink{class_graph_with_array_aeeb85d42c6122f801f26155b5dc0bdff}{inic\+Mat} (C $\ast$$\ast$m, int tam)
+\begin{DoxyCompactList}\small\item\em Metodo que genera una matriz de inicializada en -\/1. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_with_array_ad564f3321ee6aa87766e89f1910ab450}{print\+M} ()
+\begin{DoxyCompactList}\small\item\em Metodo que imprime la matriz de adyacencia. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_with_array_a39d1b9c4d04fc8d493973c3e5af670ee}{add\+Node} (\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} n)
+\begin{DoxyCompactList}\small\item\em Metodo que agrega Vertices a la lista de Vertices del grafo. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_with_array_a3b9b6ea545e70e271e0e18ebdc24268b}{add\+Edge} (C costo, \hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} s, \hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} d)
+\begin{DoxyCompactList}\small\item\em Metodo que agrega conexiones entre nodos en la matriz de adyacencias. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_with_array_a2409546d9987e0fb93ef7029f42fe218}{del\+Edge} (\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} s, \hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} d)
+\begin{DoxyCompactList}\small\item\em Metodo que elimina conexiones entre nodos en la matriz de adyacencias. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_with_array_a50da62934c9baff5ed48ee305bb1f64e}{del\+Node} (\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} d)
+\begin{DoxyCompactList}\small\item\em Metodo que elimina nodos del grafo. \end{DoxyCompactList}\item 
+\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} \hyperlink{class_graph_with_array_a05881bf7c9c70621bb3b1197b723c726}{first\+Node} ()
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve el primer nodo de la lista de nodos. \end{DoxyCompactList}\item 
+\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} \hyperlink{class_graph_with_array_a83451cde5a50347c5964a1203cf9993e}{next\+Node} (\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} n)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve el siguiente nodo a primer de un nodo de la lista de nodos. \end{DoxyCompactList}\item 
+\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} \hyperlink{class_graph_with_array_a1abd6176f52732883322d3374a3734d9}{Node} (int i)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve el nodo en la posicion i de la lista. \end{DoxyCompactList}\item 
+\hyperlink{gwp_2main_8cpp_af316c33cc298530f245e8b55330e86b5}{D} \hyperlink{class_graph_with_array_a4281fd133432dd9d38901653822db314}{get\+Data} (\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} n)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve el dato contenido en un nodo especifico n. \end{DoxyCompactList}\item 
+bool $\ast$ \hyperlink{class_graph_with_array_ae5d6a358aa8054f49396770cd39666da}{m\+Reco\+Build} (bool val\+Ini)
+\begin{DoxyCompactList}\small\item\em Funcion apendice de la busquedas dfs y bfs que devuelve un array de bool que representa los nodos recorridos. \end{DoxyCompactList}\item 
+\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} \hyperlink{class_graph_with_array_a84fb0b91905d2cc29cb9240e7614172e}{dfs\+Finding} (\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} d, \hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} n, bool $\ast$m\+Reco)
+\begin{DoxyCompactList}\small\item\em Metodo apendice de la busquedas dfs que devuelve el N\+O\+D\+E con el dato buscado d o un N\+O\+D\+E con -\/1 de lo contrario. \end{DoxyCompactList}\item 
+\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} \hyperlink{class_graph_with_array_a1dfd71019f607a87c427edc84ea535f4}{dfs} (\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} d)
+\begin{DoxyCompactList}\small\item\em Metodo de busqueda en profundidad (dfs) que devuelve el N\+O\+D\+E con el dato buscado d o un N\+O\+D\+E con -\/1 de lo contrario utilizando un recorrido primero en profundidad. \end{DoxyCompactList}\item 
+\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} \hyperlink{class_graph_with_array_ad17b51c687185a3498d281cfdcdad028}{bfs\+Finding} (\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} d, \hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} n, bool $\ast$m\+Reco)
+\begin{DoxyCompactList}\small\item\em Metodo apendice de la busquedas bfs que devuelve el N\+O\+D\+E con el dato buscado d o un N\+O\+D\+E con -\/1 de lo contrario. \end{DoxyCompactList}\item 
+\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} \hyperlink{class_graph_with_array_ad14f7ae0ee1057eda42a87cc4e44219c}{bfs} (\hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E} d)
+\begin{DoxyCompactList}\small\item\em Metodo de busquedas en anchura (bfs) que devuelve el N\+O\+D\+E con el dato buscado d o un N\+O\+D\+E con -\/1 de lo contrario, utilizando un recorrido primero en anchura del grafo. \end{DoxyCompactList}\item 
+double $\ast$ \hyperlink{class_graph_with_array_af8c58c891a254c9a5901fbf1240aad81}{dijkstra} ()
+\item 
+double $\ast$$\ast$ \hyperlink{class_graph_with_array_a79a7530cfc6522e640ec2eb02e988314}{floyd} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_graph_with_array_aa3a01982d5839bbb449354b08e443b64}{cant\+Nodos}
+\item 
+C $\ast$$\ast$ \hyperlink{class_graph_with_array_a465fc5527e070cce20b37ffc8286c6c8}{m\+A}
+\begin{DoxyCompactList}\small\item\em Cantidad de nodos del grafo///. \end{DoxyCompactList}\item 
+\hyperlink{class_list}{List}$<$ \hyperlink{_graph_with_array_8h_a9a2bbc66102de668efe5e9c7feb23eaa}{N\+O\+D\+E}, int $>$ $\ast$ \hyperlink{class_graph_with_array_ae5c0c4faebb4e04f1c313400c817d53d}{nodos}
+\begin{DoxyCompactList}\small\item\em Matriz de Adyacencia de costo tipo C para representacion del Grafo///. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file Graph\+With\+Array.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graph_with_array_a2d5c344eb9674d28ff3dee9379be73a8}{\index{Graph\+With\+Array@{Graph\+With\+Array}!Graph\+With\+Array@{Graph\+With\+Array}}
+\index{Graph\+With\+Array@{Graph\+With\+Array}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{Graph\+With\+Array}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+With\+Array\+::\+Graph\+With\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a2d5c344eb9674d28ff3dee9379be73a8}
+
+
+Lista de nodos con indice de enteros ///. 
+
+Constructor de la clase \hyperlink{class_graph_with_array}{Graph\+With\+Array} 
+
+Definition at line 27 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_aa2f46c01d724076e296b876c74d74477}{\index{Graph\+With\+Array@{Graph\+With\+Array}!````~Graph\+With\+Array@{$\sim$\+Graph\+With\+Array}}
+\index{````~Graph\+With\+Array@{$\sim$\+Graph\+With\+Array}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{$\sim$\+Graph\+With\+Array}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+With\+Array\+::$\sim$\+Graph\+With\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_aa2f46c01d724076e296b876c74d74477}
+
+
+Destructor de la clase \hyperlink{class_graph}{Graph}. 
+
+
+
+Definition at line 36 of file Graph\+With\+Array.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graph_with_array_a3b9b6ea545e70e271e0e18ebdc24268b}{\index{Graph\+With\+Array@{Graph\+With\+Array}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{add\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+With\+Array\+::add\+Edge (
+\begin{DoxyParamCaption}
+\item[{C}]{costo, }
+\item[{{\bf N\+O\+D\+E}}]{s, }
+\item[{{\bf N\+O\+D\+E}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a3b9b6ea545e70e271e0e18ebdc24268b}
+
+
+Metodo que agrega conexiones entre nodos en la matriz de adyacencias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em costo} & Tipo C que indica el costo de la arista donde -\/1 representa sin conexion \\
+\hline
+{\em s} & Nodo source (origen) de la arista \\
+\hline
+{\em d} & Nodo destination (destino) de la arista \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 105 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a39d1b9c4d04fc8d493973c3e5af670ee}{\index{Graph\+With\+Array@{Graph\+With\+Array}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{add\+Node}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+With\+Array\+::add\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E}}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a39d1b9c4d04fc8d493973c3e5af670ee}
+
+
+Metodo que agrega Vertices a la lista de Vertices del grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Que contiene el nodo a agregar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 93 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_ad14f7ae0ee1057eda42a87cc4e44219c}{\index{Graph\+With\+Array@{Graph\+With\+Array}!bfs@{bfs}}
+\index{bfs@{bfs}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{bfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E} Graph\+With\+Array\+::bfs (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_ad14f7ae0ee1057eda42a87cc4e44219c}
+
+
+Metodo de busquedas en anchura (bfs) que devuelve el N\+O\+D\+E con el dato buscado d o un N\+O\+D\+E con -\/1 de lo contrario, utilizando un recorrido primero en anchura del grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & N\+O\+D\+E con el dato buscado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+O\+D\+E con el dato d buscado 
+\end{DoxyReturn}
+
+
+Definition at line 269 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_ad17b51c687185a3498d281cfdcdad028}{\index{Graph\+With\+Array@{Graph\+With\+Array}!bfs\+Finding@{bfs\+Finding}}
+\index{bfs\+Finding@{bfs\+Finding}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{bfs\+Finding}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E} Graph\+With\+Array\+::bfs\+Finding (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E}}]{d, }
+\item[{{\bf N\+O\+D\+E}}]{n, }
+\item[{bool $\ast$}]{m\+Reco}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_ad17b51c687185a3498d281cfdcdad028}
+
+
+Metodo apendice de la busquedas bfs que devuelve el N\+O\+D\+E con el dato buscado d o un N\+O\+D\+E con -\/1 de lo contrario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & N\+O\+D\+E con el dato buscado \\
+\hline
+{\em n} & N\+O\+D\+E donde comienza la busqueda \\
+\hline
+{\em m\+Reco} & Puntero a bool con el array de los nodos ya recorridos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+O\+D\+E con el dato d buscado 
+\end{DoxyReturn}
+
+
+Definition at line 246 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a7bb36bd068aa1d1e2f9c2f6cf9a2039d}{\index{Graph\+With\+Array@{Graph\+With\+Array}!build\+M@{build\+M}}
+\index{build\+M@{build\+M}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{build\+M}]{\setlength{\rightskip}{0pt plus 5cm}C$\ast$$\ast$ Graph\+With\+Array\+::build\+M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a7bb36bd068aa1d1e2f9c2f6cf9a2039d}
+
+
+Metodo que genera la matriz de adyacencia para modelar el grafo despues de cada insercion de vertices. 
+
+\begin{DoxyReturn}{Returns}
+Puntero doble de tipo C que representa la matriz de pesos en las aristas de conexion donde -\/1 indica que no hay conexion 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a2409546d9987e0fb93ef7029f42fe218}{\index{Graph\+With\+Array@{Graph\+With\+Array}!del\+Edge@{del\+Edge}}
+\index{del\+Edge@{del\+Edge}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{del\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+With\+Array\+::del\+Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E}}]{s, }
+\item[{{\bf N\+O\+D\+E}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a2409546d9987e0fb93ef7029f42fe218}
+
+
+Metodo que elimina conexiones entre nodos en la matriz de adyacencias. 
+
+Asigna un -\/1 al campo \mbox{[}s\mbox{]}\mbox{[}d\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em s} & Nodo source (origen) de la arista \\
+\hline
+{\em d} & Nodo destination (destino) de la arista \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 114 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a50da62934c9baff5ed48ee305bb1f64e}{\index{Graph\+With\+Array@{Graph\+With\+Array}!del\+Node@{del\+Node}}
+\index{del\+Node@{del\+Node}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{del\+Node}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+With\+Array\+::del\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a50da62934c9baff5ed48ee305bb1f64e}
+
+
+Metodo que elimina nodos del grafo. 
+
+Primero elimina todas sus conexiones origen y destino y luego reacomoda la lista de nodos y reacomoda la matriz de adyacencia 
+\begin{DoxyParams}{Parameters}
+{\em s} & Nodo source (origen) de la arista \\
+\hline
+{\em d} & Nodo destination (destino) de la arista \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a1dfd71019f607a87c427edc84ea535f4}{\index{Graph\+With\+Array@{Graph\+With\+Array}!dfs@{dfs}}
+\index{dfs@{dfs}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{dfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E} Graph\+With\+Array\+::dfs (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a1dfd71019f607a87c427edc84ea535f4}
+
+
+Metodo de busqueda en profundidad (dfs) que devuelve el N\+O\+D\+E con el dato buscado d o un N\+O\+D\+E con -\/1 de lo contrario utilizando un recorrido primero en profundidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & N\+O\+D\+E con el dato buscado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+O\+D\+E con el dato d buscado 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a84fb0b91905d2cc29cb9240e7614172e}{\index{Graph\+With\+Array@{Graph\+With\+Array}!dfs\+Finding@{dfs\+Finding}}
+\index{dfs\+Finding@{dfs\+Finding}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{dfs\+Finding}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E} Graph\+With\+Array\+::dfs\+Finding (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E}}]{d, }
+\item[{{\bf N\+O\+D\+E}}]{n, }
+\item[{bool $\ast$}]{m\+Reco}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a84fb0b91905d2cc29cb9240e7614172e}
+
+
+Metodo apendice de la busquedas dfs que devuelve el N\+O\+D\+E con el dato buscado d o un N\+O\+D\+E con -\/1 de lo contrario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & N\+O\+D\+E con el dato buscado \\
+\hline
+{\em n} & N\+O\+D\+E donde comienza la busqueda \\
+\hline
+{\em m\+Reco} & Puntero a bool con el array de los nodos ya recorridos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+O\+D\+E con el dato d buscado 
+\end{DoxyReturn}
+
+
+Definition at line 216 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_af8c58c891a254c9a5901fbf1240aad81}{\index{Graph\+With\+Array@{Graph\+With\+Array}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{dijkstra}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Graph\+With\+Array\+::dijkstra (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_af8c58c891a254c9a5901fbf1240aad81}
+
+
+Definition at line 273 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a05881bf7c9c70621bb3b1197b723c726}{\index{Graph\+With\+Array@{Graph\+With\+Array}!first\+Node@{first\+Node}}
+\index{first\+Node@{first\+Node}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{first\+Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E} Graph\+With\+Array\+::first\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a05881bf7c9c70621bb3b1197b723c726}
+
+
+Metodo que devuelve el primer nodo de la lista de nodos. 
+
+\begin{DoxyReturn}{Returns}
+N\+O\+D\+E con el nodo inicial 
+\end{DoxyReturn}
+
+
+Definition at line 154 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a79a7530cfc6522e640ec2eb02e988314}{\index{Graph\+With\+Array@{Graph\+With\+Array}!floyd@{floyd}}
+\index{floyd@{floyd}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{floyd}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$$\ast$ Graph\+With\+Array\+::floyd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a79a7530cfc6522e640ec2eb02e988314}
+
+
+Definition at line 277 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a4281fd133432dd9d38901653822db314}{\index{Graph\+With\+Array@{Graph\+With\+Array}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{get\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D} Graph\+With\+Array\+::get\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E}}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a4281fd133432dd9d38901653822db314}
+
+
+Metodo que devuelve el dato contenido en un nodo especifico n. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & N\+O\+D\+E que se desea obtener dato \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dato de tipo D contenido en el Nodo 
+\end{DoxyReturn}
+
+
+Definition at line 187 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_aeeb85d42c6122f801f26155b5dc0bdff}{\index{Graph\+With\+Array@{Graph\+With\+Array}!inic\+Mat@{inic\+Mat}}
+\index{inic\+Mat@{inic\+Mat}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{inic\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}C$\ast$$\ast$ Graph\+With\+Array\+::inic\+Mat (
+\begin{DoxyParamCaption}
+\item[{C $\ast$$\ast$}]{m, }
+\item[{int}]{tam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_aeeb85d42c6122f801f26155b5dc0bdff}
+
+
+Metodo que genera una matriz de inicializada en -\/1. 
+
+\begin{DoxyReturn}{Returns}
+Puntero doble a tipo C que contiene una matriz llena de -\/1 de tamaño del array que contiene los nodos 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_ae5d6a358aa8054f49396770cd39666da}{\index{Graph\+With\+Array@{Graph\+With\+Array}!m\+Reco\+Build@{m\+Reco\+Build}}
+\index{m\+Reco\+Build@{m\+Reco\+Build}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{m\+Reco\+Build}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ Graph\+With\+Array\+::m\+Reco\+Build (
+\begin{DoxyParamCaption}
+\item[{bool}]{val\+Ini}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_ae5d6a358aa8054f49396770cd39666da}
+
+
+Funcion apendice de la busquedas dfs y bfs que devuelve un array de bool que representa los nodos recorridos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+Ini} & bool que indica que valor se va a inicializar el array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero a bool que apunta al array de recorrido 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a83451cde5a50347c5964a1203cf9993e}{\index{Graph\+With\+Array@{Graph\+With\+Array}!next\+Node@{next\+Node}}
+\index{next\+Node@{next\+Node}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{next\+Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E} Graph\+With\+Array\+::next\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E}}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a83451cde5a50347c5964a1203cf9993e}
+
+
+Metodo que devuelve el siguiente nodo a primer de un nodo de la lista de nodos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & N\+O\+D\+E que se utiliza como indice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+O\+D\+E con el nodo siguiente de n 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a1abd6176f52732883322d3374a3734d9}{\index{Graph\+With\+Array@{Graph\+With\+Array}!Node@{Node}}
+\index{Node@{Node}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E} Graph\+With\+Array\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_a1abd6176f52732883322d3374a3734d9}
+
+
+Metodo que devuelve el nodo en la posicion i de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & int indice de la lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+O\+D\+E pertenencente a la posicion i de la lista de nodos 
+\end{DoxyReturn}
+
+
+Definition at line 178 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_ad564f3321ee6aa87766e89f1910ab450}{\index{Graph\+With\+Array@{Graph\+With\+Array}!print\+M@{print\+M}}
+\index{print\+M@{print\+M}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{print\+M}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+With\+Array\+::print\+M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_with_array_ad564f3321ee6aa87766e89f1910ab450}
+
+
+Metodo que imprime la matriz de adyacencia. 
+
+
+
+Definition at line 80 of file Graph\+With\+Array.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_graph_with_array_aa3a01982d5839bbb449354b08e443b64}{\index{Graph\+With\+Array@{Graph\+With\+Array}!cant\+Nodos@{cant\+Nodos}}
+\index{cant\+Nodos@{cant\+Nodos}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{cant\+Nodos}]{\setlength{\rightskip}{0pt plus 5cm}int Graph\+With\+Array\+::cant\+Nodos}}\label{class_graph_with_array_aa3a01982d5839bbb449354b08e443b64}
+
+
+Definition at line 20 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_a465fc5527e070cce20b37ffc8286c6c8}{\index{Graph\+With\+Array@{Graph\+With\+Array}!m\+A@{m\+A}}
+\index{m\+A@{m\+A}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{m\+A}]{\setlength{\rightskip}{0pt plus 5cm}C$\ast$$\ast$ Graph\+With\+Array\+::m\+A}}\label{class_graph_with_array_a465fc5527e070cce20b37ffc8286c6c8}
+
+
+Cantidad de nodos del grafo///. 
+
+
+
+Definition at line 21 of file Graph\+With\+Array.\+h.
+
+\hypertarget{class_graph_with_array_ae5c0c4faebb4e04f1c313400c817d53d}{\index{Graph\+With\+Array@{Graph\+With\+Array}!nodos@{nodos}}
+\index{nodos@{nodos}!Graph\+With\+Array@{Graph\+With\+Array}}
+\subsubsection[{nodos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$<${\bf N\+O\+D\+E}, int$>$$\ast$ Graph\+With\+Array\+::nodos}}\label{class_graph_with_array_ae5c0c4faebb4e04f1c313400c817d53d}
+
+
+Matriz de Adyacencia de costo tipo C para representacion del Grafo///. 
+
+
+
+Definition at line 22 of file Graph\+With\+Array.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/gwa/\hyperlink{_graph_with_array_8h}{Graph\+With\+Array.\+h}\end{DoxyCompactItemize}

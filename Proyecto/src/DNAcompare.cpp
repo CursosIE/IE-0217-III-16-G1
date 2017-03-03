@@ -87,7 +87,7 @@ void DNAcompare::compareXY(){
 * @param a string que contiene un char que se usa para representar las condiciones actuales 
 * @return Data<D> que sigue al estado recibido en la matriz de transicion de estados
 */
-Stade* DNAcompare::nextE(Stade* d, string a){
+Stade* DNAcompare::nextS(Stade* d, string a){
 	int pos = this->dicc.find(a);
 	int nexts = this->graph->StadeMat[pos][*d->tag];
 	return &(this->graph->Stades->get(nexts));

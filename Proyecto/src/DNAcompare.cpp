@@ -3,7 +3,8 @@
 * @date 01-03-2017
 * @brief Implementacion de los metodos de la clase clase DNAcompare
 */
-#include "../include/DNAcompare.h"
+#include "stdafx.h"
+#include "DNAcompare.h"
 
 /**
  * Constructor de la clase DNAcompare
@@ -14,7 +15,7 @@ DNAcompare::DNAcompare(){
 	this->Y = nullptr;
 	this->numWords = 0;
 	this->checkPerc = 0;
-	this->graph = new GraphAhoCorasick<Data<int>>();
+	this->graph = new GraphAhoCorasick();
 }
 
 /**
@@ -32,7 +33,10 @@ DNAcompare::DNAcompare(string dictionary, string stringX, string* words, int per
 	this->numWords = countWords;
 	this->checkPerc = percentage;
 	int stades = countStades(words);
-	this->graph = new GraphAhoCorasick<Data<int>>(stades, dictionary, words);
+	this->graph = new GraphAhoCorasick(stades, dictionary, words, countWords);
+	this->stade100 = new ListWithArray<StadeSuc, int>();
+	this->stadePerc = new ListWithArray<StadeSuc, int>();
+	compareXY();
 }
 
 /**
@@ -59,7 +63,7 @@ int DNAcompare::countStades(string* sequences){
 	for (int j = 1; j < this->numWords; j++){
 		for (int k = 0; k < this->numWords-1; k++){
 			if (j != k && firstChar[j] == firstChar[k]){
-				for (int m = 1; m<sequences[j].length(); m++){
+				for (unsigned int m = 1; m < sequences[j].length(); m++){
 					if (sequences[j][m] != sequences[k][m]){
 						count += m;
 						break;
@@ -70,6 +74,25 @@ int DNAcompare::countStades(string* sequences){
 	}
 	return temp - count;
 }
+
+/**
+ * Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y
+ */
+void compareXY(){
+
+}
+
+/**
+* Metodo get del atributo numWords
+* @param a string que contiene un char que se usa para representar las condiciones actuales 
+* @return Data<D> que sigue al estado recibido en la matriz de transicion de estados
+*/
+stade* nextE(stade* d, string a){
+	int pos = this->dicc.find(a);
+	int nexts = this->graph->stadeMat[pos][*d->tag];
+	&this->graph->stades->get(nexts);
+}
+
 
 /**
 * Metodo get del atributo dicc
@@ -91,6 +114,6 @@ int DNAcompare::getNumWords(){
 * Metodo get del atributo graph
 * @return GraphAhoCorasick que contiene el grafo que representa las palabras de busqueda
 */
-GraphAhoCorasick<Data<int>>* DNAcompare::getGraph(){
+GraphAhoCorasick* DNAcompare::getGraph(){
 	return this->graph;
 }

@@ -98,11 +98,11 @@ public:
 	* @return 	Indice de tipo P dentro de List
 	*/
 	P find(D d) {
-	//	for (int i = 0; i < this->getSize(); i++) {
-	//		if (*(d.tag) == *(this->get(i).tag))
-	//			return i;
-	//	}
-	//	return -1; /**Indicacion de que el dato no fue encontrado en la lista*/
+		/*for (int i = 0; i < this->getSize(); i++) {
+			if (*(d.data) == *(this->get(i).data))
+				return i;
+		}*/
+		return -1; /**Indicacion de que el dato no fue encontrado en la lista*/
 	}
 
 	/**

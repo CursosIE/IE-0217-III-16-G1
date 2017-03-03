@@ -79,6 +79,37 @@ int DNAcompare::countStades(string* sequences){
  * Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y
  */
 void DNAcompare::compareXY(){
+	Stade temp = this->graph->Stades->get(0);
+	string s = "";
+	cout << s.length()<<endl;
+	int l = X.length();
+	cout << l<<endl;
+/*	for(int n = 0;n <l; n++)
+	{
+		cout << n <<endl;
+		cout << X<<endl;
+		cout << X[0]<<endl;
+		cout << X[2]<<endl;
+		cout << X[700]<<endl;
+		s = X.substr(n,n+1);
+		s = X[n];
+		cout << s<<endl;
+		temp = nextE(temp,X.substr(n,n+1));
+		temp = nextE(temp,s);
+	}*/
+	for(int n = 0;n <l; n++)
+	{	
+		if(X[n]!='\n'&&X[n]!=' '&&X[n]!='\t')cout << X[n]<<endl;
+
+	}
+}
+
+/**
+* Metodo para obtener el siguiente estado de la matriz de estados
+* @param index entero de la posicion en x
+* @param numword entero del numero de palabra
+*/
+void DNAcompare::output(int index, int numWord){
 	
 }
 
@@ -87,10 +118,10 @@ void DNAcompare::compareXY(){
 * @param a string que contiene un char que se usa para representar las condiciones actuales 
 * @return Data<D> que sigue al estado recibido en la matriz de transicion de estados
 */
-Stade* DNAcompare::nextE(Stade* d, string a){
+Stade DNAcompare::nextE(Stade d, string a){
 	int pos = this->dicc.find(a);
-	int nexts = this->graph->StadeMat[pos][*d->tag];
-	return &(this->graph->Stades->get(nexts));
+	int nexts = this->graph->StadeMat[pos][*d.tag];
+	return (this->graph->Stades->get(nexts));
 }
 
 /**
@@ -116,3 +147,4 @@ int DNAcompare::getNumWords(){
 GraphAhoCorasick* DNAcompare::getGraph(){
 	return this->graph;
 }
+

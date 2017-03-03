@@ -3,8 +3,8 @@
 * @date 01-03-2017
 * @brief Implementacion de los metodos de la clase clase DNAcompare
 */
-#include "stdafx.h"
-#include "DNAcompare.h"
+
+#include "../include/DNAcompare.h"
 
 /**
  * Constructor de la clase DNAcompare
@@ -78,8 +78,8 @@ int DNAcompare::countStades(string* sequences){
 /**
  * Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y
  */
-void compareXY(){
-
+void DNAcompare::compareXY(){
+	
 }
 
 /**
@@ -87,12 +87,11 @@ void compareXY(){
 * @param a string que contiene un char que se usa para representar las condiciones actuales 
 * @return Data<D> que sigue al estado recibido en la matriz de transicion de estados
 */
-stade* nextE(stade* d, string a){
+Stade* DNAcompare::nextE(Stade* d, string a){
 	int pos = this->dicc.find(a);
-	int nexts = this->graph->stadeMat[pos][*d->tag];
-	&this->graph->stades->get(nexts);
+	int nexts = this->graph->StadeMat[pos][*d->tag];
+	return &(this->graph->Stades->get(nexts));
 }
-
 
 /**
 * Metodo get del atributo dicc

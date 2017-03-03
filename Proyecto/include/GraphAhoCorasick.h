@@ -212,11 +212,11 @@ public:
 		}
 		return -1;
 	}
-
-private:
-	int numStades;		///Cantidad de estados representados en el grafo///
+public:
 	int** StadeMat;		///Matriz de Transicion de Estados que representa los movimientos en el grafo de estados de tipo entero///
 	List<Stade, int>* Stades;///Lista de estados que contiene como Dato una etiqueta del estado (int) y como indice un entero (int)///
+private:
+	int numStades;		///Cantidad de estados representados en el grafo///
 	string Dicc;		///Cadena de caracteres diccionario///
 	int numWords;		///Cantidad de palabras a mapear en la matriz de transicion///
 };

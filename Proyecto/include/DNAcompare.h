@@ -6,6 +6,8 @@
 #ifndef DNACOMPARE_H
 #define DNACOMPARE_H
 
+#include <cstring>
+#include <string.h>
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -53,11 +55,21 @@ public:
 	*/
 	int getNumWords();
 	/**
+	* Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y empezando desde el inicio de X
+	*/
+	void compareXY();
+	/**
+	* Metodo para obtener el siguiente estado de la matriz de estados
+	* @param index entero de la posicion en x
+	* @param numword entero del numero de palabra
+	*/
+	void output(int index, int numWord);
+	/**
 	* Metodo para obtener el siguiente estado de la matriz de estados
 	* @param d puntero a estado
 	* @return Data<D> que sigue al estado recibido en la matriz de transicion de estados
 	*/
-	Stade* nextE(Stade* d, string a);
+	Stade nextE(Stade d, string a);
 	/**
 	* Metodo para conocer cuando se hallam coincidencias
 	* @return lista que contiene los elementos encontrados

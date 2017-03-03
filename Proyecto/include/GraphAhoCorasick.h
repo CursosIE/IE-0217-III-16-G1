@@ -46,9 +46,9 @@ public:
 	 * Destructor de la clase GraphAhoCorasick
 	*/
 	~GraphAhoCorasick(){
-		delete *StadeMat;
-		delete StadeMat;
-		delete Stades;
+		//delete StadeMat;
+		//delete *StadeMat;
+		//delete Stades;
 	}
 
 	/**

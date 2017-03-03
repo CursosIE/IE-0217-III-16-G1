@@ -3,14 +3,13 @@
 * @date 01-03-2017
 * @brief Implementacion de los metodos de la clase clase DNAcompare
 */
-
 #include "../include/DNAcompare.h"
 
 /**
  * Constructor de la clase DNAcompare
  */
 DNAcompare::DNAcompare(){
-	this->dicc = "";
+	this->Dicc = "";
 	this->X = "";
 	this->Y = nullptr;
 	this->numWords = 0;
@@ -27,7 +26,7 @@ DNAcompare::DNAcompare(){
 * @param countWords		int que indica la cantidad de palabras contenidas en Y
 */
 DNAcompare::DNAcompare(string dictionary, string stringX, string* words, int percentage, int countWords){
-	this->dicc = dictionary;
+	this->Dicc = dictionary;
 	this->X = stringX;
 	this->Y = words;
 	this->numWords = countWords;
@@ -36,7 +35,6 @@ DNAcompare::DNAcompare(string dictionary, string stringX, string* words, int per
 	this->graph = new GraphAhoCorasick(stades, dictionary, words, countWords);
 	this->stade100 = new ListWithArray<StadeSuc, int>();
 	this->stadePerc = new ListWithArray<StadeSuc, int>();
-	compareXY();
 }
 
 /**
@@ -76,21 +74,63 @@ int DNAcompare::countStades(string* sequences){
 }
 
 /**
- * Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y
- */
-void DNAcompare::compareXY(){
-	
+* Metodo que agrega el indice de la secuencia a la lista correcta de exito en caso de un estado de exito
+* @param s	Objeto Stade del estado actual
+* @param i int que indica el indice sobre la secuencia X
+* @param suc100 bool que indica que tipo de exito se dio en el estado si true es suc100 de lo contrario sucLes100
+* @param int que indica el numero de palabra que tuvo exito
+*/
+void DNAcompare::output(Stade s, int i, bool suc100, int numP){
+	if (suc100){
+		this->stade100->insert(StadeSuc(i,numP));
+		cout << "SUCCESS 100" << endl;
+	}
+	else{
+		this->stadePerc->insert(StadeSuc(i, numP));
+		cout << "SUCCESS 80" << endl;
+	}
 }
 
 /**
-* Metodo get del atributo numWords
-* @param a string que contiene un char que se usa para representar las condiciones actuales 
-* @return Data<D> que sigue al estado recibido en la matriz de transicion de estados
+* Metodo que obtiene el siguiente estado a partir de un estadoa actual y un caracter de entrada pertenneciente al diccionario
+* @param s	Objeto Stade del estado actual
+* @param a  char del diccionario que se obtiene como entrada
+* @return	Objeto Stade del estado siguiente
 */
-Stade* DNAcompare::nextS(Stade* d, string a){
-	int pos = this->dicc.find(a);
-	int nexts = this->graph->StadeMat[pos][*d->tag];
-	return &(this->graph->Stades->get(nexts));
+Stade DNAcompare::nextS(Stade s, char c){
+	int row = this->Dicc.find(c);
+	int nextStade = this->graph->getStateMat()[row][*s.tag];
+	return this->graph->getStades()->get(nextStade);
+}
+
+/**
+ * Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y
+ */
+void DNAcompare::compareXY(){
+	Stade actualStade = this->getGraph()->getStades()->get(0); //siempre comienza en estado 0
+	for (unsigned int i = 0; i < this->X.length();i++){
+		actualStade = this->nextS(actualStade, X[i]);
+		if (actualStade.success100 && *actualStade.tag == 5){
+			output(actualStade, i, actualStade.success100, 0);
+		}
+		else if (actualStade.success100 && *actualStade.tag == 10){
+			output(actualStade, i, actualStade.success100, 1);
+		}
+		else if (actualStade.success100 && *actualStade.tag == 14){
+			output(actualStade, i, actualStade.success100, 2);
+		}
+		else if (actualStade.successLes100 && *actualStade.tag == 4){
+			output(actualStade, i, actualStade.successLes100, 0);
+		}
+		else if (actualStade.successLes100 && *actualStade.tag == 9){
+			output(actualStade, i, actualStade.successLes100, 1);
+		}
+		else if (actualStade.successLes100 && *actualStade.tag == 13){
+			output(actualStade, i, actualStade.successLes100, 2);
+		}
+		cout << *actualStade.tag;
+	}
+	cout << endl;
 }
 
 /**
@@ -98,7 +138,7 @@ Stade* DNAcompare::nextS(Stade* d, string a){
 * @return string que contiene el diccionario
 */
 string DNAcompare::getDicc(){
-	return this->dicc;
+	return this->Dicc;
 }
 
 /**
@@ -115,4 +155,20 @@ int DNAcompare::getNumWords(){
 */
 GraphAhoCorasick* DNAcompare::getGraph(){
 	return this->graph;
+}
+
+/**
+* Metodo get de la lista suc100 graph
+* @return lista de exito 100 
+*/
+List<StadeSuc,int>* DNAcompare::getStade100(){
+	return this->stade100;
+}
+
+/**
+* Metodo get de la lista suc100 graph
+* @return lista de exito 100
+*/
+List<StadeSuc, int>* DNAcompare::getStadePerc(){
+	return this->stadePerc;
 }

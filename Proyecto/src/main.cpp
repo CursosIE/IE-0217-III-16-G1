@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
 			getline(fileX, tit);
 			int i = 0;
 			while (getline(fileX, temp)){
+				temp.erase(temp.length()-1);
 				temp2[i] = temp;
 				X += temp2[i];
 				i++;
@@ -74,9 +75,18 @@ int main(int argc, char** argv) {
 		cout << "% = " << perce << endl;
 		//Impresion de la matriz que representa el grafo de las palabras de busqueda
 		cout << "----- CREANDO GRAFO -----" << endl;
-		cout << "--- MATRIZ DE TRANSICION -----" << endl;
+		cout << "--- MATRIZ DE TRANSICION ---" << endl;
 		cp1->getGraph()->printStadeMat();
-		cout << "ELIMINANDO EL GRAFO..." << endl;
+		cout << "COMPARANDO secuencia..." << endl;
+		cp1->compareXY();
+		cout << "Lista de coincidencia del 100%" << endl;
+		for (int i = 0; i < cp1->getStade100()->getSize();i++){
+			cout << "Gen y" << cp1->getStade100()->get(i).numWord << " encontrado en X_" << cp1->getStade100()->get(i).index << endl;
+		}
+		cout << "Lista de coincidencia de >=" << perce <<  endl;
+		for (int j = 0; j < cp1->getStade100()->getSize(); j++){
+			cout << "Gen y" << cp1->getStade100()->get(j).numWord << " encontrado a un" << perce << " en X_" << cp1->getStade100()->get(j).index << endl;
+		}
 		delete cp1;
 	}
 	return 0;

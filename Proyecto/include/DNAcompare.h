@@ -6,8 +6,6 @@
 #ifndef DNACOMPARE_H
 #define DNACOMPARE_H
 
-#include <cstring>
-#include <string.h>
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -55,33 +53,41 @@ public:
 	*/
 	int getNumWords();
 	/**
-	* Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y empezando desde el inicio de X
-	*/
-	void compareXY();
-	/**
-	* Metodo para obtener el siguiente estado de la matriz de estados
-	* @param index entero de la posicion en x
-	* @param numword entero del numero de palabra
-	*/
-	void output(int index, int numWord);
-	/**
-	* Metodo para obtener el siguiente estado de la matriz de estados
-	* @param d puntero a estado
-	* @return Data<D> que sigue al estado recibido en la matriz de transicion de estados
-	*/
-	Stade nextE(Stade d, string a);
-	/**
-	* Metodo para conocer cuando se hallam coincidencias
-	* @return lista que contiene los elementos encontrados
-	*/
-	ListWithArray<int*,int> output(Stade* d);
-	/**
 	* Metodo get del atributo graph
 	* @return GraphAhoCorasick que contiene el grafo que representa las palabras de busqueda
 	*/
 	GraphAhoCorasick* getGraph();
+	/**
+	* Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y
+	*/
+	void compareXY();
+	/**
+	* Metodo que obtiene el siguiente estado a partir de un estadoa actual y un caracter de entrada pertenneciente al diccionario
+	* @param s	Obketo Stade del estado actual
+	* @param a  char del diccionario que se obtiene como entrada
+	* @return	Objeto Stade del estado siguiente
+	*/
+	Stade nextS(Stade s, char c);
+	/**
+	* Metodo que agrega el indice de la secuencia a la lista correcta de exito en caso de un estado de exito
+	* @param s	Objeto Stade del estado actual
+	* @param i int que indica el indice sobre la secuencia X
+	* @param suc100 bool que indica que tipo de exito se dio en el estado si true es suc100 de lo contrario sucLes100
+	* @param int que indica el numero de palabra que tuvo exito
+	*/
+	void output(Stade s, int i, bool suc100, int numP);
+	/**
+	* Metodo get de la lista suc100 graph
+	* @return lista de exito 100
+	*/
+	List<StadeSuc, int>* getStade100();
+	/**
+	* Metodo get de la lista suc100 graph
+	* @return lista de exito 100
+	*/
+	List<StadeSuc, int>* getStadePerc();
 private:
-	string dicc; ///Cadena de caracteres con los elementos del diccionario///
+	string Dicc; ///Cadena de caracteres con los elementos del diccionario///
 	string X;	///Cadena de caracteres por leer. Input X Aho-Corasick(1975)///
 	string* Y;	///Lista de cadenas de caracteres por buscar en X. Input Y Aho-Corasick(1975)///
 	int numWords; ///Cantidad de palabras por buscar///

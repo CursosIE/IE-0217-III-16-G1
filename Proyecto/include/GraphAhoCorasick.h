@@ -38,8 +38,8 @@ public:
 		insertStades();												//Se agregan todos los estados a la lista
 		this->Dicc = dictionary;
 		this->numWords = countWords;								
-		initMat();													//Se crea la matriz de estados en 0s del tamano correcto
-		setStadeMat(Y);
+		this->firstChar = getFirstChar(Y);							
+		setStadeMat(Y);	
 	}
 
 	/**
@@ -57,6 +57,12 @@ public:
 	void insertStades(){
 		for (int i = 0; i < this->numStades; i++){
 			Stade* temp = new Stade(new int(i));
+			if (i == 5 || i == 10 || i == 14){
+				temp->success100 = true;
+			}
+			else if (i == 4 || i == 9 || i == 13){
+				temp->successLes100 = true;
+			}
 			this->addState(*temp);
 		}
 	}
@@ -66,7 +72,7 @@ public:
 	*/
 	void initMat(){
 		this->StadeMat = new int*[this->Dicc.length()];
-		for (int i = 0; i < this->Dicc.length(); i++){ //Se asiga el tamano de diccionario como cantidad de filas
+		for (unsigned int i = 0; i < this->Dicc.length(); i++){ //Se asiga el tamano de diccionario como cantidad de filas
 			this->StadeMat[i] = new int[this->numStades];
 			for (int j = 0; j <this->numStades; j++){ //Se asigna la cantidad de estados como columnas
 				this->StadeMat[i][j] = 0;
@@ -75,34 +81,30 @@ public:
 	}
 
 	/**
-	* Metodo que crea la matriz de transicion de estados para modelar el grafo despues de tener todos los estados y sus relaciones
+	* Metodo que rellena la matriz de transicion con los estados de las palabras completas para modelar el grafo sin incluir conexiones entre sufijos y prefijos
 	* @param words	Puntero a string que contiene las palabras a buscar
 	*/
-	void setStadeMat(string* words){
-		int actualState=0;	//Estado el que me encuentro asignando arista
-		char* firstChar = new char[this->numWords];
+	void wordsToMat(string* words){
+		int actualState = 0;	//Estado el que me encuentro asignando arista
 		bool prefijo = false;
-		for (int i = 0; i < this->numWords; i++){
-			firstChar[i] = words[i][0];
-		}
 		for (int j = 0; j < this->numWords; j++){
-			for (unsigned int k = 0; k < words[j].length();k++){
+			for (unsigned int k = 0; k < words[j].length(); k++){
 				prefijo = false;
-				if (j!=0 && k==0){
+				if (j != 0 && k == 0){
 					for (int m = 0; m < j; m++){
-						if (m != j && firstChar[j] == firstChar[m]){
-							for (int n = 1; n < words[m].length();n++){
+						if (m != j && this->firstChar[j] == this->firstChar[m]){
+							for (unsigned int n = 1; n < words[m].length(); n++){
 								if (words[m][n] != words[j][m]){ //n lleva la cuenta de letras que coinciden
 									k = n;
 									prefijo = true;
 									break;
 								}
-							}	
+							}
 						}
 					}
 				}
 				if (!prefijo){
-					this->addTran(actualState, words[j][k], actualState + 1);//la primer palabra la ingresa letra a letra
+					this->addTran(actualState, words[j][k], actualState + 1);//ingreso ordenado de palabras
 				}
 				actualState++;
 			}
@@ -110,10 +112,63 @@ public:
 	}
 
 	/**
+	 * Metodo que genera una matriz booleana donde genera valores true en las palabras que comienzan con el mismo caracter del diccionario
+	 * @return bool** con valor true en los campos de las palabras que comienzan con el caracter c
+	 */
+	bool** sameFirstChar(){
+		bool** temp = new bool*[this->numWords];
+		for (int i = 0;i<this->getSizeDicc();i++){
+			temp[i] = new bool[this->numWords];
+			for (int j = 0; j < this->numWords; j++){
+				if (firstChar[j] == this->Dicc[i]){
+					temp[i][j] = true;
+				}
+				else{
+					temp[i][j] = false;
+				}
+			}
+		}
+		return temp;
+	}
+
+	/**
+	* Metodo que rellena la matriz con las relaciones de sufijos y prefijos entre palabras
+	* @param words	Puntero a string que contiene las palabras a buscar
+	*/
+	void fixMat(string* words){
+		int actualStade = 0;	//estado actual
+		int nextStade = 0;		//estado siguiente
+		bool** mat = sameFirstChar();
+		for (int i = 0; i < this->numStades; i++){
+			actualStade = i;
+			for (int j = 0; j < this->numWords; j++){
+				if (this->StadeMat[Dicc.find(this->firstChar[j])][actualStade]==0 && j==0){
+					addTran(actualStade, this->firstChar[j],1);
+				}
+				else if (j !=0 && this->StadeMat[Dicc.find(this->firstChar[j])][i] == 0){
+					addTran(actualStade, this->firstChar[j], 6);
+				}
+
+				//voy por aqui
+			}
+		}
+	}
+
+	/**
+	* Metodo que rellena la matriz de transicion
+	* @param words	Puntero a string que contiene las palabras a buscar
+	*/
+	void setStadeMat(string* words){
+		initMat();				//Se crea la matriz de estados en 0s del tamano correcto
+		wordsToMat(words);		//Rellena la matriz con las transiciones entre palabras
+		fixMat(words);				//Rellena las relaciones de sufijos y prefijos en la matriz de transicion
+	}
+
+	/**
 	* Metodo que imprime la matriz de estados
 	*/
 	void printStadeMat(){
-		for (int i = 0; i < this->Dicc.length(); i++){
+		for (unsigned int i = 0; i < this->Dicc.length(); i++){
 			for (int j = 0; j < this->numStades; j++){
 				cout << this->StadeMat[i][j] << "\t";
 			}
@@ -192,6 +247,14 @@ public:
 	}
 
 	/**
+	* Metodo que devuelve la matriz de transicion del grafo
+	* @return	 Stade pertenencente a la posicion i de la lista de estados
+	*/
+	int** getStateMat(){
+		return this->StadeMat;
+	}
+
+	/**
 	* Metodo que devuelve el estado en la posicion i de la lista
 	* @param i	 int indice de la lista
 	* @return	 Stade pertenencente a la posicion i de la lista de estados
@@ -212,13 +275,27 @@ public:
 		}
 		return -1;
 	}
-public:
-	int** StadeMat;		///Matriz de Transicion de Estados que representa los movimientos en el grafo de estados de tipo entero///
-	List<Stade, int>* Stades;///Lista de estados que contiene como Dato una etiqueta del estado (int) y como indice un entero (int)///
+
+	/**
+	 * Metodo que devuelve una cadena de caracteres con la primer letra de cada palabra
+	 * @param words		String* con las palabras por buscar
+	 * @return	 char* que contiene la primera letra de cada palabra
+	 */
+	char* getFirstChar(string* words){
+		char*temp=new char[this->numWords];
+		for (int i = 0; i < this->numWords; i++){
+			temp[i] = words[i][0];
+		}
+		return temp;
+	}
+
 private:
 	int numStades;		///Cantidad de estados representados en el grafo///
+	int** StadeMat;		///Matriz de Transicion de Estados que representa los movimientos en el grafo de estados de tipo entero///
+	List<Stade, int>* Stades;///Lista de estados que contiene como Dato una etiqueta del estado (int) y como indice un entero (int)///
 	string Dicc;		///Cadena de caracteres diccionario///
 	int numWords;		///Cantidad de palabras a mapear en la matriz de transicion///
+	char* firstChar;	//Cadena de caracteres de tamano numWords con el primer caracter de cada palabra
 };
 
 #endif /* GRAPHAHOCORASICK_H */

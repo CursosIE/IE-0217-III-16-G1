@@ -1,0 +1,28 @@
+------ PROYECTO FINAL - G1 -----
+
+IMPLEMENTACION DEL ALGORITMO AHO-CORASICK EN C++ PARA BUSCAR CADENAS DE NUCLEOTIDOS EN SECUENCIAS DE ADN
+
+	Organizacion de archivos:
+		/build: 	aqui esta el makefile y aqui se generan el ejecutable
+		/include: 	archivos headers que se usan en archivos en src
+		/src:		archivos fuente
+		/include/ADN: 	ubicacion de los archivos txt que contienen las palabras a buscar y los textos en lso cuales se busca
+
+	Para compilar y correr los programas:
+
+		1) Se debe ingresar a la carpeta build
+
+				>> make build
+
+		2) Se ejecuta el archivo ejecutable
+
+				>> make run
+
+		4) Se limpian los archivos intermedios y ejecutables con
+	
+				>> make clean
+
+		NOTA: Se puede compilar, correr y limpiar ejecutando cualquiera de los siguientes comandos
+
+				>> make
+				>> make all

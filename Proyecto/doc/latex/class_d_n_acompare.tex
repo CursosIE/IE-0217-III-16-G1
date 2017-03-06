@@ -1,0 +1,328 @@
+\hypertarget{class_d_n_acompare}{\section{D\+N\+Acompare Class Reference}
+\label{class_d_n_acompare}\index{D\+N\+Acompare@{D\+N\+Acompare}}
+}
+
+
+{\ttfamily \#include $<$D\+N\+Acompare.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_n_acompare_afc7ea1cba3a91cdf7d6130c73461ce7c}{D\+N\+Acompare} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \hyperlink{class_d_n_acompare}{D\+N\+Acompare}. \end{DoxyCompactList}\item 
+\hyperlink{class_d_n_acompare_a1fdd0f41d40101045885825ebd9849e9}{D\+N\+Acompare} (string dictionary, string string\+X, string $\ast$words, int percentage, int count\+Words)
+\begin{DoxyCompactList}\small\item\em Constructor sobrecargado de la clase \hyperlink{class_d_n_acompare}{D\+N\+Acompare}. \end{DoxyCompactList}\item 
+\hyperlink{class_d_n_acompare_adff43389b52e963817bdb08076ce72be}{$\sim$\+D\+N\+Acompare} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \hyperlink{class_d_n_acompare}{D\+N\+Acompare}. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_n_acompare_a8faa784e087dabfbbb29faa2c9ce0933}{count\+Stades} (string $\ast$sequences)
+\begin{DoxyCompactList}\small\item\em Metodo que cuenta la longitud de las palabras para deteminar cuantos estados existen. \end{DoxyCompactList}\item 
+string \hyperlink{class_d_n_acompare_ad6944ef2736f6cfcaeec7f07ea174b7c}{get\+Dicc} ()
+\begin{DoxyCompactList}\small\item\em Metodo get del atributo dicc. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_n_acompare_a5c2ec87d4157c3db16cdb775d0cbf68b}{get\+Num\+Words} ()
+\begin{DoxyCompactList}\small\item\em Metodo get del atributo num\+Words. \end{DoxyCompactList}\item 
+\hyperlink{class_graph_aho_corasick}{Graph\+Aho\+Corasick} $\ast$ \hyperlink{class_d_n_acompare_ae255784a3f7565bf9383642ab5b3f842}{get\+Graph} ()
+\begin{DoxyCompactList}\small\item\em Metodo get del atributo graph. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_n_acompare_a1406488005fa9a39390dc71561732d6c}{compare\+X\+Y} ()
+\begin{DoxyCompactList}\small\item\em Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y. \end{DoxyCompactList}\item 
+\hyperlink{class_stade}{Stade} \hyperlink{class_d_n_acompare_a9b09e4eb3aa5d8306ccc0102e1180cb7}{next\+S} (\hyperlink{class_stade}{Stade} s, char c)
+\begin{DoxyCompactList}\small\item\em Metodo que obtiene el siguiente estado a partir de un estadoa actual y un caracter de entrada pertenneciente al diccionario. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_n_acompare_af26cd5f7adf3bd85253230d9cd816f4d}{output} (\hyperlink{class_stade}{Stade} s, int i, bool suc100, int num\+P)
+\begin{DoxyCompactList}\small\item\em Metodo que agrega el indice de la secuencia a la lista correcta de exito en caso de un estado de exito. \end{DoxyCompactList}\item 
+\hyperlink{class_list}{List}$<$ \hyperlink{class_stade_suc}{Stade\+Suc}, int $>$ $\ast$ \hyperlink{class_d_n_acompare_abdbd00b0d1308ec1f60041b7091ae415}{get\+Stade100} ()
+\begin{DoxyCompactList}\small\item\em Metodo get de la lista suc100 graph. \end{DoxyCompactList}\item 
+\hyperlink{class_list}{List}$<$ \hyperlink{class_stade_suc}{Stade\+Suc}, int $>$ $\ast$ \hyperlink{class_d_n_acompare_a9be3f0c595cf73a5630b0af96617c6b8}{get\+Stade\+Perc} ()
+\begin{DoxyCompactList}\small\item\em Metodo get de la lista suc100 graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file D\+N\+Acompare.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_n_acompare_afc7ea1cba3a91cdf7d6130c73461ce7c}{\index{D\+N\+Acompare@{D\+N\+Acompare}!D\+N\+Acompare@{D\+N\+Acompare}}
+\index{D\+N\+Acompare@{D\+N\+Acompare}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{D\+N\+Acompare}]{\setlength{\rightskip}{0pt plus 5cm}D\+N\+Acompare\+::\+D\+N\+Acompare (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_afc7ea1cba3a91cdf7d6130c73461ce7c}
+
+
+Constructor de la clase \hyperlink{class_d_n_acompare}{D\+N\+Acompare}. 
+
+Implementacion de los metodos de la clase clase \hyperlink{class_d_n_acompare}{D\+N\+Acompare}.
+
+\begin{DoxyAuthor}{Author}
+Luis Adrian Aguilar Cascante -\/ B00092 
+
+Robin Gonzalez -\/ B43011 
+
+Giancarlo Marin -\/ B54099 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01-\/03-\/2017 Constructor de la clase \hyperlink{class_d_n_acompare}{D\+N\+Acompare} 
+\end{DoxyDate}
+
+
+Definition at line 13 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_a1fdd0f41d40101045885825ebd9849e9}{\index{D\+N\+Acompare@{D\+N\+Acompare}!D\+N\+Acompare@{D\+N\+Acompare}}
+\index{D\+N\+Acompare@{D\+N\+Acompare}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{D\+N\+Acompare}]{\setlength{\rightskip}{0pt plus 5cm}D\+N\+Acompare\+::\+D\+N\+Acompare (
+\begin{DoxyParamCaption}
+\item[{string}]{dictionary, }
+\item[{string}]{string\+X, }
+\item[{string $\ast$}]{words, }
+\item[{int}]{percentage, }
+\item[{int}]{count\+Words}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_a1fdd0f41d40101045885825ebd9849e9}
+
+
+Constructor sobrecargado de la clase \hyperlink{class_d_n_acompare}{D\+N\+Acompare}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dictionary} & Cadena de caracteres que contiene los elementos que representan el diccionario \\
+\hline
+{\em string\+X} & String Secuencia que se quiere comparar \\
+\hline
+{\em words} & String$\ast$ Palabras que se quieren buscar en la secuencia \\
+\hline
+{\em percentage} & int que representa el valor minimo de comparacion acertada. Se toma como porcentaje del prefijo de la palabra desde \\
+\hline
+{\em count\+Words} & int que indica la cantidad de palabras contenidas en Y \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_adff43389b52e963817bdb08076ce72be}{\index{D\+N\+Acompare@{D\+N\+Acompare}!````~D\+N\+Acompare@{$\sim$\+D\+N\+Acompare}}
+\index{````~D\+N\+Acompare@{$\sim$\+D\+N\+Acompare}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{$\sim$\+D\+N\+Acompare}]{\setlength{\rightskip}{0pt plus 5cm}D\+N\+Acompare\+::$\sim$\+D\+N\+Acompare (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_adff43389b52e963817bdb08076ce72be}
+
+
+Destructor de la clase \hyperlink{class_d_n_acompare}{D\+N\+Acompare}. 
+
+
+
+Definition at line 45 of file D\+N\+Acompare.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_n_acompare_a1406488005fa9a39390dc71561732d6c}{\index{D\+N\+Acompare@{D\+N\+Acompare}!compare\+X\+Y@{compare\+X\+Y}}
+\index{compare\+X\+Y@{compare\+X\+Y}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{compare\+X\+Y}]{\setlength{\rightskip}{0pt plus 5cm}void D\+N\+Acompare\+::compare\+X\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_a1406488005fa9a39390dc71561732d6c}
+
+
+Metodo que realiza la comparacion de la secuencia X con las palabras de entrada Y. 
+
+
+
+Definition at line 111 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_a8faa784e087dabfbbb29faa2c9ce0933}{\index{D\+N\+Acompare@{D\+N\+Acompare}!count\+Stades@{count\+Stades}}
+\index{count\+Stades@{count\+Stades}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{count\+Stades}]{\setlength{\rightskip}{0pt plus 5cm}int D\+N\+Acompare\+::count\+Stades (
+\begin{DoxyParamCaption}
+\item[{string $\ast$}]{sequences}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_a8faa784e087dabfbbb29faa2c9ce0933}
+
+
+Metodo que cuenta la longitud de las palabras para deteminar cuantos estados existen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequences} & string$\ast$ que contiene cada caracter de cada palabra \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int que contiene la cantidad de estados por crear en el grafo
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em sequences} & char$\ast$$\ast$ que contiene cada caracter de cada palabra \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int que contiene la cantidad de estados por crear en el grafo 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_ad6944ef2736f6cfcaeec7f07ea174b7c}{\index{D\+N\+Acompare@{D\+N\+Acompare}!get\+Dicc@{get\+Dicc}}
+\index{get\+Dicc@{get\+Dicc}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{get\+Dicc}]{\setlength{\rightskip}{0pt plus 5cm}string D\+N\+Acompare\+::get\+Dicc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_ad6944ef2736f6cfcaeec7f07ea174b7c}
+
+
+Metodo get del atributo dicc. 
+
+\begin{DoxyReturn}{Returns}
+string que contiene el diccionario 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_ae255784a3f7565bf9383642ab5b3f842}{\index{D\+N\+Acompare@{D\+N\+Acompare}!get\+Graph@{get\+Graph}}
+\index{get\+Graph@{get\+Graph}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{get\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph\+Aho\+Corasick} $\ast$ D\+N\+Acompare\+::get\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_ae255784a3f7565bf9383642ab5b3f842}
+
+
+Metodo get del atributo graph. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_graph_aho_corasick}{Graph\+Aho\+Corasick} que contiene el grafo que representa las palabras de busqueda 
+\end{DoxyReturn}
+
+
+Definition at line 158 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_a5c2ec87d4157c3db16cdb775d0cbf68b}{\index{D\+N\+Acompare@{D\+N\+Acompare}!get\+Num\+Words@{get\+Num\+Words}}
+\index{get\+Num\+Words@{get\+Num\+Words}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{get\+Num\+Words}]{\setlength{\rightskip}{0pt plus 5cm}int D\+N\+Acompare\+::get\+Num\+Words (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_a5c2ec87d4157c3db16cdb775d0cbf68b}
+
+
+Metodo get del atributo num\+Words. 
+
+\begin{DoxyReturn}{Returns}
+int que contiene el numero de palabras de busqueda 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_abdbd00b0d1308ec1f60041b7091ae415}{\index{D\+N\+Acompare@{D\+N\+Acompare}!get\+Stade100@{get\+Stade100}}
+\index{get\+Stade100@{get\+Stade100}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{get\+Stade100}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$<$ {\bf Stade\+Suc}, int $>$ $\ast$ D\+N\+Acompare\+::get\+Stade100 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_abdbd00b0d1308ec1f60041b7091ae415}
+
+
+Metodo get de la lista suc100 graph. 
+
+\begin{DoxyReturn}{Returns}
+lista de exito 100 
+\end{DoxyReturn}
+
+
+Definition at line 166 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_a9be3f0c595cf73a5630b0af96617c6b8}{\index{D\+N\+Acompare@{D\+N\+Acompare}!get\+Stade\+Perc@{get\+Stade\+Perc}}
+\index{get\+Stade\+Perc@{get\+Stade\+Perc}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{get\+Stade\+Perc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$<$ {\bf Stade\+Suc}, int $>$ $\ast$ D\+N\+Acompare\+::get\+Stade\+Perc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_a9be3f0c595cf73a5630b0af96617c6b8}
+
+
+Metodo get de la lista suc100 graph. 
+
+\begin{DoxyReturn}{Returns}
+lista de exito 100 
+\end{DoxyReturn}
+
+
+Definition at line 174 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_a9b09e4eb3aa5d8306ccc0102e1180cb7}{\index{D\+N\+Acompare@{D\+N\+Acompare}!next\+S@{next\+S}}
+\index{next\+S@{next\+S}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{next\+S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stade} D\+N\+Acompare\+::next\+S (
+\begin{DoxyParamCaption}
+\item[{{\bf Stade}}]{s, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_a9b09e4eb3aa5d8306ccc0102e1180cb7}
+
+
+Metodo que obtiene el siguiente estado a partir de un estadoa actual y un caracter de entrada pertenneciente al diccionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Obketo \hyperlink{class_stade}{Stade} del estado actual \\
+\hline
+{\em a} & char del diccionario que se obtiene como entrada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Objeto \hyperlink{class_stade}{Stade} del estado siguiente
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Objeto \hyperlink{class_stade}{Stade} del estado actual \\
+\hline
+{\em a} & char del diccionario que se obtiene como entrada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Objeto \hyperlink{class_stade}{Stade} del estado siguiente 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file D\+N\+Acompare.\+cpp.
+
+\hypertarget{class_d_n_acompare_af26cd5f7adf3bd85253230d9cd816f4d}{\index{D\+N\+Acompare@{D\+N\+Acompare}!output@{output}}
+\index{output@{output}!D\+N\+Acompare@{D\+N\+Acompare}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}void D\+N\+Acompare\+::output (
+\begin{DoxyParamCaption}
+\item[{{\bf Stade}}]{s, }
+\item[{int}]{i, }
+\item[{bool}]{suc100, }
+\item[{int}]{num\+P}
+\end{DoxyParamCaption}
+)}}\label{class_d_n_acompare_af26cd5f7adf3bd85253230d9cd816f4d}
+
+
+Metodo que agrega el indice de la secuencia a la lista correcta de exito en caso de un estado de exito. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Objeto \hyperlink{class_stade}{Stade} del estado actual \\
+\hline
+{\em i} & int que indica el indice sobre la secuencia X \\
+\hline
+{\em suc100} & bool que indica que tipo de exito se dio en el estado si true es suc100 de lo contrario suc\+Les100 \\
+\hline
+{\em int} & que indica el numero de palabra que tuvo exito \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file D\+N\+Acompare.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_d_n_acompare_8h}{D\+N\+Acompare.\+h}\item 
+src/\hyperlink{_d_n_acompare_8cpp}{D\+N\+Acompare.\+cpp}\end{DoxyCompactItemize}

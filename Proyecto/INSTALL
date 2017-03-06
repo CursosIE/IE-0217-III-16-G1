@@ -6,7 +6,7 @@ IMPLEMENTACION DEL ALGORITMO AHO-CORASICK EN C++ PARA BUSCAR CADENAS DE NUCLEOTI
 		/build: 	aqui esta el makefile y aqui se generan el ejecutable
 		/include: 	archivos headers que se usan en archivos en src
 		/src:		archivos fuente
-		/include/ADN: 	ubicacion de los archivos txt que contienen las palabras a buscar y los textos en lso cuales se busca
+		/include/ADN: 	ubicacion de los archivos txt que contienen las palabras a buscar y los textos en los cuales se busca
 
 	Para compilar y correr los programas:
 

@@ -6,8 +6,9 @@ Programa para implemetar el algoritmo de busqueda de subStrings en un string may
 PROYECTO:
 	
 	El codigo consiste en varias clases en c++ para poder implementar el algoritmo Aho-Corasick:
-	La clase GraphAhoCorasick crea el grafo a recorrer y su matriz de adyacencias en base a los strings que se van a buscar,
-para su implementacion de requiere de la clase ListWithArray para utilizar listas de objetos del tipo stade.
+	La clase GraphAhoCorasick crea el grafo a recorrer y una matriz de transicion de estados en base a las cadenas de caracteres que 
+se van a buscar, para su implementacion de requiere de la clase ListWithArray para utilizar listas de objetos del tipo Stade.
+
 	La clase DNAcompare es la que lleva la implementacion del codigo en si, tiene como atributos strings que tienen el texto a buscar,
  en el que se busca y un string diccionario que tiene las letras de las palabras a buscar.
 	Se aplicara a buscar strings que son conjuntos de letras representando sectores de ADN en una secuencia de ADN conocida mucho mas grande.

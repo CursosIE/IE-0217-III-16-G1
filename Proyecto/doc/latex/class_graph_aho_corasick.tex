@@ -1,0 +1,480 @@
+\hypertarget{class_graph_aho_corasick}{\section{Graph\+Aho\+Corasick Class Reference}
+\label{class_graph_aho_corasick}\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+}
+
+
+{\ttfamily \#include $<$Graph\+Aho\+Corasick.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graph_aho_corasick_ac64b1bcc1a54abdd42a4d2411cd833c1}{Graph\+Aho\+Corasick} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \hyperlink{class_graph_aho_corasick}{Graph\+Aho\+Corasick}. \end{DoxyCompactList}\item 
+\hyperlink{class_graph_aho_corasick_af6b860fd718c8ca037eec6066b7d971e}{Graph\+Aho\+Corasick} (int tot\+States, string dictionary, string $\ast$Y, int count\+Words)
+\begin{DoxyCompactList}\small\item\em Constructor sobrecargado de la clase \hyperlink{class_graph_aho_corasick}{Graph\+Aho\+Corasick}. \end{DoxyCompactList}\item 
+\hyperlink{class_graph_aho_corasick_aec7b1cf7e492aa7fc9c0c46aa3347140}{$\sim$\+Graph\+Aho\+Corasick} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \hyperlink{class_graph_aho_corasick}{Graph\+Aho\+Corasick}. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aho_corasick_aafe054daa541afbfb3859a464d97345c}{insert\+Stades} ()
+\begin{DoxyCompactList}\small\item\em Metodo que agrega todos los estados a la lista de estados. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aho_corasick_a71f72fab03305b7c4ed56c57cc90d8f8}{init\+Mat} ()
+\begin{DoxyCompactList}\small\item\em Metodo que genera la matriz de transicion vacia inicializando todo en 0. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aho_corasick_abcc86ffb6186ebace0764505b51c98e3}{words\+To\+Mat} (string $\ast$words)
+\begin{DoxyCompactList}\small\item\em Metodo que rellena la matriz de transicion con los estados de las palabras completas para modelar el grafo sin incluir conexiones entre sufijos y prefijos. \end{DoxyCompactList}\item 
+bool $\ast$$\ast$ \hyperlink{class_graph_aho_corasick_a315229703f61d34621c52c8b327e5985}{same\+First\+Char} ()
+\begin{DoxyCompactList}\small\item\em Metodo que genera una matriz booleana donde genera valores true en las palabras que comienzan con el mismo caracter del diccionario. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aho_corasick_a7f1b50c6c0cf27630f8d6b50feef46e9}{fix\+Mat} (string $\ast$words)
+\begin{DoxyCompactList}\small\item\em Metodo que rellena la matriz con las relaciones de sufijos y prefijos entre palabras. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aho_corasick_a8a696d54d5810060f61be49ee7dabc58}{set\+Stade\+Mat} (string $\ast$words)
+\begin{DoxyCompactList}\small\item\em Metodo que rellena la matriz de transicion. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aho_corasick_abe30b2726160786d41f04dbdb5fc0aa2}{print\+Stade\+Mat} ()
+\begin{DoxyCompactList}\small\item\em Metodo que imprime la matriz de estados. \end{DoxyCompactList}\item 
+int \hyperlink{class_graph_aho_corasick_a01a05df2b0d49b420a127fbb2ceb288c}{get\+Num\+Stades} ()
+\begin{DoxyCompactList}\small\item\em Metodo get del atributo num\+Stade. \end{DoxyCompactList}\item 
+int \hyperlink{class_graph_aho_corasick_ae1e4f47012e1937511d7be9446890e5a}{get\+Size\+Dicc} ()
+\begin{DoxyCompactList}\small\item\em Metodo get del atributo size\+Dicc. \end{DoxyCompactList}\item 
+\hyperlink{class_list}{List}$<$ \hyperlink{class_stade}{Stade}, int $>$ $\ast$ \hyperlink{class_graph_aho_corasick_aa8b02e72320c3e81534e42b0640a340e}{get\+Stades} ()
+\begin{DoxyCompactList}\small\item\em Metodo get del atributo Stades (Lista de estados) \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aho_corasick_a82628ba31c94e938f7c08c42c2bec36d}{add\+State} (\hyperlink{class_stade}{Stade} n)
+\begin{DoxyCompactList}\small\item\em Metodo que agrega un estado a la lista de estados del grafo. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aho_corasick_a1709b7643bce87c5f35fae0a3243357b}{add\+Tran} (int prev\+Stade, int letter, int \hyperlink{class_graph_aho_corasick_a859ef1b84bcda82a872ca19b5fddbe52}{next\+Stade})
+\begin{DoxyCompactList}\small\item\em Metodo que agrega conexiones entre estados en la matriz de transicion de estados. \end{DoxyCompactList}\item 
+\hyperlink{class_stade}{Stade} \hyperlink{class_graph_aho_corasick_a0e824563fe656f50ddea8fa1a8594c47}{first\+Stade} ()
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve el primer estado de la lista de estados. \end{DoxyCompactList}\item 
+\hyperlink{class_stade}{Stade} \hyperlink{class_graph_aho_corasick_a859ef1b84bcda82a872ca19b5fddbe52}{next\+Stade} (\hyperlink{class_stade}{Stade} s)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve el siguiente estado de la lista de estados a partir de un estado dado. \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \hyperlink{class_graph_aho_corasick_a37bac3b010ef645d2364c3648196f43a}{get\+State\+Mat} ()
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve la matriz de transicion del grafo. \end{DoxyCompactList}\item 
+\hyperlink{class_stade}{Stade} \hyperlink{class_graph_aho_corasick_a86d4b2de0a00e27565a3eaeb37a105e7}{get\+State} (int i)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve el estado en la posicion i de la lista. \end{DoxyCompactList}\item 
+int \hyperlink{class_graph_aho_corasick_a8f345a1676a7d84b4a649be2f046c1fb}{get\+Tag} (\hyperlink{class_stade}{Stade} s)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve la etiqueta del estado contenido en un \hyperlink{class_stade}{Stade} especifico n. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_graph_aho_corasick_a440ada8ff130120fed4a94b71874da69}{get\+First\+Char} (string $\ast$words)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve una cadena de caracteres con la primer letra de cada palabra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file Graph\+Aho\+Corasick.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graph_aho_corasick_ac64b1bcc1a54abdd42a4d2411cd833c1}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{Graph\+Aho\+Corasick}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+Aho\+Corasick\+::\+Graph\+Aho\+Corasick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_ac64b1bcc1a54abdd42a4d2411cd833c1}
+
+
+Constructor de la clase \hyperlink{class_graph_aho_corasick}{Graph\+Aho\+Corasick}. 
+
+
+
+Definition at line 23 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_af6b860fd718c8ca037eec6066b7d971e}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{Graph\+Aho\+Corasick}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+Aho\+Corasick\+::\+Graph\+Aho\+Corasick (
+\begin{DoxyParamCaption}
+\item[{int}]{tot\+States, }
+\item[{string}]{dictionary, }
+\item[{string $\ast$}]{Y, }
+\item[{int}]{count\+Words}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_af6b860fd718c8ca037eec6066b7d971e}
+
+
+Constructor sobrecargado de la clase \hyperlink{class_graph_aho_corasick}{Graph\+Aho\+Corasick}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tot\+States} & Entero que indica la cantidad de estados del grafo \\
+\hline
+{\em dictionary} & Array de char que contiene el diccionario de caracteres por utilizar \\
+\hline
+{\em Y} & Matriz de char que contiene cada una de los elementos de cada palabra a insertar al grafo y que representa cada estado \\
+\hline
+{\em count\+Words} & int que indica el numero de palabras que se desean mapear en la Matriz de transicion de estados \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_aec7b1cf7e492aa7fc9c0c46aa3347140}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!````~Graph\+Aho\+Corasick@{$\sim$\+Graph\+Aho\+Corasick}}
+\index{````~Graph\+Aho\+Corasick@{$\sim$\+Graph\+Aho\+Corasick}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{$\sim$\+Graph\+Aho\+Corasick}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+Aho\+Corasick\+::$\sim$\+Graph\+Aho\+Corasick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_aec7b1cf7e492aa7fc9c0c46aa3347140}
+
+
+Destructor de la clase \hyperlink{class_graph_aho_corasick}{Graph\+Aho\+Corasick}. 
+
+
+
+Definition at line 50 of file Graph\+Aho\+Corasick.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graph_aho_corasick_a82628ba31c94e938f7c08c42c2bec36d}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!add\+State@{add\+State}}
+\index{add\+State@{add\+State}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{add\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Aho\+Corasick\+::add\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf Stade}}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a82628ba31c94e938f7c08c42c2bec36d}
+
+
+Metodo que agrega un estado a la lista de estados del grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \hyperlink{class_stade}{Stade} Que contiene el estado a agregar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 209 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a1709b7643bce87c5f35fae0a3243357b}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!add\+Tran@{add\+Tran}}
+\index{add\+Tran@{add\+Tran}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{add\+Tran}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Aho\+Corasick\+::add\+Tran (
+\begin{DoxyParamCaption}
+\item[{int}]{prev\+Stade, }
+\item[{int}]{letter, }
+\item[{int}]{next\+Stade}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a1709b7643bce87c5f35fae0a3243357b}
+
+
+Metodo que agrega conexiones entre estados en la matriz de transicion de estados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prev\+Stade} & int que indica el estado en el que me encuentro \\
+\hline
+{\em letter} & int indice de la lista de diccionario que representa el caracter que me lleva al siguiente estado a partir del estado actual \\
+\hline
+{\em next\+Stade} & int que indica el proximo estado \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 219 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a0e824563fe656f50ddea8fa1a8594c47}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!first\+Stade@{first\+Stade}}
+\index{first\+Stade@{first\+Stade}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{first\+Stade}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stade} Graph\+Aho\+Corasick\+::first\+Stade (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a0e824563fe656f50ddea8fa1a8594c47}
+
+
+Metodo que devuelve el primer estado de la lista de estados. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_stade}{Stade} con el estado inicial 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a7f1b50c6c0cf27630f8d6b50feef46e9}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!fix\+Mat@{fix\+Mat}}
+\index{fix\+Mat@{fix\+Mat}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{fix\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Aho\+Corasick\+::fix\+Mat (
+\begin{DoxyParamCaption}
+\item[{string $\ast$}]{words}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a7f1b50c6c0cf27630f8d6b50feef46e9}
+
+
+Metodo que rellena la matriz con las relaciones de sufijos y prefijos entre palabras. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & Puntero a string que contiene las palabras a buscar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 140 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a440ada8ff130120fed4a94b71874da69}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!get\+First\+Char@{get\+First\+Char}}
+\index{get\+First\+Char@{get\+First\+Char}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{get\+First\+Char}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Graph\+Aho\+Corasick\+::get\+First\+Char (
+\begin{DoxyParamCaption}
+\item[{string $\ast$}]{words}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a440ada8ff130120fed4a94b71874da69}
+
+
+Metodo que devuelve una cadena de caracteres con la primer letra de cada palabra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & String$\ast$ con las palabras por buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ que contiene la primera letra de cada palabra 
+\end{DoxyReturn}
+
+
+Definition at line 286 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a01a05df2b0d49b420a127fbb2ceb288c}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!get\+Num\+Stades@{get\+Num\+Stades}}
+\index{get\+Num\+Stades@{get\+Num\+Stades}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{get\+Num\+Stades}]{\setlength{\rightskip}{0pt plus 5cm}int Graph\+Aho\+Corasick\+::get\+Num\+Stades (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a01a05df2b0d49b420a127fbb2ceb288c}
+
+
+Metodo get del atributo num\+Stade. 
+
+\begin{DoxyReturn}{Returns}
+int con la cantidad de estados del grafo Aho\+Corasick 
+\end{DoxyReturn}
+
+
+Definition at line 185 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_ae1e4f47012e1937511d7be9446890e5a}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!get\+Size\+Dicc@{get\+Size\+Dicc}}
+\index{get\+Size\+Dicc@{get\+Size\+Dicc}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{get\+Size\+Dicc}]{\setlength{\rightskip}{0pt plus 5cm}int Graph\+Aho\+Corasick\+::get\+Size\+Dicc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_ae1e4f47012e1937511d7be9446890e5a}
+
+
+Metodo get del atributo size\+Dicc. 
+
+\begin{DoxyReturn}{Returns}
+int con la cantidad de elementos del diccionario del grafo Aho\+Corasick 
+\end{DoxyReturn}
+
+
+Definition at line 193 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_aa8b02e72320c3e81534e42b0640a340e}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!get\+Stades@{get\+Stades}}
+\index{get\+Stades@{get\+Stades}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{get\+Stades}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$<${\bf Stade}, int$>$$\ast$ Graph\+Aho\+Corasick\+::get\+Stades (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_aa8b02e72320c3e81534e42b0640a340e}
+
+
+Metodo get del atributo Stades (Lista de estados) 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_list}{List$<$\+Stade, int$>$}$\ast$ con la lista de estados del grafo Aho\+Corasick 
+\end{DoxyReturn}
+
+
+Definition at line 201 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a86d4b2de0a00e27565a3eaeb37a105e7}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{get\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stade} Graph\+Aho\+Corasick\+::get\+State (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a86d4b2de0a00e27565a3eaeb37a105e7}
+
+
+Metodo que devuelve el estado en la posicion i de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & int indice de la lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_stade}{Stade} pertenencente a la posicion i de la lista de estados 
+\end{DoxyReturn}
+
+
+Definition at line 264 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a37bac3b010ef645d2364c3648196f43a}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!get\+State\+Mat@{get\+State\+Mat}}
+\index{get\+State\+Mat@{get\+State\+Mat}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{get\+State\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ Graph\+Aho\+Corasick\+::get\+State\+Mat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a37bac3b010ef645d2364c3648196f43a}
+
+
+Metodo que devuelve la matriz de transicion del grafo. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_stade}{Stade} pertenencente a la posicion i de la lista de estados 
+\end{DoxyReturn}
+
+
+Definition at line 255 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a8f345a1676a7d84b4a649be2f046c1fb}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!get\+Tag@{get\+Tag}}
+\index{get\+Tag@{get\+Tag}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{get\+Tag}]{\setlength{\rightskip}{0pt plus 5cm}int Graph\+Aho\+Corasick\+::get\+Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf Stade}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a8f345a1676a7d84b4a649be2f046c1fb}
+
+
+Metodo que devuelve la etiqueta del estado contenido en un \hyperlink{class_stade}{Stade} especifico n. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \hyperlink{class_stade}{Stade} que se desea obtener etiqueta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D que representa la etiqueta del estado en el \hyperlink{class_stade}{Stade} 
+\end{DoxyReturn}
+
+
+Definition at line 273 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a71f72fab03305b7c4ed56c57cc90d8f8}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!init\+Mat@{init\+Mat}}
+\index{init\+Mat@{init\+Mat}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{init\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Aho\+Corasick\+::init\+Mat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a71f72fab03305b7c4ed56c57cc90d8f8}
+
+
+Metodo que genera la matriz de transicion vacia inicializando todo en 0. 
+
+
+
+Definition at line 75 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_aafe054daa541afbfb3859a464d97345c}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!insert\+Stades@{insert\+Stades}}
+\index{insert\+Stades@{insert\+Stades}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{insert\+Stades}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Aho\+Corasick\+::insert\+Stades (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_aafe054daa541afbfb3859a464d97345c}
+
+
+Metodo que agrega todos los estados a la lista de estados. 
+
+
+
+Definition at line 59 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a859ef1b84bcda82a872ca19b5fddbe52}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!next\+Stade@{next\+Stade}}
+\index{next\+Stade@{next\+Stade}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{next\+Stade}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stade} Graph\+Aho\+Corasick\+::next\+Stade (
+\begin{DoxyParamCaption}
+\item[{{\bf Stade}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a859ef1b84bcda82a872ca19b5fddbe52}
+
+
+Metodo que devuelve el siguiente estado de la lista de estados a partir de un estado dado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \hyperlink{class_stade}{Stade} que se utiliza como indice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_stade}{Stade} con el estado siguiente de s 
+\end{DoxyReturn}
+
+
+Definition at line 241 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_abe30b2726160786d41f04dbdb5fc0aa2}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!print\+Stade\+Mat@{print\+Stade\+Mat}}
+\index{print\+Stade\+Mat@{print\+Stade\+Mat}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{print\+Stade\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Aho\+Corasick\+::print\+Stade\+Mat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_abe30b2726160786d41f04dbdb5fc0aa2}
+
+
+Metodo que imprime la matriz de estados. 
+
+
+
+Definition at line 172 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a315229703f61d34621c52c8b327e5985}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!same\+First\+Char@{same\+First\+Char}}
+\index{same\+First\+Char@{same\+First\+Char}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{same\+First\+Char}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$$\ast$ Graph\+Aho\+Corasick\+::same\+First\+Char (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a315229703f61d34621c52c8b327e5985}
+
+
+Metodo que genera una matriz booleana donde genera valores true en las palabras que comienzan con el mismo caracter del diccionario. 
+
+\begin{DoxyReturn}{Returns}
+bool$\ast$$\ast$ con valor true en los campos de las palabras que comienzan con el caracter c 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_a8a696d54d5810060f61be49ee7dabc58}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!set\+Stade\+Mat@{set\+Stade\+Mat}}
+\index{set\+Stade\+Mat@{set\+Stade\+Mat}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{set\+Stade\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Aho\+Corasick\+::set\+Stade\+Mat (
+\begin{DoxyParamCaption}
+\item[{string $\ast$}]{words}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_a8a696d54d5810060f61be49ee7dabc58}
+
+
+Metodo que rellena la matriz de transicion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & Puntero a string que contiene las palabras a buscar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 163 of file Graph\+Aho\+Corasick.\+h.
+
+\hypertarget{class_graph_aho_corasick_abcc86ffb6186ebace0764505b51c98e3}{\index{Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}!words\+To\+Mat@{words\+To\+Mat}}
+\index{words\+To\+Mat@{words\+To\+Mat}!Graph\+Aho\+Corasick@{Graph\+Aho\+Corasick}}
+\subsubsection[{words\+To\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Aho\+Corasick\+::words\+To\+Mat (
+\begin{DoxyParamCaption}
+\item[{string $\ast$}]{words}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aho_corasick_abcc86ffb6186ebace0764505b51c98e3}
+
+
+Metodo que rellena la matriz de transicion con los estados de las palabras completas para modelar el grafo sin incluir conexiones entre sufijos y prefijos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & Puntero a string que contiene las palabras a buscar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file Graph\+Aho\+Corasick.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_graph_aho_corasick_8h}{Graph\+Aho\+Corasick.\+h}\end{DoxyCompactItemize}

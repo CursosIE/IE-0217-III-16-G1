@@ -1,5 +1,7 @@
 /**
-* @author Giancarlo Marin Hernandez - B54099
+* @author Luis Adrian Aguilar Cascante - B00092
+* @author Robin Gonzalez - B43011	
+* @author Giancarlo Marin - B54099
 * @date 01-03-2017
 * @brief Libreria de la clase GraphAhoCorasick que implementa un grafo con una representacion matricial de un diccionario determinado y una lista de estados
 */

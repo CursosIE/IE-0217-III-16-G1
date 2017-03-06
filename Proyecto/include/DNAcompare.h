@@ -1,4 +1,6 @@
 /**
+* @author Luis Adrian Aguilar Cascante - B00092
+* @author Robin Gonzalez - B43011	
 * @author Giancarlo Marin - B54099
 * @date 01-03-2017
 * @brief Libreria que contiene la definicion de la clase DNAcompare

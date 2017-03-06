@@ -1,6 +1,8 @@
 /**
 * Universidad de Costa Rica - Escuela de Ingenieria ELectrica
 * IE-0217 - PROYECTO: Comparacion de secuencias de nucleotidos de ADN utilizando el algoritmo Aho-Corasick
+* @author Luis Adrian Aguilar Cascante - B00092
+* @author Robin Gonzalez - B43011	
 * @author Giancarlo Marin - B54099
 * @date 26-02-2017
 * @brief Programa de prueba para el funcionamiento de la comparacion de nucleotidos

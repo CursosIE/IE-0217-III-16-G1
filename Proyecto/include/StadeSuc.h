@@ -1,4 +1,6 @@
 /**
+* @author Luis Adrian Aguilar Cascante - B00092
+* @author Robin Gonzalez - B43011	
 * @author Giancarlo Marin - B54099
 * @date 02-03-2017
 * @brief Biblioteca la clase StadeSuc que representa la definicion de un estado de exito
